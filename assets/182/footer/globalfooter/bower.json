@@ -1,0 +1,9 @@
+{
+  "name": "globalfooter",
+  "version": "0.0.0",
+  "commit": "12c5d1d7d0e6881cbfb6c16ba57808865894476d",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:whichdigital/eva-global-footer.git"
+  }
+}

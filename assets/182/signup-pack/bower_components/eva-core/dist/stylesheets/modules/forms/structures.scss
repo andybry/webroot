@@ -1,0 +1,20 @@
+%dropdown-selector {
+  padding: 5px;
+  position: relative;
+  border-radius: 0;
+  border: 1px solid $cool-grey4;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 2px;
+  border: 1px solid $cool-grey1;
+  appearance: none;
+  position: relative;
+  background-color: #ffffff;
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    background-image: asset-data-url('forms/dropdown-selector.png');
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: right -5px;
+    padding-right: 55px;
+  }
+}

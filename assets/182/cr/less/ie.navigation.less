@@ -1,0 +1,51 @@
+
+#nav-auth ul {float:right}
+#nav-auth li {float:left }
+
+// Duplication of large media query
+ul#nav-min {display:none;}
+ul#nav-max {
+	margin-bottom: 0;
+	background: none;
+
+	li {
+		.ie7-inline-block();
+		border-top:0px none;
+	}
+	a {
+		height: 3px * @baseFontSize;
+		line-height: 3px * @baseFontSize;
+		margin:@baseFontSize 0;
+	}
+}
+
+#cr-logo {
+	background-image: url('@{assetsUrl}i/logo-consumer-rights.png');
+	width:220px;
+	text-indent:-999px;
+	font-size:0px
+}
+
+.js .minShow {display:none}
+.js .minHide {display:block}
+
+.js #nav-max {display: block; float:right; border-right:1px solid #fff; border-left:1px solid #DFDFDF}
+.js #nav-max li {float:left; border-left:1px solid #fff; border-right:1px solid #DFDFDF}
+
+.tpl_article {
+	#content aside.affix {top:20px;}
+	#content aside li {display:list-item; list-style-position: outside}
+	article .articleBody li, article .callout li {
+		display:list-item;
+		vertical-align: text-top;
+	}
+ 	article h2 strong {border:1px none; margin:0}
+}
+
+#search button {top:8px; right:8px}
+
+#breadcrumb i.hidden {width:auto;}
+#breadcrumb li {float:left; margin-right: 14px;}
+
+#copyright li {float:right}
+#copyright li.left {float:left}

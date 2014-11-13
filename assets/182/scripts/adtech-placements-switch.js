@@ -1,0 +1,1 @@
+var adtechPlacements=[{name:"adtech-switch-confirmation-tr",id:"3077270|0|999"},{name:"adtech-switch-confirmation-mr",id:"3077272|0|509"},{name:"adtech-switch-confirmation-ba",id:"3077271|0|16"}];

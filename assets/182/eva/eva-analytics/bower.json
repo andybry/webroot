@@ -1,0 +1,6 @@
+{
+  "name": "eva-analytics",
+  "dependencies": {
+    "v0.12.3":"git@github.com:whichdigital/eva-analytics.git#v0.12.3"
+  }
+}

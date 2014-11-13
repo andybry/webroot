@@ -1,0 +1,31 @@
+			<div id="interactive-tool">
+				<form class="standard third-party" action="" method="post">
+	
+					<h2>The Good Food Guide</h2>
+	
+					<p id="explanation">Restaurant review feedback form</p>
+	
+					<ol class="steps">
+						<li>Step 1</li>
+						<li>Step 2</li>
+						<li>Step 3</li>
+						<li class="on"><strong>Complete!</strong></li>
+					</ol>
+	
+					<div class="wrapper">
+	
+						<fieldset>
+	
+							<h3>Thank you for taking the time to tell us about your meal.</h3>
+	
+							<div class="instructions no-b-m no-bg">
+								<p>Your input is very much appreciated, and we hope you will continue to tell us about your experiences in UK restaurants.</p>
+							</div>
+	
+						</fieldset>
+	
+					</div>
+	
+				</form>
+				
+			</div>

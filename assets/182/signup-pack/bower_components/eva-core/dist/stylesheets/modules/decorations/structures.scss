@@ -1,0 +1,22 @@
+/* utility placeholder class, intended to be used with an .icon-* class, which will show the icon and hide any text label
+Sample markup - <button class="action-close icon-close"><span class="inner-text">Close</span></button>
+Where action-close would use the %ir-with-icon placeholder
+*/
+%ir-with-icon {
+  @extend %button-reset;
+  overflow: hidden;
+  position: relative;
+  &:before {
+    display: block;
+    position: static;
+  }
+  > .inner-text {
+    position: absolute;
+    left: -1000px;
+  }
+}
+
+%panel-highlight {
+  border-left: 5px solid $pink;
+  padding-left: 30px;
+}

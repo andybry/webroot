@@ -1,0 +1,14 @@
+{
+  "name": "Mega-menu",
+  "version": "0.1.9",
+  "dependencies":{
+    "eva-typography":"git@github.com:whichdigital/eva-typography.git#1.1.4",
+    "html5shiv":"3.6.2",
+    "jquery":"1.9.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}

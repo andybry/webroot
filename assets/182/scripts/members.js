@@ -1,0 +1,1 @@
+var personalisedGreeting={init:function(){$.getJSON("/user/salutation",function(a){personalisedGreeting.displayGreeting(a)})},displayGreeting:function(a){var b=(a.salutation==="")?"You are now logged in":"Hello "+a.salutation;$("#signup-login p").text(b)}};$(document).ready(function(){personalisedGreeting.init()});

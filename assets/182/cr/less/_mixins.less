@@ -1,0 +1,91 @@
+
+.paper(){
+	background: #eee url("@{frameworkUrl}i/bg/noise-light.png") top center repeat;
+}
+
+.corner(){
+	&:before {
+		content:'';
+		position: absolute; top:-3px; right:-3px;
+		width:30px; height:30px;
+		background: url("@{frameworkUrl}i/bg/noise-light.png") repeat scroll center top #eee;
+		box-shadow:-2px 2px 3px -2px #999;
+	}
+	&:after {
+		content:'';
+		position: absolute; top:8px; right:8px;
+		width:0; height:0;
+		background: transparent;
+		//z-index: 2;
+		border:19px solid transparent;
+		border-right-color: #fff;
+		.rotate(-45deg);
+		box-shadow: 3px 0px 2px -3px #999;
+	}	
+}
+
+.zz-bottom(){
+	position: relative;
+	background:#fff;
+	box-shadow:0 0 2px rgba(0,0,0,0.3);
+
+	&:after {
+		content:'';
+		background: url('@{assetsUrl}i/bg/zigzag.png') bottom left repeat-x;
+		width:100%;
+		height: 4px;
+		position: absolute;
+		bottom:-4px;
+		left:0;
+	}
+}
+
+.zz-top(){
+	&:before {
+		content:'';
+		background: url('@{assetsUrl}i/bg/zigzag-top.png') 7px 0 repeat-x;
+		width:100%;
+		height: 4px;
+		position: absolute;
+		top:-4px;
+		left:0;
+	}
+}
+
+.zz-big-bottom(){
+	&:after {
+		content: '';
+		position: absolute; bottom:-11px; left: 0; right:0;
+		height: 11px;
+		background: url("@{assetsUrl}i/bg/zigzag2.png") repeat-x left top;
+		z-index:1;
+	}
+}
+
+.zz-dark(){
+	&:before, &:after {
+		content:'';
+		position: absolute; left:0; right:0; top:-20px;
+		height: 20px;
+		background: url("@{assetsUrl}i/bg/zigzag-dark.png") repeat-x left top;
+	}
+	&:after {
+		top:auto; bottom:-20px;
+		background-position: left bottom;
+	}	
+}
+
+
+.angle(@colour:@blueDark, @h:30px, @border:14px){
+	position:relative;
+	&:before{
+		content:'';
+		position:absolute; display: block; left:-1px; right:-1px;
+		top:-(@h / 2); height: @h;
+		margin-top:0;
+		.paper();
+		border-bottom:  @border solid @colour;
+		.skew(0, -@rhomDeg);
+	}
+}
+

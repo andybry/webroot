@@ -1,0 +1,1 @@
+define([],function(){var a={};a.globalnav={path:"modules/globalnav/base.js",local:false,dom:true,options:{}};a.navigation={path:"modules/navigation/base.js",local:false,dom:true,options:{}};return a});

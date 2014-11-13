@@ -1,0 +1,78 @@
+
+.rhomboid(){
+	position:relative;
+	z-index: 2;
+	display: inline-block;
+	margin-top:12px; margin-bottom:12px;
+	.border-radius(@radiusMed);
+
+	&:before, &:after {
+		content:'';
+		z-index:-1; 
+		width:100%;
+		height:100%;
+		.border-radius(@radiusMed);
+		.posAbsolute(0,0,0,0);
+		.origin(0%, 50%);
+	}
+
+	&:before {
+		.skew(0, -@rhomDeg);
+	}
+	&:after {
+		.skew(0, @rhomDeg);
+	}
+
+}
+
+.rhomboid-colour(@gradStart, @gradStop){
+	
+	&, &:before, &:after {
+		#gradient.horizontal(@gradStart, @gradStop);
+	}
+}
+
+.rhomGroup > section,
+.rhom {
+	.rhomboid();
+	.rhomboid-colour(#1e5799, #7db9e8);
+}
+
+.rhomGroup > section > *,
+.rhom > * {padding-left:10px}
+
+// On 3columns stacked vertically make middle invert so they stack
+@media only screen and (max-width: 479px) {
+	.col3 .rhom:nth-child(3) {
+		&:before, &:after {
+			.origin(100%, 50%);
+		}
+	}
+}
+
+.rhomGroup {position:relative;}
+
+.rhomGroup > section {
+	position:relative;
+	display:block;
+	//z-index:1;
+}
+
+.rhomGroup > section.sibling,
+.rhomGroup > section.shadow {
+	&, &:before, &:after {
+		#gradient.horizontal(#ff0000, #00ff00);
+	}
+}
+
+.rhomGroup > section.sibling {
+	//z-index:2;
+	display:inline-block;
+	.posAbsolute(auto, auto, -80%, 20%)
+}
+
+.rhomGroup > section.shadow {
+	@offset:10px;
+	//z-index:0;
+	.posAbsolute(@offset, -@offset, -@offset, @offset)
+}

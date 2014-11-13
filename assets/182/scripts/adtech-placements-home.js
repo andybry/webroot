@@ -1,0 +1,1 @@
+var adtechPlacements=[{name:"adtech-which-homepage-ma",id:"2588759|0|16"},{name:"adtech-which-homepage-ma1",id:"2907711|0|16"},{name:"adtech-which-homepage-ma2",id:"2890373|0|1013"}];

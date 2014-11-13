@@ -1,0 +1,31 @@
+Below is the result of your feedback form.  It was submitted by
+ ($!feedback.email) on $!feedback.prettyDate
+---------------------------------------------------------------------------
+
+#if($feedback.isEmailOptIn())
+The customer HAS opted to receive email updates
+#else
+The customer HAS NOT opted to receive email updates
+#end
+
+The campaign reference (data source code) is $!feedback.dataSourceCode
+
+First name: $!feedback.firstName
+
+Last name: $!feedback.lastName
+
+Phone number: $!feedback.phone
+
+Town: $!feedback.town
+
+County: $!feedback.county
+
+Message: $!feedback.message
+
+Other feeback:
+
+#foreach( $entry in $feedback.getUserDefinedFields() )
+        $!entry
+#end
+
+---------------------------------------------------------------------------

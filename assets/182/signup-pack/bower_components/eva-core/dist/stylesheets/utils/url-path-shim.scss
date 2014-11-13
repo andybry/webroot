@@ -1,0 +1,24 @@
+$asset-path: "assets/" !default;
+$image-path: "assets/" !default;
+$audio-path: "assets/" !default;
+$font-path:  "assets/" !default;
+
+@function asset-url($path){
+  @return url(#{$asset-path}#{$path});
+}
+
+@function asset-data-url($path) {
+  @return url(#{$asset-path}#{$path});
+}
+
+@function font-url($path){
+  @return url("#{$font-path}#{$path}");
+}
+
+@function image-url($path){
+  @return url(#{$image-path}#{$path});
+}
+
+@function audio-url($path){
+  @return url(#{$audio-path}#{$path});
+}

@@ -1,0 +1,57 @@
+<!-- 
+
+module = navSite
+location = top of document after opening <body> tag
+
+-->
+
+
+<header id="hd">
+	<nav id="nav-auth">
+		<div class="inner">
+			<a class="skipLink" href="#content" title="Skip to content">Skip to content</a>
+
+			<ul>
+				<li><a href="#">Log in to Which?</a></li>
+				<li><a href="#">Cookies</a></li>
+				<li id="gn-tab"><a href="http://www.which.co.uk">More from Which?<i></i></a></li>	
+			</ul>
+		</div>
+	</nav>
+
+	<div id="cookie">
+		<div class="content">
+			<h1>Sorry for interrupting, but there is something we need to tell you...</h1>
+			<p>We have updated our cookie policy to reflect changes in the law on cookies and tracking technologies used on websites. To show you this page, we placed cookies on your computer. If you continue on this website, we will use further cookies to maximise your experience and help us to understand how we can improve it.</p>
+
+			<footer><a class="button clearCookie" href="#">Accept &amp; hide this message</a> or <a class="button more" href="http://www.yoursite.com/privacy">Find out more</a></footer>
+			
+		</div>
+	</div>
+
+	<nav id="nav-content">
+		<div class="inner">
+
+			<h1 id="logo"><a href="/">Which?</a> <small>University</small></h1>
+
+			<ul class="navMax">
+				<!--li><a href="/">Home</a></li-->
+				<li><a href="/courses">Find a Course</a></li>
+				<li><a href="/institutions">Discover a Uni</a></li>
+				<li><a href="/advice">Get advice</a></li>
+			</ul>
+			<ul class="navMin">
+				<li class="navSections"><a class="button" href="#">Sections</a></li>
+				<li class="navSearch"><a class="button" href="#">Search</a></li>
+				<li class="navComp"><a class="button" href="#">5 <span>saved courses</span></a></li>
+			</ul>
+		</div>
+	</nav>
+	<form id="search">
+		<div class="inner">
+			<label for="search">i'm looking for</label>
+			<input name="search" type="text" placeholder="Search a Uni or course to get started ..." />
+			<button>go</button>
+		</div>
+	</form>
+</header>

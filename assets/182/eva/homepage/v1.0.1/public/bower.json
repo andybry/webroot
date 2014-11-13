@@ -1,0 +1,16 @@
+{
+  "name": "Homepage",
+  "version": "0.1.0",
+  "dependencies":{
+    "eva-global-navigation":"git@github.com:whichdigital/eva-global-navigation.git",
+    "eva-global-footer":"git@github.com:whichdigital/eva-global-footer.git",
+    "eva-typography":"git@github.com:whichdigital/eva-typography.git",
+    "eva-grid-frameless":"git@github.com:whichdigital/eva-grid-frameless.git",
+    "eva-eprivacy":"git@github.com:whichdigital/eva-eprivacy.git",
+    "eva-utils":"git@github.com:whichdigital/eva-utils.git",
+    "requirejs":"2.1.5",
+    "html5shiv":"3.6.2",
+    "jquery":"1.9.1",
+    "hammerjs":"1.0.5"
+  }
+}

@@ -1,0 +1,74 @@
+/* IE5 */
+
+/* Design fixes */
+#logo {
+	margin-top:-10px;
+}
+#masthead {
+	overflow:hidden;
+	width:930px;
+}
+#masthead h2 {
+	margin-top:21px;
+}
+#page {
+	overflow:auto;
+}
+#tabs {
+	margin-top:5px;
+	width:930px;
+}
+/*No secondary nav arrow for <=IE6*/
+#tabs li a span {
+	padding-right:7px;
+	background:none;
+}
+#tabs li.on a span, #tabs li.on a:hover span, #tabs li.on a:active span {
+	background:url(/assets/images/navigation/bg-compare-tab-right.png) 100% 0 no-repeat;
+}
+#tabs li a:hover span {
+	background:url(/assets/images/navigation/bg-compare-tab-right-on.png) 100% 0 no-repeat;
+}
+#user-controls {
+	width:930px;
+}
+#user-controls ul li a {
+	line-height:18px;
+}
+#user-controls ul li.last a {
+	/*line-height:normal;*/
+}
+#sub-nav {
+	position:relative;
+}
+#sub-nav ul li {
+	background:#EFF3F4;
+}
+#sub-nav ul li a {
+	height:1em;
+}
+#sub-nav ul li {
+	display:inline;
+}
+#sub-nav ul li ul {
+	height:1em;
+}
+#related ul {
+	height:1em;
+}
+#related ul li {
+	display:inline;
+}
+#related ul li a {
+	height:1em;
+}
+
+/* Content fixes */
+#latest-news ul.feed-options {
+	width:150px;
+}
+
+/* Form fixes */
+#search input#keywords {
+	height:24px;
+}

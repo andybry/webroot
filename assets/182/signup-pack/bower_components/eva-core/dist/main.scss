@@ -1,0 +1,21 @@
+// This is an override provided for fonts folder
+
+$asset-path: "assets/";
+$image-path: "assets/";
+$audio-path: "assets/";
+$font-path:  "../dist/fonts/";
+
+@import "../bower_components/reset-scss/reset.scss";
+@import "../dist/stylesheets/utils/url-path-shim.scss";
+@import "../dist/stylesheets/responsive/grid.scss";
+@import "../dist/stylesheets/responsive/responsive-mixins.scss";
+@import "../dist/stylesheets/colours/colours.scss";
+@import "../dist/stylesheets/typography/font-face.scss";
+@import "../dist/stylesheets/typography/typography.scss";
+@import "../dist/stylesheets/typography/icons.scss";
+@import "../dist/stylesheets/buttons/buttons.scss";
+@import "../dist/stylesheets/forms/forms.scss";
+
+@include default-container();
+@include standard-grid-helpers();
+

@@ -1,0 +1,1 @@
+requirejs.config({paths:{jquery:"../components/jquery/jquery",nav:"../js/nav"}});requirejs(["jquery","nav"],function(d,c){d(function(){if(typeof window.onload=="function"){var a=window.onload;a()}c.init({logo:true,search_open:true,search:true,signin:true})})});

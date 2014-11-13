@@ -1,0 +1,351 @@
+html, body {
+	width:100%; margin:0; padding:0;
+	background:#666;
+	background:@bg-dark;
+	text-rendering: optimizeLegibility !important;
+}
+
+a:focus,
+.btn:focus {outline:0px none}
+
+.ieOnly {display:none;}
+
+.hidden-accessible {
+	position: absolute; left:-9998px; top:-9998px;
+	width:1px; height:1px; overflow:hidden;
+}
+
+.wrapper {background:#fff;}
+
+.in {
+	.clearfix();
+	position:relative;
+}
+.out {
+	.paper();
+	box-shadow:2px 0 2px 1px #ddd, -2px 0 2px 1px #eee;
+}
+
+#hd {
+	position: relative;
+	z-index:3;
+}
+
+.wrap {
+	.clearfix();
+	position:relative;
+	z-index:2;
+}
+
+#ft {
+	z-index:1;
+}
+
+.skipLink {display:none}
+.skipLink:focus {display:block}
+
+a {cursor:pointer; color:#036690}
+
+// Generic layout ////////////////////////////////////////////////
+#content {
+	padding:0 0 180px;
+	.clearfix();
+
+	header {}
+
+	aside {
+		z-index:1;
+
+		> div {
+			.zz-bottom();
+			.zz-top();
+			margin-bottom: @baseFontSize;
+			padding:@baseFontSize/2  0 @baseFontSize;
+			h4 {padding:@baseFontSize @baseFontSize 0}
+		}
+
+		> div:first-of-type:before,
+		> div:last-of-type:after {display:none}
+
+		p {color:@cr-grey-light}
+
+		.tagCloud {
+			padding:10px 0 0 10px;
+			border-bottom:1px solid #ddd;
+			&:last-of-type {border:0px none}
+		}
+
+		.subNav {
+			h3 {line-height: 1em; padding-top:0}
+			// h4 {padding:@baseFontSize @baseFontSize 0}
+			a {
+				display: block;
+				color: @cr-grey-light;
+				padding:@baseFontSize * 0.5 @baseFontSize;
+				&:hover {
+					text-decoration: none;
+				}
+				&.btn {
+					display: inline-block;
+					color: #fff;
+					margin-bottom:7px
+				}
+			}
+
+			li {
+				position: relative;
+				border-bottom: 1px dotted #aaa; //@cr-grey-light
+				padding-top:@baseFontSize * 0.5;
+
+				a {
+					padding-top:0;
+					line-height: @baseFontSize * 1.25;
+					strong {
+						margin-right:5px
+					}
+				}
+
+				span {
+					float:right;
+					font-family: @sansFontFamily-bold;
+				}
+
+				&:hover {
+					background:#eee;
+				}
+			}
+
+			h3.on,
+			li.on {
+				position: relative;
+				background:#ebe9e9;
+				border-bottom:1px solid #fff;
+
+				&:after {
+					content:'';
+					position: absolute;
+					right:-30px; top:50%; margin-top:-15px;
+					width:0;
+					background: transparent;
+					border:15px solid transparent;
+					border-left-color:#ebe9e9;
+				}
+			}
+
+		}
+		.tagFilters {}
+	}
+
+
+	.articleList, article {
+
+	}
+}
+
+
+// Search ////////////////////////////////////////////////
+#search {
+	z-index: 5;
+	clear:both;
+	position: relative;
+	margin:@baseFontSize * 2 0 0 0;
+	border:5px solid rgba(255,255,255,0.3);
+	border-radius:11px;
+
+	::-webkit-input-placeholder { color: #999; }
+	:-moz-placeholder { color: #999; }
+
+	input {
+		width:100%;
+		.box-sizing(border-box);
+		height: 46px;
+		line-height: 46px;
+		border-radius:6px;
+		border:0px none;
+		font-family: @altFontFamily;
+		font-size:@baseFontSize * 1.5;
+		box-shadow:inset 0 0 1px 1px rgba(0, 0, 0, 0.6);
+		background:#efefef;
+		padding:@baseFontSize/2 @baseFontSize;
+		margin:0;
+
+		&:focus {background-color:#fff}
+		&.ui-autocomplete-loading {
+			background-color:#fff;
+			background-image:url('@{frameworkUrl}i/bg/loader.gif');
+			background-repeat:no-repeat;
+		}
+
+	}
+
+	button {
+		position:absolute;
+		top:5px;
+		right:5px;
+		padding:9px 7px;
+		.buttonBackground(#999, darken(#999,15%), #fff, 0 -1px 0 rgba(0,0,0,0.5));
+	}
+
+	.ui-helper-hidden-accessible {display:none}
+}
+
+// search > Jquery.ui.autocomplete dropdown
+#ui-id-1 {
+	background:#fff;
+	position:absolute;
+	border-radius:4px;
+	box-shadow:0 0 0 4px rgba(0,0,0,0.3);
+	margin-top:10px;
+	z-index: 20;
+
+	li {border-bottom:1px dotted #ccc; }
+	h3 {color:#fff; padding:7px; }
+	a {display:block; padding:7px; color: #777}
+	.ui-state-focus {background:#ddd}
+}
+
+// Rhomboids
+.rhom, .callout, .callout2, .callout3 {
+	position:relative;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin:28px 0; 
+	color:#fff;
+}
+
+
+// Generic / resused styling ////////////////////////////////////////////////
+
+//Share
+
+.share-this {
+	border-top: 1px dashed @cr-grey;
+	margin-top: @baseFontSize;
+	h3 {
+		padding: 0;
+		margin-bottom: 10px;
+		font-size: 11px;
+		text-transform: uppercase;
+	}
+	.btn-group,
+	.btn-share {
+		margin-bottom: @baseFontSize;
+		vertical-align: middle;
+	}
+}
+
+.btn-share {
+	display: inline-block;
+	border-radius: 50%;
+	background: #fff;
+	font-style: normal;
+	font-size:21px;
+	width : 42px;
+	height : 42px;
+	color: @cr-grey-light;
+	text-align: center;
+	line-height: 42px;
+	box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.5) inset;
+	margin: 0 5px;
+
+	.i {
+		padding: 0;
+	}
+
+	&:first-of-type {margin-left: 0;}
+	&:last-of-type {margin-right: @baseFontSize*2;}
+	&:hover {
+		background:#00A0D1;
+		color: #fff;
+		box-shadow: none
+	}
+}
+
+// Generic link list style
+.linkList li {
+	display:block;
+	list-style:none outside;
+	border-bottom:1px dotted #777;
+	&:last-of-type {border:0px none;}
+
+	a {
+		display:block;
+		position: relative;
+		color:#777;
+		padding:@baseFontSize/2 20px @baseFontSize/2 0;		
+	
+		i {position:absolute; right:0; top:@baseFontSize/2;}
+	}
+
+}
+
+a.linkAll {
+	text-transform: uppercase;
+	font-family: @sansFontFamily-bold;
+	font-size:11px;
+}
+
+
+// Set theme colours
+.lead {
+	padding:20px 0 0;
+	drop-initial-value: 1;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+}
+
+.tagCloud > a, .tag {
+	background:#ddd;
+	color:@cr-grey-light;
+	letter-spacing: 0.05em;
+
+	&:focus {background:#ddd; color:#75716E}
+	&:hover {background:#aaa}
+	&.on {background:#049CDB; color:#fff}
+}
+
+#hd .chromeframe {
+	padding:14px; background: #000;
+	&, a {color: #fff}
+}
+
+
+// Advert ////////////////////////////////////////////////
+.advert {
+	.columnFull();
+	clear: both;
+	box-shadow: 0 0 3px #ccc;
+	border:3px solid #fff;
+	#gradient.vertical(#dbe2e8, #fff);
+
+	h3 {
+		color:#999;
+		padding:7px;
+		box-shadow:inset 0 -1px 0 0 #ddd;
+		border-bottom:1px solid #fff;
+		margin:0 0 21px 0;
+	}
+
+	p {padding:0 20px 20px 7px}
+}
+
+// 404 page
+.cat_404 article {padding-bottom:180px}
+
+
+// Home Template
+@import "template.home.less";
+
+// Article Template
+@import "template.article.less";
+
+// Category Template
+@import "template.category.less";
+
+// Landing Template
+@import "template.landing.less";
+
+// Search + Tag Template
+@import "template.search.less";
+
+//404, 500 Template
+@import "template.404.less";

@@ -1,0 +1,18 @@
+{
+  "name": "v0.8.0",
+  "version": "0.8.0",
+  "description": "Which? Global Buttons",
+  "dependencies": {
+    "normalize-css": "latest",
+    "eva-typography": "git@github.com:whichdigital/eva-typography.git",
+    "eva-utils": "git@github.com:whichdigital/eva-utils.git"
+  },
+  "gitHead": "4643fd2e772db943dce3708eaf259fe8ab5f575f",
+  "readmeFilename": "README.md",
+  "_id": "eva-buttons@0.7.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:whichdigital/eva-buttons.git"
+  },
+  "readme": "# Buttons\nGeneric buttons.\n\n## Usage\n\n    <div class=\"button button-a\">Blue Button</div>\n    <div class=\"button button-b\">White Button</div>\n    <div class=\"button button-c\">Red Button</div>\n\n    <div class=\"button-group\">\n      <div class=\"button button-a\">Blue Button</div>\n      <div class=\"button button-b\">White Button</div>\n    </div>\n\n    <div class=\"button button-a button-slant button-next\">\n      Button\n    </div>\n\n\n# Changelog\n- 0.7.0 Use eva-utils instead of eva-colours\n- 0.6.2 Use eva-colours dependency\n- 0.6.1 button-next icon positioning\n- 0.6.0 Updated button-slant/ button-next markup\n- 0.5.0 Adds buttons with slanted design\n- 0.4.0 Added simple buttons\n- 0.3.0 Red button\n- 0.2.1 No underline for `<a>`\n- 0.2.0 Button is now available as a SASS module\n- 0.1.0 First release\n"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "EPrivacy",
+  "version": "0.1.2",
+  "description": "Which? ePrivacy",
+  "dependencies": {
+    "normalize-css"   : "latest",
+    "eva-frameless"   : "git@github.com:whichdigital/eva-grid-frameless.git",
+    "eva-typography"  : "git@github.com:whichdigital/eva-typography.git",
+    "cookie-monster"  : "git@github.com:danielepolencic/cookie-monster.git",
+    "eva-buttons"     : "git@github.com:whichdigital/eva-buttons.git"
+  }
+}

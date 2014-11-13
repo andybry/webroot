@@ -1,0 +1,12 @@
+{
+  "name": "eva-global-navigation",
+  "version": "0.0.0",
+  "dependencies": {
+    "head":"git@github.com:whichdigital/eva-global-navigation.git",
+    "v3.3.3":"git@github.com:whichdigital/eva-global-navigation.git#v3.3.3",
+    "v3.2.10":"git@github.com:whichdigital/eva-global-navigation.git#v3.2.10",
+    "v3.2.9":"git@github.com:whichdigital/eva-global-navigation.git#v3.2.9",
+    "v3.2.8":"git@github.com:whichdigital/eva-global-navigation.git#v3.2.8",
+    "v3.2.7":"git@github.com:whichdigital/eva-global-navigation.git#v3.2.7"
+  }
+}

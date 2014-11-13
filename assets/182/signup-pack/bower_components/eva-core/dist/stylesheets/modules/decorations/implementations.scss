@@ -1,0 +1,15 @@
+.list {
+  padding: 10px 15px;
+}
+.list-item {
+  list-style: disc;
+}
+
+/*
+Information panel
+
+Styleguide 4.1
+*/
+.highlight-left {
+	@extend %panel-highlight;
+}

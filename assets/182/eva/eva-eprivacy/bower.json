@@ -1,0 +1,7 @@
+{
+  "name": "eva-eprivacy",
+  "dependencies": {
+    "v0.1.1":"git@github.com:whichdigital/eva-eprivacy.git#v0.1.1",
+    "v0.1.0":"git@github.com:whichdigital/eva-eprivacy.git#v0.1.0"
+  }
+}

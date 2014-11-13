@@ -1,0 +1,100 @@
+html, body {
+	width:100%; margin:0; padding:0;
+}
+
+.wrapper {
+	//background: @bodyBackground;
+}
+
+.in {
+	.clearfix();
+	position:relative;
+}
+
+#hd {
+	position: relative;
+	z-index:3;
+}
+
+.wrap {
+	.clearfix();
+	position:relative;
+	z-index:2;
+}
+
+#ft {
+	z-index:1;
+}
+
+
+
+.skipLink {display:none}
+.skipLink:focus {display:block}
+
+.col1 > * { .columnFull() }
+.col2 > * { .column(4) }
+.col3 > * { .column(4) }
+.col4 > * { .column(3) }
+.narrowCols > * { .column(2) }
+.spanAll { .column(4) }
+// .col3 > .span2 { .column(4) } // not required here as same as default
+
+.col3 > .push1 { .push(0) }
+
+[class*="col"] > hr {display:block; clear:both; float:none; width:100%; margin:0}
+[class*='col'] {}
+
+// 480px - 6cols
+@media only screen and (min-width: 480px) {
+	.col2 > * { .columnSize(3) }
+	.col3 > * { .columnSize(2) }
+		.col3 > .span2 { .columnSize(4) }
+		.col3 > .span3 { .columnSize(6) }
+		.col3 > .push1 { .push(2) }
+	.col4 > * { .column(3) }
+	.spanAll { .column(6) }
+}
+
+// 600px - 6cols
+@media only screen and (min-width: 600px) {
+}
+
+// 768px - 9cols
+@media only screen and (min-width: 768px) {
+	.col2 > * { .columnSize(4.5) }
+	.col3 > * { .columnSize(3) }
+		.col3 > .span2 { .columnSize(6) }
+		.col3 > .span3 { .columnSize(9) }
+		.col3 > .push1 { .push(3) }
+	.col4 > * { .column(4.5) }
+	.spanAll { .column(9) }
+}
+
+// 992px - 12cols
+@media only screen and (min-width: 992px) {
+	.col2 > * { .columnSize(6) }
+	.col3 > * { .columnSize(4) }
+		.col3 > .span2 { .columnSize(8) }
+		.col3 > .span3 { .columnSize(12) }
+		.col3 > .push1 { .push(4) }
+	.col4 > * { .column(3) }
+	.spanAll { .column(12) }
+}
+
+// 1382px - 18 cols
+@media only screen and (min-width: 1382px) {
+}
+
+
+.col3 > * .col1 {margin:0}
+
+.grid .in {
+	.gridBG(grey, 4, -7.5px);
+}
+
+.grid [class*="col"] > *:nth-child(1) {background:rgba(250,0,0,0.4)}
+.grid [class*="col"] > *:nth-child(2) {background:rgba(0,250,0,0.4)}
+.grid [class*="col"] > *:nth-child(3) {background:rgba(0,0,250,0.4)}
+
+.skip {}
+

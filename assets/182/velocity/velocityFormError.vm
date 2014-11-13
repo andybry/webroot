@@ -1,0 +1,15 @@
+				<!--Velocity general form level error message -->
+				#if($errors)
+				#if($errors.size() > 0)
+				$messages.getString("form.general.errors.container.prefix")
+				$messages.getString("form.general.errors.text.prefix")
+				$messages.getString("form.general.errors.prefix")
+				$errors.size()
+					#if ($errors.size() == 1)		
+					$messages.getString("form.general.errors.single.suffix")
+					#else
+					$messages.getString("form.general.errors.suffix")
+					#end
+				$messages.getString("form.general.errors.container.suffix")
+				#end
+				#end

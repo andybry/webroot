@@ -1,0 +1,9 @@
+{
+  "name": "signup-pack",
+  "description": "The assets package for the signup pages.",
+  "version": "0.0.1",
+  "dependencies": {
+    "eva-core": "git@github.com:whichdigital/eva-core.git#forms",
+    "eva-global-footer": "git@github.com:whichdigital/eva-global-footer.git#v0.1.4"
+  }
+}

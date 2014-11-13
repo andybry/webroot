@@ -1,0 +1,20 @@
+{
+  "name": "v0.1.0",
+  "version": "0.1.0",
+  "description": "Which? ePrivacy",
+  "dependencies": {
+    "normalize-css": "latest",
+    "eva-frameless": "git@github.com:whichdigital/eva-grid-frameless.git",
+    "eva-typography": "git@github.com:whichdigital/eva-typography.git",
+    "cookie-monster": "git@github.com:danielepolencic/cookie-monster.git",
+    "eva-buttons": "git@github.com:whichdigital/eva-buttons.git"
+  },
+  "gitHead": "8d585ede1f16b050023c6eb5d5b5ce5f4bfb8d37",
+  "readme": "# ePrivacy\nEPrivacy module\n\n# Usage\nCopy the html snippet from `index.html`\nRequire the module as an AMD module and call the init function with\n\n    define(['eva-eprivacy/main'], function(eprivacy){\n      ...\n      eprivacy.init()\n    })\n\nthe module will automagically handle the cookie.\nDon't forget to require the module's CSS.\n\n# Changelog\n\n- 0.1.0 First release\n",
+  "readmeFilename": "README.md",
+  "_id": "EPrivacy@0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:whichdigital/eva-eprivacy.git"
+  }
+}

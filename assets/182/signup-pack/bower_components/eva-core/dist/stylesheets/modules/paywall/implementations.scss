@@ -1,0 +1,346 @@
+%paywall-banner {
+  @extend %st-layout__parent-block;
+  background-color: $light-blue1;
+  position: relative;
+}
+
+.paywall-banner--xlarge.hide-on-medium-viewport {
+  @extend %hide-on-medium-viewport;
+}
+
+.paywall-banner--xlarge,
+.paywall-banner--large,
+.paywall-banner--medium,
+.paywall-banner--small {
+  @extend %paywall-banner;
+}
+
+%paywall-banner--facets {
+  @extend .paywall-banner--small;
+  @media (min-width: $tabletMin) {
+    height: 315px;
+  }
+  @media (max-width: $mobileMax) {
+    width: column(4);
+  }
+}
+
+.paywall-banner--facets--always-open {
+  @extend %paywall-banner--facets;
+}
+
+.paywall-banner--facets--open-with-facets {
+  @extend %paywall-banner--facets;
+}
+
+.paywall-banner--facets--hidden {
+  @extend %paywall-banner--facets;
+  display: none;
+}
+
+.paywall-banner--mask {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.paywall-banner__content {
+  margin-right: column(3);
+  padding: 35px;
+  text-align: left;
+  color: $black;
+  @media (max-width: $tabletMax) {
+    margin-right: column(2);
+  }
+  @media (max-width: $mobileMax) {
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .paywall-banner--xlarge & {
+    @media (max-width: $mobileMax) {
+      padding-top: 40px;
+    }
+  }
+  .paywall-banner--medium & {
+    margin-right: 0;
+  }
+  .paywall-banner--small & {
+    margin-right: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  %paywall-banner--facets & {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+.paywall-banner__header {
+  @include font-stack-bold;
+  @include font-size($font-size-ratio-14to20);
+  margin-bottom: 0.7em;
+  padding-top: 0;
+  @media (max-width: $mobileMax) {
+    %paywall-banner--facets & {
+      padding-top: 20px;
+    }
+  }
+}
+
+%paywall-banner__text {
+  @extend %st-layout__box-sizing;
+  margin-bottom: 2em;
+  max-width: 650px;
+}
+
+.paywall-banner__text--long {
+  @extend %paywall-banner__text;
+  @extend %hide-on-small-viewport;
+  .paywall-banner--medium &, .paywall-banner--small & {
+    display: none;
+  }
+}
+
+.paywall-banner__text--short {
+  @extend %paywall-banner__text;
+  @extend %show-on-small-viewport;
+  .paywall-banner--medium &, .paywall-banner--small & {
+    display: block;
+  }
+}
+
+.paywall-banner__actions {
+  @media (max-width: $mobileMax) {
+    text-align: center;
+  }
+}
+
+.paywall-banner__action {
+  display: inline-block;
+  text-align: left;
+  &:first-child {
+    @media (min-width: $desktopMin) {
+      margin-right: 10px;
+    }
+  }
+  .paywall-banner--xlarge & {
+    @media (min-width: $desktopMin) {
+      width: 100px;
+    }
+  }
+  .paywall-banner--small & {
+    padding-left: 15px;
+  }
+  %paywall-banner--facets & {
+    padding-left: 10px;
+    @media(max-width: $mobileMax) {
+      padding-right: 0px;
+      margin-bottom: 20px;
+      width: column(4) - 2 * 35px;
+    }
+  }
+
+}
+
+.paywall-banner__review {
+  @extend %st-layout__box-sizing;
+  position: absolute;
+  color: #ffffff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  width: column(3);
+  background: {
+    color: $pink;
+    image: asset-data-url('paywall/grab_review.png');
+    repeat: no-repeat;
+    position: bottom right;
+  }
+  @media (min-width: $tabletMin) and (max-width: $tabletMax) {
+    background-position: 20px bottom;
+    padding-left: 15px;
+    width: column(2);
+  }
+  @media (max-width: $mobileMax) {
+    display: none;
+  }
+  .paywall-banner--medium &, .paywall-banner--small & {
+    background-image: none;
+    padding: 8px 35px;
+    text-align: left;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+.paywall-banner__review__inner {
+  @extend %st-layout__center_vertically;
+  height: 100%;
+}
+
+.paywall-banner__link-review {
+  @include font-stack-light;
+  @include font-size($font-size-ratio-14to26);
+  color: #ffffff;
+  line-height: 1;
+  white-space: normal;
+  -webkit-font-smoothing: antialiased;
+  .paywall-banner--small & {
+    @include font-size($font-size-ratio-14to24);
+  }
+  .link-txt {
+    line-height: inherit;
+  }
+  &:after {
+    font-size: 1.2em;
+    margin-left: 10px;
+    @media (min-width: $tabletMin) and (max-width: $tabletMax) {
+      margin-left: 3px;
+    }
+  }
+}
+
+%panel-highlight {
+  border-left: 5px solid $pink;
+  padding-left: 30px;
+}
+
+
+%paywall-banner__action-close {
+  @extend %ir-with-icon;
+  color: white;
+  width: 40px;
+  height: 40px;
+  @media (max-width: $mobileMax) {
+    color: $black;
+  }
+  .paywall-banner--small & {
+    color: $black;
+  }
+  &:before {
+    @include font-size($font-size-ratio-14to22);
+    @extend %icon;
+    @extend %icon-close;
+  }
+}
+
+.paywall-banner__action-close--top {
+  @extend %paywall-banner__action-close;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1;
+}
+
+.paywall-banner__badges-container {
+  @extend %hide-on-small-viewport;
+  margin-bottom: 20px;
+  .paywall-banner--medium & {
+    margin-bottom: 15px;
+  }
+  .paywall-banner--small & {
+    @media (max-width: $tabletMax) {
+      display: none;
+    }
+  }
+}
+
+.paywall-banner__badge {
+  @extend %st-layout__horizontal-list-item;
+  @extend %sk-divider-thick-right;
+  margin-bottom: 10px;
+  vertical-align: top;
+  &:last-child {
+    border-right: 0 none;
+  }
+}
+
+.reviews-count-label {
+  @include font-stack-bold;
+  @include font-size($font-size-ratio-14to12);
+  @extend %sk-no-hyphens;
+  color: $cool-grey4;
+  display: inline-block;
+  max-width: 6em;
+  line-height: 1em;
+}
+
+%sk-no-hyphens {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+.behind-paywall {
+  @extend %content-disabled;
+}
+
+%content-disabled {
+  color: $cool-grey1;
+}
+
+.paywall-banner__inner-wrapper {
+  position: relative;
+}
+
+%paywall-facets__member-exclusive-label {
+  $heightOfLabel: 24px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  line-height: $heightOfLabel;
+  text-align: middle;
+  color: white;
+  background-color: $pink;
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 100%;
+    border-right-width: 15px;
+    border-right-style: solid;
+    border-right-color: $pink;
+    border-bottom-width: $heightOfLabel;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+  }
+}
+
+.paywall-facets__member-exclusive-label--open-with-facets {
+  @extend %paywall-facets__member-exclusive-label;
+  @extend %hide-on-medium-and-large-viewport;
+}
+
+.paywall-facets__member-exclusive-label--always-open {
+  @extend %paywall-facets__member-exclusive-label;
+}
+
+%paywall-facets__facet-cover {
+  $paywall-facets__left-right-padding: 20px;
+  position: absolute;
+  top: 0px;
+  left: -$paywall-facets__left-right-padding;
+  right: -$paywall-facets__left-right-padding;
+  bottom: -10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.paywall-facets__facet-cover--open-with-facets {
+  @extend %paywall-facets__facet-cover;
+  @extend %hide-on-medium-and-large-viewport;
+}
+
+.paywall-facets__facet-cover--always-open {
+  @extend %paywall-facets__facet-cover;
+}
+
+
+

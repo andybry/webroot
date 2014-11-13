@@ -1,0 +1,1 @@
+define([],function(){var a={env:Which.bootstrapJson.env,googleAnalyticsIds:Which.bootstrapJson.googleAnalyticsIds,version:"0.0.0",logging:true,testing:true,frameworkPath:"../js"};return a});

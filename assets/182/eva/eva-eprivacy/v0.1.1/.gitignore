@@ -1,0 +1,6 @@
+/components
+.*
+!/.gitignore
+*.psd
+*.ai
+config.rb

@@ -1,0 +1,12 @@
+@mixin generate-which-badge-skins {
+
+  %sk-which-badge--best-buy {
+    background-color: #ed1c24;
+  }
+  %sk-which-badge--energy-saver {
+    background-color: #00ae4d;
+  }
+  %sk-which-badge--dont-buy {
+    background-color: #41606f;
+  }
+}

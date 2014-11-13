@@ -1,0 +1,193 @@
+			<div id="form-error-1"> 	
+				#parse('velocityFormError.vm')
+			</div>
+			
+			<div id="interactive-tool">
+			
+				<form class="standard third-party" action="" id="fm_pp" method="post">
+	
+					<h2>The Good Food Guide</h2>
+	
+					<p id="explanation">Restaurant review feedback form</p>
+	
+					<ol class="steps">
+						<li>Step 1</li>
+						<li>Step 2</li>
+						<li class="on"><strong>Step 3</strong></li>
+						<li>Complete!</li>
+					</ol>
+	
+					<div class="wrapper">
+	
+						<fieldset>
+							<input name="page" value="3" type="hidden">
+							<h3>About you</h3>
+	
+							<div class="instructions no-b-m">
+								
+								<p>(<span class="mandatory">*</span> Denotes a mandatory field)</p>
+								
+							</div>
+							<h4 class="heading">Please provide us with the following details in case we need to ask you more information about the feedback you have provided.</h4>							
+							
+							<div>	
+								#if($errors.containsKey("dinerNameTitle"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.title")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<label for="fm_pp_element0">Title <span class="mandatory">*</span></label>					
+								<div class="element">		
+									<select name="dinerNameTitle" id="fm_pp_element0">
+										<option value="">Select...</option>
+										<option value="Mr"#if($input.dinerNameTitle == "Mr") selected="true"#end>Mr</option>
+										<option value="Mrs"#if($input.dinerNameTitle == "Mrs") selected="true"#end>Mrs</option>
+										<option value="Miss"#if($input.dinerNameTitle == "Miss") selected="true"#end>Miss</option>
+										<option value="Ms"#if($input.dinerNameTitle == "Ms") selected="true"#end>Ms</option>
+									</select>
+								</div>			
+							</div>
+							
+							<div>	
+								#if($errors.containsKey("dinerNameFirst"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.first.name")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<label for="fm_pp_elementA">First name <span class="mandatory">*</span></label>					
+								<div class="element">		
+									<input id="fm_pp_elementA" value="$input.dinerNameFirst" name="dinerNameFirst" class="text" type="text" />
+								</div>			
+							</div>
+							
+							<div>	
+								#if($errors.containsKey("dinerNameLast"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.last.name")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<label for="fm_pp_elementB">Last name <span class="mandatory">*</span></label>					
+								<div class="element">		
+									<input id="fm_pp_elementB" value="$input.dinerNameLast" name="dinerNameLast" class="text" type="text" />
+								</div>			
+							</div>
+							
+							<h4 class="heading">Please supply your email address and  home address:</h4>
+							
+							<div>	
+								#if($errors.containsKey("dinerEmail"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.email")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<label for="fm_pp_element1">Email <span class="mandatory">*</span></label>					
+								<div class="element">		
+									<input id="fm_pp_element1" value="$input.dinerEmail" name="dinerEmail" class="text" type="text" />
+								</div>
+							</div>
+							
+							<hr />
+										
+							<div>	
+								#if($errors.containsKey("dinerAddress1"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.address")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<label for="fm_pp_element2">Address 1</label>					
+								<div class="element">		
+									<input id="fm_pp_element2" value="$input.dinerAddress1" name="dinerAddress1" class="text" type="text" />
+								</div>
+								
+							</div>
+							
+							<div>	
+								<label for="fm_pp_element3" class="hidden">Address 2</label>					
+								<div class="element">		
+									<input id="fm_pp_element3" value="$input.dinerAddress2" name="dinerAddress2" class="text" type="text" />
+								</div>
+								
+							</div>
+							
+							<div>	
+								#if($errors.containsKey("dinerTown"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.town")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<label for="fm_pp_element5">Town</label>					
+								<div class="element">		
+									<input id="fm_pp_element5" value="$input.dinerTown" name="dinerTown" class="text" type="text" />
+								</div>
+							</div>
+						
+							<div>	
+								#if($errors.containsKey("dinerCounty"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.county")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<label for="fm_pp_element6">County</label>					
+								<div class="element">		
+									<input id="fm_pp_element6" value="$input.dinerCounty" name="dinerCounty" class="text" type="text" />
+								</div>
+							</div>
+							
+							<div>	
+								#if($errors.containsKey("dinerPostcode"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.postcode")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								#if($errors.containsKey("dinerPostcodeInvalid"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.postcode.invalid")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end	        					
+								<label for="fm_pp_element7">Postcode</label>					
+								<div class="element">		
+									<input id="fm_pp_element7" value="$input.dinerPostcode" name="dinerPostcode" class="text" type="text" />
+								</div>
+							</div>
+							
+							<hr />
+							
+							<div class="single-checkbox">
+								#if($errors.containsKey("disclaimed"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.disclaimer")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<span><input id="fm_pp_element10" value="true" name="disclaimed" type="checkbox"#if($input.disclaimed == "true") checked="true"#end /></span>
+								<label for="fm_pp_element10">I confirm that I have no connection with the management or proprietors of the above restaurant and I have not been asked by them to submit this review. I accept that I may be contacted by a Which? researcher to verify my feedback.</label>
+							</div>
+	
+							<div class="single-checkbox">
+								<input id="fm_pp_element12" value="true" name="feedback" type="checkbox"#if($input.feedback == "true") checked="true"#end />
+								<label for="fm_pp_element12">We'd like to put your review on <a href="http://www.which-local.co.uk">www.which-local.co.uk</a> - a site which enables Which? members to find and recommend reliable traders in their local area. We will not publish your personal information. Please tick the box if you are happy with this</label>
+							</div>
+	
+							<div class="single-checkbox">
+								<input id="fm_pp_element11" value="true" name="optIn" type="checkbox"#if($input.optIn == "true") checked="true"#end />
+								<label for="fm_pp_element11">To make sure you keep up to date with the latest news, offers and information from The Good Food Guide, please tick this box.</label>
+							</div>
+	
+	
+							<ol class="steps">
+								<li>Step 1</li>
+								<li>Step 2</li>
+								<li class="on"><strong>Step 3</strong></li>
+								<li>Complete!</li>
+							</ol>
+							
+							<ul id="form-buttons" class="not-bordered">
+								<li><input src="$imageUrl/assets/images/buttons/btn-back-step-2.png" title="Back to step 2" alt="Back to step 2" class="button left cancel" name="cmd.back" type="image"></li>						
+								<li><input src="$imageUrl/assets/images/buttons/btn-submit.png" title="Submit" alt="Submit" class="button right" name="cmd.next" type="image"></li>
+							</ul>
+	
+						</fieldset>
+	
+					</div>
+	
+				</form>
+			</div>

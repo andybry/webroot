@@ -1,0 +1,38 @@
+.hero {
+  width: column(12);
+  margin: auto;
+
+  .full-overlay .bottom {
+    bottom: -110px;
+    left: -20px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9975640502598243, M12=0.06975647374412515, M21=-0.06975647374412515, M22=0.9975640502598243, SizingMethod='auto expand')";
+  }
+
+  .full-overlay .bottom.alt {
+    bottom: -210px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9975640502598243, M12=-0.06975647374412476, M21=0.06975647374412476, M22=0.9975640502598243, SizingMethod='auto expand')";
+  }
+
+  .fb-b {
+    left: 70px;
+  }
+
+  .fb-c {
+    right: 70px;
+  }
+
+  .fb-a,
+  .fb-b,
+  .fb-c,
+  .fb-d {
+    background: #FFF;
+  }
+
+  .fb-d {
+    left: 70px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}

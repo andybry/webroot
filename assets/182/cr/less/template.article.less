@@ -1,0 +1,192 @@
+#letter {
+	padding:@gutter-width * 1px;
+	background:#fff;
+	border-left:4px solid @cr-action;
+	box-shadow:0 0 2px rgba(0,0,0,0.5);
+}
+
+.tpl_article {
+	.btn-group {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	aside {
+		.thProblem:before,
+		.thRegulation:before,
+		.thAction:before {
+			content: '';
+			position: absolute;
+			left:0; top:0px; bottom:0px;
+			width:6px;
+			z-index: 1;
+		}
+
+		.actions {padding:@baseFontSize/2 0 0  @baseFontSize;}
+		#anchorLinks h3.on:before, 
+		#anchorLinks li.on:before {
+			content:'';
+			position: absolute;
+			right:-31px; top:50%; margin-top:-15px;
+			width:0;
+			background: transparent;
+			border:15px solid transparent;
+			border-left-color:#ccc;
+		}
+	}
+
+	article {
+		color:@cr-grey-light;
+
+		.lead .divide {
+			border-bottom:1px dashed @cr-grey-light;
+			margin-bottom:@baseFontSize*1;
+
+			i {font-size:40px; float:left; margin-top:16px;}
+		}
+
+		.call-to-action {
+			background:#fff;
+			padding:@baseFontSize;
+			box-shadow:1px 1px 3px #333;
+			span {
+				float:right; line-height: 30px;
+				font-family: @serifFontFamily; 
+				font-size:21px; 
+				a {color:@cr-action;}
+				i {margin-right:@baseFontSize/2;}
+			}
+		}
+
+		h2 {
+			font-size:17px;
+			strong {
+				border-radius:50%;
+				width:21px; 
+				height:21px; 
+				line-height:21px;
+				border:3px solid;
+				text-align:center;
+				display:inline-block;
+				margin-right:7px;
+				font-weight:normal;
+				font-size:14px;
+			}
+		}
+
+		table {
+			width:auto !important;
+			border-collapse: collapse;
+			margin:@baseFontSize 0 @baseFontSize*2 0;
+
+			thead {
+				background:#ccc;
+				th.hdr {
+					background:#777;
+					color:#fff;
+					border:1px solid #777; 	
+					border-bottom:0px;			
+				}
+			}
+			thead th,
+			tbody td {border:1px solid #aaa; padding:4px 7px;}
+		}
+
+		.articleBody,
+		.callout,
+		#letter {
+			ul {padding:0 0 7px 14px}
+			li {
+				display:list-style;
+				list-style:	disc;
+				padding-bottom:7px;
+			}
+		}
+
+		// Default callout styling is generic in template
+		.callout, .callout2, .callout3 {
+			&:before {
+				position:absolute; top:20px; right:15px;
+				font-size:30px
+			}
+
+			h3 {
+				display:inline-block;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-o-background-size: 100% 100%;
+				-webkit-background-size: 100% 100%;			
+				padding:0 0 14px 0
+			}	
+		}
+
+		// Callout (1) is set in theme colours
+		.callout2 {
+			background-image: url('@{assetsUrl}svg/cr-article-large-blue.svg');
+			padding:0 28px 50px 28px;
+			&:before {right:20px}
+
+			h3 {
+				padding:35px 28px;
+				margin:-0px 0 0 -35px;
+				background-image: url('@{assetsUrl}svg/cr-article-blue-small.svg');
+				width:60%;
+			}
+		}
+		.callout3 {
+			background-image: url('@{assetsUrl}svg/cr-article-red-orange.svg');
+			padding:60px 85px 35px 14px;
+			&:before {right:10px; top:55px}
+			h3 {padding:0 0 14px 0}
+		}
+
+		.BrightcoveExperience {
+			box-shadow:0 0 4px #777;
+		}
+
+	}
+}
+
+// Article Template
+.relBlock {
+	position:relative;
+	background:#fff;
+	margin:0 0 @baseFontSize*1.5;
+	padding: 0 @baseFontSize*2 @baseFontSize*2;
+	border-left-width: 8px;
+	border-left-style:solid;
+	box-shadow:0 0 4px -1px #999;
+	.corner();
+
+	a {color:@cr-grey}
+
+	img {float:left; margin:14px 14px 0 0;}
+
+	h2 {
+		font-size:17px;
+		text-transform: uppercase;
+		span {float:right; padding:0 5px}
+	}
+	p {padding-right:30px}
+	li {
+		clear:both;
+		border-bottom:1px dotted @cr-grey;
+		&:last-of-type {
+			border:0px;
+		}
+		h4 {
+			clear:none;
+			position: relative;
+			padding:7px 30px 7px 0;
+			font-family:@sansFontFamily;
+			a i {
+				position: absolute; right:0px; top:7px;
+			}
+			em {
+				color:#000;
+				font-style: normal;
+				border-bottom:1px dotted;
+			}
+		}
+	}
+}

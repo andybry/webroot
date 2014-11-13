@@ -1,0 +1,6 @@
+{
+  "name": "GlobalFooter",
+  "dependencies": {
+    "globalfooter":"git@github.com:whichdigital/eva-global-footer.git"
+  }
+}

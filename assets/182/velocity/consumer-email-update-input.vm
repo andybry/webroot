@@ -1,0 +1,27 @@
+#macro( dotify $field )
+#if( $field && $field.trim().length() != 0 )$!field
+#else
+...#end
+#end
+
+<div id="r22">
+    <h2>Free email updates</h2>
+    <form action="$!{contextPath}/email-update-processor" method="post">
+        <div>
+            <input type="hidden" name="datasourcecode" value="$!input.datasourcecode"/>
+            <p>Sign up for details of the latest reports, consumer campaigns, exclusive offers and competitions.</p>
+            <label for="email">Your email address:</label>
+            <input type="text" name="email" id="email" value="#dotify($!input.email)" class="text-input"/>
+            #if($errors)
+            <span class="formerrorhighcontrast">
+                Please enter a valid email address
+            </span>
+            #end
+            <input type="image" src="$!{contextPath}/static/images/button_register_now.gif" alt="Register now"/>
+
+            <div class="pin">&nbsp;</div>
+        </div>
+    </form>
+</div>
+<p>
+</p>

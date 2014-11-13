@@ -1,0 +1,23 @@
+//
+//  <div class="js-event-aggregator-sink1">
+//  </div>
+//  <div class="js-event-aggregator-sink2">
+//  </div>
+//  <button class="js-event-aggregator-demo-source">Button</Button>
+//  <script>
+//    window.onload = function() {
+//      $('.js-event-aggregator-demo-source').click(function() {
+//        WHICH.eventAggregator.trigger('event-aggregator-demo-event', 'Value to populate HTML with');
+//      });
+//      WHICH.eventAggregator.on('event-aggregator-demo-event', function(event, data) {
+//        $('.js-event-aggregator-sink1').html('Handler 1: ' + data);
+//      });
+//      WHICH.eventAggregator.on('event-aggregator-demo-event', function(event, data) {
+//        $('.js-event-aggregator-sink2').html('Handler 2: ' + data);
+//      });
+//    };
+//  </script>
+// 
+// Styleguide JavaScript - Modules - Event Aggregator
+//
+

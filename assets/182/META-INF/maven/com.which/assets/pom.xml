@@ -1,0 +1,484 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  	<modelVersion>4.0.0</modelVersion>
+
+  	<groupId>com.which</groupId>
+  	<artifactId>assets</artifactId>
+	<version>5.9.4-SNAPSHOT</version>
+  	<packaging>war</packaging>
+
+  	<name>assets</name>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>
+                http://lrsnexl1.which.co.uk/nexus/content/repositories/releases
+            </url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>
+                http://lrsnexl1.which.co.uk/nexus/content/repositories/snapshots
+            </url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <scm>
+        <url>https://github.com/whichdigital/assets</url>
+        <connection>git@github.com:whichdigital/assets.git</connection>
+        <developerConnection>scm:git:git@github.com:whichdigital/assets</developerConnection>
+	<tag>HEAD</tag>
+    </scm>
+
+
+    <properties>
+		<sonar.language>js</sonar.language>
+		<sonar.dynamicAnalysis>false</sonar.dynamicAnalysis>
+	</properties>
+
+	<build>
+		<sourceDirectory>src/main/webapp</sourceDirectory>
+		<finalName>assets</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.0.2</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>exploded</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<useCache>true</useCache>
+				</configuration>
+			</plugin>
+
+			<plugin>
+	           <groupId>com.google.code.maven-replacer-plugin</groupId>
+	           <artifactId>maven-replacer-plugin</artifactId>
+	           <version>1.3.9</version>
+	           <executions>
+	               <execution>
+	                   <phase>prepare-package</phase>
+	                   <goals>
+	                       <goal>replace</goal>
+	                   </goals>
+	               </execution>
+	           </executions>
+	           <configuration>
+					<basedir>target/assets</basedir>
+					<includes>
+						<include>**/*</include>
+					</includes>
+					<excludes>
+						<exclude>**/flash/*</exclude>
+						<exclude>**/cr/i/**/*</exclude>
+						<exclude>**/cr/svg/**/*</exclude>
+						<exclude>**/framework/**/*</exclude>
+						<exclude>**/images/**/*</exclude>
+						<exclude>**/nav/img/**/*</exclude>
+						<exclude>**/nav/components/typography/fonts/**/*</exclude>
+						<exclude>**/nav/globalnav/public/img/**/*</exclude>
+						<exclude>**/nav/globalnav/public/components/typography/fonts/**/*</exclude>
+						<exclude>**/nav/globalnav/public/components/requirejs/dist/fonts/**/*</exclude>
+						<exclude>**/footer/globalfooter/public/components/typography/fonts/**/*</exclude>
+						<exclude>**/velocity/promos/*</exclude>
+						<exclude>**/*.eot</exclude>
+						<exclude>**/*.woff</exclude>
+						<exclude>**/*.ttf</exclude>
+						<exclude>**/*.gif</exclude>
+						<exclude>**/*.jpg</exclude>
+						<exclude>**/*.png</exclude>
+						<exclude>**/*.svg</exclude>
+						<exclude>**/*.jpeg</exclude>
+						<exclude>**/*.tiff</exclude>
+						<exclude>**/*.pdf</exclude>
+						<exclude>**/*.swf</exclude>
+					</excludes>
+					<regex>false</regex>
+					<token>@@RELEASE_ASSETS@@</token>
+					<value>/${project.version}</value>
+	           </configuration>
+	       </plugin>
+
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>yuicompressor-maven-plugin</artifactId>
+				<executions>
+					<execution>
+		                <phase>compile</phase>
+						<goals>
+							<!--<goal>jslint</goal>-->
+							<goal>compress</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<failOnWarning>false</failOnWarning>
+					<nosuffix>true</nosuffix>
+					<force>false</force>
+					<gzip>false</gzip>
+					<!-- files to exclude, path relative to output's directory-->
+					<excludes>
+						<exclude>**/switch/</exclude>
+						<exclude>**/jcarousellite.js</exclude>
+						<exclude>**/*.min.js</exclude>
+						<exclude>**/*.min.css</exclude>
+						<exclude>**/omniture/omnitureSiteCatalyst.js</exclude>
+						<exclude>**/nav/globalnav/public/components/requirejs/tests/</exclude>
+						<exclude>**/tests</exclude>
+						<exclude>**/test/**</exclude>
+						<exclude>**/eva/**/*.js</exclude>
+						<exclude>**/signup-pack*/**/*.js</exclude>
+					</excludes>
+
+					<aggregations>
+						<!-- JS: JQuery package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/scripts/jquery.pack.min.js</output>
+							<includes>
+								<include>../topics/scripts/jquery-1.7.1.min.js</include>
+								<include>../topics/scripts/jquery.ui.core.js</include>
+								<include>../topics/scripts/jquery.ui.widget.js</include>
+								<include>../topics/scripts/jquery.ui.mouse.js</include>
+								<include>../topics/scripts/jquery.ui.position.js</include>
+								<include>../topics/scripts/jquery.ui.dialog.js</include>
+								<include>../topics/scripts/jquery.ui.tabs.js</include>
+								<include>../topics/scripts/jquery-hover-intent.js</include>
+								<include>../topics/scripts/jquery.cookie.js</include>
+								<include>../topics/scripts/jquery.color-RGBa-patch.js</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- JS: Common Which? package, used on most sections -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/scripts/common.pack.min.js</output>
+							<includes>
+								<include>global.js</include>
+								<include>help-bubble.js</include>
+								<include>swfobject-video.js</include>
+								<include>mvt/optimost-head.js</include>
+								<include>adtech-tax.js</include>
+								<include>deferred-scripts.js</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- JS: deferred package, used on most sections -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/scripts/deferred.pack.min.js</output>
+							<includes>
+								<include>omniture/omnitureSiteCatalyst.js</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- JS: Homepage package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/scripts/home.pack.min.js</output>
+							<includes>
+								<include>homepage.js</include><!-- This file also loads home-deferred.js -->
+								<include>info-box.js</include>
+								<include>../topics/scripts/jquery.ui.tabs.js</include>
+								<include>mvt/optimost-head.js</include>
+								<include>adtech-tax.js</include>
+								<include>adtech-placements-home.js</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- JS: Homepage deferred package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/scripts/home-deferred.pack.min.js</output>
+							<includes>
+								<include>omniture/omnitureSiteCatalyst.js</include>
+								<!--Would like to inlcude omniture/omnitureSiteCatalyst.js but it does not execute-->
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- JS: Signup package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/scripts/signup.pack.min.js</output>
+							<includes>
+								<include>bank-address-lookup.js</include>
+								<include>signup.js</include>
+								<include>../topics/scripts/jquery.ui.draggable.js</include>
+								<include>../topics/scripts/jquery.ui.resizable.js</include>
+								<include>../topics/scripts/jquery.ui.dialog.js</include>
+							    <include>../signup-pack/bower_components/html5shiv/dist/html5shiv.js</include>
+							    <include>../signup-pack/bower_components/H5F/src/H5F.js</include>
+							    <include>../signup-pack/bower_components/eva-core/dist/javascripts/cookie.js</include>
+							    <include>../signup-pack/bower_components/eva-core/dist/javascripts/viewport.js</include>
+
+							    <include>../signup-pack/bower_components/eva-core/dist/javascripts/forms/main.js</include>
+							    <include>../signup-pack/main.js</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- JS: Your Account package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/scripts/your-account.pack.min.js</output>
+							<includes>
+								<include>jquery.validate.min.js</include>
+								<include>contextual.help.js</include>
+								<include>capslock.js</include>
+								<include>login.js</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- JS: Cars package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/scripts/cars.pack.min.js</output>
+							<includes>
+								<include>../topics/scripts/jquery-1.7.1.min.js</include>
+								<include>../topics/scripts/jquery-ui-custom.js</include>
+								<include>../topics/scripts/jquery-hover-intent.js</include>
+								<include>../topics/scripts/jquery.cookie.js</include>
+								<include>../topics/scripts/cars.js</include>
+								<include>global.js</include>
+								<include>swfobject-video.js</include>
+								<include>mvt/optimost-head.js</include>
+								<include>adtech-tax.js</include>
+								<include>../topics/plug-ins/ad-gallery/jquery.ad-gallery.pack.js</include>
+								<include>thickbox.js</include>
+								<include>deferred-scripts.js</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- JS: Computing package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/scripts/computing.pack.min.js</output>
+							<includes>
+								<include>jquery.validate.min.js</include>
+								<include>global.js</include>
+								<include>help-bubble.js</include>
+								<include>mvt/optimost-head.js</include>
+								<include>deferred-scripts.js</include>
+								<include>computing-validation.js</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- CSS: Common package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/styles/common.pack.min.css</output>
+							<includes>
+								<include>../topics/styles/reset.css</include>
+								<include>../topics/styles/core-for-aggregation.css</include>
+								<include>design.css</include>
+								<include>content-for-aggregation.css</include>
+								<include>../topics/styles/section/core-vertical-for-aggregation.css</include>
+								<include>../topics/styles/section/masthead-nav.css</include>
+								<include>../topics/styles/section/adtech-creatives.css</include>
+								<include>customhtml.css</include>
+								<include>captionbox.css</include>
+								<include>jquery-ui.css</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- CSS: Homepage package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/styles/home.pack.min.css</output>
+							<includes>
+								<include>homepage.css</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- CSS: Signup package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/styles/signup.pack.min.css</output>
+							<includes>
+								<include>forms-global.css</include>
+								<include>forms-signup-for-aggregation.css</include>
+								<include>jquery-ui.css</include>
+								<include>sections/welcome.css</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- CSS: Signup responsive package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/styles/signup.responsive.pack.min.css</output>
+							<includes>
+    							<include>../signup-pack/signup-pack.css</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- CSS: Your Account package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/styles/your-account.pack.min.css</output>
+							<includes>
+								<include>forms-global.css</include>
+								<include>forms-for-aggregation.css</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- CSS: Vertical-top package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/styles/vertical-top.pack.min.css</output>
+							<includes>
+								<include>../topics/styles/reset.css</include>
+								<include>../topics/styles/core-for-aggregation.css</include>
+								<include>../topics/styles/section/core-vertical-for-aggregation.css</include>
+								<include>../topics/styles/section/vertical-top-for-aggregation.css</include>
+								<include>../topics/styles/section/masthead-nav.css</include>
+								<include>../topics/styles/section/adtech-creatives.css</include>
+								<include>captionbox.css</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- CSS: Cars package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/styles/cars.pack.min.css</output>
+							<includes>
+								<include>../topics/styles/reset.css</include>
+								<include>../topics/styles/core-for-aggregation.css</include>
+								<include>../topics/styles/section/masthead-nav.css</include>
+								<include>../topics/styles/section/cars-for-aggregation.css</include>
+								<include>customhtml.css</include>
+								<include>thickbox.css</include>
+								<include>../topics/plug-ins/panels/tangent-promos.css</include>
+								<include>../topics/plug-ins/ad-gallery/ad-gallery.css</include>
+								<include>captionbox.css</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- CSS: Computing package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/styles/computing.pack.min.css</output>
+							<includes>
+								<include>../topics/styles/core-for-aggregation.css</include>
+								<include>design.css</include>
+								<include>content-for-aggregation.css</include>
+								<include>sections/corporate.css</include>
+								<include>customhtml.css</include>
+								<include>../topics/styles/section/core-vertical-for-aggregation.css</include>
+								<include>forms-global.css</include>
+								<include>forms-interactive-tools-for-aggregation.css</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- CSS: Search results package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/styles/search.pack.min.css</output>
+							<includes>
+								<include>content-for-aggregation.css</include>
+								<include>sections/corporate.css</include>
+								<include>customhtml.css</include>
+								<include>../topics/styles/section/core-vertical-for-aggregation.css</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+
+						<!-- CSS: Switch package -->
+						<aggregation>
+							<removeIncluded>false</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<output>${project.build.directory}/${project.build.finalName}/switch/styles/switch.pack.min.css</output>
+							<includes>
+								<include>default.css</include>
+								<include>design.css</include>
+								<include>content.css</include>
+								<include>switch.css</include>
+								<include>customhtml.css</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.pack.*</exclude>
+							</excludes>
+						</aggregation>
+					</aggregations>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

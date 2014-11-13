@@ -1,0 +1,70 @@
+@totalWidth: 12;
+
+.in {.masterSize(12)}
+.out {.outer(12)}
+
+.hidden-accessible-small {position:relative; left:auto; top:auto;}
+
+#search input.ui-autocomplete-loading {background-position:710px center;}
+
+#hero hgroup { .column(@totalWidth) }
+
+#navWhichLocal h2,
+#navWhichGlobal h2 { .columnSize(@totalWidth) }
+
+#navWhichLocal section,
+#navWhichGlobal .col { .columnSize(3); }
+#navWhichLocal section:nth-child(2n+1) {clear:none}
+//#navWhichLocal section:nth-child(2n+1) {clear:left}
+
+// tpl_article
+@articleWidth: 7.5;
+@articleAsideWidth: 4;
+.tpl_article #hero hgroup { .columnSize(@articleWidth); .push( @totalWidth - @articleWidth ) }
+
+#content {
+	aside {.columnSize(@articleAsideWidth)}
+	article {.columnSize(@articleWidth) }
+}
+
+.tpl_article .callout {.push(0.5)}
+.tpl_article .BrightcoveExperience {.videoSize(@articleWidth)}
+
+// tpl_landing
+.tpl_landing #content .catBlock { .columnSize(4); margin-bottom: @baseFontSize*2; }
+
+// tpl_category
+
+.share-this .btn-group {float:right;}
+
+// Home
+.tpl_home {
+	#hero .article,
+	#hero article {
+		.rhom {
+			.columnSize(7);
+			.push(0.5);
+			padding-left:55px;
+		}
+		img {.columnSize(4.5); .push(6.5)}
+	}
+
+	#steps .article,
+	#steps article {.columnSize(4);}
+
+	#subStories article {
+		.columnSize(6);
+		ul {.row(6)}
+		li { .columnSize(5.5); .push(0.25)}
+	}
+	.tweetBlock {
+		.columnSize(4);
+		ul {.row(4)}
+		li {.columnSize(3.5); .push(0.25); min-height: 190px;}
+	}
+	.newsBlock {
+ 		.columnSize(8);
+		ul {.row(8)}
+		li {.columnSize(3.5); .push(0.25); min-height: 190px;}
+	}
+}

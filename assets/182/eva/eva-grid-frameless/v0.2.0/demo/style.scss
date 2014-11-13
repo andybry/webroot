@@ -1,0 +1,167 @@
+$breakpoints : 4, 9, 12, 18;
+
+@import '../grid';
+.container{ width: #{container(12)}\9; } // IE8 < *hack* for media queries
+
+[class^="block-"],
+[class*=" block-"] {
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.red { background-color: red; }
+.green { background-color: green; }
+.blue { background-color: blue; }
+
+// 12 columns is default
+// .container { width: container(12); }
+.container:before{ content: '12 columns' }
+
+.block-18-12-9-4 {
+  @include column(12);
+}
+
+.block-inner-9-6-5-2 {
+  @include column-alpha(6);
+  height: 80px;
+}
+
+.block-inner-9-6-4-2 {
+  @include column-omega(6);
+  height: 80px;
+}
+
+.block-12-10-8-4 {
+  @include column(10);
+}
+
+.block-6-2-1-4 {
+  @include column(2);
+}
+
+.block-8-4-3-2 {
+  @include column(4);
+}
+
+.block-5-4-3-2 {
+  @include column(4);
+}
+
+.block-5-4-3-4 {
+  @include column(4);
+}
+
+@media only screen and ( min-width: container(18) ) {
+  // 18 columns
+  .container:before{ content: '18 columns' }
+
+  .block-18-12-9-4 {
+    @include column(18);
+  }
+
+  .block-inner-9-6-5-2 {
+    @include column-alpha(9);
+  }
+
+  .block-inner-9-6-4-2 {
+    @include column-omega(9);
+  }
+
+  .block-12-10-8-4 {
+    @include column(12);
+  }
+
+  .block-6-2-1-4 {
+    @include column(6);
+  }
+
+  .block-8-4-3-2 {
+    @include column(8);
+  }
+
+  .block-5-4-3-2 {
+    @include column(5);
+  }
+
+  .block-5-4-3-4 {
+    @include column(5);
+  }
+
+}
+
+@media only screen and (min-width: container(9) ) and ( max-width: container(12) ) {
+  // 9 columns
+  .container:before{ content: '9 columns' }
+
+  .block-18-12-9-4 {
+    @include column(9);
+  }
+
+  .block-inner-9-6-5-2 {
+    @include column-alpha(5);
+  }
+
+  .block-inner-9-6-4-2 {
+    @include column-omega(4);
+  }
+
+  .block-12-10-8-4 {
+    @include column(8);
+  }
+
+  .block-6-2-1-4 {
+    @include column(1);
+  }
+
+  .block-8-4-3-2 {
+    @include column(3);
+  }
+
+  .block-5-4-3-2 {
+    @include column(3);
+  }
+
+  .block-5-4-3-4 {
+    @include column(3);
+  }
+
+}
+
+@media only screen and ( max-width: container(9) ) {
+  // 4 columns
+  .container:before{ content: '4 columns' }
+
+  .block-18-12-9-4 {
+    @include column(4);
+  }
+
+  .block-inner-9-6-5-2 {
+    @include column-alpha(2);
+  }
+
+  .block-inner-9-6-4-2 {
+    @include column-omega(2);
+  }
+
+  .block-12-10-8-4 {
+    @include column(4);
+  }
+
+  .block-6-2-1-4 {
+    @include column(4);
+  }
+
+  .block-8-4-3-2 {
+    @include column(2);
+  }
+
+  .block-5-4-3-2 {
+    @include column(2);
+  }
+
+  .block-5-4-3-4 {
+    @include column(4);
+  }
+
+}

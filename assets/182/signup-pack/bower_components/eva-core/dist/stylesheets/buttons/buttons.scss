@@ -1,0 +1,463 @@
+// REFERENCE FOR BUTTON STYLES:
+// /Google Drive/Sashimi/UX:DESIGN Folder/0 button styles/UI_buttons_Sashimi.psd
+
+
+$btn-font-size: 13px !default;
+$btn-padding-top-bot: 10px !default;
+$border-radius: 2px !default;
+
+
+%button-reset {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 0 none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  @include font-stack-book;
+  @extend %button-reset;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  border-radius: $border-radius;
+  font-size: $btn-font-size;
+  word-spacing: 0.2em;
+  text-decoration: none;
+  line-height: 14px;
+  &:hover {
+    text-decoration: none;
+  }
+
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  padding: $btn-padding-top-bot 14px;
+  text-align: center;
+}
+
+.button-group {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+.button-group + .button-group {
+  margin-left: 5px;
+}
+
+.button-group > .button {
+  position: relative;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.button-group > .button + .button {
+  margin-left: -1px;
+}
+
+.button-group > .button:first-child {
+  margin-left: 0;
+  -webkit-border-top-left-radius: $border-radius;
+  -moz-border-radius-topleft: $border-radius;
+  border-top-left-radius: $border-radius;
+  -webkit-border-bottom-left-radius: $border-radius;
+  -moz-border-radius-bottomleft: $border-radius;
+  border-bottom-left-radius: $border-radius;
+}
+
+.button-group > .button:last-child {
+  -webkit-border-top-right-radius: $border-radius;
+  -moz-border-radius-topright: $border-radius;
+  border-top-right-radius: $border-radius;
+  -webkit-border-bottom-right-radius: $border-radius;
+  -moz-border-radius-bottomright: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+@mixin button-colours-common($colour, $lightenPerc:10%){
+  -webkit-box-shadow: 0px 2px darken( $colour, 20% );
+  box-shadow: 0px 2px darken( $colour, 20% );
+  background-color: $colour;
+  border-right-color: darken( $colour, 15% );
+  &:hover {
+    background: lighten($colour, $lightenPerc);
+    -webkit-box-shadow: 0px 2px darken( $colour, 10% );
+    box-shadow: 0px 2px darken( $colour, 10% );
+  }
+}
+
+@mixin button-colours_right-slant($colour, $lightenPerc:10%) {
+  @include button-colours-common($colour, $lightenPerc);
+  &:after {
+    border-bottom-color: darken( $colour, 15% );
+  }
+  &:hover:after {
+    border-bottom-color: lighten(darken( $colour, 15% ), $lightenPerc);
+  }
+}
+
+@mixin button-colours_left-slant($colour, $lightenPerc:10%) {
+  @include button-colours-common($colour, $lightenPerc);
+  &:before {
+    border-top-color: darken( $colour, 15% );
+  }
+  &:hover:before {
+    border-top-color: lighten(darken( $colour, 15% ), $lightenPerc);
+  }
+}
+
+@mixin button-common {
+  position: relative;
+  font-size: 14px;
+  border-right: 1px solid;
+  > span {
+    display: block;
+  }
+  @media (max-width: container(9)) {
+    &:before,
+    &:after {
+      display: none !important; // yuk. Seems necessary as an icon-* class may come after this in the markup
+    }
+    padding: 6px 25px;
+  }
+}
+
+@mixin button-slant-common {
+  content: "";
+  display: block;
+  position: absolute;
+  top:0;
+  height: 0;
+  width:39px;
+}
+
+@mixin button-slant-right {
+  @include button-common;
+  padding: 12px 60px 12px 25px;
+  &:after { // adds slant
+    @include button-slant-common;
+    right:0;
+    border-left: 9px solid transparent;
+    border-bottom: 39px solid;
+    border-bottom: 38px solid\0;
+  }
+// styling for any icon that is added using an eva-typography icon-* class
+  &:before{
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    right:0;
+    top:50%;
+    margin-top: -20px;
+    width:40px;
+    height: 40px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    font-size: 200%;
+    line-height: 40px;
+    z-index: 1;
+    text-align: center;
+  }
+}
+
+@mixin button-slant-left {
+  @include button-common;
+  padding: 12px 25px 12px 50px;
+  &:before { // adds slant
+    @include button-slant-common;
+    left:0;
+    border-right: 9px solid transparent;
+    border-top: 39px solid;
+  }
+// styling for any icon that is added using an eva-typography icon-* class
+  &:after {
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    right:0;
+    width:40px;
+    height: 40px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    font-size: 200%;
+    line-height: 40px;
+    z-index: 1;
+    text-align: center;
+  }
+  @media (max-width: container(9)) {
+    padding-left: 10px;
+    padding-right: 55px;
+  }
+}
+
+/*
+Primary button
+
+Styleguide 1.1
+*/
+.button-primary {
+  @include button-slant-right;
+  color: #ffffff;
+  @include button-colours_right-slant($pink);
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.button-back {
+  @include button-slant-left;
+  color: #666666;
+  @include button-colours_left-slant($cool-grey1, 5%);
+  &:hover {
+    color: #666;
+  }
+  &:after {
+    color: white;
+  }
+}
+
+/*
+Secondary button
+
+Styleguide 1.2
+*/
+.button-secondary {
+  @include button-slant-right;
+  color: #ffffff;
+  @include button-colours_right-slant($cyan);
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+/*
+Tertiary button
+
+Styleguide 1.3
+*/
+.button-tertiary {
+  @include button-slant-right;
+  color: #666666;
+  @include button-colours_right-slant($cool-grey1, 5%);
+  &:before {
+    color: white;
+  }
+}
+
+/*
+Tool button
+
+Styleguide 1.4
+*/
+.button-tool {
+  @include button-slant-right;
+  background-color: white;
+  color: $cool-grey4;
+  border: 1px solid $cool-grey1;
+  &:after {
+    border-bottom-color: $cool-grey1;
+  }
+  &:hover:after {
+    border-bottom-color: $cool-grey2;
+  }
+  &:hover:before {
+    color: white;
+  }
+  &:disabled {
+    color: $cool-grey2;
+  }
+}
+/*
+Primary button (small)
+
+Styleguide 1.7
+*/
+.button-primary-small {
+  color: #ffffff;
+  @include button-colours_right-slant($pink);
+  &:hover {
+    color: #ffffff;
+  }
+  padding: 6px 25px;
+}
+
+/*
+Secondary button (small)
+
+Styleguide 1.8
+*/
+.button-secondary-small {
+  color: #ffffff;
+  @include button-colours_right-slant($cyan);
+  &:hover {
+    color: #ffffff;
+  }
+  padding: 6px 25px;
+}
+
+/*
+Tertiary button (small)
+
+Styleguide 1.9
+*/
+.button-tertiary-small {
+  color: #666666;
+  @include button-colours_right-slant($cool-grey1, 5%);
+  padding: 6px 25px;
+}
+
+.button-simple {
+
+  font-size: 14px;
+
+  &.primary {
+    background-color: $cyan;
+    color: #FFF;
+  }
+
+  &.secondary {
+    background-color: $light-green;
+    color: $black;
+  }
+
+  &.tertiary {
+    background-color: $cool-grey1;
+    color: $cool-grey4;
+  }
+}
+
+%link {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 0 none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  color: $cyan;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  line-height: 1.2em;
+  text-align: left;
+  white-space: nowrap;
+  .link-txt {
+    vertical-align: middle;
+  }
+  &:hover {
+    text-decoration: underline;
+    &:before,
+    &:after {
+      text-decoration: none;
+    }
+  }
+  &:before,
+  &:after {
+    @extend %icon;
+    font-size: 1.6em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+/*
+
+Link
+
+Styleguide 2.1
+
+*/
+.link {
+  @extend %link;
+}
+
+/*
+
+Link (left)
+
+Styleguide 2.2
+
+*/
+.link-left {
+  @extend %link;
+  &:before {
+    @extend %icon-left;
+    margin-right: 5px;
+  }
+}
+
+.icon-back {
+  &:after {
+    @extend %icon-left;
+    font-family: 'Which-Icons';
+    left: 0;
+    top: 0;
+  }
+}
+
+/*
+
+Link (right)
+
+Styleguide 2.3
+
+*/
+.link-right {
+  @extend %link;
+  &:after {
+    @extend %icon-right;
+    margin-left: 5px;
+  }
+}
+
+%toggle {
+  @extend %button-reset;
+  @extend %link;
+  &:after {
+    font-size: 1.4em;
+    margin-left: 5px;
+    vertical-align: baseline;
+  }
+}
+
+/*
+Toggle up      (Can be used with the collapsible panel plugin)
+
+Styleguide 1.5
+*/
+.toggle-up {
+  @extend %toggle;
+  &:after {
+    @extend %icon-less;
+  }
+}
+
+/*
+Toggle down
+
+Styleguide 1.6
+*/
+.toggle-down {
+  @extend %toggle;
+  &:after {
+    @extend %icon-more;
+  }
+}

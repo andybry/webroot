@@ -1,0 +1,1 @@
+requirejs.config({urlArgs:"bust="+(new Date()).getTime(),paths:{jquery:"../components/jquery/jquery",nav:"../js/nav"}});requirejs(["jquery","nav"],function(a,b){a(function(){b.init({logo:true,search_open:true,search:true,signin:true})})});

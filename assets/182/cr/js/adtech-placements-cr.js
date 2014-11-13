@@ -1,0 +1,1 @@
+var adtechPlacements=[{name:"adtech-cr-home",id:"4245640|0|0"},{name:"adtech-article-problem",id:"4245644|0|0"},{name:"adtech-article-regulation",id:"4245649|0|0"},{name:"adtech-article-action",id:"4245650|0|0"}];

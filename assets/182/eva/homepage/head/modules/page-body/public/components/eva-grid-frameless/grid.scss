@@ -1,0 +1,87 @@
+$breakpoints : 4, 6, 9, 12 !default;
+$column: 55px !default;
+$gutter: 15px !default;
+
+.container {
+  margin: 0 auto;
+  @extend .group;
+}
+
+@mixin column( $cols ) {
+  margin-left: ceil($gutter / 2);
+  margin-right: floor($gutter / 2);
+  @include _column( $cols );
+}
+
+@mixin column-alpha( $cols ) {
+  margin-left: 0;
+  margin-right: floor($gutter / 2);
+  @include _column( $cols );
+}
+
+@mixin column-omega( $cols ) {
+  margin-left: ceil($gutter / 2);
+  margin-right: 0;
+  @include _column( $cols );
+}
+
+@mixin column-alpha-omega( $cols ) {
+  margin-left: 0;
+  margin-right: 0;
+  @include _column( $cols );
+}
+
+@mixin _column( $cols ) {
+  float: left;
+  display: inline;
+  width: column( $cols );
+}
+
+@mixin offset-by( $cols ) {
+  padding-left: $cols * $column;
+}
+
+@function container( $n ){
+  @return $n * ($column + $gutter);
+}
+
+@function column( $n ){
+  @return $n * ($column + $gutter) - $gutter;
+}
+
+@for $i from 1 through length($breakpoints ) {
+  @if ( $i == 1 ){
+    @media only screen and ( max-width: container(nth($breakpoints, $i + 1)) - 1) {
+      .container { width: container( nth($breakpoints, $i ) ); }
+    }
+  }
+  @else if ( $i == length($breakpoints) ){
+    @media only screen and ( min-width: container(nth($breakpoints, $i)) ) {
+      .container { width: container( nth($breakpoints, $i ) ); }
+    }
+  }
+  @else{
+    @media only screen and ( min-width: container(nth($breakpoints, $i)) ) and ( max-width: container(nth($breakpoints, $i + 1)) - 1) {
+      .container { width: container( nth($breakpoints, $i ) ); }
+    }
+  }
+}
+
+@mixin group {
+  zoom:1;
+  &:before, &:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+.group {
+  @include group;
+}
+
+.clear { clear: both; display: block; overflow: hidden; visibility: hidden; height: 0; }

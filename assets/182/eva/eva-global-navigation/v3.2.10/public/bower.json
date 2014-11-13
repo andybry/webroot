@@ -1,0 +1,11 @@
+{
+  "name": "GlobalNav",
+  "version": "3.2.9",
+  "dependencies": {
+    "typography":"git@github.com:whichdigital/eva-typography.git",
+    "eva-typography":"git@github.com:whichdigital/eva-typography.git",
+    "jquery": "1.7.1",
+    "requirejs": "2.1.6",
+    "jasmine":"1.3.1"
+  }
+}

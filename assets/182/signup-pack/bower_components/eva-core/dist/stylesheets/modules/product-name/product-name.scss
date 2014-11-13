@@ -1,0 +1,17 @@
+//<div class="m-product-name">
+//  <a href="/product/Samsung_UE55F8000"><span class="m-product-name-manufacturer">Samsung</span><span class="m-product-name-model">UE55F8000STXXU</span></a>
+//</div>
+//
+// Styleguide product-name
+//
+
+//structure
+.m-product-name-manufacturer {
+  display: block;
+}
+.m-product-name-model {
+  @include font-stack-bold;
+  display: block;
+  margin-top: 0.2em;
+}
+

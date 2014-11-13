@@ -1,0 +1,125 @@
+// <div class="which-badge--best-buy--small"><span class="which-badge__label--best-buy--small">Best Buy</span></div>
+//
+//  Styleguide Modules - Which Badges - Best Buy - Small
+.which-badge--best-buy--small {
+  @extend %st-which-badge--best-buy--small;
+  @extend %sk-which-badge--best-buy;
+  .ie8 & {
+    background-image: asset-data-url('which_badges/best-buy-bg--small.png');
+  }
+}
+.which-badge__label--best-buy--small {
+  @extend %st-which-badge__label;
+  font-size: 12px;
+  line-height: 0.95;
+  .ie8 & {
+    font-size: 10px;
+  }
+}
+
+// <div class="which-badge-with-count"><div class="which-badge--best-buy--small"><span class="which-badge__label--best-buy--small">Best Buy</span></div><div class="paywall-banner__badge__count">8</div></div>
+//
+//  Styleguide Modules - Which Badges - Best Buy - Small with count
+.paywall-banner__badge__count {
+  @extend %font-stack-bold;
+  @include font-size($font-size-ratio-14to22);
+  display: inline-block;
+  line-height: 0.9;
+  margin-left: 0.1em;
+  vertical-align: top;
+}
+
+// <div class="which-badge--energy-saver--small"><span class="which-badge__label--energy-saver--small">Energy Saver</span></div>
+//
+//  Styleguide Modules - Which Badges - Energy Saver - Small
+.which-badge--energy-saver--small {
+  @extend %st-which-badge--energy-saver--small;
+  @extend %sk-which-badge--energy-saver;
+  .ie8 & {
+    background-image: asset-data-url('which_badges/energy-saver-bg--small.png');
+  }
+}
+.which-badge__label--energy-saver--small {
+  @extend %st-which-badge__label;
+  font-size: 9px;
+  line-height: 1.1em;
+  .ie8 & {
+    font-size: 7px;
+  }
+}
+
+// <div class="which-badge--dont-buy--small"><span class="which-badge__label--dont-buy--small">Don't Buy</span></div>
+//
+//  Styleguide Modules - Which Badges - Dont Buy - Small
+.which-badge--dont-buy--small {
+  @extend %st-which-badge--dont-buy--small;
+  @extend %sk-which-badge--dont-buy;
+  .ie8 & {
+    background-image: asset-data-url('which_badges/dont-buy-bg--small.png');
+  }
+}
+.which-badge__label--dont-buy--small {
+  @extend %st-which-badge__label;
+  font-size: 11px;
+  line-height: 1em;
+  .ie8 & {
+    font-size: 8px;
+  }
+}
+
+// <div class="which-badge--best-buy--large"><span class="which-badge__label--best-buy--large">Best Buy</span></div>
+//
+//  Styleguide Modules - Which Badges - Best Buy - Large
+.which-badge--best-buy--large {
+  @extend %st-which-badge--best-buy--large;
+  @extend %sk-which-badge--best-buy;
+  .ie8 & {
+    background-image: asset-data-url('which_badges/best-buy-bg--large.png');
+  }
+}
+.which-badge__label--best-buy--large {
+  @extend %st-which-badge__label;
+  font-size: 12px;
+  line-height: 0.95;
+  .ie8 & {
+    font-size: 10px;
+  }
+}
+
+// <div class="which-badge--energy-saver--large"><span class="which-badge__label--energy-saver--large">Energy Saver</span></div>
+//
+//  Styleguide Modules - Which Badges - Energy Saver - Large
+.which-badge--energy-saver--large {
+  @extend %st-which-badge--energy-saver--large;
+  @extend %sk-which-badge--energy-saver;
+  .ie8 & {
+    background-image: asset-data-url('which_badges/energy-saver-bg--large.png');
+  }
+}
+.which-badge__label--energy-saver--large {
+  @extend %st-which-badge__label;
+  font-size: 9px;
+  line-height: 1.1em;
+  .ie8 & {
+    font-size: 7px;
+  }
+}
+
+// <div class="which-badge--dont-buy--large"><span class="which-badge__label--dont-buy--large">Don't Buy</span></div>
+//
+//  Styleguide Modules - Which Badges - Dont Buy - Large
+.which-badge--dont-buy--large {
+  @extend %st-which-badge--dont-buy--large;
+  @extend %sk-which-badge--dont-buy;
+  .ie8 & {
+    background-image: asset-data-url('which_badges/dont-buy-bg--large.png');
+  }
+}
+.which-badge__label--dont-buy--large {
+  @extend %st-which-badge__label;
+  font-size: 11px;
+  line-height: 1em;
+  .ie8 & {
+    font-size: 8px;
+  }
+}

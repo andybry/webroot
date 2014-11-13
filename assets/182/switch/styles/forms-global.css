@@ -1,0 +1,214 @@
+/* Basic Rules */
+input {padding:2px;}
+option {padding:0 2px;}
+textarea {
+	width:300px; /* generic size as requested by Which,SR-199 - may be amended */
+	height:125px; /* generic size as requested by Which,SR-199 - may be amended */
+	padding:2px;
+}
+.button {
+	border:none;
+	padding:0;
+	vertical-align:middle;
+}
+input.reset {
+	background:url(/assets/images/buttons/btn-reset.png) top left no-repeat;
+	border:none;
+	cursor:pointer;
+	height:25px;
+	margin:0;
+	padding:0;
+	text-indent:-1000em;
+	width:75px;
+}
+span.mandatory {color:#C00;}
+#content form .no-label {
+	clear:both;
+	margin-left:220px;
+	margin-bottom:0;
+}
+
+/* Form element container and label */
+#content form.plain div,
+#content form.standard div {
+	clear:both;
+	margin-bottom:5px;
+	padding-bottom:2px; /* Helping Camino with room to render SELECTS right */
+	overflow:hidden;
+}
+#content form.plain div label,
+#content form.standard div label {
+	color:#333;
+	display:block;
+	float:left;
+	margin-right:20px;
+	padding-left:10px;
+	padding-top:4px;
+	position:relative;
+	text-align:right;
+	width:230px;
+}
+
+#content form.standard div p.error {
+	color:#C00;
+	padding-bottom:2px;
+	width:415px;
+}
+/* Form progress buttons */
+ul#form-buttons,
+ul#form-buttons-upper {
+	margin-bottom:10px;
+	overflow:hidden;
+}
+ul#form-buttons li {background:none;}
+ul#form-buttons li a:hover,
+ul#form-buttons-upper li a:hover {
+background:transparent;
+}
+ul#form-buttons li.right,
+ul#form-buttons-upper li.right {margin-left:5px;}
+
+/* Credit card icons conainer utilised in sign-up and Shopping Basket forms */
+#content form.sign-up #card-note,
+#content form.standard #card-note {
+	bottom:8px;
+	clear:both;
+	position:absolute;
+	right:8px;
+	text-align:right;
+	width:240px;
+}
+#content form.sign-up #card-note,
+#content form.standard #card-note p {margin-bottom:5px;}
+
+/* Print */
+#content form.sign-up a.print,
+#content form.standard a.print {
+	padding:2px 10px 2px 20px;
+	background:url(/assets/images/bullets/blt-print.png) center left no-repeat;
+}
+#content form.sign-up .login .print-area,
+#content form.standard .print-area {
+	position:absolute;
+	right:15px;
+	bottom:10px;
+	width:auto;
+}
+
+/* Shared interactive tool rules */
+#content #interactive-tool form div.confirmation li,
+#content ul.bullet-link li {
+	background:url(/assets/images/bullets/blt-blue-circle.png) no-repeat 0 2px;
+	color:#333;
+	padding-bottom:2px;
+	padding-left:23px;
+}
+#content #interactive-tool form.plain {
+	background:none;
+	margin:0;
+	width:auto;
+}
+#content #interactive-tool form.plain div {
+	padding:0;
+}
+
+
+/* Shopping Basket progress list */
+/* Moved from content.css - needs testing */
+ol#steps {
+	clear:both;
+	margin:-15px 0 30px;
+	overflow:hidden;
+	width:100%;
+}
+ol#steps li {
+	background:url(/assets/images/bullets/blt-shoppingsteps.gif) no-repeat center right;
+	color:#455866;
+	float:left;
+	font-weight:normal; 
+	font-size:1.375em; 
+	font-family:"Trebuchet MS",Arial,sans-serif;
+	margin-right:8px;
+	padding-right:18px;
+}
+ol#steps li.on {
+	background:url(/assets/images/bullets/blt-shoppingsteps-on.png) no-repeat center right;
+	color:#00555D;
+	font-weight:bold;
+}
+ol#steps li.last {
+	background:none;
+}
+/* Contextual Help code */
+#content #contextualHelp {
+	background:url(/assets/images/design/bg-contextual-help-top.png) top left no-repeat;
+	left:524px;
+	margin-bottom:0;
+	overflow:hidden;
+	padding:7px 0 0 0;
+	position:absolute;
+	width:291px;
+}
+#content #contextualHelp div {
+	background:url(/assets/images/design/bg-contextual-help-bot.png) bottom left no-repeat;
+	margin-bottom:0;
+	padding:0 7px 7px 7px;
+}
+#content #contextualHelp p {
+	background:#D0E9F6;
+	color:#000;
+	margin:0;
+	padding:6px;
+}
+#content div#contextualHelp.error p {
+	background:#FFFAC2;
+	color:#000;
+	margin:0;
+	padding:6px;
+}
+#content div#contextualHelp.error p.errorTitle {
+	background:#FFFAC2;
+	color:#C00;
+	font-weight:bold;
+	margin:0;
+	padding:6px 6px 0 6px;
+}
+#supportingInformation {
+	clear:both;
+}
+/* Component XXXXXXXX:Error Box */
+#content .error-box {
+	background:url(/assets/images/design/bg-error-standard-end.png) bottom left no-repeat;
+	margin-bottom:10px;
+	padding-bottom:15px;
+	height:1%;
+}
+#content .error-box div {
+	background:url(/assets/images/design/bg-error-standard.png) top left no-repeat;
+}
+#content .error-box p {
+	color:#C00;
+	font-weight:bold;
+	margin:0;
+	padding:8px 4px 5px 12px;
+}
+#content .error-box ul.standard {
+	margin:0;
+	padding:0 12px;
+}
+#content .error-box ul.standard li {
+	background:url(/assets/images/bullets/blt-yellow-bg.png) no-repeat top left;
+}
+
+/* One-column page variant */
+.one-column #content .error-box {
+	background:url(/assets/images/design/bg-error.png) bottom left no-repeat;
+	float:left;
+	clear:both;
+	width:100%;
+	margin-bottom:10px;
+	padding-bottom:10px;
+}
+.one-column #content .error-box div {
+	background:url(/assets/images/design/bg-error-top.png) top left no-repeat;
+}

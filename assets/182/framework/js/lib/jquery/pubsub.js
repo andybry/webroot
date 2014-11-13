@@ -1,0 +1,1 @@
+(function(d){var c=d({});d.subscribe=function(){c.on.apply(c,arguments)},d.unsubscribe=function(){c.off.apply(c,arguments)},d.publish=function(){c.trigger.apply(c,arguments)}})(jQuery);

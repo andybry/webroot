@@ -1,0 +1,19 @@
+// Implementation example
+
+// Paths for images that override defaults set in global-navigation.scss
+$logo-main-path: '../img/logo.gif';
+$logo-dark-path: '../img/logo-dark.gif';
+
+// Path to fonts folder overriding defaults set in eva-typography
+$fonts_folder: '../components/eva-typography/';
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+// Imports
+@import '../components/eva-typography/font-face.scss';
+@import '../components/eva-typography/icons.css';
+@import 'global-navigation';
+@import 'masthead';

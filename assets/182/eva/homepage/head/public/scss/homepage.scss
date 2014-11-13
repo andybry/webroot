@@ -1,0 +1,29 @@
+$breakpoints : 4, 6, 9, 12, 18, 24;
+$fonts_folder: '../';
+$logo-main-path: '../img/logo.gif';
+$logo-dark-path: '../img/logo-dark.gif';
+
+$logo-red: #dc1315;
+//
+@import 'reset.scss';
+
+// Components
+@import '../components/eva-grid-frameless/grid.scss';
+@import '../components/eva-typography/font-face.scss';
+@import '../components/eva-global-navigation/public/scss/global-navigation.scss';
+@import '../components/eva-global-footer/public/scss/global-footer.scss';
+@import '../components/eva-eprivacy/style.scss';
+@import '../components/eva-buttons/button.scss';
+
+.global-nav .button {
+  border-radius: 0;
+}
+
+.eprivacy .container {
+  padding: 30px 0px;
+}
+
+// Modules
+@import '../modules/hero/public/scss/hero.scss';
+@import '../modules/page-body/public/scss/page-body.scss';
+@import '../modules/old-new/oldnew.scss';

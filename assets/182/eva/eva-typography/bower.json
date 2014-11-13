@@ -1,0 +1,9 @@
+{
+  "name": "eva-typography",
+  "dependencies": {
+    "v1.0.0":"git@github.com:whichdigital/eva-typography.git#v1.0.0",
+    "v0.9.0":"git@github.com:whichdigital/eva-typography.git#v0.9.0",
+    "v0.8.0":"git@github.com:whichdigital/eva-typography.git#v0.8.0",
+    "v0.7.0":"git@github.com:whichdigital/eva-typography.git#v0.7.0"
+  } 
+}

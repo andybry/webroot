@@ -1,0 +1,105 @@
+// Colours
+
+$dark-grey: #2f2f2f;
+$stone-grey4: #6e6664;
+$consumer-grey: #cac5c5;
+$red: #ed1c24;
+
+// CSS
+
+$footer-height: 32px;
+
+.global-footer {
+  border-top: 3px solid $red;
+  width: 100%;
+  background: $dark-grey;
+  color: $consumer-grey;
+  text-rendering: optimizeLegibility;
+  font-family: 'StagSansWeb-Book';
+  padding: 10px 0px 10px 0px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.global-footer {
+
+  .group:before,
+  .group:after {
+    content: "";
+    display: table;
+  } 
+  .group:after {
+    clear: both;
+  }
+  .group {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+  }
+  
+  a {
+    color: $consumer-grey;
+    text-decoration: none;
+    font-weight: normal;
+    padding: 0px 12px;
+    border-right: 1px solid $stone-grey4;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    float: left;
+    list-style: none;
+    
+  }
+
+  li.last {
+    border: none; 
+  }
+
+  .strapline {
+    font-family: 'stsemiboldRegular';
+    margin-right: 10px;
+  }
+
+  .footer-left {
+    float: left;
+  }
+
+  .footer-right {
+    float: right;
+    padding: 0px 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .global-footer {
+    .footer-left,
+    .footer-right {
+      float: none;
+      display: block;
+      width: 100%;
+    }
+
+    .footer-right {
+      padding: 20px 0px 0px 10px;
+    }
+
+    a {
+      padding: 0px 10px 0px 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .global-footer {
+    li {
+      float: none;
+      border:none;
+      line-height: 1.6;
+    }
+
+    a {
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,237 @@
+/*
+#hd ul, #hd li, #nav-global ul, #nav-global li {.unstyled}
+#hd a, #nav-global a {text-decoration:none; color:#fff}
+*/
+
+// keeps spacing for fixed position nav
+#hd:before {content:''; position:relative; display: block; height:80px}
+
+/* Shared styling */
+#nav-auth, #nav-content, #cookie, #search {position:fixed; display: block; top:0; left:0; right:0; z-index:1}
+
+.button, #search button {display:inline-block; padding: 4px 10px; border-radius: 3px; color:#fff; margin:15px 20px 0; font-weight: bold; background: #2E9DC5; border:1px solid #2E9DC5; box-shadow:0 25px 15px -15px rgba(255,255,255,0.5) inset; }
+.button.on, #search button.on {box-shadow:0px 1px 2px -1px #000 inset}
+
+
+/* Auth black bar */
+#nav-auth {height:26px; background:#262626; z-index:22; border-top:2px solid #aa050e}
+	#nav-auth ul {float:right; margin: 0}
+	#nav-auth li {display:inline; float:left; margin:0}
+	#nav-auth a {display:block; color:#fff; padding:0 10px; font-size: 12px; line-height: 26px; height: 26px; border-left:1px solid #000}
+	#nav-auth a:hover, #nav-auth a:focus {background:#333}
+	#nav-auth #gn-tab a {background:url("@{frameworkUrl}i/bg/tab2-mini.png") top center no-repeat; width:46px; height: 26px; text-indent: -999px; overflow: hidden; border:0px none; position: relative; top:-2px; padding:0}
+
+/* cookie */
+#cookie {
+	top:-320px; height: 320px; z-index:2; color:#fff;
+	/* gradients */ background: #292929; background: -moz-linear-gradient(top,  #7a7a7a 0%, #292929 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7a7a7a), color-stop(100%,#292929)); background: -webkit-linear-gradient(top,  #7a7a7a 0%,#292929 100%); background: -o-linear-gradient(top,  #7a7a7a 0%,#292929 100%); background: -ms-linear-gradient(top,  #7a7a7a 0%,#292929 100%); background: linear-gradient(to bottom,  #7a7a7a 0%,#292929 100%);
+	}
+ 
+	#cookie .content {width:100%; margin:0px auto;}
+	#cookie h1 {font-size: 16px; padding:10px 20px 10px; line-height: 1.2em; }
+	#cookie p {font-size:12px; padding:0 20px}
+	#cookie p a {text-decoration: underline; color:#2E9DC5}
+	#cookie .clearCookie {background: #d90613; border-color:#d90613}
+	#cookie .more {}
+	#cookie footer {text-align: center;}
+
+/* Content Nav */
+#nav-content .navMin, #nav-content .navMax, #nav-global {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box}
+
+#nav-content, #nav-content .navMin {background:#f1f0f0; box-shadow:inset 0 -37px 0 0 #ebe9e9, 0 0 2px -1px rgba(0,0,0,0.5); }
+
+#nav-content {height: 74px; top:26px; z-index: 2}
+#nav-content:after {content:''; position:absolute; bottom:-20px; height:20px; left:0; right:0; background:url("@{frameworkUrl}modules/globalnav/i/shadow.png") center -3px no-repeat; z-index:3;}
+
+#nav-content h1 {position:absolute; display:block; z-index:3; top:0; left:5px; margin:12px;padding:0}
+	#nav-content h1 a {background: url("@{frameworkUrl}i/WhichLogo.png") no-repeat; background-size:100% auto; display: block; height: 48px; text-indent: -9999px; width: 76px; border-radius:3px;}
+    #nav-content h1 small {color: #000; font-size: 20px; left: 86px; position: absolute; text-indent: 0; top: 7px; font-family: Arial,sans-serif}
+
+#nav-content li a {color:#6E6664; text-align:center; display: block}
+
+/* Nav Min */
+#nav-content .navMin {position:relative; float:left; width:100%; padding:0 0 0 200px; z-index:2; height: 74px;}
+	#nav-content .navMin li {display:inline-block; vertical-align: top}
+	#nav-content .navMin li a {padding:0 15px 0 8px; font-size:14px; text-shadow:1px 1px 0 #fff; background:url("@{frameworkUrl}modules/globalnav/i/nav-divider.png") center right no-repeat; background-size: 2px 100%; height: 74px; line-height: 74px; }
+	#nav-content .navMin li.navSections a {padding-right:16px; background: url("@{frameworkUrl}i/icon/arrow-down.png") center right no-repeat}
+
+	#nav-content .navMin li a.button,
+	#search button {color:#fff; font-weight: normal; text-shadow:-1px -1px 0 #666; background:#2E9DC5; line-height:26px; height:26px; width:auto; padding:0 10px; margin:21px 0 0 8px;  }
+
+	#nav-content li.navSections a.button,
+	#nav-content li.navSearch a.button,
+	#search button {background:#958d8c url("@{frameworkUrl}modules/globalnav/i/search.png") center center no-repeat; border:1px solid #958d8c; width:28px; padding:0; text-indent:-999px; overflow: hidden; text-align: left;}
+
+	#nav-content li.navSections a.button {background-image:url("@{frameworkUrl}modules/globalnav/i/section.png"); background-position: center center;}
+
+	#nav-content .navMin li.navComp a span {display: none}
+	#nav-content .navMin li.navSearch {display:none}
+
+/* Nav Max */
+#nav-content .navMax {position:fixed; display:block; top:-100%; left:0; right:0; height:100%; background:#fff; padding:102px 0 0 0;}
+	#nav-content .navMax li {display:block; border-bottom:1px solid #ccc; vertical-align: top;}
+	#nav-content .navMax li a {text-align:left; padding: 10px 10px}
+
+	#nav-content .navMax li ul {
+		.posAbsolute(74px,auto,auto,auto);
+		z-index:10;
+		display:none; background:#fff; box-shadow:0 1px 1px #000;
+	}
+	#nav-content .navMax li ul li {line-height: 1.5em; float:none; display:block; margin:0; padding:0;}
+	#nav-content .navMax li ul li a {height: auto !important; line-height: 1.7em !important}
+
+	#nav-content .navMax li:hover ul,
+	#nav-content .navMax li ul:hover {display:block}
+
+
+/* Search Bar */
+#search {background:#f1f0f0; background:rgba(241,240,240,0.9); height: 52px; top:100px; border-bottom:1px solid #ccc; text-align: center; margin:0;}
+	#search label {display:none}
+	#search input {width:75%; margin:12px 5px 0 0}
+	#search button {margin:12px 0 0;}
+
+
+/* Nav Global */
+#nav-global {position:fixed; display: block; background:#555; left:0; right:0; height: 100%; top:-100%; padding:28px 0 74px 0; z-index: 20;}
+	
+	#nav-global h1, #nav-global h2, #nav-global li {position:relative; display: block; margin:0; padding:10px; color:#fff;}
+
+	#nav-global section {border-bottom:1px solid #ccc}
+	#nav-global h1 {font-size: 18px;}
+	#nav-global h2 {font-size:16px;}
+	#nav-global ul {display:none; clear:both}
+	#nav-global li {}
+	#nav0-global a {color:#fff; font-size:14px; padding: 0 5px 0 0;}
+	#nav-global p {color:#fff; font-size:12px; padding: 0 5px 0 0; display:none}
+
+
+
+
+
+
+
+/* Animation */
+
+/* OPEN MAIN NAV */
+.snOpen #nav-content .navMax {top:0}
+
+
+/* OPEN SEARCH */
+.searchOpen #search {margin-top:0}
+
+/* OPEN COOKIE */
+.cookieOpen #cookie {top:0; margin-top:26px}
+.cookieOpen #nav-content {margin-top:320px}
+.cookieOpen.snOpen #nav-content .navMax {top:346px; padding-top:74px}
+.cookieOpen #search {top:420px}
+
+/* OPEN ACCORDION */
+
+/* FIXED TOP */
+.fixed #advice {top:75px}
+
+.fixed #nav-auth {margin-top:-26px}
+	.fixed #nav-auth #gn-tab a {top:22px}
+
+.fixed #cookie {margin-top:2px}
+
+.fixed #nav-content, .fixed #nav-content .navMin {box-shadow:inset 0 -24px 0 0 #ebe9e9, 0 0 2px -1px rgba(0,0,0,0.5);}
+.fixed #nav-content {height: 48px; top:2px}
+	.fixed #nav-content h1 {margin:6px; left:0}
+	.fixed #nav-content h1 a {height: 36px; width: 58px; border-radius:2px;}
+	.fixed #nav-content h1 small {font-size: 12px; left:65px; top:2px;}
+
+	.fixed #nav-content .navMin {padding-left:130px; height:48px;}
+	.fixed #nav-content .navMin li a {height:48px; line-height: 50px; }
+	.fixed #nav-content .navMin li a.button {height:26px; line-height: 26px; margin-top:10px;}
+
+	.fixed #nav-content .navMax {padding-top:50px}
+	.fixed #nav-content .navMin li.navSearch {display:inline-block}
+	.fixed #nav-content .navMax li ul {top:48px}
+
+.fixed #search {top:50px; margin:-53px 0 0 0;}
+
+.fixed.cookieOpen #search {top:370px}
+.fixed.searchOpen #search {margin-top:0}
+
+/* OPEN GLOBAL NAV */
+.gnOpen #nav-content {top:100%; margin-top:-74px}
+.fixed.gnOpen #nav-content {margin-top:-50px}
+.gnOpen #nav-global {top:0}
+.gnOpen #search, .fixed.gnOpen #search {top:110%}
+
+
+/* Animation */
+#cookie, 
+#advice, 
+#gn-tab a, 
+#nav-content, 
+#nav-content .navMin,
+#nav-content .navMax,
+#nav-global,
+#nav-auth {-moz-transition: top ease-out 0.5s, margin-top ease-out 0.5s; -webkit-transition: top ease-out 0.5s, margin-top ease-out 0.5s; }
+
+#search {-moz-transition: top ease-out 0.5s, margin-top ease-out 0.2s; -webkit-transition: top ease-out 0.5s, margin-top ease-out 0.2s }
+
+
+/* // MEDIA QUERYS */
+@media only screen and (min-width: 480px) {
+	#cookie {height:220px; top:-220px}
+	.cookieOpen #nav-content {margin-top:220px}
+	.cookieOpen.snOpen #nav-content .navMax {top:246px; padding-top:74px}
+	.cookieOpen #search {top:320px}
+
+	.fixed.cookieOpen #search {top:270px}
+
+	#nav-content h1 small {display: inline}
+	#nav-content .navMin {padding-left:220px}
+	#nav-content li.navSections a.button {width:auto; padding: 0 20px 0 10px; text-align: center; text-indent: 0; background-image: url('@{frameworkUrl}/modules/globalnav/i/arrow-down.png'); background-position: right center;}
+
+	/* fixed */
+	.fixed #nav-content .navMin {padding-left:170px}
+	.fixed #nav-auth #gn-tab {display:inline}
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 768px) {
+	#nav-auth #gn-tab a {background-image:url('@{frameworkUrl}modules/globalnav/i/tab2.png'); width:137px; text-align:center; text-indent:0; padding:0 15px;}
+
+	#cookie {height:170px; top:-170px}
+	.cookieOpen #nav-content {margin-top:170px}
+	.cookieOpen.snOpen #nav-content .navMax {top:196px; padding-top:74px}
+	.cookieOpen #search {top:270px}
+	.fixed.cookieOpen #search {top:220px}
+
+	#nav-content .navMin li.navComp a span {display: inline}
+}
+
+@media only screen and (min-width: 960px) {
+	.inner {width:960px;}
+
+	#cookie {height:140px; top:-140px}
+	#cookie .content {width:960px}
+	.cookieOpen #nav-content {margin-top:140px}
+	.cookieOpen.snOpen #nav-content .navMax {top:166; padding-top:74px}
+	.cookieOpen #search {top:240px}
+	.fixed.cookieOpen #search {top:190px}
+
+	/* style .navMax */
+	#nav-content .navMax {position:relative; float: left; padding:0 0 0 220px; height: auto; top:auto; left:auto; right:auto; background: none}
+	#nav-content .navMax li {display: inline-block; border:0px none}
+	/* copy of .navMin from above */
+	#nav-content .navMax li a {padding:0 15px 0 8px; font-size:14px; text-shadow:1px 1px 0 #fff; background:url('@{frameworkUrl}modules/globalnav/i/nav-divider.png') center right no-repeat; background-size: 2px 100%; height: 74px; line-height: 74px; }
+
+	/* style .navMin */
+	#nav-content .navMin {width: auto; padding:0; background: none; box-shadow: none; height: 74px}
+	#nav-content .navMin li.navSections {display:none}
+
+	/* fixed */
+	.fixed #nav-content .navMax {padding-top:0}
+	.fixed #nav-content .navMax li a,
+	.fixed #nav-content .navMin {height: 48px; line-height: 48px;}
+
+	.fixed #nav-content .navMin {padding-left:0; box-shadow: none}
+}
+

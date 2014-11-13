@@ -1,0 +1,51 @@
+@mixin generate-which-badge-structures {
+
+  %st-which-badge {
+    @extend %st-layout__center_vertically;
+    display: inline-block;
+    position: relative;
+    .ie8 & {
+      background-color: transparent;
+    }
+  }
+  @include generate-which-badge-of-size-structure(
+    $diameter: 38px,
+    $name: small
+  );
+  %st-which-badge--best-buy--small {
+    @extend %st-which-badge;
+    @extend %st-which-badge--small;
+  }
+  %st-which-badge--energy-saver--small {
+    @extend %st-which-badge;
+    @extend %st-which-badge--small;
+  }
+  %st-which-badge--dont-buy--small {
+    @extend %st-which-badge;
+    @extend %st-which-badge--small;
+  }
+
+  @include generate-which-badge-of-size-structure(
+    $diameter: 44px,
+    $name: large
+  );
+  %st-which-badge--best-buy--large {
+    @extend %st-which-badge;
+    @extend %st-which-badge--large;
+  }
+  %st-which-badge--energy-saver--large {
+    @extend %st-which-badge;
+    @extend %st-which-badge--large;
+  }
+  %st-which-badge--dont-buy--large {
+    @extend %st-which-badge;
+    @extend %st-which-badge--large;
+  }
+  %st-which-badge__label {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    @include font-stack-bold;
+  }
+}

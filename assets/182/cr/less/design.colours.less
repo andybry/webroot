@@ -1,0 +1,178 @@
+// General
+.problemHero 	{#gradient.img-directional('@{assetsUrl}i/brand/hero-problem.png', @cr-problem, @cr-problem-light, 135deg)}
+.regHero		{#gradient.img-directional('@{assetsUrl}i/brand/hero-regs.png', @cr-regulation-dark, @cr-regulation-light, 135deg)}
+.actionHero 	{#gradient.img-directional('@{assetsUrl}i/brand/hero-action.png', @cr-action, @cr-action-light, 135deg)}
+
+aside {
+	li.thProblem {
+		&:before { background: @cr-problem; }
+		a span {color:@cr-problem;}
+	}
+	section.thProblem h4 {color:@cr-problem}
+}
+aside {
+	li.thRegulation {
+		&:before { background: @cr-regulation; }
+		a span {color:@cr-regulation;}
+	}
+	section.thRegulation h4 {color:@cr-regulation}
+}
+aside {
+	li.thAction {
+		&:before { background: @cr-action; }
+		a span {color:@cr-action;}
+	}
+	section.thAction h4 {color:@cr-action}
+}
+
+////
+article .thProblem {
+	border-color: @cr-problem;
+	h2, i, li h4 em {color:@cr-problem !important;}
+} 
+article .thRegulation {
+	border-color: @cr-regulation;
+	h2, i, li h4 em {color:@cr-regulation !important;}
+}
+article .thAction {
+	border-color: @cr-action;
+	h2, i, li h4 em {color:@cr-action !important;}
+}
+
+
+.ui-autocomplete em {font-style:normal; font-weight:bold}
+.ui-autocomplete .thProblem em {color:@cr-problem}
+.ui-autocomplete .thRegulation em {color:@cr-regulation}
+.ui-autocomplete .thAction em {color:@cr-action}
+
+.tpl_home {
+	#hero,
+	#hero.thProblem {
+		.problemHero;
+		.rhom {background-image: url('@{assetsUrl}svg/cr-home-red.svg');}
+	}
+	#hero.thRegulation {
+		.regHero;
+		.rhom {background-image: url('@{assetsUrl}svg/cr-home-blue.svg');}
+	}
+	#hero.thAction {
+		.actionHero;
+		.rhom {background-image: url('@{assetsUrl}svg/cr-home-red.svg');}
+	}
+	#hero.thActionCool {
+		.actionHero;
+		.rhom {background-image: url('@{assetsUrl}svg/cr-home-blue.svg');}
+	}
+
+	#steps .thProblem a {color:@cr-problem-light}
+	#steps .thRegulation a {color:@cr-regulation-light}
+	#steps .thAction a {color:@cr-action}
+}
+
+
+// @cr-grey
+
+.cat_problem {
+	// @cr-problem
+	// @cr-problem-light
+	// @cr-problem-dark
+
+	#hero {
+		.problemHero;
+	}
+
+	// Category Template
+	&.tpl_category #content {
+		header {border-color:@cr-problem;}
+		h2 {color:@cr-problem}
+		.articleList h2 a:hover {color:@cr-problem;}
+	}
+
+	// tpl_article
+	&.tpl_article {
+		#content h2 { color:@cr-problem;}
+
+		aside h3.on,
+		aside li.on {
+			a {color:@cr-problem-dark}
+		}
+
+		// aside #anchorLinks li.on {
+		// 	background:@cr-problem-light;
+		// 	&:after { border-left-color:@cr-problem-light; }
+		// }
+		aside a strong,
+		article h2 strong {border-color:@cr-problem;}
+	}
+	.callout {background-image: url('@{assetsUrl}svg/cr-article-problems.svg');}
+}
+
+.cat_regulation {
+	// @cr-regulation
+	// @cr-regulation-light
+	// @cr-regulation-dark
+	#hero {
+		.regHero;
+	}
+
+	// Category Template
+	&.tpl_category  #content {
+		header {border-color:@cr-regulation;}
+		h2 {color:@cr-regulation}
+		.articleList h2 a:hover {color:@cr-regulation}
+	}
+
+	// tpl_article
+	&.tpl_article {
+		
+		#content h2 { color:@cr-regulation;}
+
+		aside h3.on,
+		aside li.on {
+			a {color:@cr-regulation-dark}
+		}
+
+		// aside #anchorLinks li.on {
+		// 	background:@cr-regulation-light;
+		// 	&:after { border-left-color:@cr-regulation-light; }
+		// 	a {color:@cr-regulation-dark}
+		// }
+		aside a strong,
+		article h2 strong {border-color:@cr-regulation;}
+	}
+	.callout {background-image: url('@{assetsUrl}svg/cr-article-regulations.svg');}
+}
+
+.cat_action {
+	// @cr-action
+	// @cr-action-light
+	// @cr-action-dark
+	#hero {
+		.actionHero
+	}
+
+	// Category Template
+	&.tpl_category  #content {
+		header {border-color:@cr-action;}
+		h2 {color:@cr-action}
+		.articleList h2 a:hover {color:@cr-action;}
+	}
+
+	// tpl_article
+	&.tpl_article {
+		#content h2 { color:@cr-action;}
+
+		aside h3.on,
+		aside li.on {
+			a {color:@cr-action-dark}
+		}
+
+		// aside #anchorLinks li.on {
+		// 	background:@cr-action-light;
+		// 	&:after { border-left-color:@cr-action-light; }
+		// }
+		aside a strong,
+		article h2 strong {border-color:@cr-action;}
+	}
+	.callout {background-image: url('@{assetsUrl}svg/cr-article-actions.svg');}
+}

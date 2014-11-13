@@ -1,0 +1,329 @@
+// ############################################################################
+// # CONTENTS
+// ############################################################################
+//
+// SCORE HEADER (for test products)
+// NOT TESTED HEADER
+// PRODUCT THUMBNAIL
+// NAME AND KEY FACT
+// PRICE AND BADGES
+// LAUNCH DATE
+// NOTES TEXT AREA
+// COMPARE BUTTON
+// READ FULL REVIEW BUTTON
+
+// Container for the module used in all scenarios
+.m-product-listing {
+}
+
+// ##########################################################################
+// # SCORE HEADER (for tested products)
+// ##########################################################################
+
+//  <div class="product-listing__score">
+//    @Section Modules - Product Listing - Score Label
+//    @Section Modules - Product Listing - Score Value
+//  </div>
+//
+// Styleguide Modules - Product Listing - Score
+.product-listing__score {
+  @extend %font-stack-bold;
+  @extend %st-layout__parent-block;
+
+  margin-bottom: 10px;
+  @include font-size(1.2);
+}
+
+//  <div class="product-listing__score-label">
+//    <span class="product-listing__which-name-highlight">Which</span>? score
+//  </div>
+//
+// Styleguide Modules - Product Listing - Score Label
+.product-listing__score-label {
+  @extend %st-layout__block-of-width--left--70;
+  border-left-width: 5px;
+
+  padding-left: 8px;
+  border-left-style: solid;
+  border-left-color: #FF3858;
+
+  line-height: 24px;
+}
+
+//  <span class="product-listing__which-name-highlight">Which</span>
+//
+// Styleguide Modules - Product Listing - Which Name Highlight
+.product-listing__which-name-highlight {
+  color: #FF3858;
+}
+
+//  <div class="product-listing__score-value">
+//    @Section Modules - Product Listing - Score Highlight
+//  </div>
+//
+// Styleguide Modules - Product Listing - Score Value
+.product-listing__score-value {
+  @extend %st-layout__block-of-width--right--30;
+  line-height: 24px;
+}
+//
+//  <span class="product-listing__score-highlight">99%</span>
+//
+// Styleguide Modules - Product Listing - Score Highlight
+.product-listing__score-highlight {
+  display:inline-block;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: white;
+  background-color: #FF3858;
+  line-height: 24px;
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 100%;
+    border-right-width: 15px;
+    border-right-style: solid;
+    border-right-color: #FF3858;
+    border-top-width: 24px;
+    border-top-style: solid;
+    border-top-color: transparent;
+  }
+}
+
+// ##########################################################################
+// # NOT TESTED HEADER (for non tested products)
+// ##########################################################################
+
+//
+//  <div class="product-listing__not-tested">
+//    @Section Modules - Product Listing - Not Tested Header
+//    @Section Modules - Product Listing - Results Exepected
+//  </div>
+//
+// Styleguide Modules - Product Listing - Not Tested
+.product-listing__not-tested {
+  border-left-width: 5px;
+  padding-left: 8px;
+  border-left-style: solid;
+  border-left-color: #FF3858;
+}
+
+//  <div class="product-listing_not-tested-header">Not tested</div>
+//
+// Styleguide Modules - Product Listing - Not Tested Header
+.product-listing_not-tested-header {
+  @extend %font-stack-bold;
+  display: block;
+}
+
+//  <div class="product-listing_results-expected">Results expected: September</div>
+//
+// Styleguide Modules - Product Listing - Results Exepected
+.product-listing_results-expected {
+}
+
+// ##########################################################################
+// # PRODUCT THUMBNAIL
+// ##########################################################################
+
+//  <div class="product-listing__thumb">
+//    <a href="/product/Samsung_UE55F8000">
+//      @Section Modules - Product Listing - Thumb Image
+//    </a>
+//  </div>
+//
+// Styleguide Modules - Product Listing - Thumb
+.product-listing__thumb {
+  @extend .m-thumb;
+}
+
+//  <img
+//    class="product-listing__thumb-image"
+//    alt=""
+//    src="http://images.pricerunner.com/product/408x432/370089985/Samsung-UE65ES8000.jpg"
+//  >
+//
+// Styleguide Modules - Product Listing - Thumb Image
+.product-listing__thumb-image {
+  @extend .m-thumb-img;
+}
+
+// ##########################################################################
+// # NAME AND KEY FACT
+// ##########################################################################
+
+//      <div class="product-listing__name-and-key-fact">
+//        <a class="product-listing__name" href="/product/Samsung_UE55F8000">
+//          <span class="product-listing__manufacturer">Samsung</span>
+//          <span class="product-listing__model">UE55F8000STXXU</span>
+//        </a>
+//        <div class="product-listing__key-fact">
+//          42"
+//        </div>
+//      </div>
+//
+// Styleguide Modules - Product Listing - Name and Key Fact
+.product-listing__name-and-key-fact {
+  @extend %st-layout__parent-block;
+  margin-top: 1em;
+  color: $black;
+}
+.product-listing__name {
+  @extend %st-layout__block-of-width--left--70;
+  @include font-size(1);;
+  color: $black;
+  text-decoration: none;
+}
+.product-listing__manufacturer {
+  @extend .m-product-name-manufacturer;
+}
+.product-listing__model {
+  @extend .m-product-name-model;
+}
+.product-listing__key-fact {
+  @extend %st-layout__block-of-width--right--30;
+  @include font-size(1.5);
+  color: $black;
+}
+
+// ##########################################################################
+// # PRICE AND BADGES
+// ##########################################################################
+
+//  <div class="product-listing__price-and-badges">
+//    <div class="product-listing__price">£1,249.99</div>
+//    <div class="product-listing__badges">
+//      @Section Modules - Which Badges - Best Buy - Small
+//      @Section Modules - Which Badges - Energy Saver - Small
+//      @Section Modules - Which Badges - Dont Buy - Small
+//    </div>
+//  </div>
+//
+//  Styleguide Modules - Product Listing - Price and Badges
+.product-listing__price-and-badges {
+  @extend %st-layout__parent-block;
+  margin-bottom: 1em;
+}
+
+//  <div class="product-listing__price-and-badges--with-bottom">
+//    <div class="product-listing__price">£1,249.99</div>
+//    <div class="product-listing__badges">
+//      @Section Modules - Which Badges - Best Buy - Small
+//      @Section Modules - Which Badges - Energy Saver - Small
+//      @Section Modules - Which Badges - Dont Buy - Small
+//    </div>
+//  </div>
+//
+//  Styleguide Modules - Product Listing - Price and Badges - with Bottom
+.product-listing__price-and-badges--with-bottom {
+  @extend .product-listing__price-and-badges;
+}
+
+//  <div class="product-listing__price-and-badges">
+//    <div class="product-listing__price--with-history">
+//      <div class="product-listing__current-price">£12,249.99</div>
+//      Was <span class="product-listing__original-price">£12,399.99</span>
+//    </div>
+//    <div class="product-listing__badges">
+//      @Section Modules - Which Badges - Best Buy - Small
+//      @Section Modules - Which Badges - Energy Saver - Small
+//      @Section Modules - Which Badges - Dont Buy - Small
+//    </div>
+//  </div>
+//
+//  Styleguide Modules - Product Listing - Price and Badges - price history variation
+
+.product-listing__price {
+  @extend %st-layout__block-of-width--left--45;
+  letter-spacing: -1px;
+  vertical-align: middle;
+  @include font-size(1.2);
+  line-height: 38px;
+}
+
+.product-listing__badges {
+  @extend %st-layout__block-of-width--right--55;
+  vertical-align: middle;
+}
+
+.product-listing__price--with-history {
+  @extend .product-listing__price;
+  line-height: 1;
+}
+.product-listing__current-price {
+  @extend %font-stack-bold;
+  @include font-size(1.2);
+  color: #D90011;
+  margin-bottom: 0.3em;
+}
+.product-listing__original-price {
+  @include font-size(1);
+  text-decoration: line-through;
+}
+
+// ##########################################################################
+// # LAUNCH DATE
+// ##########################################################################
+
+//  <div class="product-listing__launch-date">
+//    Launch date: 26:07:13
+//  </div>
+//
+// Styleguide Modules - Product Listing - Launch Date
+.product-listing__launch-date {
+  margin-bottom: 1em;
+}
+
+// ##########################################################################
+// # NOTES TEXT AREA
+// ##########################################################################
+
+//  <textarea class="product-listing__notes-text-area">Add your notes here...</textarea>
+//
+// Styleguide Modules - Product Listing - Notes Text Area
+.product-listing__notes-text-area {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  border-color: #DEE1E3;
+  padding: 1em;
+  @include font-size(1);
+  color: #3D5664;
+}
+
+// ##########################################################################
+// # COMPARE BUTTON
+// ##########################################################################
+
+//  <div class="product-listing__compare-button">
+//    Add to compare
+//  </div>
+//
+// Styleguide Modules - Product Listing - Compare Button
+.product-listing__compare-button {
+  display: block;
+  cursor: pointer;
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  border-top: 1px solid $cool-grey1;
+  margin-bottom: 1em;
+  color: $cyan;
+  text-decoration: none;
+}
+
+// ##########################################################################
+// # READ FULL REVIEW BUTTON
+// ##########################################################################
+
+//  <a class="product-listing__read-full-review">
+//    Read the full review
+//  </a>
+//
+// Styleguide Modules - Product Listing - Read Full Review
+.product-listing__read-full-review {
+  @extend .product-listing__compare-button;
+}
+

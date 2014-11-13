@@ -1,0 +1,1 @@
+adtech.setAdTagPrefix("SW");adtech.setAdTagData({BA:"2387541|0|2973",TR:"2374383|0|1946"});

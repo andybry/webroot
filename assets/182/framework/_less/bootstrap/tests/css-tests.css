@@ -1,0 +1,3 @@
+/*!
+ * Bootstrap CSS Tests
+ */body{background-image:none}.subhead{margin-bottom:36px}.type-test{margin-bottom:20px;padding:0 20px 20px;background:url(../../docs/assets/img/grid-baseline-20px.png)}.type-test h1,.type-test h2,.type-test h3,.type-test h4,.type-test h5,.type-test h6{background-color:rgba(255,0,0,.2)}.col1{background-color:rgba(255,0,0,.1)}.col2{background-color:rgba(0,255,0,.1)}.col3{background-color:rgba(0,0,255,.1)}#rowInputs .row>[class*=span],#fluidRowInputs .row-fluid>[class*=span]{background-color:rgba(255,0,0,.1)}.fluid-grid{margin-bottom:45px}.fluid-grid .row{height:40px;padding-top:10px;margin-top:10px;color:#ddd;text-align:center}.fluid-grid .span1{background-color:#999}

@@ -1,0 +1,64 @@
+
+
+/*
+Checkbox
+
+Styleguide 3.1
+*/
+.checkbox {
+  display: block;
+  min-width: 20px;
+  min-height: 20px;
+  position: relative;
+  .inner-label {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 2px;
+    &:before {
+      content: "";
+      display: block;
+      float: left;
+      width: 14px;
+      height: 14px;
+      border: 3px solid $cool-grey4;
+      background: #ffffff;
+      color: #ffffff;
+      text-align: center;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+  input[type="radiobutton"] ,
+  input[type="checkbox"] {
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    z-index: 1;
+
+    &:nth-child(1) {
+      display: none;
+    }
+  }
+  :checked+span {
+    &:before {
+      font-family: 'Which-Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 120%;
+      text-decoration: inherit;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      content: '\2713';
+      line-height: 12px;
+      background: $pink;
+      border-color: $pink;
+    }
+  }
+  :disabled+span {
+    cursor: default;
+  }
+}

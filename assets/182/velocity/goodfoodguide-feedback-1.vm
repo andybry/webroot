@@ -1,0 +1,115 @@
+			<div id="form-error-1"> 	
+				#parse('velocityFormError.vm')
+			</div>
+
+			<div id="interactive-tool">
+				<form class="standard third-party" action="" method="post" id="fm_pp">
+					<h2>Restaurant Review Feedback</h2>
+	
+					<p id="explanation">Restaurant review feedback form</p>
+	
+					<ol class="steps">
+						<li class="on"><strong>Step 1</strong></li>
+						<li>Step 2</li>
+						<li>Step 3</li>
+						<li>Complete!</li>
+					</ol>
+	
+					<div class="wrapper">
+	
+						<fieldset>
+							
+							<input name="page" value="1" type="hidden">
+							
+							<h3>Name and location of restaurant</h3>
+	
+							<div class="instructions">
+								
+								<p>(<span class="mandatory">*</span> Denotes a mandatory field)</p>
+								
+							</div>
+							
+							<div>
+								 #if ($errors.containsKey("restaurantName"))
+								 $messages.getString("form.element.errors.prefix")
+								 $messages.getString("good.food.feedback.restaurant.name")
+								 $messages.getString("form.element.errors.suffix")
+								 #end
+								<label for="restaurant-name">Name of restaurant you ate at <span class="mandatory">*</span></label>
+								<div class="element">
+									<input name="restaurantName" value="$!input.restaurantName" id="restaurant-name" class="text" type="text" maxlength="64" />
+								</div>											
+							</div>
+							
+							<div>
+								#if ($errors.containsKey("restaurantAddress1"))
+								 $messages.getString("form.element.errors.prefix")
+								 $messages.getString("good.food.feedback.restaurant.address")
+								 $messages.getString("form.element.errors.suffix")
+								 #end
+								<label for="address-1">Address of the restaurant</label>
+								<div class="element">
+									<input name="restaurantAddress1" value="$!input.restaurantAddress1" id="address-1" class="text" type="text" maxlength="128" />
+								</div>											
+							</div>
+							
+							<div> 
+								<label for="address-2" class="hidden">Address line 2 of the restaurant</label>
+								<div class="element">
+									<input name="restaurantAddress2" value="$!input.restaurantAddress2" id="address-2" class="text" type="text" maxlength="128" />
+								</div>												
+							</div>
+							
+							<div>
+								#if ($errors.containsKey("restaurantTown"))
+								 $messages.getString("form.element.errors.prefix")
+								 $messages.getString("good.food.feedback.restaurant.town")
+								 $messages.getString("form.element.errors.suffix")
+								 #end
+								<label for="town">Town <span class="mandatory">*</span></label>
+								<div class="element">	
+									<input name="restaurantTown" value="$!input.restaurantTown" id="town" class="text" type="text" maxlength="64" />
+								</div>											
+							</div>
+							
+							<div> 
+								#if ($errors.containsKey("restaurantCounty"))
+								 $messages.getString("form.element.errors.prefix")
+								 $messages.getString("good.food.feedback.restaurant.county")
+								 $messages.getString("form.element.errors.suffix")
+								 #end
+								<label for="county">County <span class="mandatory">*</span></label>
+								<div class="element">
+									<input name="restaurantCounty" value="$!input.restaurantCounty" id="county" class="text" type="text" maxlength="64" />
+								</div>											
+							</div>
+							
+							<div>
+								#if ($errors.containsKey("restaurantPostcode"))
+								 $messages.getString("form.element.errors.prefix")
+								 $messages.getString("good.food.feedback.restaurant.postcode")
+								 $messages.getString("form.element.errors.suffix")
+								 #end
+								<label for="postcode">Postcode</label>
+								<div class="element">
+									<input name="restaurantPostcode" value="$!input.restaurantPostcode" id="postcode" class="text" type="text" maxlength="18" />
+								</div>											
+							</div>							
+							
+							<ol class="steps">
+								<li class="on"><strong>Step 1</strong></li>
+								<li>Step 2</li>
+								<li>Preview</li>
+								<li>Complete!</li>
+							</ol>
+							
+							<ul id="form-buttons" class="not-bordered">
+								<li><input type="image" title="Step 2" class="button right" src="$imageUrl/assets/images/buttons/btn-step-2.png" value="Step 2" name="cmd.next" /></li>
+							</ul>
+	
+						</fieldset>
+	
+					</div>
+	
+				</form>
+			</div>

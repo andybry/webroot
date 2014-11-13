@@ -1,0 +1,25 @@
+// <div class="js-widgets-demo__container">
+//   <h1 class="widgets-demo__target-h1"><h1>
+//   <h2 class="widgets-demo__target-h2"><h1>
+//   <div 
+//       data-widget="widgetsDemo__h1Populator widgetsDemo__h2Populator" 
+//       data-h1text="Text used to populate the h1 element"
+//       data-h2text="Text used to populate the h2 element"
+//   ></div>
+// </div>
+// <script>
+//   window.onload = function() {
+//     WHICH.createWidget('widgetsDemo__h1Populator', function(dataAttributes) {
+//       var h1Text = dataAttributes.h1text;
+//       $('.widgets-demo__target-h1').text(h1Text);
+//     });
+//     WHICH.createWidget('widgetsDemo__h2Populator', function(dataAttributes) {
+//       var h2Text = dataAttributes.h2text;
+//       $('.widgets-demo__target-h2').text(h2Text);
+//     });
+//     $('.js-widgets-demo__container').widgetLoader();
+//   };
+// </script>
+//
+// Styleguide JavaScript - Modules - Widgets
+

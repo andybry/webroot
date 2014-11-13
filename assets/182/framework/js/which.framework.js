@@ -1,0 +1,1 @@
+require(["jquery","./common","./config/development","./utils","./modules","./moduleLoader"],function(f,e,d,c,b){var a=["globalNav"];b.init(c,a);return{init:function(){alert("! which.framework.js init")}}});

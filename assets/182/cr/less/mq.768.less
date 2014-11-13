@@ -1,0 +1,101 @@
+@totalWidth: 9;
+
+.in {.masterSize(9);}
+.out {.outer(9)}
+
+#search button span {display: inline}
+#search input.ui-autocomplete-loading {background-position:490px center;}
+
+#hero hgroup { .column(@totalWidth) }
+#hero h1 {margin-top:35px; font-size:@baseFontSize*2.5; line-height: @baseFontSize*3}
+#hero article {
+}
+
+.tpl_article aside h3.on:after, 
+.tpl_article aside li.on:after {display:block}
+
+#navWhichLocal h2,
+#navWhichGlobal h2 { .columnSize(@totalWidth) }
+
+#navWhichLocal section,
+#navWhichGlobal .col { .columnSize(4.5); }
+
+// tpl_article
+@articleWidth: 5.5;
+@articleAsideWidth: 3;
+.tpl_article #hero hgroup { .columnSize(@articleWidth); .push( @totalWidth - @articleWidth ) }
+
+#content {
+	aside {.columnSize(@articleAsideWidth)}
+	article {.columnSize(@articleWidth) }
+}
+
+.tpl_article #content aside {top:-100px;}
+.tpl_category #content aside {margin-top:@baseFontSize * 2;}
+
+.tpl_article .callout {.push(-0.25)}
+.tpl_article .BrightcoveExperience {.videoSize(@articleWidth)}
+
+// tpl_landing
+.tpl_landing #content .catBlock { .columnSize(4.5); margin-bottom: @baseFontSize * 2; min-height: 350px }
+
+// tpl_category
+.tpl_category header.padImage {
+	padding-right:234px;
+	p, h2 {}	
+	img {position:absolute}
+}
+
+.tpl_category header.left.padImage {
+	padding-right:0;
+	padding-left:234px;
+	img {right:auto; left:0}
+}
+
+
+// Home
+.tpl_home {
+
+	#hero .article,
+	#hero article {
+		.rhom {
+			.columnSize(6);
+			padding-right:45px;
+		}
+		img {
+			.push(5);
+			z-index:3;
+			top:25%;
+			display:block;
+			max-width: none;
+		}
+	}
+
+	#steps .article,
+	#steps article {.columnSize(3);}
+
+	#steps article > a {
+		margin-top:-35px;
+		h2, p {text-align: left;}
+	}
+
+	#subStories article {
+		.columnSize(4.5);
+		ul {.row(4.5)}
+		li { .columnSize(4); .push(0.25)}
+		.block {
+			margin-top:-@baseFontSize * 3;
+			margin-bottom:@baseFontSize * 3;
+		}
+	}
+	.tweetBlock {
+		.columnSize(3);
+		ul {.row(3)}
+		li { .columnSize(2.5); .push(0.25)}
+	}
+	.newsBlock {
+		.columnSize(6)
+		ul {.row(6)}
+		li { .columnSize(5.5); .push(0.25)}
+	}
+}

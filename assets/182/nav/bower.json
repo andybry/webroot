@@ -1,0 +1,6 @@
+{
+  "name": "GlobalNav",
+  "dependencies": {
+    "globalnav":"git@github.com:whichdigital/eva-global-navigation.git#v3.3.12"
+  }
+}

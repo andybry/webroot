@@ -1,0 +1,29 @@
+#ft {
+	position: relative;
+	border-bottom: @baseLineHeight * 4 solid @blueDark;
+	background:url("@{frameworkUrl}i/bg/bg-footer.png");
+	color:@white;
+	padding-bottom:20px;
+
+	.copyright {
+		//position: relative;
+		.posAbsolute(auto, 0, 0, 0);
+		margin-bottom: -@baseLineHeight * 4;
+		height:  @baseLineHeight * 4;
+		line-height:  @baseLineHeight * 4;
+		padding: 0;
+	}
+
+
+}
+
+#ft:before {
+	content:'';
+	position:relative; display: block;
+	top:-(@maskHeight / 2); height: @maskHeight;
+	margin-top:@baseLineHeight*2;
+	background:@bodyBackground;
+	border-bottom: 10px solid @blueDark;
+	.skew(0, -@rhomDeg);
+}
+

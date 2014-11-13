@@ -1,0 +1,44 @@
+@mixin standard-grid-helpers {
+  @for $i from 1 through 12 {
+    .col#{$i} {
+      width: column($i);
+    }
+
+    .offset#{$i} {
+      margin-left: column($i);
+    }
+  }
+}
+
+@mixin default-container {
+  // The first breakpoint (value: 4) is no longer being used. The
+  // code below ensures that the 2nd index (value: 6)is always the
+  // starting point.
+  //
+  // Presumably this has been done to effectively remove the 1st
+  // breakpoint while maintaining backwards compatibility with
+  // existing code.
+  $breakpoints : 4, 6, 9, 12 !default;
+
+  @for $i from 1 through length($breakpoints ) {
+    @if ( $i == 1 ){
+      // First breakpoint is going to be the 2nd index.
+      @media only screen and ( max-width: container(nth($breakpoints, $i + 1)) - 1) {
+        .container { width: container( nth($breakpoints, $i ) ); }
+        .containerMinusMargin { width: column( nth($breakpoints, $i ) ); }
+      }
+    }
+    @else if ( $i == length($breakpoints) ){
+      @media only screen and ( min-width: container(nth($breakpoints, $i)) ) {
+        .container { width: container( nth($breakpoints, $i ) ); }
+        .containerMinusMargin { width: column( nth($breakpoints, $i ) ); }
+      }
+    }
+    @else{
+      @media only screen and ( min-width: container(nth($breakpoints, $i)) ) and ( max-width: container(nth($breakpoints, $i + 1)) - 1) {
+        .container { width: container( nth($breakpoints, $i ) ); }
+        .containerMinusMargin { width: column( nth($breakpoints, $i ) ); }
+      }
+    }
+  }
+}

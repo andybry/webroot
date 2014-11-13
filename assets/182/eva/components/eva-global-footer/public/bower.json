@@ -1,0 +1,7 @@
+{
+  "name": "global-footer",
+  "version": "0.1.2",
+  "dependencies": {
+    "typography":"git@github.com:whichdigital/eva-typography.git#v1.1.4"
+  }
+}

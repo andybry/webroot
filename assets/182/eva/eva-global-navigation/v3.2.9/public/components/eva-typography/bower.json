@@ -1,0 +1,14 @@
+{
+  "name": "eva-typography",
+  "version": "0.0.0",
+  "description": "Which? Typography",
+  "gitHead": "9fcba9799c795bec588c799f88a7db58984f346a",
+  "readme": "# Which? Typography\n\nBasic styles, fonts and icons used in Which?\n\nPlease, set the *$fonts_folder* variable to load the right assets.\n\n# Changelog\n\n- 0.2.1 New (old) `.big` class\n- 0.2.0 *BREAKING CHANGES* Rewritten in SASS.\n- 0.1.1 First release\n",
+  "readmeFilename": "README.md",
+  "_id": "typography@0.2.1",
+  "commit": "9fcba9799c795bec588c799f88a7db58984f346a",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:whichdigital/eva-typography.git"
+  }
+}

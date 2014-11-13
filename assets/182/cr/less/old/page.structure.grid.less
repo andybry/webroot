@@ -1,0 +1,108 @@
+@frameworkUrl: '../_framework/';
+@import "../_framework/_less/which/variables.less";
+@import "../_framework/_less/which/mixins.less";
+@import "../_framework/_less/which/grid.less";
+@import "../_framework/_less/bootstrap/mixins.less";
+
+#hero {
+	background: url(/i/content/hero.jpg) center center no-repeat;
+}
+
+.wrap .grid.in {border-bottom:40px solid #fff}
+
+.wrap hgroup {
+	border-bottom:1px solid #fff;
+}
+
+// Example 1 - no generic class, targeting with ID
+//#noClass { .column(4); }
+
+#noClass hgroup { .column(4) }
+
+#noClass article {
+	min-height: 80px;
+	.gridBG(red, 4);
+	.column(4);
+}
+#noClass aside {
+	min-height: 20px;
+	.gridBG(blue, 4);
+	.column(4);
+}
+
+// aside ul {
+// 	list-style: none;
+// 	.row(4);
+// }
+// aside li {
+// 	background: pink;
+// 	.column(4,4);
+// 	border-bottom:2px solid black;
+// }
+
+#ex1 {background:#ddd; padding:20px 0; margin:0 0 20px 0}
+#ex1 .in {background:#fff }
+
+.show4 { .column(4) }
+.show6 { .column(6) }
+.show9 { .column(9) }
+.show12 { .column(12) }
+.show18 { .column(18) }
+
+[class^="show"] {clear:both; .gridBG(#666, 4); margin-bottom:20px; text-indent: 10px}
+
+// 480px - 6cols
+@media only screen and (min-width: 480px) {
+	#noClass hgroup { .column(6) }
+	#noClass article {.column(6)}
+	#noClass aside {.column(6)}
+	// aside ul {.row(6)}
+	// aside li {.column(3,6)}
+
+	.grid .in {.gridBG(grey, 6, -7.5px)}
+}
+
+// 600px - 6cols
+@media only screen and (min-width: 600px) {
+}
+
+// 768px - 9cols
+@media only screen and (min-width: 768px) {
+	#noClass hgroup { .column(9) }
+	#noClass article {.column(6)}
+	#noClass aside {.column(3)}
+	// aside ul {.row(3)}
+	// aside li {.column(3,3)}
+
+	.grid .in {.gridBG(grey, 9, -7.5px)}
+
+}
+
+// 992px - 12cols
+@media only screen and (min-width: 992px) {
+	@column-width: 55 * 1.5;
+	@gutter-width: 15 * 1.5;
+	
+	#noClass hgroup { .column(12) }
+	#noClass article {.column(6); } // .push(1);
+	#noClass aside {.column(6)}
+	// aside ul {.row(6)}
+	// aside li {.column(3,6)}
+
+	.grid .in {.master(12);}
+}
+
+// 1382px - 18 cols
+@media only screen and (min-width: 1382px) {
+	@columns: 18;
+	#noClass article {.push(3)}
+}
+
+
+
+
+
+
+
+
+

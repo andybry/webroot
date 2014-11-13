@@ -1,0 +1,164 @@
+
+// Variables
+@sidebarWidth: 260px;
+@authHeight: @baseFontSize * 1.5;
+@globalNavHeight: @baseFontSize * 4px;
+@navHeight: @baseFontSize * 3px;
+@searchHeight: @baseFontSize * 4px;
+
+@logoHeight: @globalNavHeight - @baseFontSize;
+@logoWidth: @logoHeight * 1.575;
+
+
+#cookies {
+	display: block;
+	padding:20px;
+	color: #fff;
+	background: #000
+}
+
+#hd {
+	.navBlock {
+		text-align:right;
+	}
+
+	.logo {
+		position: relative;
+		float: left;
+	}
+
+}
+
+#navGlobal {
+	height:@globalNavHeight;
+	background:#fff;
+	border-bottom: 3px solid @grayLight;
+
+	form, #auth, .more {
+		position:relative;
+		display:inline-block;
+		height: @globalNavHeight;
+		line-height: @globalNavHeight;
+		border-left:1px solid @grayLight;
+	}
+
+	.logo {
+		top: @baseFontSize/2; left:@baseFontSize/2;
+		height: @logoHeight;
+	}
+
+	form {
+		-moz-flex: 1;
+		input {width:20px}
+		button {}
+	}
+
+	.navItem {
+		text-align:center;
+		padding: 0 10px;		
+
+		&:before {
+			display: block;
+		}
+	}
+
+	#auth {}
+
+	a.more {}
+}
+
+#auth {
+	> a {}
+	ul {
+		display:none; 
+		li a {}
+	}
+}
+
+#navSite {
+
+	min-height:@navHeight;
+	line-height:@navHeight;
+	background:#eee;
+	border-bottom: 1px solid @grayLight;
+
+	.logo {padding:0 10px;}
+	.mq-small {}
+
+	ul {
+		list-style: none;
+		text-align: left;
+		margin:10px;
+		background:#ccc;
+
+		li {
+			border-bottom:1px solid #aaa;
+			margin:0;
+		}
+
+		a {
+			display:block;
+			padding:0 10px;
+		}
+
+		ul {
+			margin:0;
+			padding:10px;
+			background:#aaa;
+		}
+	}
+}
+
+.mq-small {}
+.mq-big {}
+
+
+@media only screen and (min-width: 600px) {
+	.mq-small {
+		display:none;
+	}
+
+	#navGlobal {
+		.navItem {}
+
+		form input {
+			width:200px
+		}
+	}
+
+	#navSite {
+		.clearfix();
+		ul {
+			margin:0;
+			float:right;
+		}
+		ul li {
+			float:left;
+		}
+		ul a {
+			line-height:@navHeight;
+		}
+		ul li {border:0px none}
+		ul ul {
+			display:none;
+			position: absolute;
+			left:0; right:0;
+			font-size:11px;
+			padding:0;
+			li {
+				padding:4px;
+				max-width: 80px;
+				line-height: @baseFontSize;
+			}
+			a {
+				line-height: @baseFontSize;
+			}
+		}
+		ul li:hover {
+			background:#888;
+			ul {
+				display: block;
+			}
+		}
+	}
+}

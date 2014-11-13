@@ -1,0 +1,129 @@
+// colours
+$white: #ffffff;
+$black: #000000;
+$blue: #67c7f1;
+$pale-green: #e6f3de;
+$lime: #c7db49;
+$pink: #ffc8d1;
+$red: #ef435e;
+$light-red: #f05d70;
+$purple: #7367ae;
+$green: #83c55b;
+$aqua: #00ae4d;
+$turqouise: #00ac9d;
+$pale-blue: #eff3f5;
+$light-grey-blue: #d8e2e7;
+$normal-grey-blue: #9eb3be;
+$dark-grey-blue: #6c8896;
+$darker-grey-blue: #41606f;
+$darkest-grey-blue: #353f48;
+
+// Imports
+
+@import '../components/eva-grid-frameless/grid.scss';
+@import '../../modules/hero/public/scss/hero-ie.scss';
+@import '../components/eva-utils/colours.scss';
+@import '../components/eva-global-navigation/public/scss/global-navigation-ie.scss';
+
+.which-product-summary {
+  .product-block {
+
+    &:hover .summary-product {
+      top: 0 !important;
+    }
+    
+    .info {
+      padding-top: 40px !important;
+
+      .cover {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9961946980917454, M12=0.08715574274765871, M21=-0.08715574274765871, M22=0.9961946980917454, SizingMethod='auto expand')";
+      }
+
+      h5 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+.reviews-discussion-section {
+  padding-top: 30px;
+}
+
+// rollovers
+.which-sign-up .which-sign-up-extra .extra-social a,
+.footer-social-links a {
+  &:hover {
+    background-position-y: -48px;
+  }
+
+  &:before, &:after {
+    display: none;
+  }
+}
+
+.which-numbers .numbers-block p {
+  font-size: 14px;
+}
+
+.which-sign-up {
+  .which-sign-up-reasons {
+    .reasons-block {
+      &:after {
+        display: none;
+      }
+
+      .cover {
+        display: block;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.99619470, M12=0.08715574, M21=-0.08715574, M22=0.99619470,sizingMethod='auto expand')";
+            width: 300px;
+            height: 65px;
+            position: absolute;
+            bottom: -28px;
+            left: -20px;
+      }
+
+      &.reasons-block-1 {
+            .cover {
+              background: $purple;
+            }
+
+            &:hover .cover {
+          background: lighten($purple, 10);
+            }
+        }
+
+        &.reasons-block-2 {
+            .cover {
+              background: $red;
+            }
+
+            &:hover .cover {
+          background: lighten($red, 10);
+        }
+        }
+
+        &.reasons-block-3 {
+            .cover {
+              background: $lime;
+            }
+
+            &:hover .cover {
+          background: lighten($lime, 10);
+            }
+        }
+    }
+  }
+}
+
+// Rhomboid background for campaigns takeover
+.hero .rhomboid-wrapper {
+  background: #fff;
+  height: 420px;
+  padding-right: 20px;
+}

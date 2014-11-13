@@ -1,0 +1,8 @@
+{
+  "name": "eva-global-navigation",
+  "version": "3.3.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:whichdigital/eva-global-navigation.git"
+  }
+}

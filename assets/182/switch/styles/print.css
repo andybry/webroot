@@ -1,0 +1,12 @@
+#landing-pages #page {
+	margin:0; padding:0;
+	overflow:visible;
+}
+
+/* Targeting landing pages only but this could be .two-column #content */
+#landing-pages #content {
+	clear:both;
+	float:none;
+	width:auto;
+	margin:0;
+}

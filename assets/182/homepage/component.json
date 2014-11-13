@@ -1,0 +1,6 @@
+{
+  "name": "Homepage",
+  "dependencies": {
+    "bower-homepage":"git@github.com:whichdigital/homepage.git"
+  }
+}

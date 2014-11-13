@@ -1,0 +1,202 @@
+			<div id="form-error-1"> 	
+				#parse('velocityFormError.vm')
+			</div>
+			
+			<div id="interactive-tool">
+			
+				<form class="standard third-party" action="" id="fm_pp" method="post" name="feedbackform">
+	
+					<h2>The Good Food Guide</h2>
+	
+					<p id="explanation">Restaurant review feedback form</p>
+	
+					<ol class="steps">
+						<li>Step 1</li>
+						<li class="on"><strong>Step 2</strong></li>
+						<li>Step 3</li>
+						<li>Complete!</li>
+					</ol>
+	
+					<div class="wrapper">
+	
+						<fieldset>
+						
+							<input name="page" value="2" type="hidden">
+							<h3>About the restaurant</h3>
+	
+							<div class="instructions">
+								
+								<p>(<span class="mandatory">*</span> Denotes a mandatory field)</p>
+								
+							</div>
+							
+							<div>
+								#if($errors.containsKey("mealType"))
+								$messages.getString("form.element.errors.prefix")
+           						$messages.getString("good.food.feedback.cuisine")
+           						$messages.getString("form.element.errors.suffix")
+        						#end	
+								<label for="fm_pp_element1">What is the main type of cuisine at this restaurant?</label>					
+								<div class="element">		
+									<select id="fm_pp_element1" name="mealType">
+							            <option value="">Select...</option>
+							            <option value="British"#if($input.mealType == "British") selected="true"#end>British</option>
+							            <option value="French"#if($input.mealType == "French") selected="true"#end>French</option>
+							            <option value="Italian"#if($input.mealType == "Italian") selected="true"#end>Italian</option>
+							            <option value="Greek/Turkish"#if($input.mealType == "Greek/Turkish") selected="true"#end>Greek / Turkish</option>
+							            <option value="Spanish/Portuguese"#if($input.mealType == "Spanish/Portuguese") selected="true"#end>Spanish / Portuguese</option>
+								    	<option value="Scandinavian"#if($input.mealType == "Scandinavian") selected="true"#end>Scandinavian</option>
+							            <option value="Modern European"#if($input.mealType == "Modern European") selected="true"#end>Modern European</option>
+							            <option value="Eastern European"#if($input.mealType == "Eastern European") selected="true"#end>Eastern European</option>      
+							            <option value="Chinese"#if($input.mealType == "Chinese") selected="true"#end>Chinese</option>
+							            <option value="Indian/Pakistani/Bangladeshi"#if($input.mealType == "Indian/Pakistani/Bangladeshi") selected="true"#end>Indian / Pakistani / Bangladeshi</option>
+							            <option value="Thai/Indonesian/Malaysian"#if($input.mealType == "Thai/Indonesian/Malaysian") selected="true"#end>Thai / Indonesian / Malaysian</option>
+							            <option value="Fusion/Pan-Asian"#if($input.mealType == "Fusion/Pan-Asian") selected="true"#end>Fusion / Pan-Asian</option>
+							            <option value="Japanese"#if($input.mealType == "Japanese") selected="true"#end>Japanese</option>
+							            <option value="Middle Eastern"#if($input.mealType == "Middle Eastern") selected="true"#end>Middle Eastern (e.g. Lebanese)</option>
+							            <option value="North African"#if($input.mealType == "North African") selected="true"#end>North African (e.g. Moroccan)</option>
+							            <option value="Mexican"#if($input.mealType == "Mexican") selected="true"#end>Mexican</option>
+							            <option value="Caribbean"#if($input.mealType == "Caribbean") selected="true"#end>Caribbean</option> 
+							            <option value="South American"#if($input.mealType == "South American") selected="true"#end>South American</option>
+							            <option value="Seafood"#if($input.mealType == "Seafood") selected="true"#end>Seafood</option>
+							            <option value="Vegetarian"#if($input.mealType == "Vegetarian") selected="true"#end>Vegetarian</option>
+							            <option value="Other"#if($input.mealType == "Other") selected="true"#end>Other (please type in)</option>
+							            <option value="Don't know"#if($input.mealType == "Don't know") selected="true"#end>Don't know</option>
+							        </select>
+							        
+								</div>			
+							</div>
+							
+							<div>	
+								#if($errors.containsKey("mealTypeOther"))
+								$messages.getString("form.element.errors.prefix")
+           						$messages.getString("good.food.feedback.cuisine.other")
+           						$messages.getString("form.element.errors.suffix")
+        						#end
+								<label for="fm_pp_element8">If you have selected 'Other', please specify.</label>					
+								<div class="element">		
+									<input id="fm_pp_element8" class="text" type="text" name="mealTypeOther" value="$input.mealTypeOther">
+								</div>			
+							</div>
+								
+							<div>
+								<div>	
+									#if( $errors.containsKey("mealPrice" ) )
+									$messages.getString("form.element.errors.prefix")
+	           						$messages.getString("good.food.feedback.cost")
+	           						$messages.getString("form.element.errors.suffix")
+	        						#end
+									<label for="fm_pp_element2">How much should one person expect to pay for a three-course meal at this restaurant, excluding wine?</label>					
+									<div class="element">		
+								        <select id="fm_pp_element2" name="mealPrice">
+								            <option value="">Select...</option>
+								            <option value="Under 20"#if($input.mealPrice == "Under 20") selected="true"#end>Under &pound;20</option>
+								            <option value="20 - 39.99"#if($input.mealPrice == "20 - 39.99") selected="true"#end>&pound;20-&pound;39.99</option>
+								            <option value="40 - 59.99"#if($input.mealPrice == "40 - 59.99") selected="true"#end>&pound;40-&pound;59.99</option>
+								            <option value="60 or more"#if($input.mealPrice == "60 or more") selected="true"#end>&pound;60 or more</option>
+								        </select>							
+									</div>
+								</div>
+							</div>
+							
+							<h4 class="heading">How would you rate this restaurant for the following aspects?</h4>
+							
+							<div>	
+								#if($errors.containsKey("foodRating"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.food.rating")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<label for="fm_pp_element3">Food <span class="mandatory">*</span></label>					
+								<div class="element">		
+									<select id="fm_pp_element3" name="foodRating">
+							        	<option value="">Select...</option>
+							            <option value="Excellent"#if($input.foodRating == "Excellent") selected="true"#end>Excellent</option>
+							            <option value="Very good"#if($input.foodRating == "Very good") selected="true"#end>Very good</option>
+							            <option value="Good"#if($input.foodRating == "Good") selected="true"#end>Good</option>
+							            <option value="Fair"#if($input.foodRating == "Fair") selected="true"#end>Fair</option>
+										<option value="Poor"#if($input.foodRating == "Poor") selected="true"#end>Poor</option>
+							        </select>					
+								</div>
+							</div>
+							
+							<div>	
+								#if($errors.containsKey("serviceRating"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.service.rating")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<label for="fm_pp_element4">Service <span class="mandatory">*</span></label>					
+								<div class="element">		
+									<select id="fm_pp_element4" name="serviceRating">
+							            <option value="">Select...</option>
+							            <option value="Excellent"#if($input.serviceRating == "Excellent") selected="true"#end>Excellent</option>
+							            <option value="Very good"#if($input.serviceRating == "Very good") selected="true"#end>Very good</option>
+							            <option value="Good"#if($input.serviceRating == "Good") selected="true"#end>Good</option>
+							            <option value="Fair"#if($input.serviceRating == "Fair") selected="true"#end>Fair</option>
+										<option value="Poor"#if($input.serviceRating == "Poor") selected="true"#end>Poor</option>
+							        </select>						
+								</div>
+								
+							</div>
+							
+							<div>	
+								#if($errors.containsKey("atmosphereRating"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.atmosphere.rating")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<label for="fm_pp_element5">Atmosphere <span class="mandatory">*</span></label>					
+								<div class="element">		
+									<select id="fm_pp_element5" name="atmosphereRating">
+							            <option value="">Select...</option>
+							            <option value="Excellent"#if($input.atmosphereRating == "Excellent") selected="true"#end>Excellent</option>
+							            <option value="Very good"#if($input.atmosphereRating == "Very good") selected="true"#end>Very good</option>
+							            <option value="Good"#if($input.atmosphereRating == "Good") selected="true"#end>Good</option>
+							            <option value="Fair"#if($input.atmosphereRating == "Fair") selected="true"#end>Fair</option>
+										<option value="Poor"#if($input.atmosphereRating == "Poor") selected="true"#end>Poor</option>
+							        </select>				
+								</div>
+							</div>						
+							
+							<div>	
+								#if($errors.containsKey("overallRating"))
+								$messages.getString("form.element.errors.prefix")
+	           					$messages.getString("good.food.feedback.overall.rating")
+	           					$messages.getString("form.element.errors.suffix")
+	        					#end
+								<label for="fm_pp_element6">How would you rate this restaurant overall&#63; <span class="mandatory">*</span></label>					
+								<div class="element">		
+							       <select id="fm_pp_element6" name="overallRating" class="floatr">
+							            <option value="">Select...</option>
+							            <option value="Excellent"#if($input.overallRating == "Excellent") selected="true"#end>Excellent</option>
+							            <option value="Very good"#if($input.overallRating == "Very good") selected="true"#end>Very good</option>
+							            <option value="Good"#if($input.overallRating == "Good") selected="true"#end>Good</option>
+							            <option value="Average"#if($input.overallRating == "Average") selected="true"#end>Average</option>
+							            <option value="Poor"#if($input.overallRating == "Poor") selected="true"#end>Poor</option>
+							        </select>
+							</div>						
+							
+							<div class="comments">
+								<label for="fm_pp_element7">Describe your experience at this restaurant and please mention dishes you ate.</label>
+								<textarea id="fm_pp_element7" name="restaurantInfo" rows="2" cols="2">$input.restaurantInfo</textarea>
+							</div>
+	
+							<ol class="steps">
+								<li>Step 1</li>
+								<li class="on"><strong>Step 2</strong></li>
+								<li>Step 3</li>
+								<li>Complete!</li>
+							</ol>
+							
+							<ul id="form-buttons" class="not-bordered">
+								<li><input src="$imageUrl/assets/images/buttons/btn-back-step-1.png" alt="Back to step 2" class="button left cancel" name="cmd.back" type="image"></li>						
+								<li><input src="$imageUrl/assets/images/buttons/btn-step-3.png" alt="Step 3" class="button right" name="cmd.next" type="image"></li>
+							</ul>
+	
+						</fieldset>
+	
+					</div>
+	
+				</form>
+			</div>

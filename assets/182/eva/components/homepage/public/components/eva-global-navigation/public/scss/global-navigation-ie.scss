@@ -1,0 +1,8 @@
+.global-nav {
+  width: expression( document.body.clientWidth < 888 ? "888px" : "auto" ); /* set min-width for IE */
+  min-width: 888px;
+}
+
+.global-nav .item-label {
+  border: none;
+}

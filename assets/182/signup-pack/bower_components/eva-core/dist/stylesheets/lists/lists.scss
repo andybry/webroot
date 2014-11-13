@@ -1,0 +1,26 @@
+.list {
+  padding-left: 32px;
+}
+
+.list-item--checkmark,
+.list-item--trapezoid {
+  text-indent: -1em;
+}
+
+.list-item--checkmark:before,
+.list-item--trapezoid:before {
+  @extend %icon;
+  display: inline-block;
+  width: 15px;
+  text-align: center;
+  color: red;
+}
+
+.list-item--checkmark:before {
+  @extend %icon-tick;
+}
+
+.list-item--trapezoid:before {
+  // TODO: replace with trapezoid icon
+  @extend %icon-stop;
+}

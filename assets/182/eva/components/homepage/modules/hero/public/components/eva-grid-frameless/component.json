@@ -1,0 +1,9 @@
+{
+  "name": "eva-grid-frameless",
+  "version": "0.0.0",
+  "commit": "939853e7338e1d8958e0325af5a658a0127d34ce",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:whichdigital/eva-grid-frameless.git"
+  }
+}

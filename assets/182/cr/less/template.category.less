@@ -1,0 +1,76 @@
+// Article Template
+.tpl_category .col2 article {
+	min-height: @baseFontSize * 12;
+}
+
+.tpl_category #content {
+
+	header {
+		margin-top:@baseFontSize;
+		margin-bottom:@baseFontSize*1.5; 
+		border-bottom:1px dotted;
+
+		h2 {
+			font-family:@serifFontFamily-light;
+			font-size:28px;
+			padding-top:@baseFontSize; padding-bottom:@baseFontSize;
+		}
+		img {
+			right:0; 
+			margin-top:-50px;
+			margin-right:-50px;
+		}	
+	}
+
+	aside {
+		h3 {padding:@baseFontSize}
+		section {padding:0 @baseFontSize}
+		section.thProblem {margin-bottom: @baseFontSize*3;}
+		.subNav:after {display: block}
+	}
+
+	article.left {border-top:0}
+
+	.catCutout {
+		position:absolute;
+		top:-184px;
+		right:0;
+		opacity:0.5;
+	}
+
+	.articleList {
+		li {.clearfix()}
+		h2 {
+			padding:@baseFontSize * 2 0 @baseFontSize/4;
+			border-bottom:1px dotted @cr-grey;
+			margin-bottom:@baseFontSize ;
+
+			> i {
+				float:left;
+				font-size: 17px;
+				margin-right: 4px;
+			}
+
+			a {
+				color:@cr-grey;
+				position:relative;
+				display: block;
+				padding-right:@baseFontSize*3;
+				&:hover {
+					text-decoration:none
+				}
+				i {
+					position: absolute;
+					right:0; top:0;
+					font-size:16px;
+				}
+			}
+		}
+
+		p {
+			font-size:16px;
+			color:@cr-grey-light;
+			padding-bottom: 7px;
+		}
+	}
+}

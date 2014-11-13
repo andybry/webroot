@@ -1,0 +1,1 @@
+.global-nav{width:expression(document.body.clientWidth < 838 ? "838px":"auto");min-width:838px}.global-nav .button-label{border:0}

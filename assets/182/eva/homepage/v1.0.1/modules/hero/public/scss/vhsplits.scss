@@ -1,0 +1,61 @@
+// Default height
+
+$carousel-height: 420px !default;
+
+@function divideheight($num) {
+  @return $carousel-height / $num;
+}
+
+@function pcnt($num) {
+  @return 100% / $num;
+}
+
+// Block
+.block {
+  float: left;
+}
+
+// Verticals
+.v-full {
+  height: 100%;
+}
+
+.v-oneoftwo {
+  height: divideheight(2);
+}
+
+.v-oneofthree {
+  height: divideheight(3);
+}
+
+.v-twoofthree {
+  height: divideheight(3) * 2;
+}
+
+.v-oneoffour {
+  height: divideheight(4);
+}
+
+.v-twooffour {
+  height: divideheight(4) * 2;
+}
+
+.v-threeoffour {
+  height: divideheight(4) * 3;
+}
+
+// Horizontals
+.h-full {
+  width: 100%;
+}
+.h-oneoftwo {
+  width: pcnt(2);
+}
+
+.h-oneofthree {
+  width: pcnt(3);
+}
+
+.h-twoofthree {
+  width: pcnt(3) * 2;
+}

@@ -1,0 +1,80 @@
+@totalWidth: 6;
+
+.in {.masterSize(6);}
+
+#search input.ui-autocomplete-loading {background-position:290px center;}
+
+#hero hgroup { .column(@totalWidth) }
+
+#navWhichLocal h2,
+#navWhichGlobal h2 { .columnSize(@totalWidth) }
+
+#navWhichLocal section,
+#navWhichGlobal .col { .columnSize(3); }
+#navWhichLocal section:nth-child(2n+1) {clear:left}
+
+// tpl_article
+@articleWidth: 6;
+.tpl_article #hero hgroup { .columnSize(@articleWidth); .push(0) }
+
+#content {
+	aside {.columnSize(@articleWidth)}
+	article {.columnSize(@articleWidth) }
+}
+
+
+.tpl_article .callout {
+	.columnSize(@totalWidth);
+	div {padding:60px 20px 55px 50px}
+}
+.tpl_article .BrightcoveExperience { .videoSize(@totalWidth);}
+
+// tpl_landing
+.tpl_landing #content .catBlock { .columnSize(6);}
+
+
+// Home
+.tpl_home {
+
+	#hero .article,
+	#hero article {
+		.rhom {
+			.columnSize(6);
+			padding-left:40px;
+		}
+		img {.push(3)}
+	}
+
+	#steps .article,
+	#steps article {.columnSize(@totalWidth)}
+
+	#subStories article {
+		.columnSize(@totalWidth);
+		ul {.row(@totalWidth)}
+		li { .columnSize(5.5); .push(0.25)}
+	}
+
+	.tweetBlock {
+		.columnSize(@totalWidth);
+		ul {.row(@totalWidth)}
+		li { .columnSize(2.5); .push(0.25)}
+	}
+	.newsBlock {
+		.columnSize(@totalWidth);
+		ul {.row(@totalWidth)}
+		li { .columnSize(5.5); .push(0.25)}
+	}
+
+	// .block ul { .row(@totalWidth); }
+	// .block li { .columnSize(2.5); .push(0.25)} 
+}
+
+// Advert
+.advert {
+	padding:7px 180px 7px 7px;
+
+	img {
+		position: absolute;
+		right:-30px; top:-50px;
+	}
+}

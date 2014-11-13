@@ -1,0 +1,28 @@
+.sample-content {
+  position: relative;
+}
+
+.sample-content__text {
+
+  /* Defaults */
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  right: 0;
+  @include font-stack-bold;
+  font-size: 40px;
+  font-style: normal;
+  text-transform: none;
+  text-align: center;
+  letter-spacing: 0;
+  @include rotate(-45);
+  color: #6d6d6d;
+  @include opacity(0.15);
+
+  /* Variations */
+  &.is-on-dark-bg {
+	color: #eeeeee;
+	@include opacity(0.90);
+  }
+}

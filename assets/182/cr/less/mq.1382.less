@@ -1,0 +1,63 @@
+@totalWidth: 18;
+
+.in { .masterSize(18); }
+.out {.outer(18)}
+
+#hero hgroup { .column(@totalWidth) }
+
+#navWhichLocal h2,
+#navWhichGlobal h2 { .columnSize(@totalWidth) }
+
+#navWhichLocal section,
+#navWhichGlobal section { .columnSize(4.5); }
+
+// tpl_article
+@articleWidth: 12;
+@articleAsideWidth: 5;
+.tpl_article #hero hgroup { .columnSize(@articleWidth); .push( @totalWidth - @articleWidth ) }
+
+#content {
+	aside {.columnSize(@articleAsideWidth)}
+	.articleList, article {.columnSize(@articleWidth) }
+}
+
+.tpl_article .callout {.columnSize(8); .push(2)}
+
+// tpl_landing
+.tpl_landing #content .catBlock { .columnSize(4.5); margin-bottom: @baseFontSize*2;}
+
+
+// Home
+.tpl_home {
+	.relatedBlock section {.columnSize(6)}
+	#actionSections {.columnSize(6)}
+	#newsSections {
+		.columnSize(12);
+		.block { padding:0; }
+		ul {.row(12)}
+		li {.column(6)}
+	}
+}
+
+// Home
+.tpl_home {
+	#hero .article,
+	#hero article {
+		.copy {.columnSize(12)}
+		img {.push(12); }
+	}
+
+	#steps .article,
+	#steps article {.columnSize(6)}
+
+	.tweetBlock {
+		.columnSize(6);
+		ul {.row(6)}
+		li {.columnSize(5.5); .push(0.25)}
+	}
+	.newsBlock {
+		.columnSize(12);
+		ul {.row(12)}
+		li {.columnSize(5.5); .push(0.25)}
+	}
+}

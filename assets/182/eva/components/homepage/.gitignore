@@ -1,0 +1,9 @@
+_mine
+_old
+_testversions
+.DS_Store
+tests
+.*
+!/.gitignore
+!.bowerrc
+_tmp

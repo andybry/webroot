@@ -1,0 +1,122 @@
+* { zoom: 1 !important; }
+
+@import "../_framework/_less/bootstrap/bootstrap-small.less";
+
+@import "../_framework/_less/which/variables.less";
+@import "../_framework/_less/which/mixins.less";
+@import "../_framework/_less/which/grid.less";
+@import "../_framework/_less/which/992.less";
+
+// Project specific variables
+@import "_mixins.less";
+@import "_variables.less";
+
+// import 992 scale to set as default - load only for IE < 9
+@import "mq.768.less";
+@import "mq.992.less";
+
+@import "ie.navigation.less";
+
+.ieOnly {display:inline;}
+
+//.ie7-inline-block()
+
+li {list-style-position:outside;}
+
+#hd #navWhichGlobal,
+#hd #navWhichGlobal .in {clear:both; background:#333 !important; padding-bottom:0;}
+
+#hd #navWhichGlobal {
+	ul, li {float:none; display:block;}
+}
+
+.problemHero 	{background-image:url('@{assetsUrl}i/brand/hero-problem.jpg')}
+.regHero		{background-image:url('@{assetsUrl}i/brand/hero-regs.jpg')}
+.actionHero 	{background-image:url('@{assetsUrl}i/brand/hero-action.jpg')}
+
+.cat_problem #hero {.problemHero;}
+.cat_regulation #hero {.regHero;}
+.cat_action #hero {.actionHero;}
+
+.tpl_home {
+	#hero,
+	#hero.thProblem {
+		.problemHero;
+		.rhom {background-image: url('@{assetsUrl}svg/ie/cr-home-red.png');}
+	}
+	#hero.thRegulation {
+		.regHero;
+		.rhom {background-image: url('@{assetsUrl}svg/ie/cr-home-blue.png');}
+	}
+	#hero.thAction {
+		.actionHero;
+		.rhom {background-image: url('@{assetsUrl}svg/ie/cr-home-red.png');}
+	}
+	#hero.thActionCool {
+		.actionHero;
+		.rhom {background-image: url('@{assetsUrl}svg/ie/cr-home-blue.png');}
+	}
+
+	#subStories .block {margin-top:@baseFontSize*2;}
+	#steps {padding-top:30px}
+}
+
+.tpl_home #hero {
+	> div {z-index:2}
+	> article {z-index:0}
+	.rhom {min-height:235px; height:auto !important; height:235px;}
+}
+
+// Rhomboid jpg replacement
+.tpl_article {
+	article .callout2 {background-image: url("@{assetsUrl}svg/ie/cr-article-large-blue.jpg")}
+	article .callout2 h3 {background-image: url("@{assetsUrl}svg/ie/cr-article-blue-small.jpg")}
+	article .callout3 {background-image: url("@{assetsUrl}svg/ie/cr-article-red-orange.jpg")}	
+
+	aside li span {position: absolute; right:7px;}
+
+}
+
+.cat_problem .callout {
+	background-color: @cr-problem;
+	background-image: url("@{assetsUrl}svg/ie/cr-article-actions.jpg");
+}
+.cat_regulation .callout {
+	background-color: @cr-regulation;
+	background-image: url("@{assetsUrl}svg/ie/cr-article-actions.jpg");
+}
+.cat_action .callout {
+	background-color: @cr-action;
+	background-image: url("@{assetsUrl}svg/ie/cr-article-actions.jpg");
+}
+
+
+
+#search {
+	input {padding:0}
+	button {padding:7px 14px}
+}
+
+.articleList .tagCloud {margin:0;}
+.searchAlternatives a {.ie7-inline-block()}
+
+// Copied from mq.480.less
+.advert {
+	padding:7px 247px 7px 7px;
+	min-height:247px; height:auto !important; height:247px;
+	img {position: absolute; right:0px; top:0px;}
+}
+
+.wrapper {
+	#hero {position:relative; z-index:2}
+	.ui-menu {z-index:100; border:3px solid #ccc; border-top:0px;}
+	.ui-menu h3 {display:block; float:none}
+	.out {position:relative; z-index:1}
+}
+
+.tpl_article #content aside {top:10px;}
+.tpl_category .out .in > article {padding-top:40px;}
+
+.tpl_category #content header img {margin-top:-20px;}
+
+

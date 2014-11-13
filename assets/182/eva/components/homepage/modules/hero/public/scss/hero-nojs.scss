@@ -1,0 +1,33 @@
+// Side panels
+
+.no-js .hero {
+
+  .content {
+    width: auto;
+  }
+
+  // Block sets
+
+  .block-set {
+    float: none;
+  }
+
+  // Arrows
+
+  .left-arrow, 
+  .right-arrow {
+    display: none;
+  }
+
+  // Side braces
+
+  .left-brace, 
+  .right-brace {
+    display: none;
+  }
+
+  .hero-nav {
+    display: none;
+  }
+
+}

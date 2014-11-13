@@ -1,0 +1,177 @@
+%icon {
+  font-family: 'Which-Icons';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  @extend %icon;
+}
+
+%icon-facebook { content: '\263A'; }
+%icon-twitter { content: '\263b'; }
+%icon-reddit { content: '\2639'; }
+%icon-google { content: '\00B6'; }
+%icon-quoteStart { content: '\201c'; }
+%icon-quoteEnd { content: '\201d'; }
+%icon-list { content: '\2738'; }
+%icon-gridList { content: '\2606'; }
+%icon-nav { content: '\2638'; }
+%icon-user { content: '\265f'; }
+%icon-contact { content: '\2706'; }
+%icon-home { content: '\2302'; }
+%icon-comments { content: '\260e'; }
+%icon-bookmarks { content: '\27a4'; }
+%icon-video { content: '\272e'; }
+%icon-tag { content: '\2711'; }
+%icon-search { content: '\27B2'; }
+%icon-linkOut { content: '\25c8'; }
+%icon-settings { content: '\2739'; }
+%icon-podcast { content: '\266b'; }
+%icon-rss { content: '\21df'; }
+%icon-fav { content: '\2764'; }
+%icon-members { content: '\265a'; }
+%icon-member { content: '\265b'; }
+%icon-download { content: '\8675'; }
+%icon-help { content: '\fffd'; }
+%icon-info { content: '\2610'; }
+%icon-msg { content: '\2709'; }
+%icon-alert { content: '\26A0'; }
+%icon-internal { content: '\2023'; }
+%icon-external { content: '\25C8'; }
+%icon-checkbox { content: '\2611'; }
+%icon-tick { content: '\2713'; }
+%icon-sync { content: '\27f2'; }
+%icon-reload { content: '\21ba'; }
+%icon-more { content: '\25bc'; }
+%icon-less { content: '\25b2'; }
+%icon-remove { content: '-'; }
+%icon-add { content: '+'; }
+%icon-left { content: '\2039'; }
+%icon-right { content: '\203a'; }
+%icon-leftThin { content: ''; }
+%icon-rightThin { content: '\00bb'; }
+%icon-expand { content: '\25a3'; }
+%icon-shrink { content: '\2612'; }
+%icon-thumbUp { content: '\261d'; }
+%icon-thumbDown { content: '\261f'; }
+%icon-close { content: '\2716'; }
+%icon-edit { content: '\270e'; }
+%icon-reply { content: '\21e6'; }
+%icon-rate { content: '\2605'; }
+%icon-share { content: '\2724'; }
+%icon-print { content: '\27f1'; }
+%icon-rewind { content: '\ab'; }
+%icon-prev { content: '\25c4'; }
+%icon-stop { content: '\25a0'; }
+%icon-pause { content: '\264A'; }
+%icon-next { content: '\25ba'; }
+%icon-fastforward { content: '\bb'; }
+%icon-recycle { content: '\267b'; }
+%icon-reg { content: '\ae'; }
+%icon-copy { content: '\a9'; }
+%icon-trade { content: '\2122'; }
+%icon-youtube { content: '\9635'; }
+%icon-trash { content: '\267B'; }
+%icon-tv { content: '\0394'; }
+%icon-brand { content: '\2662'; }
+%icon-slideshow { content: '\2704'; }
+%icon-tuner { content: '\21DD'; }
+%icon-basket { content: '\261E'; }
+%icon-flickr { content: '\2601'; }
+%icon-trendUp { content: '\219b'}
+%icon-trendStable { content: '\21ae'}
+%icon-trendDown { content: '\219a'}
+
+
+.icon-facebook:before { @extend %icon-facebook; }
+.icon-twitter:before { @extend %icon-twitter; }
+.icon-reddit:before { @extend %icon-reddit; }
+.icon-google:before { @extend %icon-google; }
+.icon-quoteStart:before { @extend %icon-quoteStart; }
+.icon-quoteEnd:before { @extend %icon-quoteEnd; }
+.icon-list:before { @extend %icon-list; }
+.icon-gridList:before { @extend %icon-gridList; }
+.icon-nav:before { @extend %icon-nav; }
+.icon-user:before { @extend %icon-user; }
+.icon-contact:before { @extend %icon-contact; }
+.icon-home:before { @extend %icon-home; }
+.icon-comments:before { @extend %icon-comments; }
+.icon-bookmarks:before { @extend %icon-bookmarks; }
+.icon-video:before { @extend %icon-video; }
+.icon-tag:before { @extend %icon-tag; }
+.icon-search:before { @extend %icon-search; }
+.icon-linkOut:before { @extend %icon-linkOut; }
+.icon-settings:before { @extend %icon-settings; }
+.icon-podcast:before { @extend %icon-podcast; }
+.icon-rss:before { @extend %icon-rss; }
+.icon-fav:before { @extend %icon-fav; }
+.icon-members:before { @extend %icon-members; }
+.icon-member:before { @extend %icon-member; }
+.icon-download:before { @extend %icon-download; }
+.icon-help:before { @extend %icon-help; }
+.icon-info:before { @extend %icon-info; }
+.icon-msg:before { @extend %icon-msg; }
+.icon-alert:before { @extend %icon-alert; }
+.icon-internal:before { @extend %icon-internal; }
+.icon-external:before { @extend %icon-external; }
+.icon-checkbox:before { @extend %icon-checkbox; }
+.icon-tick:before { @extend %icon-tick; }
+.icon-sync:before { @extend %icon-sync; }
+.icon-reload:before { @extend %icon-reload; }
+.icon-more:before { @extend %icon-more; }
+.icon-less:before { @extend %icon-less; }
+.icon-remove:before { @extend %icon-remove; }
+.icon-add:before { @extend %icon-add; }
+.icon-left:before { @extend %icon-left; }
+.icon-right:before { @extend %icon-right; }
+.icon-leftThin:before { @extend %icon-leftThin; }
+.icon-rightThin:before { @extend %icon-rightThin; }
+.icon-expand:before { @extend %icon-expand; }
+.icon-shrink:before { @extend %icon-shrink; }
+.icon-thumbUp:before { @extend %icon-thumbUp; }
+.icon-thumbDown:before { @extend %icon-thumbDown; }
+.icon-close:before { @extend %icon-close; }
+.icon-edit:before { @extend %icon-edit; }
+.icon-reply:before { @extend %icon-reply; }
+.icon-rate:before { @extend %icon-rate; }
+.icon-share:before { @extend %icon-share; }
+.icon-print:before { @extend %icon-print; }
+.icon-rewind:before { @extend %icon-rewind; }
+.icon-prev:before { @extend %icon-prev; }
+.icon-stop:before { @extend %icon-stop; }
+.icon-pause:before { @extend %icon-pause; }
+.icon-next:before { @extend %icon-next; }
+.icon-fastforward:before { @extend %icon-fastforward; }
+.icon-recycle:before { @extend %icon-recycle; }
+.icon-reg:before { @extend %icon-reg; }
+.icon-copy:before { @extend %icon-copy; }
+.icon-trade:before { @extend %icon-trade; }
+.icon-youtube:before { @extend %icon-youtube; }
+.icon-trash:before { @extend %icon-trash; }
+.icon-tv:before { @extend %icon-tv; }
+.icon-brand:before { @extend %icon-brand; }
+.icon-slideshow:before { @extend %icon-slideshow; }
+.icon-tuner:before { @extend %icon-tuner; }
+.icon-basket:before { @extend %icon-basket; }
+.icon-flickr:before { @extend %icon-flickr; }
+.icon-trend-up:before { @extend %icon-trendUp; }
+.icon-trend-stable:before { @extend %icon-trendStable; }
+.icon-trend-down:before { @extend %icon-trendDown; }
+
+// generate an icon implementation
+//
+// $icon-name - the name of the icon that we want to create
+//
+// Example (to generate a class for the remove icon):
+//
+// .my-icon-class {
+//   @include which-icon(remove);
+// }
+@mixin which-icon($icon-name) {
+  @extend %which-icon;
+  @extend .icon-#{$icon-name};
+}

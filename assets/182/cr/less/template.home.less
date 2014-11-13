@@ -1,0 +1,126 @@
+// Home Template
+.tpl_home {
+	#hero {
+		overflow:hidden;
+		box-shadow:0 0 4px #000;
+
+		.article,
+		article {
+			position:relative;
+			margin-top:@baseFontSize * 2;
+			margin-bottom:@baseFontSize * 4;
+
+			h1 {
+				font-size:21px;
+				background:#333 @bg-dark;
+				padding:@baseFontSize/2 @baseFontSize;
+				line-height: @baseFontSize * 2;
+				text-align: center;
+				margin:0;
+				border-radius:3px;
+
+				strong {font-weight:1200; padding-right:2px}
+			}
+
+			.rhom {
+				z-index: 2;
+				margin-top:20px;
+				.box-sizing(border-box);
+
+				h2 {
+					font-family: @altFontFamily;
+					font-size:@baseFontSize * 2; line-height: @baseFontSize * 2.5;
+				}
+
+				.linkList li {border-color:#fff}
+				a {color:#fff}
+			}
+			img {
+				position:absolute;
+				left:0; 
+			}	
+
+			a.btn {
+				margin:0 7px 7px 0;
+			}		
+		}
+	}
+
+	#steps {
+		position: relative;
+		background:#333 @bg-dark;
+		color:#fff;
+		padding-bottom:40px;
+		box-shadow:0 0 4px #000;
+
+		.article,
+		article {
+			a {
+				position: relative;
+				display: block;
+			}
+			h2 {
+				font-size: @baseFontSize*2; line-height:@baseFontSize*2.5;  font-family: @altFontFamily;
+				margin-bottom: @baseFontSize * 2;
+			}
+			//p {font-style: italic; font-family:@serifFontFamily-italic}
+		}
+	}
+
+	.block {
+		background:#fff;
+		box-shadow:0 0 6px -2px #777;
+		margin-bottom:21px;
+		padding:@baseFontSize 0;
+
+		h2 {
+			font-family: @altFontFamily;
+			padding:0 17.5px 21px;
+		}
+ 
+		h3 {
+			padding:0 17.5px 21px;
+			color: #777;
+		}
+
+		li {
+			border-top:1px dotted #ccc;
+			padding-top:14px;
+		}
+	}
+
+	#subStories {
+		.block {
+			margin-top:-@baseFontSize * 2;
+			margin-bottom:@baseFontSize * 4;
+			.zz-bottom();
+
+			li {border-top:0px; padding-top:0}
+		}
+	}
+
+	#news {
+		padding:40px 0 140px;
+	}
+
+
+	.newsBlock li {
+		h4 {padding:0}
+		time {font-size:12px; color:#777}
+	}
+
+	.tweetBlock {
+		&:before {
+			position:absolute; top:14px; right:14px; font-size:2.5em;
+		}
+
+		li {
+			font-size:14px;
+			cite {color:#777; padding-bottom:7px; display: block; font-size:12px}
+			p {font-style: italic; font-family:@serifFontFamily-italic;}
+		}
+	}
+
+
+
+}

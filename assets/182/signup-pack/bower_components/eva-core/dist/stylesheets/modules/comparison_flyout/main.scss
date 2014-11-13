@@ -1,0 +1,196 @@
+@import "*"
+
+// 
+// @Section Modules - Comparison Flyout - Container - Hidden
+// <!--
+//    Setup:
+//      set count to 0
+//      Empty the selection boxes
+//      Put the TV placeholders in place
+//    This scenario is the default state of the comparison UI
+// -->
+// <script>
+//   addOnload(function() {
+//     $('.js-comparison-flyout__count').html(0);
+//     $('.js-comparison-flyout__product-container').empty()
+//       .removeClass('comparison-flyout__product').addClass('comparison-flyout__product-placeholder--tv');
+//   });
+// </script>
+//
+// Styleguide Modules - Comparison Flyout - Scenario - No items to compare
+
+// @Section Modules - Product Listing - Scenario - Viewing a tested product on listing page
+// @Section Modules - Comparison Flyout - Scenario - No items to compare
+// <!--
+//   Setup:
+//     Start with the empty comparison flyout (no items to compare)
+//   Mock product listings UI (because the code for it is in product-web)
+//     attach an onlick event to the product listings compare button to 
+//       When the text is 'Add to compare':
+//         1. Change the text to 'Remove from compare'
+//         2. Fire the comparison-flyout__add-product-event event with the data
+//              category: tv,
+//              model: <taken from product listing>
+//              manufacturer: <taken from product listing>
+//              thumbnail URL: <taken from product listing>
+//       When the text is 'Remove from compare':
+//         1. Change the text to 'Add to compare'
+//         2. Fire the comparison-flyout__remove-product-event event with the data
+//              category: tv,
+//              model: <taken from product listing>
+//              manufacturer: <taken from product listing>
+//              thumbnail URL: <taken from product listing>
+//              href: <taken from product listing>
+//         3. Add the mock handling for removal of a product
+// -->
+// <script>
+//   addOnload(function() {
+//     $('.product-listing__compare-button').click(function() {
+//       var $this = $(this),
+//           $productListing = $this.parents('.product-listing'),
+//           manufacturer = $productListing.find('.product-listing__manufacturer').text(),
+//           model = $productListing.find('.product-listing__model').text(),
+//           thumbnailSrc = $productListing.find('.product-listing__thumb-image').attr('src'),
+//           href = $productListing.find('.product-listing__name').attr('href'),
+//           text = $.trim($this.text());
+//       if(text === 'Add to compare') {
+//         WHICH.eventAggregator.trigger('comparison-flyout__add-product-event', {
+//           category: 'tv',
+//           model: model,
+//           manufacturer: manufacturer,
+//           thumbnailSrc: thumbnailSrc,
+//           href: href,
+//           $source: $this
+//         });
+//       } else {
+//         WHICH.eventAggregator.trigger('comparison-flyout__remove-product-event', {
+//           category: 'tv',
+//           model: model,
+//           manufacturer: manufacturer,
+//           thumbnailSrc: thumbnailSrc,
+//           href: href,
+//           $source: $this
+//         });
+//         $this.text('Add to compare');
+//       }
+//     });
+//     WHICH.eventAggregator.on('comparison-flyout__add-product-success-event', function(event, data) {
+//       data.$target.text('Remove from compare');
+//     });
+//     WHICH.eventAggregator.on('comparison-flyout__add-product-failure-event', function(event, data) {
+//       data.$target.after('<div>You already have four products for comparison</div>');
+//       setTimeout(function() {
+//         data.$target.next().slideUp();
+//       }, 5000);
+//     });
+//     WHICH.eventAggregator.on('comparison-flyout__remove-product-event', function(event, data) {
+//       var model = data.model,
+//           manufacturer = data.manufacturer;
+//       $('.product-listing').filter(function(index, element) {
+//         var $element = $(element),
+//             elementModel = $element.find('.product-listing__model').text()
+//             elementManufacturer = $element.find('.product-listing__manufacturer').text(),
+//             matches = (elementModel === model && elementManufacturer === manufacturer);
+//         return matches;
+//       }).find('.product-listing__compare-button').text('Add to compare');
+//     });
+//   });
+// </script>
+//
+// Styleguide Modules - Comparison Flyout - Scenario - Adding an item to the compare toolbar when it has no items
+
+// @Section Modules - Product Listing - Scenario - Viewing a tested product on listing page
+// @Section Modules - Comparison Flyout - Scenario - Adding an item to the compare toolbar when it has no items
+// <!-- 
+//   Setup: 
+//     1. Start with the toolbar when it has no items and a second copy of the product listing
+//     2. Update the CSS to allow the listings to sit on the same line
+//     2. Replace the data for the second product 
+//     3. Click the 'Add to compare' button to add the first product to the flyout
+// -->
+// <script>
+//   addOnload(function() {
+//     var $secondProduct = $('._product-listings-mock-grid-container:nth-child(2)');
+//     $('._product-listings-mock-grid-container').css({
+//       'float': 'left',
+//       'margin-right': '50px'
+//     });
+//     $secondProduct.find('.product-listing__manufacturer').text('LG');
+//     $secondProduct.find('.product-listing__model').text('55LM860V');
+//     $secondProduct.find('.product-listing__thumb-image').attr('src', 'http://images.pricerunner.com/product/335x241/372632149/LG-55LM860V.jpg');
+//     $('._product-listings-mock-grid-container').find('.product-listing__compare-button').first().click();
+//   });
+// </script>
+//
+// Styleguide Modules - Comparison Flyout - Scenario - Adding an item to the compare toolbar when open
+
+// @Section Modules - Product Listing - Scenario - Viewing a tested product on listing page
+// @Section Modules - Product Listing - Scenario - Viewing a tested product on listing page
+// @Section Modules - Product Listing - Scenario - Viewing a tested product on listing page
+// @Section Modules - Comparison Flyout - Scenario - Adding an item to the compare toolbar when open
+// <!--
+//   Setup:
+//     1. Start with the initial state of the 'Adding an item to the compare toolbar when open' scenario with 3 extra product listings
+//     2. Populate the extra data
+//     3. Click 2nd, 3rd and 4th elements to add them to the flyout
+// -->
+// <script>
+//   addOnload(function() {
+//     var $secondProduct = $('._product-listings-mock-grid-container:nth-child(2)'),
+//         $thirdProduct = $('._product-listings-mock-grid-container:nth-child(3)'),
+//         $fourthProduct = $('._product-listings-mock-grid-container:nth-child(4)'),
+//         $fifthProduct = $('._product-listings-mock-grid-container:nth-child(5)');
+//     $thirdProduct.find('.product-listing__manufacturer').text('Samsung');
+//     $thirdProduct.find('.product-listing__model').text('UE40ES8000');
+//     $thirdProduct.find('.product-listing__thumb-image').attr('src', 'http://www.staticwhich.co.uk/static/images/products/tv/Samsung_UE40ES8000/thumbnails/xlarge/thumb.jpg');
+//     $fourthProduct.find('.product-listing__manufacturer').text('Panasonic');
+//     $fourthProduct.find('.product-listing__model').text('TX-L19C20B');
+//     $fourthProduct.find('.product-listing__thumb-image').attr('src', 'http://images.pricerunner.com/product/466x352/241097054/Panasonic-Viera-TX-L19C20B.jpg');
+//     $fifthProduct.find('.product-listing__manufacturer').text('Samsung');
+//     $fifthProduct.find('.product-listing__model').text('UE46D7000LUXXU');
+//     $fifthProduct.find('.product-listing__thumb-image').attr('src', 'http://images.pricerunner.com/product/400x265/220775311/Samsung-UE46D7000.jpg');
+//     $secondProduct.find('.product-listing__compare-button').click();
+//     $thirdProduct.find('.product-listing__compare-button').click();
+//     $fourthProduct.find('.product-listing__compare-button').click();
+//   });
+// </script>
+//
+// Styleguide Modules - Comparison Flyout - Scenario - Adding a fifth item to the compare toolbar
+
+// @Section Modules - Comparison Flyout - Scenario - Adding a fifth item to the compare toolbar
+// <!--
+//   Setup:
+//     Same start point as the 'adding a fifth item' scenario
+// -->
+// <script>
+//   addOnload(function() {
+//   });
+// </script>
+//
+// Styleguide Modules - Comparison Flyout - Scenario - Removing an item from the compare toolbar using the toolbar 'x'
+
+// @Section Modules - Comparison Flyout - Scenario - Removing an item from the compare toolbar using the toolbar 'x'
+// <!-- 
+//   Setup:
+//     Same initial state as the removing an item from the compare toolbar
+// -->
+//
+// Styleguide Modules - Comparison Flyout - Scenario - Removing an item from the compare toolbar using the listing CTA
+
+// @Section Modules - Comparison Flyout - Scenario - Removing an item from the compare toolbar using the listing CTA
+// <!--
+//   Setup:
+//     Same initial state as the 'Removing an item from the compare toolbar using the listing CTA' scenario
+// -->
+//
+// Styleguide Modules - Comparison Flyout - Scenario - Remove the last item or selecting "Remove all"
+
+
+// @Section Modules - Comparison Flyout - Scenario - Removing an item from the compare toolbar using the listing CTA
+// <!--
+//   Setup:
+//     Same initial state as the 'Removing an item from the compare toolbar using the listing CTA' scenario
+// -->
+//
+// Styleguide Modules - Comparison Flyout - Scenario - Minimising the comparison toolbar
+

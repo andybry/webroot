@@ -1,0 +1,80 @@
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+START OF FRAMEWORK CSS
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+// ==========================================================
+
+// For use in standalone framework. When use in boilerplate project code will overide this and this can be used as an example
+// Vanilla framework to be inlcluded in projects
+
+
+// ==========================================================
+// @frameworkUrl: '../';
+
+//  01. WHICH SPECIFIC 		==============================
+
+// include Which specific fonts 
+@import "which/font-stag.less";
+
+//  00. WHICH VARs 		==============================
+@import "which/variables.less";
+@import "which/mixins.less";
+
+// Which specific grid based on frameless grid & semantic grid
+@import "which/grid.less";
+@import "which/icons.less";
+// @import "which/shadows.less";
+
+//@import "which/layout.less";
+
+@import "which/tags.less";
+
+//  10. BASE FRAMEWORK 		==============================
+// @import "320/320andup.less";
+// bootstrap small has all unecessary components removed
+@import "bootstrap/bootstrap-small.less";
+
+//  10. MEDIA QUERIES 		==============================
+@media print {
+	// @import "print.less";
+}
+
+// 320px is default so no media query needed
+@import "which/320.less";
+
+// 480px
+@media only screen and (min-width: 480px) {
+	@import "which/480.less";
+}
+
+// 600px
+@media only screen and (min-width: 600px) {
+	@import "which/600.less";
+}
+
+// 768px
+@media only screen and (min-width: 768px) {
+	@import "which/768.less";
+}
+
+// 992px
+@media only screen and (min-width: 992px) {
+	@import "which/992.less";
+}
+
+// 1382px
+@media only screen and (min-width: 1382px) {
+	@import "which/1382.less";
+}
+
+// 2x
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+	@import "which/2x.less";
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+START OF FRAMEWORK CSS
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */

@@ -1,0 +1,44 @@
+
+// Base classes
+.tagCloud {
+	.clearfix();
+}
+
+.tagCloud > a,
+.tag {
+  font-size: @baseFontSize * .642857;
+  display:block; float:left;
+  text-transform:uppercase;
+  line-height: @baseFontSize * 1.5;
+  letter-spacing:0.07em;
+  padding:0 @baseFontSize/1.5;
+  margin:0  @baseFontSize/1.5px  @baseFontSize/1.5px 0;
+  color: @white;
+  vertical-align: baseline;
+  white-space: nowrap;
+  background-color: @blueLight;
+  font-family:Arial, sans-serif;
+  font-weight:bold;
+  border-radius:10px;
+
+  &:hover,
+  &:focus {
+  	text-decoration:none;
+  	color:@white;
+  	background:@blue;
+  }
+
+  &.on {
+    background:#049CDB; color:#fff
+  }
+
+}
+
+#ft .tagCloud > a,
+#ft .tag {
+  background-color: @blueDark;
+  &:hover,
+  &:focus {
+  	background:@blue;
+  }	
+}

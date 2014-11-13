@@ -1,0 +1,6 @@
+{
+  "name": "eva-grid-frameless",
+  "dependencies": {
+    "v0.2.0":"git@github.com:whichdigital/eva-grid-frameless.git#v0.2.0"
+  }
+}

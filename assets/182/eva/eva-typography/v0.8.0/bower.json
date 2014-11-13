@@ -1,0 +1,13 @@
+{
+  "name": "v0.8.0",
+  "version": "0.8.0",
+  "description": "Which? Typography",
+  "gitHead": "77c7c24d670f019d0da64dbc4c6525056b91e6ac",
+  "readmeFilename": "README.md",
+  "_id": "eva-typography@0.8.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:whichdigital/eva-typography.git"
+  },
+  "readme": "# Which? Typography\n\nBasic styles, fonts and icons used in Which?\n\nPlease, set the *$fonts_folder* variable to load the right assets.\n\n# Documentation\n\nRendered with Styledocco. To ensure that the correct font-face is being loaded,\nuse the command\n```\nstyledocco -n \"Eva Typography\" --preprocessor \"scss\" --include font-face.scss\n```\n\n# Changelog\n\n- 0.8.0 Use Which-Icons font family for pseudo content\n- 0.7.0 Font face added for typography fonts\n- 0.6.0 New icons added\n- 0.5.0, 0.4.0 Re-organised module\n- 0.3.0 New icon font added\n- 0.2.2 !important removed from headings\n- 0.2.1 New (old) `.big` class\n- 0.2.0 *BREAKING CHANGES* Rewritten in SASS.\n- 0.1.1 First release\n"
+}

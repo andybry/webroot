@@ -1,0 +1,76 @@
+//  ###################################################################################
+//  # Blocks Demos (traditional floated layouts)
+//  ###################################################################################
+
+//  <div class="demo-1-2-1-parent-block">
+//    <div class="demo-1-2-1-block1">
+//      Child 1
+//    </div>
+//    <div class="demo-1-2-1-block2">
+//      Child 2
+//    </div>
+//    <div class="demo-1-2-1-block3">
+//      Child 3
+//    </div>
+//  </div>
+//
+// Styleguide Module - Layouts - Block - Percentages - Demo - 1 to 2 to 1 centered
+.demo-1-2-1-parent-block {
+  @extend %st-layout__parent-block;
+  @include font-size(1); // font-size can be set on parent (or inherited)
+}
+.demo-1-2-1-block1 {
+  @extend %st-layout__block-of-width--center--25;
+}
+.demo-1-2-1-block2 {
+  @extend %st-layout__block-of-width--center--50;
+}
+.demo-1-2-1-block3 {
+  @extend %st-layout__block-of-width--center--25;
+}
+
+//
+//  <div class="demo-1-2-parent-block">
+//    <div class="demo-1-2-block1">
+//      Child 1
+//    </div>
+//    <div class="demo-1-2-block2">
+//      Child 2
+//    </div>
+//  </div>
+// 
+// Styleguide Module - Layouts - Block - Percentages - Demo - 1 to 2 left aligned
+.demo-1-2-parent-block {
+  @extend %st-layout__parent-block;
+  @include font-size(1); // font can be set on outer block (or inherited)
+}
+.demo-1-2-block1 {
+  @extend %st-layout__block-of-width--left--one-third;
+}
+.demo-1-2-block2 {
+  @extend %st-layout__block-of-width--left--two-thirds;
+  border: 1px solid black;
+}
+
+// <div class="demo-split-left-right-parent-block">
+//   <div class="demo-split-left">
+//     Child 1
+//   </div>
+//   <div class="demo-split-right">
+//     Child 2
+//   </div>
+// </div>
+// 
+// Styleguide Module - Layouts - Block - Demo - Split Left Right
+.demo-split-left-right-parent-block {
+  @extend %st-layout__parent-block;
+  @include font-size(2); // font can be set on outer block (or inherited)
+}
+.demo-split-left {
+  @extend %st-layout__block-of-width--left--50;
+  vertical-align: middle;
+}
+.demo-split-right {
+  @extend %st-layout__block-of-width--right--50;
+  vertical-align: middle;
+}

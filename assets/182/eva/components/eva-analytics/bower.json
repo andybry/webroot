@@ -1,0 +1,24 @@
+{
+  "name": "eva-analytics",
+  "version": "1.9.1",
+  "description": "Which? Analytics",
+  "dependencies": {
+    "jquery": "1.10.1",
+    "requirejs": "latest",
+    "eva-utils": "git@github.com:whichdigital/eva-utils.git"
+  },
+  "ignore": [
+    "*.gitignore",
+    "demo/",
+    "README.md",
+    "unit-tests"
+  ],
+  "gitHead": "4e6d88a80fce792b2e2baf84ec5eae2f4e40c8dc",
+  "readme": "# Which? Analytics\n\nEnsure the tag manager code (example shown below) is inserted on every page in the `<head>` section.\n```javascript\n<script>\n    window.universal_variable = {\n        'whichGAPUA': 'UA-36254087-7',\n        'whichGAPDom': 'which.co.uk'\n    };\n</script>\n\n<script src='//d3c3cq33003psk.cloudfront.net/opentag-51800-606367.js' async defer></script>\n```\n\nThe value of whichGAPUA and whichGAPDom will change from site to site. whichGAPUA should also change by environment (dev/int/prod). Both variables are required.\n\nThe eva-analytics module also has to be included. Ideally you should obtain the files using Bower and load the JavaScript with RequireJS. Add the following dependency within your bower.json file:\n\n```json\n\"eva-analytics\": \"git@github.com:whichdigital/eva-analytics.git#x.x.x\"\n```\n\nWhere x.x.x is the SemVer of the release you require. All of the code is self initialising so you just need to add the correct loader to your call to require().\n",
+  "readmeFilename": "README.md",
+  "_id": "analytics@1.9.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:whichdigital/eva-analytics.git"
+  }
+}

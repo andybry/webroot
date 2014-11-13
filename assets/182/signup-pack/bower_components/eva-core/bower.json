@@ -1,0 +1,30 @@
+{
+  "name": "eva-core",
+  "version": "0.9.0",
+  "homepage": "https://github.com/whichdigital/eva-core",
+  "ignore": [
+    "**/.*",
+    "**/*.sh",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "demo",
+    "Gemfile",
+    "Gemfile.lock",
+    "Guardfile",
+    "Rakefile",
+    ".git*",
+    "experiments"
+  ],
+  "dependencies":{
+    "requirejs":"2.1.9",
+    "jquery":"1.10.2",
+    "almond":"0.2.6",
+    "underscore":"1.5.2",
+    "html5shiv": "3.7.0",
+    "reset-scss": "*",
+    "H5F": "git@github.com:whichdigital/H5F.git#1.1.1"
+  }
+}

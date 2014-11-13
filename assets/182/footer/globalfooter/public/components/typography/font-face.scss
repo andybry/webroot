@@ -1,0 +1,43 @@
+$fonts_folder: 'components/' !default;
+
+@font-face {
+  font-family: 'stsemiboldRegular';
+  src: url('#{$fonts_folder}fonts/st_semibold-webfont.eot');
+  src: url('#{$fonts_folder}fonts/st_semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts_folder}fonts/st_semibold-webfont.woff') format('woff'),
+       url('#{$fonts_folder}fonts/st_semibold-webfont.svg#stsemiboldRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'StagSansWeb-Light';
+  src: url('#{$fonts_folder}fonts/StagSansWeb-Light.eot');
+  src: url('#{$fonts_folder}fonts/StagSansWeb-Light.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts_folder}fonts/StagSansWeb-Light.woff') format('woff'),
+       url('#{$fonts_folder}fonts/StagSansWeb-Light.svg#StagSansWeb-Light') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'stserifbookRegular';
+  src: url('#{$fonts_folder}fonts/st_serif_book-webfont.eot');
+  src: url('#{$fonts_folder}fonts/st_serif_book-webfont.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts_folder}fonts/st_serif_book-webfont.woff') format('woff'),
+       url('#{$fonts_folder}fonts/st_serif_book-webfont.svg#stserifbookRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'StagSansWeb-Book';
+  src: url('#{$fonts_folder}fonts/StagSansWeb-Book.eot');
+  src: url('#{$fonts_folder}fonts/StagSansWeb-Book.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts_folder}fonts/StagSansWeb-Book.woff') format('woff'),
+       url('#{$fonts_folder}fonts/StagSansWeb-Book.svg#StagSansWeb-Book') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}

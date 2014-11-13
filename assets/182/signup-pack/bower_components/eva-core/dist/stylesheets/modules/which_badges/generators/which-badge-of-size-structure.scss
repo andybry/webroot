@@ -1,0 +1,10 @@
+@mixin generate-which-badge-of-size-structure(
+  $diameter: 36px,
+  $name: small
+) {
+  %st-which-badge--#{$name} {
+    height: $diameter;
+    width: $diameter;
+    border-radius: ($diameter / 2);
+  }
+}

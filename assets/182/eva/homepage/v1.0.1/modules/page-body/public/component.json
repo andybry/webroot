@@ -1,0 +1,11 @@
+{
+  "name": "members-area",
+  "version": "0.0.0",
+  "dependencies": {
+  	"jquery":"1.9.1",
+    "hammerjs":"1.0.5",
+    "requirejs":"2.1.6",
+  	"eva-typography": "git@github.com:whichdigital/eva-typography.git",
+  	"eva-grid-frameless": "git@github.com:whichdigital/eva-grid-frameless.git"
+  }
+}

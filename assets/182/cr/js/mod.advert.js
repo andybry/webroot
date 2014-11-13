@@ -1,0 +1,1 @@
+define(["jquery","assets/adtech-placements-cr","fr/lib/adtech"],function(a){a(document).ready(function(){console.info("module.adtech");window.adtech.init()})});

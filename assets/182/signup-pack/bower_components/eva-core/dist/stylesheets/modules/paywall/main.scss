@@ -1,0 +1,33 @@
+@import "*";
+
+// Provide a container to give some context to the module when
+// displayed in the style guide.
+// This style is not intended to be used outside the styleguide
+._paywall-mock-grid-container {
+  margin: auto;
+  padding: 50px;
+  margin: 100px;
+}
+
+//
+//  <div class="_paywall-mock-grid-container">
+//    <section class="paywall-banner">
+//      <div class="paywall-banner__review">
+//        <button class="action-close-top action-close icon-close"><span class="inner-text">Close</span></button>
+//        <p><a href="#" class="link-right paywall-banner__link-review">See a sample review</a></p>
+//      </div>
+//      <div class="paywall-banner__left">
+//      <div class="paywall-banner__text">
+//        <h1 class="paywall-banner__header">The quickest way to find what you need</h1>
+//        <p>Get the inside track on over 3,000 products with unbiased, straight-talking advice from our Test Labs. To see the full reviews just log in OR start your £1 trial</p>
+//      </div>
+//      <div class="paywall-banner__actions">
+//        <a href="#" class="button button-secondary icon-user">Log in</a>
+//        <a href="#" class="button button-primary icon-right">Start trial</a>
+//      </div>
+//      </div>
+//    </section>
+//  </div>
+//
+// Styleguide Modules - Paywall - Banner
+.dummyclass {}

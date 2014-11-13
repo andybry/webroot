@@ -1,0 +1,223 @@
+/*Tables (product and non-product)*/
+#content .t1, #content .f8, #content .f9 {
+	padding:0;
+	width:100%;
+	margin:0 0 10px;
+	clear:both;
+}
+#content .t1 table.mini,.f8,.f9 {
+	width:455px;
+	margin:0px;
+}
+#content .t1 table {
+	border-collapse:collapse;
+	margin:0 0 5px;
+	border:1px solid #666;
+	color:#333;
+	font-family:Verdana, Helvetica, sans-serif;
+}
+#content .t1 th.main {
+	color:#000;
+	font-weight:700;
+	background-color:#ddd;
+	text-align:left;
+	vertical-align:top;
+	padding:3px 5px;
+	border:1px solid #666;
+}
+#content .t1 th.mini {
+	color:#fff;
+	font-weight:700;
+	background-color:#666;
+	text-align:left;
+	border-left:0px none;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+#content .t1 th.hdr_r {
+	color:#fff;
+	font-weight:700;
+	background-color:#454545;
+	text-align:center;
+	border-left:0px none;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+#content .t1 th.hdr {
+	color:#fff;
+	font-weight:700;
+	background-color:#454545;
+	text-align:center;
+	padding:2px 5px;
+	border-left:1px dotted #FFF;
+	overflow:hidden;
+}
+#content .t1 th.left {
+	padding:2px 5px;
+	border-right:1px solid #666;
+	text-align:left;
+	border-top:1px solid #666;
+}
+#content .t1 th.bb_model {
+	padding:2px 5px;
+	border-right:1px solid #666;
+	text-align:left;
+	border-top:1px solid #666;
+	color:#c00;
+	background-color:#fff;
+}
+#content .t1 td {
+	padding:2px 5px;
+	border-right:1px solid #666;
+	border-top:1px solid #666;
+}
+#content .t1 td.bb_score {
+	background-color:#c00;
+	color:#fff;
+	font-weight:700;
+}
+#content .t1 .section {
+	font-weight:700;
+	color:#fff;
+	background-color:#8a8787;
+}
+#content .t1 tr.other td {
+	background-color:#f6f6f6;
+	color:#333;
+}
+
+/*Style for table notes*/
+.tnote {
+	float:left;
+	clear:left;
+	width:100%;
+	text-align:left;
+	vertical-align:top;
+	margin:0;
+	padding-top:2px;
+	font-size:0.9em;
+	line-height:1.1em;
+}
+.tnote .notehldr {
+	width:456px;
+	margin:0;
+	padding:0;
+}
+.tnote h3.tntitle {
+	color:#ff6600;
+	margin:0px;
+	padding:0px;
+	font-size:1.1em;
+}
+.tnote p.tnparag {
+	float:left;
+	margin:0 0 4px 0;
+}
+.tnote ol, .tnote ul {
+	list-style-position:outside;
+	clear:both;
+	margin:0 0 4px 0;
+	padding-left:23px;
+	width:430px;
+	font-size:1em;
+	line-height:1em;
+}
+.tnote ol li.listnumbr {
+	list-style-type:decimal;
+	margin:0;
+	padding:0;
+}
+.tnote ol li.listlettr {
+	list-style-type:lower-alpha;
+	margin:0;
+	padding:0px;
+}
+.tnote ul li.listbult {
+	list-style-type:square;
+	margin:0;
+	padding:0;
+}
+/*ORIGINAL ONESITE TABLE STYLES*/ 
+/* Tables (product and non-product): */ 
+.t1 table {
+	border-collapse:collapse;
+	margin:0 0 5px;
+	border:1px solid #666;
+}
+.t1 th.main {
+	color:#000;
+	font-weight:700;
+	background-color:#ddd;
+	text-align:left;
+	vertical-align:top;
+	padding:3px 5px;
+	border:1px solid #666;
+}
+.t1 th.mini {
+	color:#fff;
+	font-weight:700;
+	background-color:#666;
+	text-align:left;
+	border-left:0px none;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+.t1 th.hdr_r {
+	color:#fff;
+	font-weight:700;
+	background-color:#454545;
+	text-align:center;
+	border-left:0px none;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+.t1 th.hdr {
+	color:#fff;
+	font-weight:200;
+	background-color:#454545;
+	text-align:center;
+	padding:2px 5px;
+	border-left:1px dotted #FFF;
+	overflow:hidden;
+}
+.t1 th.left {
+	padding:2px 5px;
+	border-right:1px solid #666;
+	text-align:left;
+	border-top:1px solid #666;
+}
+.t1 th.bb_model {
+	padding:2px 5px;
+	border-right:1px solid #666;
+	text-align:left;
+	border-top:1px solid #666;
+	color:#c00;
+	background-color:#fff;
+}
+.t1 td {
+	padding:2px 5px;
+	border-right:1px solid #666;
+	border-top:1px solid #666;
+}
+.t1 td.bb_score {
+	background-color:#c00;
+	color:#fff;
+	font-weight:700;
+}
+.t1 .section {
+	font-weight:700;
+	color:#fff;
+	background-color:#8a8787;
+}
+.t1 tr.other td {
+	background-color:#f6f6f6;
+	color:#000;
+}

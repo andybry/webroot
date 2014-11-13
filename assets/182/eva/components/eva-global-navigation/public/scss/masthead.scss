@@ -1,0 +1,92 @@
+// Masthead search
+
+.masthead-search {
+  background: #fff;
+  height: 30px;
+  padding: 12px 15px 13px;
+  overflow: hidden;
+
+  #sli_search_masthead {
+    //placeholder text lighten (temperamental when compiled in SASS)
+
+    &::-webkit-input-placeholder {
+      color: #41606f;
+    }
+
+    &:-moz-placeholder {
+      color: #41606f
+    }
+
+    &::-moz-placeholder {
+      color: #41606f
+    }
+    
+    &:-ms-input-placeholder {
+      color: #41606f
+    }
+    
+    &:focus::-webkit-input-placeholder {
+      color: #fff;
+    }
+
+    &:focus:-moz-placeholder {
+      color: #fff;
+    }
+
+    &:focus::-moz-placeholder {
+      color: #fff;
+    }
+    
+    &:focus:-ms-input-placeholder {
+      color: #fff;
+    }
+  }
+}
+
+.masthead-search-box {
+  width: 500px;
+  text-align: right;
+  float: right;
+
+  #sli_search_masthead {
+    width: 360px;
+    font: 18px 'StagSansWeb-Light', Helvetica, Arial, sans-serif;
+  }
+}
+
+#masthead-search-form {
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  input {
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #dddddd;
+  }
+
+  .search-button {
+    font-family: 'Which-Icons';
+    font-size: 24px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    background: #6c8896;
+    color: #fff;
+    height: 32px;
+    vertical-align: top;
+    padding: 0px 15px 0px 20px;
+    line-height: 30px;
+
+    // button appearance fix for mobile
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+  }
+}
+
+.masthead-search-title {
+  font: 30px 'StagSansWeb-Light', Helvetica, Arial, sans-serif;
+  color: #4c626c;
+  float: left;
+}

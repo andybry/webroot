@@ -1,0 +1,854 @@
+@import url(forms-global.css); /* Importing shared form rules*/
+
+/*-- SIGNUP-SPECIFIC CODE --*/
+
+/*-- begin from forms.css --*/
+#content form.sign-up {position:relative;}
+
+#content form.sign-up fieldset {
+	background:url(/assets/images/design/bg-standard-form-top-lrg.png) #FFF no-repeat 0 0;
+	border:none;
+	border-left:1px solid #FFF; /*--fixes Firefox border and background image placement */
+	margin:20px 0 0 0;
+    overflow: hidden;
+    clear: both;
+}
+
+#content form.sign-up div.wrapper {
+	/*
+	background:url(/assets/images/design/bg-standard-form-end-lrg.png) no-repeat left bottom;
+	*/
+	border:solid 1px #CDD8DE; border-top:none;
+	-moz-border-radius:5px; -webkit-border-radius:5px;
+	clear:both;
+	float:left;
+	padding:20px 10px;
+	position:relative; /*-- width:673px;Why two widths? RMC --*/
+	width:908px;
+	width:906px; /*If left and right border is used */
+}
+#content form.sign-up legend {
+	background:#FFF;
+	color:#C00;
+	font-weight:normal; 
+	font-size:1.3em;
+	font-family:"Trebuchet MS",Arial,sans-serif;
+	line-height:1;
+	margin-left:10px;
+	padding:0 5px;
+	text-transform:uppercase;
+}
+#content form.sign-up div.wrapper div {
+	clear:both;
+	margin-bottom:5px;
+}
+#content form.sign-up p.note {
+	margin-bottom:-4px;
+	padding-top:4px;
+	text-align:right;
+}
+#content form.sign-up p.note span {color:#C00;}
+#content form.sign-up fieldset a:link,
+#content form.sign-up fieldset a:visited,
+#content form.sign-up fieldset a:active {
+	text-decoration:none;
+}
+#content form.sign-up fieldset a:hover {
+	text-decoration:underline;
+}
+#content form.sign-up div.smallbox label {
+	margin-left:5px;
+	text-align:left;
+	width:auto;
+}
+#content form.sign-up div label {
+	color:#333;
+	display:block;
+	float:left;
+	margin-right:10px;
+	text-align:right;
+	width:209px;
+	padding-right:2px;
+	padding-top:4px;
+}
+#content form.sign-up div.login label {
+	width:240px; /* Login needs more space  */
+}
+#content form.sign-up div input.text {width:241px;}
+#content form.sign-up div select.text {width:250px;}
+
+/* added at W?s request */
+#content form div select.text-2 {width:250px;}
+#content form.sign-up div #select-button {margin-left:10px;}
+#content form.sign-up div #cardExpiryMonth {width:auto;}
+#content form.sign-up div #cardExpiryYear {width:60px;}
+#content form.sign-up div label.checkbox,
+#content form#forgotten-login div label.checkbox {
+	color:#333;
+	display:block;
+	float:left;
+	margin-right:10px;
+	margin-left:10px;
+	padding:2px 17px 5px 0;
+	text-align:left;
+	width:600px;
+}
+#content form#forgotten-login div label.checkbox {padding-top:0;}
+#content form.sign-up div.login label.checkbox  {
+	float:left;
+	width:560px;
+}
+#content form.sign-up div #contact-me {
+	display:block;
+	float:left;
+	margin-top:4px;
+}
+#content form.sign-up div label.mandatory {
+	padding-right:0;
+	width:197px;
+}
+#content form.sign-up div label.mandatory span {
+	color:#C00;
+	padding-left:5px;
+}
+#content form.sign-up div p.error {
+	color:#C00;
+	width:620px;
+}
+#content .sign-up .fieldWrapper .error {
+	margin:0 0 2px 212px;
+	width:480px;
+}
+#content form.sign-up div img {
+	vertical-align:middle;
+}
+#content form .hide {display:none;}
+
+#content form.sign-up .make-payment {position:relative;}
+#content form.sign-up .make-payment p {margin-bottom:5px;}
+#content form.sign-up .make-payment p.no-label {
+	padding:5px 0;
+	width:250px;
+}
+#content form.sign-up .make-payment p.no-label img {
+	float:left;
+	margin-right:12px;
+}
+#content form.sign-up .make-payment div {margin-bottom:5px;}
+#content form.sign-up div#ddInfoPanel.no-label {
+	padding:5px 0;
+	width:250px;
+}
+#content form.sign-up div#ddInfoPanel.no-label img {
+	float:left;
+	margin-right:12px;
+}
+#content form.sign-up div#ddInfoPanel.no-label a {
+	color:#0083B3;
+}
+#content form.sign-up #cardNote {
+	bottom:12pt;
+	clear:both;
+	position:absolute;
+	right:10pt;
+	text-align:right;
+	width:240px;
+}
+#content .help-area,
+#content form.sign-up .help-area {
+	clear:both;
+	position:absolute;
+	right:10px;
+	text-align:right;
+	top:0;
+	width:140px;
+}
+#content .mandatory-area,
+#content form.sign-up .mandatory-area {
+	clear:both;
+	position:absolute;
+	right:10px;
+	text-align:right;
+	top:0;
+	width:300px;
+}
+#content .mandatory-area span,
+#content form.sign-up .mandatory-area span {color:#C00;}
+#content .help-area p a,
+#content form.sign-up .help-area p a {
+	background:url(/assets/images/bullets/blt-help.png) center right no-repeat;
+	padding-right:24px;
+}
+#content form.sign-up #sortCode1,
+#content form.sign-up #sortCode2,
+#content form.sign-up #sortCode3,
+#content form.sign-up #ddSort1Field,
+#content form.sign-up #ddSort2Field,
+#content form.sign-up #ddSort3Field {width:50px;}
+#content form.sign-up #addressesFound {width:665px;}
+#content form.sign-up .detailsAreSecure {
+	position:absolute;
+	right:15px;
+	top:30px;
+	width:auto;
+}
+#content form.sign-up .detailsAreSecure a {
+	background:url(/assets/images/content/sign-up/padlock.png) no-repeat right center;
+	padding:4px 20px 4px 0;
+}
+#content form.sign-up .dd-name-of input,
+#content form.standard .dd-name-of input {
+	display:block;
+	float:left;
+}
+#content form.sign-up .dd-name-of p,
+#content form.standard .dd-name-of p {
+	display:block;
+	float:right;
+	padding-top:4px;
+	width:420px;
+}
+#content form.sign-up .login .dd-name-of p.error {
+	float:none;
+	padding-top:0;
+	text-align:left;
+	width:auto;
+}
+#content form.sign-up .dd-name-of div#namedHolderPanel {
+	clear:right;
+	display:block;
+	float:right;
+	width:400px;
+}
+#content form.sign-up .dd-name-of div#namedHolderPanel a {
+	color:#0083B3;
+}
+#content form.sign-up .login .dd-name-of p,
+#content form.standard .login .dd-name-of p {
+	display:block;
+	float:right;
+	padding-top:4px;
+	text-align:right;
+	width:390px;
+}
+#content form#remember-on-computer fieldset div label {
+	float:none;
+	/*line-height:1em;*/
+}
+
+#content form.sign-up a.print,
+#content form.standard a.print {
+	padding:2px 10px 2px 20px;
+	background:url(/assets/images/bullets/blt-print.png) center left no-repeat;
+}
+#content form.sign-up label span.smaller {font-size:0.9em;}
+#content form.sign-up .login h2 {
+	margin:40px 0 16px 0;
+	color:#000;
+	font-size:1.2em;
+}
+#content form.sign-up .login h2.auth {
+	margin:0 0 16px 0;
+	color:#000;
+	font-size:1.2em;
+}
+#content form.sign-up .login #remember-me {
+	display:block;
+	float:left;
+}
+#content form .no-label {
+	margin-left:210px;
+}
+/*-- end from forms.css --*/
+
+/*-- begin from reviews.css --*/
+/* Component RW1:signup */
+#content div.sign-up-confirm {
+	background:url(/assets/images/design/bg-basket-tbl-bottom.gif) no-repeat bottom left;
+	clear:both;
+	float:left;
+	margin:10px 0 10px 0;
+	width:930px;
+}
+#content div.showForJS {
+	display: none;
+}
+#content div.sign-up-confirm h2 {
+	background:url(/assets/images/design/bg-basket-tbl-top.gif) no-repeat top left;
+	color:#333;
+	font-size:1.4em;
+	margin:0;
+	padding:7px 16px;
+	text-transform:uppercase;
+}
+#content div.sign-up-confirm div {
+	padding:16px 12px 0 16px;
+}
+#content div.sign-up-confirm div.checkmarks {
+	margin-left:0;
+	padding-left:0;
+	padding-top:0; 
+}
+#content  form.sign-up div label {
+	margin-right:0;
+	padding-right:4px;
+}
+#content div.sign-up-confirm table {
+	margin:0 3px;
+	width:924px;
+}
+#content div.sign-up-confirm table tr th {
+	background:#F7F9F9;
+	border:1px solid #CDD8DE;
+	border-left:none;
+	color:#C00;
+	font-weight:normal; 
+	font-size:1.1em; 
+	font-family:"Trebuchet MS",Arial,sans-serif;
+	text-transform:uppercase;
+	width:50%;
+}
+#content div.sign-up-confirm table tr th span {
+	padding-left:8px;
+}
+#content div.sign-up-confirm table tr td {
+	border-right:1px solid #CDD8DE;
+	font-size:1em;
+	vertical-align:top;
+}
+#content div.sign-up-confirm table tr td p {
+	padding-left:8px;
+	padding-top:8px;
+}
+#content .sign-up div.sign-up-confirm table tr .remove-r-border {
+	border-right:0;
+}
+#content div.sign-up-confirm h3 {
+	background:#F7F9F9;
+	border-bottom:1px solid #CDD8DE;
+	border-top:1px solid #CDD8DE;
+	color:#C00;
+	margin:0 3px;
+	padding:8px;
+	text-transform:uppercase;
+}
+#content div.sign-up-confirm .ddLeft h3,
+#content div.sign-up-confirm .ddRight h3 {
+	text-transform:none;
+}
+#content div.sign-up-confirm .left-area,
+#content div.sign-up-confirm .right-area {
+	float:left;
+	width:435px;
+}
+#content div.sign-up-confirm .left-area h3,
+#content div.sign-up-confirm .right-area h3 {
+	background:none;
+	border:0;
+	margin:0;
+	padding:0 0 10px 0;
+	text-transform:none;
+}
+
+/* unique class for the sign-up error msg*/
+#content #signUp #form-error-signup {
+	clear:both;
+	float:left;
+	width:100%;
+}
+#sidebar p.error {
+	color:#C00;
+	padding-bottom:2px;
+}
+
+/* unique class for the sign-up button */
+#content #sign-up-lower #confirmOrder,
+#content #sign-up-lower #amendDetails,
+#content #sign-up-lower #completeSignUp {
+	width:187px;
+	height:26px;
+	margin:0;
+	padding:0;
+	border:0;
+	background:transparent url(/assets/images/buttons/btn-confirm-your-details.gif) no-repeat center top;
+	padding:26px 0 0 0;
+	overflow:hidden;
+	cursor:pointer;
+}
+
+#content #sign-up-lower #amendDetails {
+	width:169px;
+	background-image:url(/assets/images/buttons/btn-amend-your-details.gif);
+}
+
+#content #sign-up-lower #completeSignUp {
+	width:152px;
+	background-image:url(/assets/images/buttons/btn-complete-sign-up.gif);
+}
+
+/* Component RW1:signup =direct debit area */
+#content #directDebitPreview {
+	padding:0;
+	padding-top:10px;
+}
+#content div.sign-up-confirm div#ddArea {
+	margin:0 0 20px 13px;
+	border:2px solid #F2BFBF;
+	width:869px;
+	padding:15px;
+	float:left;
+	clear:both;
+	display:inline;
+}
+#content div.sign-up-confirm div#ddArea h3 {
+	background:transparent;
+	border:0;
+	padding:0 0 6px 0;
+	margin:0;
+	color:#333;
+}
+#content div.sign-up-confirm #ddArea .ddLeft {
+	clear:none;
+	float:left;
+	width:449px;
+	padding:0;
+}
+#content div.sign-up-confirm #ddArea .ddRight {
+	clear:none;
+	float:left;
+	overflow:hidden;
+	width:420px;
+	padding:0;
+}
+#content div.sign-up-confirm #ddArea p {
+	padding:0;
+	padding-bottom:0;
+	margin:0;
+	float:left;
+	clear:both;
+}
+#content div.sign-up-confirm #ddArea p.label {
+	width:auto;
+	padding:8px 0 2px 0;
+}
+#ddArea h4.label {
+	font-size:1em;
+	margin-left:0;
+}
+#ddArea .ddRight .instructions {
+	width:400px;
+	margin-bottom:10px;
+	padding-left:10px;
+}
+#content div.sign-up-confirm #ddArea #ddArea h3 {
+	background:#FFF;
+	color:#000;
+	margin:12px 0 0 0;
+	font-weight:bold;
+}
+#ddArea .ddLeft {
+	float:left;
+	width:299px;
+	clear:none;
+}
+#ddArea .ddLeft h3 {
+	width:auto;
+}
+#content div.sign-up-confirm #ddArea .ddLeft .name,
+#content div.sign-up-confirm #ddArea .date {
+	border:1px solid #999;
+	padding:0 8px;
+	margin:2px 0 0 0;
+	min-height:2em;
+	width:266px;
+	font-weight:bold;
+	background:#F8F9FA;
+}
+#content div.sign-up-confirm #ddArea .date {
+	margin-top:25px;
+	width:350px;
+}
+#content div.sign-up-confirm #ddArea .date span {
+	padding-right:8px;
+	float:left;
+}
+#content div.sign-up-confirm #ddArea .date strong {
+	padding-right:8px;
+	font-weight:bold; 
+	font-size:1.25em; 
+	font-family:"Trebuchet MS",Arial,sans-serif;
+	color:#000;
+	float:right;
+}
+.ddPrintable #ddArea .ddLeft .name,
+.ddPrintable #ddArea .date {
+	background:#FFF;
+}
+#ddArea .ddRight .date {
+	margin-top:0;
+}
+
+#ddArea .ddLeft #bankPostalAddress {
+	border:1px #999 solid;
+	border-bottom:0;
+	width:420px;
+	padding:0;
+	background:#F8F9FA;
+	float:left;
+	clear:both;
+}
+#content div.sign-up-confirm #ddArea .newLine {
+	display:block;
+	border:solid #999 1px;
+	border-width:0 0 1px 0;
+	padding:0 8px;
+	margin:0;
+	line-height:2.2;
+	min-height:2.2em;
+	width:404px;
+	font-weight:bold;
+}
+#content div.sign-up-confirm #ddArea .newLine span {
+	padding-right:8px;
+}
+#content div.sign-up-confirm #ddArea .newLine strong {
+	padding-right:8px;
+	font-weight:bold; 
+	font-size:1.3em; 
+	font-family:"Trebuchet MS",Arial,sans-serif;
+	color:#000;
+}
+#content #ddArea .ddLeft p.numbers,
+#content #ddArea .ddRight p.numbers,
+#content #ddArea .ddRight p.numbers2 {
+	width:100%;
+	margin-left:10px;
+	padding-top:3px;
+	float:left;
+	clear:both;
+	font-weight:bold; 
+	font-size:1em; 
+	font-family:"Trebuchet MS",Arial,sans-serif;
+	min-height:2em;
+}
+#content div.sign-up-confirm #ddArea .ddLeft .numbers span,
+#content div.sign-up-confirm #ddArea .ddRight .numbers span,
+#ddArea .ddRight .numbers2 span {
+	background:#F8F9FA;
+	border:1px solid #999;
+	color:#000;
+	display:block;
+	float:left;
+	font-weight:bold;
+	margin-right:5px;
+	padding:0 8px;
+}
+.ddPrintable #ddArea .ddLeft .numbers span,
+.ddPrintable #ddArea .ddRight .numbers span,
+.ddPrintable #ddArea .ddRight .numbers2 span {
+	background:#FFF;
+}
+#ddArea .ddRight .numbers2 span {
+	border-right:none;
+	padding:0 2px;
+	margin:0;
+}
+#ddArea .ddRight .numbers2 span.last {
+	border-right:1px solid #999;
+}
+#content div.sign-up-confirm #ddArea .ddRight h3 {
+	background:url(/assets/images/content/sign-up/direct-debit2.png) top right no-repeat;
+	padding-bottom:54px;
+	padding-right:30%;
+	width:70%;
+}
+#ddArea .ddRight h4 {
+	clear:both;
+	float:left;
+	font-size:1em;
+	margin:0;
+	margin-top:14px;
+	padding:0;
+	width:100%;
+}
+#content div.sign-up-confirm #ddArea p.indent {
+	width:90%;
+}
+#content .printable a:link,
+#content .printable a:visited {
+	text-decoration:none;
+}
+#content .printable a:hover {
+	text-decoration:underline;
+}
+#content .printable a:active {
+	text-decoration:none;
+}
+
+/* Component RW1:sign-up */
+#content  form.sign-up {
+	clear:both;
+	float:left;
+}
+#content div.sign-up-confirm {
+	background:transparent url(/assets/images/design/bg-basket-tbl-bottom.gif) no-repeat scroll bottom left;
+	margin-bottom:10px;
+}
+#content div.sign-up-confirm h2 {
+	background:transparent url(/assets/images/design/bg-basket-tbl-top.gif) no-repeat scroll top left;
+	color:#333;
+	margin:0;
+	padding:7px 16px;
+}
+#content div.sign-up-confirm div {
+	padding:16px 12px 0 16px;
+}
+#content #directDebitPreview #viewPrintable .ddPrintLinks-1 a {
+	background:url(/assets/images/content/sign-up/printable.png) center left no-repeat;
+	display:block;
+	clear:both;
+	padding-left:25px;
+}
+#content  form.sign-up div label {
+	margin-right:0;
+	padding-right:4px;
+}
+#content div.sign-up-confirm table {
+	margin:0 3px;
+	width:924px;
+}
+#content div.sign-up-confirm table tr th {
+	background:#F7F9F9;
+	border:1px solid #CDD8DE;
+	border-left:none;
+	color:#C00;
+	font-weight:normal; 
+	font-size:1.1em; 
+	font-family:"Trebuchet MS",Arial,sans-serif;
+	width:50%;
+}
+#content div.sign-up-confirm table tr th span {
+	padding-left:8px;
+}
+#content div.sign-up-confirm table tr td {
+	border-right:1px solid #CDD8DE;
+	vertical-align:top;
+}
+#content div.sign-up-confirm table tr td p {
+	padding-left:8px;
+	padding-top:8px;
+}
+#content div.sign-up-confirm table tr .remove-r-border {
+	border-right:0;
+}
+#content div.sign-up-confirm h3 {
+	background:#F7F9F9;
+	border-top:1px solid #CDD8DE;
+	border-bottom:1px solid #CDD8DE;
+	color:#C00;
+	margin:0 3px;
+	padding:8px;
+}
+#content div.sign-up-confirm  p.confirm-emph {
+	font-size:.95em;
+}
+#content div.sign-up-confirm  p.confirm-emph strong {
+	color:#C00;
+}
+
+/* Component RW1:signup lower */
+#content form#registrationForm fieldset#sign-up-lower {
+	float:left;
+	padding:18px 0 30px 0;
+	width:530px;
+	text-align:right;
+	background-image:none;
+	margin:0;
+    clear : none;
+}
+#content fieldset#sign-up-lower input,
+#content fieldset#sign-up-lower label {
+	padding:0 6px;
+}
+#content fieldset#sign-up-lower label a:link {
+	color:#0083B3;
+	text-decoration:underline;
+}
+#content fieldset#sign-up-lower p {
+	display:inline;
+}
+#content fieldset#sign-up-lower label a:visited {
+	color:#0083B3;
+	text-decoration:underline;
+}
+#content fieldset#sign-up-lower label a:active {
+	color:#0083B3;
+	text-decoration:underline;
+}
+#content fieldset#sign-up-lower label a:hover {
+	color:#0083B3;
+	text-decoration:underline;
+}
+
+/* Component RW1:signup help */
+#content #contextualHelp {
+	left:522px;
+}
+/*Field widths are different on signup to other forms which affects the helpbox. Easier to amend the help box position*/
+#content #signUp #contextualHelp{
+	left:500px;
+}
+#content div.contextual-help,
+#content div.sign-up-help {
+	background:transparent url(/assets/images/design/bg-basket-tbl-bottom.gif) no-repeat scroll bottom left;
+	margin:10px 0;
+	float:left;
+	clear:both;
+	width:930px;
+}
+#content div.contextual-help h2,
+#content div.sign-up-help h2 {
+	color:#333;
+	font-size:1.1em;
+	padding:7px 16px;
+	background:transparent url(/assets/images/design/bg-help-top.png) no-repeat scroll top left;
+	margin:0;
+}
+#content div.contextual-help h2 span,
+#content div.sign-up-help h2 span {
+	padding:4px 0 4px 30px;
+	background:url(/assets/images/bullets/blt-help-big.png) no-repeat left center;
+}
+#content div.contextual-help div,
+#content div.sign-up-help div {
+	padding:16px 12px 0 16px;
+	border-top:1px solid #CDD7DE;
+}
+#content div.contextual-help div.first,
+#content div.sign-up-help div.first {
+	border:0;
+}
+#content div.contextual-help h3,
+#content div.sign-up-help h3 {
+	color:#C00;
+	font-size:1.1em;
+	margin-bottom:20px;
+}
+#content div.contextual-help h4,
+#content div.sign-up-help h4 {
+	color:#333;
+	font-weight:bold; 
+	font-family:Verdana,Helvetica,sans-serif;
+	margin-bottom:0;
+}
+#content div.contextual-help p a:link,
+#content div.sign-up-help p a:link {
+	text-decoration:none;
+}
+#content div.contextual-help p a:hover,
+#content div.sign-up-help p a:hover {
+	text-decoration:underline;
+}
+
+/* Terms-conditions-window sign-up thickbox */
+#hiddenModalContent {
+	display:none;
+}
+#terms-conditions-window {
+	padding-top:7px;
+	width:600px;
+	background:url(/assets/images/content/thickbox/thickbox-tc-lid.png) top left no-repeat;
+}
+#terms-conditions-window .window-lid {
+	width:598px;
+	border:1px solid #FFF;
+	border-bottom:0;
+	border-top:0;
+	background:#E1E6E9;
+	float:left;
+	clear:both;
+	padding:7px 0 10px 0;
+	text-transform:uppercase;
+}
+#terms-conditions-window .window-lid h3 {
+	font-size:1.3em;
+	font-weight:bold;
+	color:#C00;
+	float:left;
+	display:block;
+	padding-left:10px;
+}
+#terms-conditions-window .window-lid a {
+	float:right;
+	display:block;
+	padding-right:10px;
+	padding-left:20px;
+	background:url(/assets/images/bullets/blt-print.png) center left no-repeat;
+	color:#0083B3;
+	text-decoration:none;
+}
+#terms-conditions-window .window-lid a:visited,
+#terms-conditions-window .window-lid a:active {
+	color:#0083B3;
+}
+#terms-conditions-window .window-lid a:hover {
+	color:#0083B3;
+	text-decoration:underline;
+}
+#terms-conditions-window .scroll-area {
+	width:598px;
+	border:1px solid #FFF;
+	border-bottom:0;
+	border-top:0;
+	background:#E1E6E9;
+	float:left;
+	clear:both;
+}
+#terms-conditions-window .scroll-area div {
+	width:590px;
+	padding-top:10px;
+	height:250px;
+	border:3px solid #E2E7EA;
+	border-bottom:1px solid #CDD7DE;
+	border-top:0;
+	background:#FFF;
+	overflow:auto;
+}
+#terms-conditions-window .scroll-area div p {
+	padding:10px;
+	padding-top:0;
+}
+#terms-conditions-window .window-footer {
+	width:600px;
+	background:url(/assets/images/content/thickbox/thickbox-tc-foot.png) bottom left no-repeat;
+	text-align:center;
+	padding:8px 0 4px 0;
+	float:left;
+	clear:both;
+}
+
+code {font-weight:bold;}
+
+#offerSummary {clear:both;}
+
+/*QAS lookup*/
+#findAddressButton  {margin:0 0 4px 212px; outline:none;}
+#findAddressButton img {border:none;}
+#addressIntro1 {margin-left:5px; font-size:125%; color:#666;}
+#addressIntro2 {margin-left:5px; margin-top:20px; font-size:125%; color:#666;}
+#addressIntro2 .alertMsg {color:#090;}
+#displayCountryLabel {border:solid 1px #CCC; background:#EEE; padding:4px;}
+#throbber {margin-left:8px;}
+#errorMessage {margin:4px 0 0 212px; text-indent:0;}
+.qasResultMessage {margin:20px 0 15px 5px; font-size:125%; color:#666;}
+.msgEireBeforeAddressLine1 {margin:20px 0 15px 5px; font-size:125%; color:#666;}
+.displayCountryWrapper {margin-top:8px;}
+.displayCountryWrapper label {padding-top:0;}
+
+/* checkmarks */
+#confirmDetails .checkmarks {padding-left:0;}
+
+#content #registrationForm .checkboxes {
+	float:left; /* Fix for missing container in IE8 */
+	width:100%;
+}

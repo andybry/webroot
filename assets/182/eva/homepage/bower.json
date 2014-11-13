@@ -1,0 +1,7 @@
+{
+  "name": "homepage",
+  "dependencies": {
+    "head":"git@github.com:whichdigital/homepage.git",
+    "v1.0.1":"git@github.com:whichdigital/homepage.git#v1.0.1"
+  }
+}

@@ -1,0 +1,1 @@
+var adtechPlacements=[{name:"adtech-mobile-default-ba",id:"2950752|0|16"}];

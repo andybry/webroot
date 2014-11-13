@@ -1,0 +1,10 @@
+@mixin generate-block-of-width-aligned (
+  $alignment,
+  $variant_name,
+  $width
+) {
+  %st-layout__block-of-width--#{$alignment}--#{$variant_name} {
+    @extend %st-layout__block-of-width--#{$variant_name};
+    text-align: $alignment;
+  }
+}

@@ -1,0 +1,66 @@
+
+
+
+#hero {
+	background: url(/i/content/hero.jpg) center center no-repeat;
+}
+
+.doc {border-bottom:1px solid #ccc; padding-bottom:20px; margin-bottom:20px;}
+.doc hgroup {}
+.doc article {}
+.doc aside {}
+
+
+// 480px - 6cols
+@media only screen and (min-width: 480px) {
+	article {.column(6)}
+	aside {.column(6)}
+	aside ul {.row(6)}
+	aside li {.column(3,6)}
+
+	.grid .in {.gridBG(grey, 6, -7.5px)}
+}
+
+// 600px - 6cols
+@media only screen and (min-width: 600px) {
+}
+
+// 768px - 9cols
+@media only screen and (min-width: 768px) {
+	article {.column(6)}
+	aside {.column(3)}
+	aside ul {.row(3)}
+	aside li {.column(3,3)}
+
+	.grid .in {.gridBG(grey, 9, -7.5px)}
+
+}
+
+// 992px - 12cols
+@media only screen and (min-width: 992px) {
+	@column-width: 55 * 1.5;
+	@gutter-width: 15 * 1.5;
+	
+
+	article {.column(6); } // .push(1);
+	aside {.column(6)}
+	aside ul {.row(6)}
+	aside li {.column(3,6)}
+
+	.grid .in {.master(12);}
+}
+
+// 1382px - 18 cols
+@media only screen and (min-width: 1382px) {
+	@columns: 18;
+	article {.push(3)}
+}
+
+
+
+
+
+
+
+
+

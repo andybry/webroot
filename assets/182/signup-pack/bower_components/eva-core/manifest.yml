@@ -1,0 +1,12 @@
+html5shiv:
+  dist:
+    - html5shiv-printshiv.js
+    - html5shiv.js
+jquery:
+  jquery.js
+requirejs:
+  require.js
+reset-scss:
+  reset.scss
+underscore:
+  underscore.js

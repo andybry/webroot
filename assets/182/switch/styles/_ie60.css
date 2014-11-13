@@ -1,0 +1,885 @@
+/* IE6 */
+.png-fix,
+#content a.print,
+#content p.link,
+.text-button img,
+#content .help-button img,
+#content .right-side img,
+#big-splash p.transparency,
+#big-splash div.transparency,
+#small-splash p.more a,
+#small-splash div.transparency-top,
+#small-splash div.transparency-end,
+#small-splash ul li,
+#carousel-reviews .ui-tabs-panel span a,
+#carousel-reviews ul.buttons li a ,
+#carousel-area div.transparency,
+#carousel-area div.transparency-bottom,
+#carousel-area li,
+#content .non-subscriber-top ul li,
+#content .non-subscriber-top a img,
+#section-index .single-row-campaigns a.bulleted,
+#home-row-2 #home-carousel div.transparency-top,
+#home-row-2 #home-carousel div.transparency-end,
+#taster-overview-5 img,
+#report-list input,
+#report-list ul img,
+#summary-content img,
+#shopping-basket h2,
+#shopping-basket .checkout-now,
+#categoric-index img,
+#dont-buy img,
+#best-buy img,
+#content input.button,
+#content .score img,
+#content .comparison img,
+#content table.results td.select img,
+#carousel .text-panel-top,
+#carousel .text-panel-end {
+    behavior:url(/assets/scripts/iepngfix.htc);
+}
+.non-subscriber-top a img {
+    /* RISKY! */
+    height:26px;
+    width:122px;
+}
+#story-teaser div.transparency p a,
+#story-teaser div.transparency p a:link,
+#story-teaser div.transparency p a:visited {
+    background:transparent url(/assets/images/bullets/blt-blue-link.png) no-repeat left center;
+    /*line-height:1.4em;*/
+}
+#story-teaser div.transparency {
+    background:url(/assets/images/design/bg-advice-cat-splash.png) no-repeat center top;
+}
+#story-teaser div.transparency div {
+    position:relative;
+}
+#big-splash {
+    height:1%;
+}
+#big-splash div.transparency-container {
+    bottom:4px;
+}
+#carousel-area div.transparency {
+    width:274px;
+}
+
+/* Design fixes */
+#masthead {
+    margin-bottom:4px;
+}
+#homepage-header {
+    height:115px;
+}
+#page {
+    position:relative;
+}
+#content {
+    overflow:hidden;
+    width:695px;
+}
+#instant-downloads #content {
+    width:616px;
+}
+#tabs {
+    clear:both;
+    height:28px;
+    overflow:visible;
+}
+#tabs li {
+    margin-top:1px;
+}
+/*No secondary nav arrow for <=IE6*/
+#tabs li a span {
+    padding-right:7px;
+    background:none;
+}
+#tabs li.on a span, #tabs li.on a:hover span, #tabs li.on a:active span {
+    background:url(/assets/images/navigation/bg-compare-tab-right.png) 100% 0 no-repeat;
+}
+#tabs li a:hover span {
+    background:url(/assets/images/navigation/bg-compare-tab-right-on.png) 100% 0 no-repeat;
+}
+#user-controls {
+    height:30px;
+}
+#user-controls ul li a {
+    line-height:18px;
+}
+#user-controls ul li.last a {
+    /*line-height:normal;*/
+}
+#sub-nav ul {
+    position:relative;
+}
+#sub-nav ul li {
+    margin-bottom:-2px;
+}
+#sub-nav ul li a {
+    height:1em;
+}
+#sub-nav ul li {
+    display:inline-block;
+}
+#sub-nav ul,
+#sub-nav ul li ul,
+#sub-nav ul li ul li ul {
+    height:1em;
+}
+#interested ul,#news ul {
+    height:1em;
+    padding-bottom:2px;
+}
+
+/* Content fixes */
+#content ul.links li {
+    background:url(/assets/images/bullets/blt-blue-circle.png) 0 2px no-repeat;
+}
+#latest-news ul li a {
+    height:1em;
+}
+#cat-header,
+#cat-header-full {
+    float:left;
+    width:100%;
+}
+#page-contents ul {
+    margin-left:6px;
+}
+#pagination {
+    float:left;
+}
+#advice-single-guide {
+    padding-top:10px;
+}
+#advice-single-guide li h3 {
+    margin-top:-20px;
+}
+#content ul.checkmarks li {
+    background-position:0 3px;
+}
+#guide-list-numeric a {
+    cursor:pointer;
+}
+#content div.star-box ul.square li {
+    background-position:0 3px;
+}
+#content div.star-box ol.top-tips li.one,
+#content div.star-box ol.top-tips li.two,
+#content div.star-box ol.top-tips li.three,
+#content div.star-box ol.top-tips li.four,
+#content div.star-box ol.top-tips li.five {
+    background-position:0 3px !important;
+}
+#section-index h2 {
+    margin-bottom:10px;
+}
+#section-index h2 span {
+    margin-top:-2px;
+}
+
+/* Form fixes - IE6 is horrible at complex forms:-( */
+form.careers div.registered input {
+    float:left;
+}
+form.careers input.error-highlight {
+    margin-left:-3px;
+}
+form.no-legend p.note {
+    padding-bottom:0;
+}
+form.no-legend fieldset {
+    padding-top:15px;
+}
+form.careers ul.check-boxes,
+form.careers ul.radio-buttons {
+    margin-left:-5px;
+}
+form.careers div.question label,
+form.careers div.question input,
+form.careers ul.check-boxes label,
+form.careers ul.check-boxes input,
+form.careers ul.radio-buttons label,
+form.careers ul.radio-buttons input {
+    vertical-align:middle;
+}
+#search input#keywords {
+    height:15px;
+}
+/*#content form.standard fieldset {
+    background:url(/assets/images/design/bg-standard-form-top.png) no-repeat 0 10px;
+}*/
+#content form.compact fieldset {
+    background:url(/assets/images/design/bg-compact-form-top.png) no-repeat 0 10px;
+}
+.one-column #content form.standard fieldset {
+    background:url(/assets/images/design/bg-standard-form-top-lrg.png) no-repeat 0 10px;
+}
+.one-column #content form.standard div.wrapper {
+    float:left;
+    width:908px;
+}
+#content form.standard div input.text,
+#content form.standard div input.small-text {
+    float:left;
+}
+#content form.standard div input.small-text {
+    margin-right:3px;
+}
+#content form.standard div select {
+    float:left;
+}
+#content form.standard div span.divider {
+    float:left;
+    padding:0 8px;
+}
+#content form.standard span.hint {
+    float:left;
+    margin:5px 0 0 10px;
+}
+#content form.standard p.no-label {
+    margin-right:30px;
+}
+#content ul.checkboxes li label,
+#content ul.radiobuttons li label {
+    margin-top:3px;
+}
+/*#content form.standard div span.mandatory {
+    padding-left:0;
+    position:absolute;
+    z-index:1000;
+}*/
+#content #interactive-tool form .element .additional-info {
+    margin:0 0 0 8px;
+}
+#content #mortgageSearchCriteria div span.mandatory {
+    margin-right:0;
+}
+div#basket table tr.subhead th,
+form#basket table tr.subhead th {
+    padding:5px 10px;
+}
+#content ul.checkboxes li label,
+#content ul.radiobuttons li label {
+    float:none;
+}
+.pseudo-fieldset {
+    height:1%;
+}
+#content #interactive-tool form.mortgage-search div.col-1 div.no-label {
+    height:22px;
+}
+#content #interactive-tool .ie6fix {
+    margin-right:-3px;
+}
+/*
+#content #interactive-tool form div.col-1 div.hidden-box {
+margin:10px 12px 0 12px;
+}
+*/
+#content #interactive-tool form.mortgage-search div.col-1 div.hidden-box div input {
+    margin-top:2px;
+}
+#content #interactive-tool form.mortgage-search div.col-1 .element select.text {
+    margin-left:5px;
+}
+#content #interactive-tool #help-desk select {
+    margin-left:5px;
+}
+#content #interactive-tool form .element input,
+#content #interactive-tool form .element p {position:relative;}
+
+
+/*  Sign-up Fixes  */
+#content form.sign-up fieldset   {
+    background:url(/assets/images/design/bg-standard-form-top-lrg.png) no-repeat 0 10px;
+    margin-bottom:15px;
+}
+#content form.sign-up fieldset {
+    margin-top:25px;
+}
+#content form.sign-up fieldset#sign-up-lower {
+    padding-top:0;
+}
+#content fieldset#sign-up-lower input {
+    vertical-align:middle;
+}
+#content #your-account fieldset legend {
+    left:-7px;
+}
+#content #your-account fieldset div label {
+    vertical-align:middle;
+    width:285px;
+}
+
+/*  need to set a hight as it is possible that there is no content/innerHtml */ 
+#ddArea .ddLeft p.numbers,
+#ddArea .ddRight p.numbers,
+#ddArea .ddRight p.numbers2 {
+    height:2em;
+}
+#content div.sign-up-confirm #ddArea .ddLeft .name,
+#content div.sign-up-confirm #ddArea .date  {
+    height:2em;
+}
+
+/* Component IT.WOL.X.X:Interactive tool e.g. the minical fixes */
+#content #interactive-tool form {
+    overflow:hidden;
+    width:693px;
+}
+#content #interactive-tool p.error {
+    margin-left:325px;
+}
+#content #interactive-tool #form-buttons {
+    /* margin-top:30px;- parallels ie6 needs this,test machine doesn't */
+    padding-bottom:15px;
+}
+#content #interactive-tool div.instructions span.mandatory {
+    margin-right:0;
+    position:static;
+}
+#content #interactive-tool ul.checkboxes li {
+    padding-bottom:8px;
+}
+#content #interactive-tool ul.checkboxes label {
+    float:left;
+}
+#content #interactive-tool div.comments label {
+    margin:0;
+    width:666px;
+}
+#content #interactive-tool div.comments li {
+    display:inline;
+}
+#content #interactive-tool div.comments li label {
+    width:auto;
+}
+#content #interactive-tool div.wrapper .steps {
+    float:left;
+    margin-top:8px;
+    padding:8px 12px;
+    width:662px;
+}
+#content #interactive-tool .single-checkbox {
+    padding-bottom:4px;
+    width:95%;
+}
+#content #interactive-tool .single-checkbox label {
+    margin-top:2px;
+    
+}
+#content #interactive-tool #help-desk .single-checkbox label {
+    width:590px;
+}
+#content #interactive-tool .checkboxes label {
+    margin-top:2px;
+}
+#content #interactive-tool .checkboxes input {
+    margin-left:7px;
+}
+#content #interactive-tool select#stories {
+    margin-left:5px;
+}
+#content .third-party select {
+    margin-left:5px;
+}
+#content .search-end,
+#content .sign-up ul#opt-outs,
+#content .sign-up ul#opt-outs li {
+    zoom:1;
+}
+#cardNote {
+    padding-bottom:2px;
+}
+/*  maintain height of empty signup DD form */
+#content div.sign-up-confirm #ddArea .newLine {
+    height:2.2em;
+}
+#content #interactive-tool form.third-party div.single-checkbox label {
+    width:500px;
+}
+.retention-panel img {
+    margin:6px 7px 0 4px;
+}
+#carousel-reviews {
+    height:210px;
+}
+
+/* Subscription panels */
+.log-in,
+.sign-up {
+    height:70px;
+}
+
+/* Promo panels */
+.promo-panel {
+    zoom:1;
+}
+#campaign-promo-updates form fieldset #sign-up-campaign,
+#free-promo-updates form fieldset #sign-up-campaign {
+    margin-left:-5px;
+}
+
+/*  taster panels */
+#taster-overview-5 .upper-area {
+    width:685px;
+}
+
+/* Component BB.5.*:product finder */   
+#content .table-modifiers {
+    clear:both; /* force clear in ie6 */
+}
+#content .back {
+    clear:both; /* force clear in ie6 */
+}
+
+/* fix width on the container of an absolutely positioned element */    
+#content table.side-by-side th.product-name .details,
+#content table.side-by-side th.no-product .details {
+    width:131px;
+}
+#content table.side-by-side tbody td {
+    width:121px;
+    background-color:; /*Hack for ie, else it does not pick up the width above: OD-1654*/
+}
+#content #filter-panel #filter-tabs li.on strong,
+#content #filter-panel #filter-tabs li {
+    zoom:1;
+}
+#content #filter-panel #filters-wrapper {
+    clear:both;
+}
+#content #filter-panel #filters #cols #colone {
+    height:150px;
+}
+#content .back {
+    clear:both; /* force clear in ie6 */
+}
+
+/* non subscriber styles (i.e. the 2 column "subscribe now" overlay */  
+#content table.results td.non-subscriber-top ul li.best-buy,
+#content table.results td.non-subscriber-top ul li.dont-buy {
+    padding-top:7px;
+}
+
+/* Fix panel text link heights */
+#content a.text-button span,
+#sidebar a.text-button span {
+    height:23px;
+}
+
+/* Product & Mortgage Finder */
+#content #select-for-comparison #results-footer {
+    padding-top:21px;
+}
+/*#content .compare-action {
+    margin-bottom:-10px;
+}*/
+#content #show-only-awarded {
+    height:40px;
+}
+#all-results-header #filter-function {
+    width:240px;
+}
+#content table.results th.first,
+#content table.results td.first {
+    width:125px;
+}
+#content table.results th.select,
+#content table.results td.select {
+    width:18px;
+}
+#content table.results td .add img {
+    height:1%;
+}
+#product-finder input.button {
+    height:auto;
+}
+#content table.results th a {
+    padding-right:10px;
+}
+/*#content #select-for-comparison .compare-action {
+    margin-bottom:8px;
+}*/
+#product-finder .range-inputs * {
+    float:left;
+}
+#product-finder .range-inputs label {
+    padding-top:3px;
+}
+#product-finder .range-inputs input.button {
+    margin-top:-1px;
+}
+#product-finder .range-inputs input.text {
+    margin-right:3px;
+}
+#content #applied-filter-panel h3 {
+    height:27px;
+}
+#content #applied-filter-panel ul li a {
+    height:1px;
+}
+#content #interactive-tool form.mortgage-calculators div.radios input {
+    margin-top:-3px
+}
+.subscription-panel-b {height:1%;}
+/* Home page masthead */
+#homepage-header em {
+    margin-top:4px;
+}
+
+/* Home page carousel */
+#home-row-2 #home-carousel .head p {
+    width:125px;
+}
+#home-row-2 #home-carousel ul#carousel-buttons li a {
+    height:37px;
+}
+#home-row-2 #home-carousel ul#carousel-buttons li a.left-btn {
+    background:url(/assets/images/buttons/btn-home-carousel-left-off-IE6.png) no-repeat bottom left;
+}
+#home-row-2 #home-carousel ul#carousel-buttons li a.mid-btn {
+    background:url(/assets/images/buttons/btn-home-carousel-mid-off-IE6.png) no-repeat bottom left;
+}
+#home-row-2 #home-carousel ul#carousel-buttons li a.right-btn {
+    background:url(/assets/images/buttons/btn-home-carousel-right-off-IE6.png) no-repeat bottom left;
+}
+#home-row-2 #how-to-guides ul {
+    margin:10px 10px 0;
+}
+
+/* Forms errors */
+#content #interactive-tool form.minical p.error,
+#content #interactive-tool form.standard p.error {
+    margin:5px 0 5px 270px;
+}
+#content #interactive-tool form.mortgage-search div.col-1 p.error {
+    margin:10px 0 5px 270px;
+}
+#content #interactive-tool form.mortgage-calculators .col-1 br.sp {
+    display:inline;
+}
+#content #interactive-tool form.mortgage-calculators p.error {
+    display:inline;
+}
+#content #interactive-tool table.regular {
+    clear:both;
+    margin-top:10px;
+}
+
+/* Advice panels */ 
+#small-splash div.transparency-container {
+    height:210px;
+}
+#small-splash div.transparency-top {
+    width:305px;
+}
+#big-splash p.transparency {
+    width:307px;
+}
+/*  Fix bug in product finder */
+#content .compare-action {
+    display:inline;
+}
+
+/* Single Sales */
+#checkout-content #expired-reports ol li,
+#checkout-content #download-reports ol li {
+    height:90px;
+}
+
+/* =homepage */
+#introduction {
+    height:81px;
+    z-index:-1;
+}
+
+/* =panel */
+#shopping-basket table {
+    border-collapse:collapse;
+}
+#shopping-basket #items {
+    background:url(/assets/images/design/bg-shopping-basket-2.png) no-repeat left bottom;
+}
+
+/* =basket table */         
+table#basket {
+    border-collapse:collapse;
+}
+
+/* =form */
+/* =checkout */
+#checkout {
+    height:auto;
+}
+#content form.compact fieldset {
+    background:url(/assets/images/design/bg-compact-form-top.png) no-repeat 0 10px;
+}
+#content form.compact div.wrapper {
+    margin:0 0 10px 0;
+}
+#content form.compact div.details input {
+    margin:-2px 4px 0 -4px;
+}
+#content form.compact div a.button.ccv {
+    top:-4px;
+}
+#content form.compact div a.button.autofill {
+    top:-5px;
+}
+#content form.compact div label {
+    margin-right:3px;
+}
+#content form.compact .fieldWrapper span img {
+    margin-top:-6px;
+}
+#help .left,
+#help .right {
+    width:440px;
+}
+
+/* =panel */        
+#content .panel input.text {
+    position:relative;
+    margin-top:3px;
+}
+
+/* =pdf previewer */
+#TB_title {
+    background:url(/assets/images/design/bg-pdf-preview-box.gif) no-repeat left top;
+    margin-bottom:-16px;
+}
+#TB_ajaxContent {
+    background:url(/assets/images/design/bg-pdf-preview-box-end.gif) no-repeat left bottom;
+}
+#pdf-browser {
+    margin:0 10px 0 20px;
+}
+#wrapper {
+    border:1px solid #999;
+    width:713px;
+}
+#shadow {
+    display:none;
+}
+#pdf-browser .items {
+    height:360px;
+}
+
+/* =report list */
+#report-list input {
+    margin-left:15px;
+    height:26px;
+    width:63px;
+}
+
+/* Books & mags */
+.books-signup-store {
+    padding-bottom:0;
+}
+.upsell-panel ul.link-list li {
+    margin-bottom:5px;
+}
+#content .table-modifiers .pagination {
+    margin:4px 5px 0 5px;
+}
+#content .books-details-list ul.standard li {
+    margin-left:175px;
+}
+#content .book-highlights { /* Duplicate content fix */
+    margin-right:-3px;
+}
+#content .books-details-list ul {
+    margin-left:0;
+}
+
+/* New carousels */
+.reviews-carousel ul.buttons li,
+.reviews-carousel ul.buttons li a {background:url(/assets/images/buttons/btn-carousel-reviews-sprite.gif) no-repeat 0 0;}
+
+/*Compare*/
+/* http://www.charlesgarwood.com/blog/?p=13 */
+table.basic {
+    border-collapse:collapse;
+}
+.extra-filters-end {
+    margin:-7px 0 0 0;
+}
+.filter-container {
+    width:596px;
+    background:#fff;
+}
+.filters-group, .filters-group-first, .filters-group-wide {
+    float:none;
+    background:#fff;
+    margin-top:15px;
+    border:none;
+}
+.filters-group-wide .filter {
+    width:261px;
+}
+.filter {
+    width:130px;
+    border:1px solid #eeede7;
+}
+.extra-filters-end {
+    float:none;
+    margin:0;
+}
+#content .filter ul li.on a {
+    background:none; /*Due to IE flickering bug on hover*/
+}
+#content .filter ul li.on a:hover {
+    background:#e6F5Fa; /*Due to IE flickering bug on hover*/
+}
+#product-carousel {height:152px;}
+#submit-pagination input {
+    margin:0;
+}
+
+/* Marketing promos */
+#sidebar .marketing .inner {height:1%;}
+
+.full-box-1 label strong.highlight {
+  background:none;
+}
+
+/* Q & A */
+
+#q-and-a-list dt,
+#q-and-a-list dd {
+    height:30px;
+}
+
+/* =pdf previewer */
+.pdf #TB_title {
+    background:url(/assets/images/design/bg-pdf-preview-box.gif) no-repeat left top !important;
+    margin-bottom:-16px;
+}
+.pdf #TB_ajaxContent {
+    background:url(/assets/images/design/bg-pdf-preview-box-end.gif) no-repeat left bottom !important;
+}
+.pdf #pdf-browser {
+    margin:0 10px 0 20px;
+}
+.pdf #wrapper {
+    border:1px solid #999;
+    width:713px;
+}
+.pdf #shadow {
+    display:none !important;
+}
+.pdf #pdf-browser .items {
+    height:360px;
+    overflow:hidden;
+}
+.pdf #wrapper {
+    margin-right:20px;
+    width:700px;
+}
+.pdf #preview-window {
+    width:700px;
+}
+.one-column #content {
+    width:100% !important; /*Tom approved*/
+}
+#sidebar .promo-6 p a img {
+    position:relative;
+}
+
+/* account created page  */
+
+#content .account-confirmation li img {
+    left:-55px;
+}
+#content .account-confirmation li a img {
+    left:0;
+}
+.date-cost {
+    display:inline;
+}
+/* Search highlight */
+.hightlight-box .inner{
+    position:relative;
+    height:1px;
+}
+.two-col-lists-3 li div {
+    height:70px;
+}
+/*Homepage fixes*/
+#content #more-products h2 {
+    margin-left:7px;
+}
+#products .list-area {
+    height:114px;
+}
+#right-home .three-col-links .list-area {
+    padding-bottom:9px;
+}
+/*Landing pages*/
+#which-tests .highlight-test p {
+    width:430px;
+}
+.a-grow .a-link {
+    right:5px;
+}
+.a-grow .a-right {
+    right:3px;
+}
+
+/* Flash panel and landing page list on homepage*/
+#welcome-panel {margin-bottom:5px;}
+#show-hide-home {margin-bottom:10px;}
+#switch-results #content #current-filters li a:hover, #content #current-filters li a:active, #content #current-filters li a:focus {
+    background:none;
+}
+
+/*Switch*/
+#compare-table {
+	border-collapse:collapse;
+}
+#sidebar .switch-simple-panel, #sidebar .switch-simple-panel .bottom {width:280px;}
+.home-decoration {display:none;}
+#current-situation fieldset {margin-right:-3px;}
+#switch-home .home-decoration {display:none;}
+/*Switch Progress bar*/
+ol.progress-bar {
+	background-image:url(/assets/images/design/bg-breadcrumb-switch-off-left.gif);
+}
+ol.first-progress {
+	background-image:url(/assets/images/design/bg-breadcrumb-switch-on-left.gif);
+}
+ol.progress-bar li {
+	background-image:url(/assets/images/design/bg-breadcrumb-switch-off.gif);
+}
+ol.progress-bar li.on {
+	background-image:url(/assets/images/design/bg-breadcrumb-switch-on.gif);
+}
+#results-filter div.toggle {
+    width:194px;
+}
+#content #results-filter label.check span {
+    width:165px;
+    margin-top:2px;
+}   
+.js-promo-ma {
+    position:relative;
+    left:109px;
+}
+.landing-content .img-left {
+    margin:5px 10px 10px 0;
+}
+#results-filter label {
+    margin-right:-3px;
+}
+#current-situation #fs-gas-bill-amount .bill-amount-area, #current-situation #fs-gas-bill-amount-copy .bill-amount-area, #current-situation #fs-electricity-bill-amount .bill-amount-area, #current-situation #fs-electricity-bill-amount-copy .bill-amount-area {
+	width:620px;
+}
+
+/* Promo panels */
+.promo-panel,
+.books-promo-panel {
+	zoom:1; /* IE6 haslayout hack - move this into IE6 only CSS */
+}

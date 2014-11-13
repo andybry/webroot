@@ -1,0 +1,1 @@
+define(["jquery","//admin.brightcove.com/js/BrightcoveExperiences.js","//admin.brightcove.com/js/APIModules_all.js"],function(b,c){console.info("module.video");var a=function(){window.brightcove.createExperiences();b(document).ready(function(){window.brightcove.createExperiences()})};return a()});

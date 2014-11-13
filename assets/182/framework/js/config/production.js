@@ -1,0 +1,1 @@
+define([],function(){var a={env:Which.bootstrapJson.env,googleAnalyticsIds:Which.bootstrapJson.googleAnalyticsIds,version:"0.0.0",logging:false,testing:false,frameworkPath:"//framework.which.co.uk/v0/js/"};return a});

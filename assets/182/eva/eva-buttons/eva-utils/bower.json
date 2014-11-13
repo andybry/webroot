@@ -1,0 +1,21 @@
+{
+  "name": "eva-utils",
+  "version": "v0.1.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "jquery": "latest"
+  },
+  "gitHead": "7110d3f87e59912b9acbf3d67397190fa54da649",
+  "readme": "#Eva Utilities\n\nRepository to hold CSS and JavaScript helpers. See the code for documentation.\n\n## Colours\n\n`colours.scss` contains the core Which? colour pallet for SASS\n\n#Changelog \n\n* v0.1.0 First release\n",
+  "readmeFilename": "README.md",
+  "_id": "eva-utils@0.1.0",
+  "description": "Repository to hold CSS and JavaScript helpers. See the code for documentation.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:whichdigital/eva-utils.git"
+  }
+}

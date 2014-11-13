@@ -1,0 +1,105 @@
+
+// Fixed left nav
+#content {position:relative;}
+
+// Generic responsive toggles
+.js .minHide {display:none}
+.js .minHide.on, {display: block}
+.js .minShow {display:block}
+
+// Show / hide nav on mobile
+.js #nav-max {display: none; .transition(height 1s ease-out); }
+.js #nav-max.on {display: block}
+
+// Show hide global nav
+#hd #navWhichGlobal { display:none; }
+#hd #navWhichGlobal.on { display:block; }
+
+// .tpl_article Fixed left nav
+.tpl_article #content aside.affix { position:fixed; top:0px;}
+.tpl_article #content aside.affix-bottom { position:absolute; top:auto; bottom:190px;}
+
+
+// .tpl_category filter menu
+.isotope-item {z-index: 2}
+.isotope-hidden.isotope-item {pointer-events: none; z-index: 1;}
+
+.tagCloud.active a {}
+
+.tpl_category aside .noRes,
+.tpl_category aside .hidden {
+	opacity:0.5;
+	&:hover {
+		cursor: default; background:#ddd; color:#75716E;
+	}
+}
+
+.tpl_category aside .active a {display:none}
+.tpl_category aside .active a.on {display:inline}
+
+.tagCloud.active a.on {display: inline; opacity:1}
+
+
+// Only Small
+@media only screen and (max-width: 767px) {
+	.toggle {
+		cursor: pointer;
+		&:hover {text-decoration:underline}
+	}
+
+	.js .tpl_article #content aside:before {
+		content:'Article sections ≡ ';
+		background:#ccc; 
+		color:#555;
+		padding:7px 14px;
+		margin-bottom: 5px;
+		position: relative; display:block;
+		text-align:right;
+		border-radius: 0 0 4px 4px;
+	}
+
+	.js .tpl_article #content aside.affix:before {
+		box-shadow: 0 0 2px 1px rgba(0,0,0,0.5)
+	}
+
+	.js .tpl_article #content aside.affix.on:after {
+		content:'';
+		background:#000;
+		opacity:0.7; 
+		position: fixed;
+		top:0; left:0; right:0; bottom:0;
+		z-index:-1;
+	}
+
+	.js .tpl_article #content aside.affix-bottom {
+		display: none;
+	}
+
+	.js .tpl_article #content aside div {display:none}
+	.js .tpl_article #content aside.on div {display:block}
+
+
+	.js #ft #navWhichLocal h2:after,
+	.js #ft #navWhichGlobal h2:after { content:'+'; position: absolute; right:0; top:14px; }
+
+	.js #ft #navWhichLocal h2.on:after,
+	.js #ft #navWhichGlobal h2.on:after { content:'-';}
+
+	.js #ft #navWhichLocal > div > div,
+	.js #ft #navWhichGlobal > div > div { display:none }
+
+	.js #ft #navWhichLocal > div >div.on,
+	.js #ft #navWhichGlobal > div > div.on { display:block }
+}
+
+// Big
+@media only screen and (min-width: 768px) {
+	.js .minShow {display:none}
+	.js .minHide {display:block}
+
+	.js #nav-max {display: block}
+
+	.tpl_article #content aside.affix {top:20px;}
+
+
+}

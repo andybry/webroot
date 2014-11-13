@@ -1,0 +1,1 @@
+define([],function(){doh.register("testBaseUrl",[function a(b){b.is(true,true)}]);doh.run()});

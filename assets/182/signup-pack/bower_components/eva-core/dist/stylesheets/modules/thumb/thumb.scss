@@ -1,0 +1,27 @@
+//<div class="m-thumb">
+//<a href="/product/Samsung_UE55F8000"><img class="m-thumb-img" alt="Thumb" itemprop="image" src="http://images.pricerunner.com/product/408x432/370089985/Samsung-UE65ES8000.jpg"></a>
+//</div>
+//
+// Styleguide thumbnail
+//
+
+@mixin generate-thumb-structure(
+  $thumb-mh,
+  $name: 'st-thumb'
+) {
+  %#{$name} {
+    display: block;
+    min-height: $thumb-mh; // in case image doesn't load
+  }
+}
+
+//structure
+.m-thumb {
+  @extend %st-thumb;
+}
+.m-thumb-img {
+  display: block;
+  max-width: 100%;
+  max-height: 150px;
+  margin: 0 auto;
+}

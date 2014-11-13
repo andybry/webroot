@@ -1,0 +1,1120 @@
+@import 'bower_components/eva-core/dist/styles.scss';
+
+/* FIXME
+ * For the time being, I'm compiling signup-pack.css
+ * from this file by manually running the command
+ * `sass signup.scss signup-pack.css`.
+ *
+ * This needs to be automated ASAP and baked into maven.
+ * Some work has already been done with `mvn compile` to
+ * support this.
+ */
+
+// ---------
+// variables 
+// ---------
+
+$light-grey: #F0F4F7;
+$label-width: column(2.2);
+$default-font-size: 14px;
+$input-field-width: column(5.5);
+$input-field-height: 2.8em;
+$error-color: $pink;
+$hint-stroke-color: #00AC9E;
+$hint-background: #00AC9E;
+
+
+// ------
+// mixins
+// ------
+
+@mixin box-shadow($size) {
+  box-shadow: $size;
+  -moz-box-shadow: $size;
+  -webkit-box-shadow: $size;
+}
+
+@mixin box-sizing($type) {
+  box-sizing: $type;
+  -moz-box-sizing: $type;
+  -webkit-box-sizing: $type;
+}
+
+@mixin opacity($alpha: 0.5) {
+  opacity: $alpha;
+  filter: alpha(opacity=$alpha * 100);
+}
+
+.radiobutton {
+	@extend .checkbox;
+}
+.radiobutton, .checkbox {
+	float: none;
+	display: block;
+	position: relative;
+
+  // the checkbox from eva core are not compatible with IE8,
+  // therefore the native radio and checkbox elements are shown instead
+	input[type=radio] ,
+	input[type=checkbox] {
+		display: block;
+
+    // these styles are needed for IE8
+		position: absolute;
+		top: 2px;
+		left: -3px;
+		z-index: 1;
+		height: 20px;
+		width: 20px;
+
+		&:nth-child(n) {
+      // nth-child is ignored by IE8, hence the element will be visible,
+      // in all other browsers the element will be hidden
+      display: none;
+		}
+	}
+	.inner-label {
+		position: static;
+	}
+
+}
+
+.help-arrow-brace {
+  display: none;
+  width: 5px;
+  height: $input-field-height + 1;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: $hint-stroke-color;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: $hint-stroke-color;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: $hint-stroke-color;
+}
+
+.help-arrow {
+  position: absolute;
+  top: 18px;
+  left: 5px;
+  border-top: 2px solid $hint-stroke-color;
+  width: 6px;
+}
+
+p.error ~ div.help-arrow-brace, p.error ~ div.hint {
+  top: 20px;
+}
+
+#helpArrow {
+  display: none !important;
+}
+
+.hint {
+  display: none;
+  background: $hint-background;
+
+  p {
+    color: white;
+    padding: 0.5em 0.7em;
+    width: auto;
+    margin: 0;
+  }
+}
+
+input:focus + .hint {
+  display: block;
+}
+
+
+// ---------------
+// base formatting
+// ---------------
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 62.5%; // 1em = 10px
+  -moz-hyphens: none; // nasty hyphenating on FF
+}
+
+a, p, label, li {
+  font-size: $default-font-size;
+}
+
+fieldset .legend {
+  font-size: $default-font-size + 2px;
+}
+
+a {
+  color: $cyan;
+  text-decoration: none;
+}
+
+fieldset {
+  padding: 1em 0;
+}
+
+h1, strong {
+  color: $pink;
+}
+
+h1 {
+  margin: 1em 0;
+}
+
+h2, p {
+  margin-bottom: 10px;
+}
+
+input[type=text], input[type=password], select, #displayCountryLabel {
+  @include box-shadow(none);
+  @include box-sizing(border-box);
+  background-position: 99% center;
+  background-color: $light-grey;
+  border: none;
+  height: $input-field-height; 
+  line-height: 2em;
+  padding-top: 8px; 
+  padding-bottom: 5px; 
+}
+
+input[type=checkbox], input[type=radio] {
+  border: none;
+}
+
+select {
+  @extend .link-right;
+  width: $input-field-width;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input, #displayCountryLabel {
+  width: $input-field-width;
+}
+
+#displayCountryLabel {
+  display: inline-block;
+  font-size: 16px;
+  color: #555;
+}
+
+label {
+  width: $label-width;
+  display: block;
+  float: left;
+}
+
+#namedHolder {
+  display: none;
+}
+
+
+// ---------------
+// custom elements
+// ---------------
+
+// override navigation elements
+
+div .masthead-search {
+  background: #41606f;
+  color: white;
+}
+
+div .masthead-search-title {
+  color: inherit;
+  margin-left: 92px;
+  font-weight: bold;
+  font-family: StagSansWeb-Book;
+  font-size: 24px;
+  margin-top: 4px;
+}
+
+// page layout
+
+.container > div {
+  margin-bottom: 3em;
+}
+
+// error box on top in case there are validation errors
+
+.error-box {
+  background-color: $light-grey;
+  border-color: $error-color;
+  border-style: solid;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  padding: 2em;
+  margin-top: 2em;
+
+  p {
+    color: $error-color;
+  }
+
+  li {
+    margin-left: 3em;
+
+    &:before {
+      @extend .icon-stop;
+      vertical-align: 2px;
+      margin-right: 8px;
+      color: $error-color;
+    }
+  }
+}
+
+.error-box-container {
+  width: column(8);
+}
+
+// lists
+
+.checkmarks ul,
+.bodyfield ul {
+  @extend .list;
+  border-left: 4px solid $pink;
+  margin-bottom: 20px;
+}
+.checkmarks ul li,
+.bodyfield ul li {
+  @extend .list-item--checkmark;
+}
+.trapezoid-bullets ul li:before {
+  @extend .icon-stop;
+  font-size: 18px;
+  line-height: 12px;
+  color: $pink;
+}
+
+// misc
+
+.mandatory-area span, .mandatory {
+  color: $red;
+}
+
+.offset-column {
+  margin-left: $label-width;
+}
+
+.intro {
+  margin: 1em 0;
+  font-size: 16px;
+  -webkit-text-size-adjust: 160%;
+  display: block;
+}
+
+.legend {
+  @extend .intro;
+  @include font-stack-bold;
+  margin-top: 0;
+}
+
+.fieldWrapper {
+  padding-bottom: 0.5em;
+  clear: right;
+
+  .error {
+    margin-left: $label-width;
+  }
+
+	position: relative;
+
+	input:focus ~ .help-arrow-brace {
+		display: block;
+	}
+
+	.help-arrow-brace {
+		position: absolute;
+		top: 1px;
+		left: column(7.6);
+	}
+
+	.hint {
+		@extend .hint;
+		width: column(4.3);
+		margin: 0;
+		min-height: $input-field-height - 0.7;
+		position: absolute;
+		left: column(7.75);
+		top: 2px;
+	}
+}
+
+#sign-up-lower .fieldWrapper .error {
+  margin-left: 0;
+}
+
+.find-address {
+  overflow: auto;
+
+	a {
+		@extend .button;
+		@extend .button-primary;
+		@extend .icon-home;
+
+		color: white;
+		float: right;
+		margin-right: 6.4em;
+
+		img {
+			display: block;
+			&:before {
+				content: 'Find Address';
+			}
+		}
+
+		float: none;
+		margin-left: column(5.07);
+	}
+}
+
+.error {
+  color: $error-color;
+  margin-bottom: 0;
+}
+
+.helpWrapper {
+}
+
+.inner-label {
+  font-size: $default-font-size;
+}
+
+.aligned {
+  display: block;
+  margin-left: 30px;
+}
+
+.payment-by-card, .payment-by-dd {
+  overflow: auto;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  height: 2.9em;
+  width: 51em;
+}
+
+.responsive-card-logo, .responsive-direct-debit-logo {
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 40px;
+}
+
+.payment-by-card, .responsive-card-logo {
+  background-image: url(/assets/images/icons/visa-mastercard.png);
+  background-size: 144px 36px;
+}
+
+.payment-by-dd, .responsive-direct-debit-logo {
+  background-image: url(/assets/images/icons/direct-debit.png);
+}
+
+.responsive-logos {
+  display: none;
+}
+
+.proceed-to-payment {
+  margin-top: 3em;
+}
+
+// modals
+
+.which-dialog {
+  width: 100%;
+  
+  &.ui-dialog {
+    background: white;
+    border: 2px solid $light-grey;
+  }
+
+  .ui-dialog-titlebar {
+    line-height: 2em;
+    padding: 1em 1.5em;
+    background: $light-grey;
+    cursor: move;
+
+    .ui-dialog-title {
+      text-transform: uppercase;
+      color: $red;
+    }
+
+    .ui-dialog-titlebar-close {
+      display: none;
+    }
+
+    .print-dialog {
+      float: right;
+    }
+  }
+
+  .ui-dialog-content {
+    padding: 1em 1.5em;
+  }
+
+  .ui-dialog-buttonpane {
+    border-top: 1px solid $light-grey;
+    text-align: center;
+    padding: 1em;
+
+    button {
+      @extend .button;
+      @extend .button-primary;
+      @extend .icon-close;
+    }
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.ui-widget-overlay {
+  @include opacity(0.5);
+  position: absolute;
+  top: 0;
+  background: #333;
+}
+
+#marketingOpt {
+  margin-top: 20px;
+}
+
+.ui-dialog {
+  position: absolute;
+}
+
+.container {
+	margin: 0 auto;
+	width: column(12);
+}
+
+p, label.checkbox {
+	width: column(6.8);
+}
+
+.ui-dialog-content {
+  p, label.checkbox {
+    width: 100%;
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+  .subheading-a {
+    display: block;
+    font-size: 24px;
+    color: #666;
+  }
+}
+
+#frame {
+  position: relative;
+}
+
+#processing {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -235px;
+  width: 470px;
+  height: 200px;
+  text-align: center;
+  border: 2px solid #ccc;
+  box-shadow: 4px 4px 4px #ccc;
+  -moz-box-shadow: 4px 4px 4px #ccc;
+  -webkit-box-shadow: 4px 4px 4px #ccc;
+  font-weight: bold;
+  overflow: hidden;
+  background: white;
+}
+
+#processing:before {
+  content: "";
+  display: block;
+  margin-top: -20px;
+  width: 100%;
+  height: 60px;
+  background: #ccc;
+  margin-bottom: 40px;
+  -webkit-transform: skewY(-2.5deg);
+  -moz-transform: skewY(-2.5deg);
+  -ms-transform: skewY(-2.5deg);
+  -o-transform: skewY(-2.5deg);
+  transform: skewY(-2.5deg);
+}
+
+#processing p {
+  font-size: 1.6em;
+}
+
+
+// -----------------
+// responsive layout
+// -----------------
+
+// breakpoints
+
+$screen-width-small: container(8);  // A single-column layout.
+																		// Labels sit above fields. Hints sit
+																		// below them. Scales to shortest width.
+
+$screen-width-medium: container(9); // A 2-column layout.
+																		// Labels are on the left, fields are on
+																		// the right. Hints are below the fields.
+
+$screen-width-large: container(13); // A 3-column layout.
+																		// Labels are on the left, fields are in
+																		// the middle, and hints are on the right.
+																		// The container is fixed width and middle
+																		// aligned. Scales to infinite width.
+
+@media only screen and (max-width: $screen-width-large - 1) {
+  .offset-column {
+    margin-left: $label-width;
+  }
+
+	.fieldWrapper input:focus ~ .help-arrow-brace {
+		display: none;
+	}
+
+  .hint {
+    margin-left: $label-width;
+		width: $input-field-width;
+		min-height: $input-field-height;
+		position: static;
+	}
+
+	.container {
+		margin: 0 2em;
+		width: auto;
+	}
+
+  div .masthead-search-title {
+    margin-left: 30px;
+  }
+
+  .sign-up-confirm {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $screen-width-small) and (max-width: $screen-width-medium - 1) {
+  .offset-column {
+    margin-left: 0;
+  }
+
+  .container {
+    margin: 0 2em;
+    width: auto;
+  }
+
+  .checkmarks ul {
+    width: 80%;
+  }
+
+  .help-arrow-brace {
+    display: none;
+  }
+
+	.find-address a {
+		margin-left: column(5.55);
+		margin-right: 0;
+		float: none;
+	}
+
+}
+
+
+@media only screen and (max-width: $screen-width-small - 1) {
+  .find-address a {
+    float: right;
+    margin-right: 0;
+  } 
+
+	.hint {
+		border: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+  .qasResultMessage {
+    float: left;
+    margin-top: 1em;
+  }
+
+  #form-error-signup ul {
+    display: none;
+  }
+
+  .offset-column {
+    margin-left: 0;
+  }
+
+  .container {
+    margin: 0 20px 0 10px;
+    width: auto;
+  }
+
+	p, label.checkbox {
+		width: auto;
+	}
+
+	.find-address a {
+		margin-left: inherit;
+	}
+
+  form.sign-up {
+    width: 100%;
+  }
+
+	label {
+		float: none;
+	}
+  .error-box-container, label, input, select {
+    width: 100%;
+  }
+
+  #form-error-signup ul {
+    display: none;
+  }
+
+  .proceed-to-payment {
+    float: right;
+  }
+
+  .fieldWrapper .error {
+    margin-left: 0;
+  }
+
+  .payment-by-card, .payment-by-dd {
+    background: none;
+    width: auto;
+  }
+
+  .responsive-logos {
+    display: block;
+  }
+
+  div .masthead-search-title {
+    margin-left: 0px;
+  }
+
+  // This is the overlay that prevents user action during processing.
+  #processing {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-height: 0) and (max-height: 910px) {
+  .error-box-container ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 680px) {
+  #processing {
+    top: 3.5%;
+  }
+}
+
+
+
+/* IE8 overrides (_ie80.css))*/
+
+body #content form.sign-up div.wrapper {
+  border: none;
+  background: none;
+}
+/* IE8 overrides */
+
+body #content form.sign-up div.wrapper {
+  border: none;
+  background: none;
+}
+
+// Direct Debit specifics
+
+#signup-dd {
+
+	$black-box: solid 1px black;
+  h1 {
+    color: inherit;
+    font-size: 28px;
+  }
+
+	h3, h4 {
+		font-size: 1.6em;
+		font-weight: normal;
+		font-family: "StagSansWeb-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	.sign-up-confirm {
+		position: relative;
+	}
+
+	.slant {
+		margin-top: 6em;
+    margin-bottom: 2em;
+		background: $light-grey;
+		padding: 2em;
+
+		&:before {
+			position: absolute;
+			content: ' ';
+			display: block;
+			height: 7em;
+			background: $light-grey;
+			transform: skew(0deg, -10deg);
+			width: 100%;
+			top: -22px;
+			left: 0;
+			transform: skew(0deg, -3deg);
+			-webkit-transform: skew(0deg, -3deg);
+			z-index: -1;
+		}
+
+    strong {
+      color: inherit;
+    }
+	}
+
+  .printable:before {
+    @extend %icon;
+    @extend .icon-print;
+    color: $cyan;
+    font-size: 1.6em;
+    line-height: 1em;
+    vertical-align: middle;
+    margin-right: 0.4em;
+    cursor: pointer;
+  }
+
+  .summary-details {
+    display: none;
+  }
+
+	p {
+		width: auto;
+	}
+
+  .numbers span {
+    padding: 0.1em 0.5em;
+    display: inline-block;
+    border: $black-box;
+    margin-left: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+	.ddLeft {
+		float: left;
+	}
+	
+	.ddRight {
+		float: left;
+		width: column(5.5);
+		margin-left: column(0.5);
+		h3 {
+			float: left;
+			width: 259px;
+			margin-bottom: 2em;
+		}
+
+		.label {
+			clear: both;
+		}
+			
+		.numbers {
+
+			span {
+				margin: 0;
+
+				&:after {
+					display: block;
+					clear: both;
+				}
+			}
+		}
+	}
+
+	.dd-note {
+		clear: both;
+		padding-top: 0.5em;
+		font-size: 1.2em;
+	}
+
+	$dd-box-width: 390px;
+
+	#ddPreviewName {
+		width: $dd-box-width;
+		height: 2em;
+		line-height: 2em;
+		border: $black-box;
+		padding: 5px;
+		font-family: stsemiboldRegular;
+	}
+
+	#bankPostalAddress {
+		border-left: $black-box;
+		border-right: $black-box;
+		border-bottom: $black-box;
+		margin: 0;
+
+		p, strong {
+			width: $dd-box-width;
+			padding: 5px;
+		}
+
+		.newLine {
+			border-top: $black-box;
+			margin-bottom: 0;
+
+			strong {
+				color: black;
+				margin-left: -5px;
+				height: 2em;
+			}
+		}
+
+		.bankPostCode {
+			border-top: solid 1px black;
+		}
+	}
+
+	#h_makingpayment {
+		display: none;
+	}
+
+	#ddSortCodeWrapper {
+		input {
+			width: 4em;
+			display: inline-block;
+		}
+		.removed {
+			display: none;
+		}
+	}
+
+	.numbers2 {
+		border-left: $black-box;
+		span {
+			display: block;
+			float: left;
+			width: 15px;
+			border-right: $black-box;
+			border-top: $black-box;
+			border-bottom: $black-box;
+		}
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+
+	.date {
+		width: column(5.8);
+		padding: 5px;
+		border: $black-box;
+		strong {
+			color: black;
+			font-weight: normal;
+			float: right;
+		}
+	}
+}
+
+// ----------------
+// Log in specifics
+// ----------------
+
+#log-in {
+  @extend %st-layout__parent-block;
+  position: relative;
+  label, p {
+    width: auto;
+  }
+  fieldset {
+    width: column(5.5);
+
+    &.left {
+      float: left;
+      margin-right: 2em;
+    }
+    &.right {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      
+      button {
+        bottom: 1.2em;
+      }
+    }
+  }
+
+}
+
+.qasResultMessage, #addressIntro1, #addressIntro2 {
+  font-size: 16px;
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+
+#findAddressButton {
+  margin-top: 5px;
+}
+
+#content {
+  @extend .container;
+  margin-bottom: 40px;
+}
+
+.login-button {
+  @extend .find-address;
+  a {
+    margin-left: 0;
+  }
+}
+
+/* welcome page */
+
+.indent {
+  margin-left: 36px;
+}
+
+.welcome-page p {
+  width: 530px;
+}
+
+.welcome-page li {
+  width: 500px;
+}
+
+@media only screen and (max-width: $screen-width-medium) {
+  .indent {
+    margin-left: 0;
+  }
+
+  .welcome-page p {
+    width: auto;
+  }
+
+  .welcome-page li {
+    width: auto;
+  }
+}
+
+h2 {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+}
+
+#findAddressButton {
+  margin-top: 5px;
+}
+
+.alreadymember {
+  padding: 15px;
+
+  .section {
+    padding-bottom: 0.5em;
+
+    h4 {
+      position: relative;
+      right: 15px;
+      padding-bottom: 1em;
+    }
+
+    p {
+      padding-top: 0.5em;
+    }
+
+    blockquote {
+      border-left: 4px solid $pink;
+      padding-left: 1.5em;
+      margin-top: 0.5em;
+
+      p {
+        padding: 0;
+      }
+
+      .highlight {
+        color: $pink;
+      }
+    }
+
+    div {
+      padding: 2em 0;
+    }
+
+    .summary {
+      font-family: StagSans-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;;
+      font-weight: 700;
+    }
+  }
+}
+
+@media only screen and (min-width: 910px) {
+  .section {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 631px) {
+  .alreadymember {
+    .button-primary {
+      padding: 9px 60px 9px 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: 559px) {
+  .alreadymember {
+    padding: 45px 15px;
+
+    .section {
+      padding-left: 45px;
+
+      h4 {
+        position: relative;
+        right: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 558px) {
+  .alreadymember {
+    padding: 3em 0 0;
+    
+    .section {
+      padding-left: 2em;
+    }
+  }
+}
+
+.value {
+  color: $pink;
+}
+
+.selected strong {
+  color: #aaa;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+}

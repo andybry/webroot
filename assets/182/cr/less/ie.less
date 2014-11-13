@@ -1,0 +1,50 @@
+@assetsUrl: "/";
+@frameworkUrl: '../_framework/';
+
+* { zoom: 1 !important; }
+
+@import "../_framework/_less/bootstrap/bootstrap-small.less";
+
+@import "../_framework/_less/which/variables.less";
+@import "../_framework/_less/which/mixins.less";
+@import "../_framework/_less/which/grid.less";
+@import "../_framework/_less/which/992.less";
+
+@import "_variables.less";
+
+
+// import 992 scale to set as default - load only for IE < 9
+@import "mq.768.less";
+@import "mq.992.less";
+
+@import "ie.navigation.less";
+
+//.ie7-inline-block()
+
+//ul, ol, li {vertical-align:top}
+li {display:list-item !important}
+
+#search {
+	input {padding:0}
+	button {padding:7px 14px}
+}
+
+.articleList .tagCloud {
+	margin:0;
+}
+		
+.searchAlternatives {
+	a {
+		.ie7-inline-block();
+	}
+}
+
+.cat_problem .callout {background-color: @cr-problem;}
+.cat_regulation .callout {background-color: @cr-regulation;}
+.cat_action .callout {background-color: @cr-action;}
+
+// Copied from interactions
+// .js .minShow {display:none}
+// .js .minHide {display:block}
+// .js #nav-max {display: block}
+// .tpl_article #content aside.affix {top:20px;}

@@ -1,0 +1,85 @@
+
+Below is the result of your feedback form.  It was submitted by
+ ($!email) on $!date
+---------------------------------------------------------------------------
+
+firstname: $!firstName
+
+surname: $!lastName
+
+publication: $!publication
+
+#if($isFreelance)
+This subscriber is freelance.
+#else
+This subscriber is not freelance.
+#end
+
+
+address:
+$!address1
+$!address2
+$!address3
+$!town
+$!county
+$!postcode
+
+tel: $!workphone
+
+#if ($whichmagazineSubscription)
+Which_magazine: yes
+#else
+Which_magazine: no
+#end
+
+#if ($computingWhichSubscription)
+Computing_Which: yes
+#else
+Computing_Which: no
+#end
+
+#if ($hollidayWhichSubscription)
+Holiday_Which: yes
+#else
+Holiday_Which: no
+#end
+
+#if ($gardeningWhichSubscription)
+Gardening_Which: yes
+#else
+Gardening_Which: no
+#end
+
+#if ($whichMoneySubscription)
+Which? Money: yes
+#else
+Which? Money: no
+#end
+
+#if ($goodFoodGuideSubscription)
+Good_food_guide: yes
+#else
+Good_food_guide: no
+#end
+
+#if ($foodIssuesSubscription)
+Food: yes
+#else
+Food: no
+#end
+
+#if ($personalFinanceSubscription)
+Personal_finance: yes
+#else
+Personal_finance: no
+#end
+
+#if ($healthIssuesSubscription)
+Health_issues: yes
+#else
+Health_issues: no
+#end
+
+other: $!otherSubscription
+
+---------------------------------------------------------------------------

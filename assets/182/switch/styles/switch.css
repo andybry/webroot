@@ -1,0 +1,1487 @@
+/* Which? Color scheme and components used only in Switch section */
+/* Design */
+fieldset {
+	border:0;	
+}
+h1 {clear:both;}
+#tabs {
+	background:url(/assets/images/navigation/bg-switch-tabs.png) #636 0 0 no-repeat;
+	width:928px;
+	padding:0;
+}
+#tabs li.first {
+	margin-left:4px;
+}
+#tabs li {
+	background:url(/assets/images/navigation/bg-switch-tab-divider.png) 0 0 no-repeat;
+	position:static;/*IE7 fix to do with stack order*/
+	z-index:999;/*IE7 fix to do with stack order*/
+}
+#tabs li.on a, #tabs li.on a:hover, #tabs li.on a:active {
+	background:url(/assets/images/navigation/bg-switch-tab-left.png) 0 0 no-repeat;
+}
+#tabs li.on a span, #tabs li.on a:hover span, #tabs li.on a:active span {
+	background:url(/assets/images/navigation/bg-switch-tab-right.png) 100% 0 no-repeat;
+}
+#tabs li a:hover {
+	background:url(/assets/images/navigation/bg-switch-tab-left.png) 0 0 no-repeat;
+}
+#tabs li a:hover span {
+	background:url(/assets/images/navigation/bg-switch-tab-right.png) 100% 0 no-repeat;
+	color:#333;
+}
+#tabs li ul {
+	position:absolute;
+	left:-999px;
+	width:190px;
+	margin:-1px 0 0 0;
+	border-top:1px solid #564d82;
+	background:url(/assets/images/design/bg-nav-hover-end.png) 0 100% no-repeat;
+	padding:0 0 5px 0;
+	z-index:999;/*IE7 fix to do with stack order*/
+}
+#tabs li:hover ul, #tabs ul.js-hover {
+	left:auto;
+}
+#tabs li li {
+	border-color:#564d82;
+	border-style:solid;
+	border-width:0 1px 0 1px;
+	width:188px;
+	padding:0;	
+	position:relative;
+	z-index:999;
+}
+#tabs li li.all {
+	border-bottom:none;
+}
+#tabs li li a {
+	color:#333;
+	background:#fff;
+	padding:5px 6px 5px 4px;
+	border-bottom:1px solid #ccc;
+}
+#tabs li.on li a {
+	background:#fff;
+}
+#tabs li li a:hover, #tabs li.on li a:hover  {
+	background:#eae5f5;
+}
+#tabs li li.all a {
+	background:url(/assets/images/bullets/blt-all-nav.gif) no-repeat 6px 50% #fff;
+	padding-left:16px;
+	border-bottom:none;
+}
+#tabs li li.last a {
+	border-bottom:none;
+}
+#tabs li li.all a:hover {
+	background:url(/assets/images/bullets/blt-all-nav.gif) no-repeat 6px 50% #eae5f5;
+}
+/*Progress bar*/
+ol.progress-bar {
+	list-style:none;
+	float:left;
+	width:100%;
+	margin-bottom:20px;
+	padding-left:5px;
+	background:url(/assets/images/design/bg-breadcrumb-switch-off-left.png) no-repeat 0 0;
+}
+ol.first-progress {
+	background:url(/assets/images/design/bg-breadcrumb-switch-on-left.png) no-repeat 0 0;
+}
+ol.progress-bar li {
+	float:left;
+	background:url(/assets/images/design/bg-breadcrumb-switch-off.png) no-repeat 100% 0;
+	padding:4px 37px 5px 30px;
+	margin-right:-18px;
+	position:relative;
+}
+ol.progress-bar li.on {
+	background:url(/assets/images/design/bg-breadcrumb-switch-on.png) no-repeat 100% 0;
+}
+ol.progress-bar li.first {
+	padding-left:14px;
+}
+#page ol.progress-bar a { 
+    color:#0083b3;
+    text-decoration:none;	
+    color:#000;
+}
+#page ol.progress-bar a:active, #page ol.progress-bar a:hover {	
+    text-decoration:underline;
+}
+#progress-bar-1 {
+	z-index:4;	
+}
+#progress-bar-2 {
+	z-index:3;	
+}
+#progress-bar-3 {
+	z-index:2;	
+}
+ol.progress-bar li span {
+	font-weight:bold;
+}
+/*Forms*/
+#current-situation {
+	background:url(/assets/images/design/bg-switch-form-top.gif) no-repeat 0 0;
+	width:612px;
+	padding:13px 0 0;
+	float:left;
+}
+#current-situation fieldset,
+#did-you-get-your-bill {
+	width:590px;
+	padding:20px 10px;
+	float:left;
+	border-left:1px solid #cdd8de;
+	border-right:1px solid #cdd8de;
+}
+#current-situation fieldset fieldset {
+	border:none;
+	width:100%;
+	padding:20px 0;
+}
+#current-situation fieldset.highlight {
+	background:#e7e9f2;
+}
+#current-situation fieldset#submit-button {
+	border:none;
+	width:592px;
+	background:url(/assets/images/design/bg-switch-form-btm.gif) no-repeat 0 0;
+}
+#current-situation fieldset div {
+	width:100%;
+	float:left;
+	clear:both;
+	margin-bottom:10px;
+}
+#current-situation strong,
+#current-situation .left-label label {
+	width:220px;
+	float:left;
+	text-align:right;
+	margin-right:10px;
+	font-weight:bold;
+}
+#current-situation #fs-gas-bill-amount strong, #current-situation #fs-electricity-bill-amount strong, #current-situation #fs-bill-amount strong,
+#current-situation #fs-gas-bill-amount-copy strong, #current-situation #fs-electricity-bill-amount-copy strong, #current-situation #fs-bill-amount-copy strong {
+	width:auto;	
+}
+#current-situation #last-chance-forms p.error {
+	padding-left:0;
+	display:inline;
+}
+#current-situation select {
+	width:249px;
+}
+#current-situation #fs-gas-bill-amount select, #current-situation #fs-electricity-bill-amount select, #current-situation #fs-bill-amount select,
+#current-situation #fs-gas-personal-projection-amount select, #current-situation #fs-electricity-personal-projection-amount select, 
+#current-situation #fs-gas-bill-amount-copy select, #current-situation #fs-electricity-bill-amount-copy select, #current-situation #fs-bill-amount-copy select {
+	width:auto;
+}
+#current-situation .enter-amount {
+	margin-right:0;	
+	margin-top:20px;
+}
+#current-situation .bill-amount-label {
+	float:left;
+	clear:none;
+	width:100px;
+	margin-bottom:0;
+}
+#current-situation #fs-electricity-bill-amount-copy .bill-amount-label strong, 
+#current-situation #fs-electricity-bill-amount .bill-amount-label strong, 
+#current-situation #fs-gas-bill-amount-copy .bill-amount-label strong, 
+#current-situation #fs-gas-bill-amount .bill-amount-label strong, 
+#current-situation #fs-gas-personal-projection-amount strong, 
+#current-situation #fs-electricity-personal-projection-amount strong {
+	text-align:right;
+	width:90%;
+}
+#current-situation .bill-amount-fields {
+	width:450px;
+	float:left;
+	clear:none;
+	margin:0;
+}
+#current-situation .bill-amount-fields p {
+	margin:0;	
+}
+#current-situation #fs-gas-bill-amount .bill-amount-area, #current-situation #fs-gas-bill-amount-copy .bill-amount-area, #current-situation #fs-electricity-bill-amount .bill-amount-area, #current-situation #fs-electricity-bill-amount-copy .bill-amount-area {
+	padding-top:20px;
+	padding-bottom:20px;
+	margin:5px 0 0 -10px;
+	width:610px;
+}
+#current-situation #fs-gas-bill-amount.highlight .bill-amount-area, #current-situation #fs-gas-bill-amount-copy.highlight .bill-amount-area, #current-situation #fs-electricity-bill-amount.highlight .bill-amount-area, #current-situation #fs-electricity-bill-amount-copy.highlight .bill-amount-area {
+	background:#E7E9F2;
+}
+#current-situation #fs-gas-bill-amount.hasError .bill-amount-label, #current-situation #fs-gas-bill-amount-copy.hasError .bill-amount-label, #current-situation #fs-electricity-bill-amount.hasError .bill-amount-label, #current-situation #fs-electricity-bill-amount-copy.hasError .bill-amount-label {
+	margin-top:18px;
+}
+#current-situation #fs-gas-bill-amount, #current-situation #fs-gas-bill-amount-copy, #current-situation #fs-electricity-bill-amount, #current-situation #fs-electricity-bill-amount-copy {
+	background:#ffffff;	
+	clear:both;
+	padding-bottom:0;
+	margin-right:0;
+	padding-right:0;
+	padding-top:0;
+	width:600px;
+}
+div.left-label {margin:20px 0 0;}
+#current-situation label {
+	margin-right:15px;
+}
+.enter-amount {
+	background:#cdd8de;
+	font-weight:bold;
+	padding:5px;
+	margin:0 -10px;
+}
+.usage-amount {
+	width:75px;
+}
+.JS-version #fs-different-suppliers,
+.JS-version #fs-same-suppliers,
+.JS-version #fs-which-economy,
+.JS-version #fs-igt,
+.JS-version #fs-have-bill,
+.JS-version #fs-have-bill-gas,
+.JS-version #fs-have-bill-electricity,
+.JS-version #fs-bill-amount,
+.JS-version #fs-electricity-bill-amount,
+.JS-version #fs-gas-bill-amount,
+.JS-version #fs-have-personal-projection,
+.JS-version #fs-have-personal-projection-gas,
+.JS-version #fs-have-personal-projection-electricity,
+.JS-version #fs-electricity-personal-projection-amount,
+.JS-version #fs-gas-personal-projection-amount,
+.JS-version #fs-electricity-bill-amount-copy,
+.JS-version #fs-gas-bill-amount-copy,
+.JS-version #fs-gas-tariff,
+.JS-version #fs-electricity-tariff,
+.JS-version #fs-single-tariff,
+.JS-version #did-you-get-your-bill,
+.JS-version #fs-how-you-pay-gas,
+.JS-version #fs-how-you-pay-electricity,
+.JS-version #fs-how-you-pay {
+	display:none; 
+}
+.single-supplier #fs-have-bill,
+.single-supplier #fs-same-suppliers,
+.single-supplier #fs-economy,
+.single-supplier #fs-gas-tariff,
+.single-supplier #fs-electricity-tariff,
+.single-supplier #fs-single-tariff,
+.single-supplier #did-you-get-your-bill,
+.single-supplier #fs-how-you-pay-gas,
+.single-supplier #fs-how-you-pay-electricity,
+.single-supplier #fs-how-you-pay {
+	display:block;
+}
+
+
+#submit-button {
+	text-align:right;
+}
+h1.switch-details-header {font-size: 2em}
+p.switch-details-intro {
+	margin:0 4px;
+	text-align:right
+}
+#switch-details .wrapper {
+	background:url(/assets/images/design/bg-switch-form-btm.gif) no-repeat bottom;
+	width:612px;
+	padding:0 0 13px 0;
+	float:left;
+	clear:both;
+}
+#switch-details fieldset.left-label {
+	background:url(/assets/images/design/bg-switch-form-top.gif) no-repeat 0 0;
+	width:612px;
+	padding-bottom: 30px;
+	float:left;
+	clear:both;
+}
+#switch-details legend {
+	color:#C00;
+	font-weight:normal; 
+	font-size:1.3em;
+	font-family:"Trebuchet MS",Arial,sans-serif;
+	text-transform:uppercase;
+	text-transform:uppercase;
+}
+#switch-details legend span {
+	background:#FFF;
+	padding:0 5px;
+	margin-left:10px;
+}
+#switch-details fieldset div.field-wrapper {
+	border-left:1px solid #cdd8de;
+	border-right:1px solid #cdd8de;
+	width:590px;
+	padding:4px 10px 14px 10px;
+	clear:both;
+	float:left;
+}
+#switch-details fieldset div.no-label{
+	width:375px;
+	padding-left:225px;
+}
+#switch-details fieldset div.no-gap{
+	padding-bottom:0;
+}
+#switch-details fieldset div.gap{
+	padding-bottom:40px;
+}
+#switch-details fieldset div.button{
+	padding-top:0;
+}
+#switch-details div label {
+	position: relative;
+	top:4px;
+	color:#333333;
+	display:block;
+	float:left;
+	margin-right:0;
+	padding-right:4px;
+	text-align:left;
+	width:209px;
+	font-weight:bold;
+}
+#switch-details div.radio-buttons {
+	padding-top:4px;
+	padding-bottom:14px;
+}
+#switch-details div.radio-buttons label {
+	top:0px;
+	display:inline;
+	float:none;
+	text-align:left;
+	font-weight:normal;
+	padding-right: 15px;
+}
+#switch-details span.mandatory,
+p.switch-details-intro span.mandatory {
+	color:#C00;
+}
+#switch-details div input.read-only {
+	background: none;
+	border: none;
+	padding:4px 0;
+}
+#switch-details div p {
+	padding-top: 0px;
+	margin-left: 213px;
+}
+#switch-details fieldset div.no-label p{
+	padding-top:0;
+	margin-left:0;
+	font-size:80%;
+}
+#switch-details div input {padding:2px;}
+#switch-details div input.text {width:241px;}
+#switch-details div select.digit2 {width:45px;}
+#switch-details div select.digit4 {width:60px;}
+#switch-details div select.digit9 {width:90px;}
+#switch-details div input.sort-code {width:18px;}
+#switch-details fieldset#submit-button {
+	border:none;
+	width:612px;
+	float:left;
+	clear:both;
+}
+
+/*Tips and hints*/
+#sidebar h2 {
+	background:url(/assets/images/design/bg-switch-side-head.gif) no-repeat 0 0;
+	margin:40px 0 10px;
+	padding:8px;
+}
+#tips-info {
+	background:url(/assets/images/design/bg-switch-tips-top.png) no-repeat 0 0;
+	padding-top:75px;
+	width:335px;
+	margin:0 0 0 -33px;
+	position:relative;
+}
+#tips-info div,
+#tips-info div.intro,
+#tips-info #no-js-inner div.last {
+	background:url(/assets/images/design/bg-switch-tips-btm.png) no-repeat 0 100%;
+	padding:0 10px 0 43px;
+	position:relative;
+	bottom:-13px;
+	
+}
+#tips-info #no-js-inner div {
+	background:none;
+	bottom:0;
+}
+#tips-info div.inner {
+	background:url(/assets/images/design/bg-switch-tips-mid.png) repeat-y 0 0;
+	padding:0;
+	margin:0;
+	position:static;
+}
+
+#tips-info p,
+#tips-info h3 {
+	position:relative;
+	left:0;
+	top:-55px;
+	margin:0 0 10px;
+	color:#000;
+}
+#tips-info h3 {
+	font-weight:bold;
+}
+
+/* Results page */
+#loader {
+	padding:10px;
+	width:188px;
+	float:left;
+	margin-bottom:20px;
+	border:1px solid #ddd;
+	text-align:center;
+}
+#loader p {
+	text-align:left;
+}
+#loader span {
+	font-weight:bold;
+}
+#loader img {
+	display:block;
+	margin:0 auto;
+	width:32px;
+	text-align:center;
+}
+#filter-column {
+	float:left;
+	clear:left;
+	width:210px;
+	margin:0 16px 0 0;
+}
+#transparency {
+	font-size:0.9em;
+	border:1px solid #ddd;
+	margin-bottom:16px;
+	padding:8px 0 0 8px;
+}
+#transparency p {
+	padding:0 8px 8px 0;
+	margin:8px 0 0 4px;
+}
+#results-filter {
+	float:left;
+	clear:left;
+	width:210px;
+}
+#results-filter div.toggle,
+#results-filter h3 {
+	padding:10px 7px;
+}
+
+#results-filter h3 {
+	background:url(/assets/images/design/bg-switch-filters-head-close.gif) no-repeat 0 0;
+	padding-right:37px;
+	color:#000;
+	font-size:1.15em;
+	margin-bottom:0;
+	cursor:pointer;
+}
+#results-filter fieldset {
+    float:left;
+    width:100%;	
+	margin-bottom:10px;
+}
+#results-filter h3.closed {
+	background-image:url(/assets/images/design/bg-switch-filters-head-open.gif);
+}
+#results-filter label {
+	display:block;
+	margin:0 0 5px 2px;
+	float:left;
+	width:185px;
+}
+#results-filter div.toggle {
+    float:left;
+    width:194px;
+	border:1px #ddd solid;
+}
+#results-filter label input {
+    float:left;  
+}
+#content #results-filter label.check span {
+	display:block;
+	float:left;
+	width:163px;
+	padding:0 0 3px 6px;
+	margin-top:-3px;
+	background:none;
+}
+#content #results-filter a {
+    text-decoration:none;	
+}	
+#content #results-filter span .disabled, #content #results-filter .disabled a {
+	color:gray;
+}
+#content #results-filter .disabled span {
+	background:url(/assets/images/bullets/blt-grey.png) 0 6px no-repeat;
+}
+#content #results-filter .disabled span a, #content #results-filter .disabled span a:hover, #content #results-filter .disabled span a:active, #content #results-filter .disabled span a:focus {
+    background:none;
+    text-decoration:none;
+}
+#results-filter .strike a {
+	text-decoration:line-through;
+}
+ul#page-tools {
+	float:right;
+	/*width:100%;*/
+	margin-bottom:0px;
+}
+#page-tools li {
+	float:right;
+	padding:5px 21px 5px 23px;
+}
+#content ul#page-tools li a {
+	text-decoration:none;
+}
+#content ul#page-tools li a:hover, #content ul#page-tools li a:active, #content ul#page-tools li a:focus {
+	text-decoration:underline;
+}
+#current-filters, #special-message {
+	background:#f3f4f8;
+	border:1px solid #e3d7e5;
+	padding:5px 10px 8px 10px;
+	margin-bottom:8px;
+	float:left;
+	width:678px;
+}
+#current-filters h3 {
+	float:left;
+	margin-bottom:0;
+}
+p#remove-filters {
+	text-align:right;
+	margin-bottom:6px;
+}
+#content p#remove-filters a {
+    text-decoration:none;	
+    padding:0 24px 3px 0;
+    background:url(/assets/images/icons/remove-cross-2.png) no-repeat 100% 0;
+}
+#content p#remove-filters a:hover, #content p#remove-filters a:focus, #content p#remove-filters a:active {
+    text-decoration:underline;   
+}
+#current-filters ul {
+	border-top:1px dotted #bc9bc2;
+	padding-top:6px;
+	margin-bottom:0;
+}
+#current-filters li {
+	display:inline;
+	margin-right:0px
+}
+#content #current-filters li {
+	padding:0 0 3px 0;
+}
+#content #current-filters ul li span.icon {
+	background:transparent url(/assets/images/icons/remove-cross-2.png) 100% 0% no-repeat;
+	width:13px;
+	height:13px;
+	padding:0 0 0 7px;
+	margin-top:2px;
+	position:absolute;
+}
+#content #current-filters li a {
+	padding-right:27px;	
+}
+#content #current-filters li a, #content #current-filters li a:link, #content #current-filters li a:visited {
+	text-decoration:none;
+}
+#content #current-filters li a:active, #content #current-filters li a:hover {
+	text-decoration:underline;
+}
+#current-filters #no-filters {
+	color:#5E2768;
+	font-style:italic; 
+	padding-right:0;
+	background:none;
+}
+#page-tools li.email-results {
+	background:url(/assets/images/icons/email.png) no-repeat 100% 50%;
+}
+#page-tools li.print-results {
+	background:url(/assets/images/icons/printer.png) no-repeat 100% 50%;
+}
+#results-list {
+	float:right;
+	width:700px;
+}
+#results-list table {
+	clear:both;
+	border:1px solid #d4dee3;
+	border-top:none;
+}
+#results-list .col-1 {width:132px;}
+#results-list .col-2 {width:239px;}
+#results-list .col-3 {width:85px;}
+#results-list .col-4 {width:102px;}
+#results-list .col-5 {width:140px;}
+
+#results-list thead th {
+	background:#8895a4;
+	color:#fff;
+	border-right:1px solid #fff;
+	vertical-align:top;
+	padding:5px;
+}
+#results-list thead th.last {
+	border-right:0;
+}
+#results-list thead th a {
+	color:#fff;
+	float:left;
+	padding-right:15px;
+	margin-bottom:5px;
+}
+#results-list #which-tariff-satisfaction {
+	padding-right:0;
+	display:block;
+	float:left;
+	width:60px;
+}
+#results-list a.which-tariff-satisfaction {
+	margin-top:10px;
+	padding-right:0;
+	position:relative;
+	left:10px;
+}
+#results-list th.last .small-info {
+	font-size:0.8em;
+	display:block;
+}
+#results-list thead th a:hover, #results-list thead th a:focus {
+	background:none;
+	text-decoration:none;
+}
+#results-list thead th a.asc {
+	background:url(/assets/images/icons/arrow-white-up-11-6.png) no-repeat 100% 50%;
+}
+#results-list thead th a.desc {
+	background:url(/assets/images/icons/arrow-white-down-11-6.png) no-repeat 100% 50%;
+}
+#results-list thead th a.help {
+	display:inline;
+	background:none;
+}
+#results-list td,
+#results-list tbody th {
+	border-top:1px solid #d4dee3;
+	padding:3px 5px 5px 5px;
+}
+#results-list tr.more-details td {
+	padding:0 5px 5px 5px;
+}
+#results-list td .notes {
+	padding:12px 0 0 14px;
+}
+#results-list td .notes li {
+	padding-bottom:3px;
+}
+#content #results-list p.tariff-type {
+	font-size:1.15em;
+	margin-bottom:7px;
+	font-family:"Trebuchet MS",Arial,sans-serif;
+}
+#results-list p.billing-type,
+#results-list td.annual-saving {
+	font-weight:bold;
+}
+#results-list td.annual-saving,
+#results-list td.tariff-satisfaction {
+	text-align:center;
+	font-size:1.2em;
+}
+#results-list td.choose-this {
+	font-size:.85em;
+	color:#666;
+}
+#results-list td.choose-this input {
+	margin-bottom:10px;
+}
+#content #results-list tr.more-details p {
+	margin-bottom:3px;
+}
+#results-list tr.more-details td {
+	border-top:none;
+}
+#results-list tr.highlight td,
+#results-list tr.highlight th {
+	background:#eff3f4;
+}
+#results-list tr.your-tariff td,
+#results-list tr.your-tariff th {
+	background:#f3f4f8;
+}
+#results-list tr.your-tariff td.choose-this {
+	background:#f3f4f8 url(/assets/images/design/bg-switch-your-tariff.gif) no-repeat 100% 50%;
+}
+#results-list .worse-tariff p.tariff-type, 
+#results-list .worse-tariff p.billing-type,
+#results-list .worse-tariff td.annual-saving,
+#results-list .worse-tariff p.highlight,
+#results-list .more-details p.error {
+	color:#cc0000;
+}
+#compare-table .cost {
+	color:#cc0000;
+}
+
+
+/* Related links box */
+#interested {
+	background:url(/assets/images/navigation/bg-h2-reviews-related.png) no-repeat top left;
+}
+#interested h2 {
+	background:url(/assets/images/navigation/bg-h2-reviews-related-grad.png) no-repeat bottom center;
+	color:#609521;
+}
+#interested div {
+	background:url(/assets/images/navigation/bg-reviews-related.png) no-repeat bottom left;
+}
+#interested ul {
+	border-top:1px solid #C5DD9C;
+}
+
+/* Section homepage list */
+.supplier-list-intro {margin-top: 1em;}
+#supplier-list-wide {
+	clear:right;
+	width:695px;
+}
+#supplier-list-wide .row {
+	border-bottom:1px solid #D5DFE4;
+	clear:left;
+	margin-top:10px;
+	padding-bottom:10px;
+	overflow:hidden;
+	width:695px;
+}
+#supplier-list-wide .row div h2 {
+	font-size:1.3em;
+	margin-bottom:2px;
+	line-height:1.3;
+}
+#supplier-list-wide .row div h2 a {
+	text-decoration:none;
+	color:#0083B3;
+}
+#supplier-list-wide .row div h2 a:hover {
+	text-decoration:underline;
+}
+#supplier-list-wide .row div {width:330px;} 
+#supplier-list-wide .row div p {margin-bottom:0;}
+#supplier-list-wide .row div img {
+	float:left;
+	margin:0 10px 10px 0;
+}
+
+/* In-page tab navigation */
+#content #inpage-nav {
+	border-bottom:6px solid #73357c;
+	margin-bottom:2px;
+}
+#inpage-nav li a:hover,
+#inpage-nav li a:active,
+#inpage-nav li a:focus {
+	background:url(/assets/images/navigation/bg-tab-inpage-left-hover.png) no-repeat left top;
+}
+#inpage-nav li a:hover span,
+#inpage-nav li a:active span,
+#inpage-nav li a:focus span {
+	background:url(/assets/images/navigation/bg-tab-inpage-right-hover.png) no-repeat right top;
+}
+#content #inpage-nav li.on a {
+	background:url(/assets/images/navigation/bg-tab-inpage-left-on-switch.png) no-repeat left top;
+	color:#FFF;
+}
+#content #inpage-nav li.on a span {
+	background:url(/assets/images/navigation/bg-tab-inpage-right-on-switch.png) no-repeat right top;
+}
+
+/* Price announcement information */
+.price-announcement {
+	border-bottom:10px #fff solid;
+}
+.price-announcement li {
+	float:left;
+	font-size:0.9em;
+	padding:2px 6px 2px 0px;
+	background:#eee;
+}
+.result-items .price-announcement li {
+	background:none;
+}
+ul.result-items .price-announcement li {
+	padding-right: 6px;
+	border-top:none;
+}
+ul.result-items li span {
+	display:block;
+	font-weight:normal;
+}
+/*Error Box*/
+#content .error-box {
+	background:url(/assets/images/design/bg-616-box-error-form-end.gif) bottom left no-repeat;
+	margin-bottom:10px;
+	padding-bottom:15px;
+	height:1%;
+}
+#content .error-box div {
+	background:url(/assets/images/design/bg-616-box-error-form-top.gif) top left no-repeat;
+}
+#content .error-box p {
+	color:#C00;
+	font-weight:bold;
+	margin:0;
+	padding:8px 4px 5px 12px;
+}
+#content .error-box ul.standard {
+	margin:0;
+	padding:0 12px;
+}
+#content .error-box ul.standard li {
+	background:url(/assets/images/bullets/blt-yellow-bg.png) no-repeat top left;
+}
+#content .error-box p {
+	color:#cc0000;
+}
+#current-situation p.error, #switch-details p.error {
+	color:#cc0000;
+	margin-bottom:0;
+}
+#current-situation p.error {
+	padding-left:230px;
+}
+#fs-gas-bill-amount p.error,
+#fs-electricity-bill-amount p.error {
+	padding-left:44px;
+}
+#switch-results h1 span {
+	display:inline;
+	font-size:1em;
+	margin-top:0;
+}
+#content #results-table .contracted-links {
+	margin-bottom:0;
+}
+#results-table .contracted-links li {
+	display:inline;
+	padding-right:5px;
+}
+#results-table tr.error {color:#cc0000;}
+#content #results-table .contracted-links a, #content #results-table .contracted-links a:focus,
+#content #results-table .more-details a, #content #results-table .more-details ul a:focus   {
+	text-decoration:none;
+}
+#content #results-table .contracted-links a:hover, #content #results-table .contracted-links a:active,
+#content #results-table .more-details a:hover, #content #results-table .more-details ul a:active {
+	text-decoration:underline;
+}
+#results-table .contracted-links a.view-details {
+	background:url(/assets/images/icons/plus-2.gif) no-repeat 0 3px;
+	padding-left:12px;
+}
+#results-table .contracted-links a.view-details:hover {
+	background:url(/assets/images/icons/plus-2.gif) no-repeat 0 3px #E6F5FA;
+	padding-left:12px;
+}
+#results-table .more-details a.less-details  {
+	background:url(/assets/images/icons/minus-2.gif) no-repeat 0 50%;
+	padding-left:12px;
+}
+#results-table .more-details a.less-details:hover  {
+	background:url(/assets/images/icons/minus-2.gif) no-repeat 0 50% #E6F5FA;
+	padding-left:12px;
+}
+#results-table .expanded-links  {
+	margin:36px 0 0 0;
+}
+#results-table .expanded-links li  {
+	display:inline;
+	padding-right:20px;
+}
+#results-table .expanded-links li.rates-info  {
+	float:right;
+	padding-right:0;
+}
+#results-table .expanded-links li.rates-info a  {
+	background:url(/assets/images/icons/arrow-right.gif) no-repeat 100% 50%;
+	padding-right:10px;
+}
+#results-table .logo {
+	padding-top:6px;
+}
+#content p#intro {
+	font-family:"Trebuchet MS",Arial,sans-serif;
+	color:#000;
+	margin-bottom:22px;
+}
+#results-table .more-information {
+	background:url(/assets/images/icons/arrow-right.gif) no-repeat 0 50%;
+	padding-left:14px;
+	font-size:1.2em;
+	display:block;
+	text-decoration:none;
+	margin-bottom:7px;
+}
+#results-table .tariff-name-billing {
+	vertical-align:top;
+}
+#results-filter .selected {
+	width:170px;
+}
+#results-table .pagination  {
+	float:left;
+	margin-bottom:0px;
+}
+#results-table .pagination li  {
+	float:left;
+	margin-right:5px;
+}
+#results-table .pagination a, #results-table .pagination strong {
+	float:left;
+	margin-right:4px;
+}
+#results-table tfoot h4 {
+	float:left;
+	color:#000;
+	font:normal 1em/1.1 Verdana,Helvetica,sans-serif;
+	margin-right:5px;
+}
+#content #results-table .pagination a {	
+	text-decoration:none;
+}
+#content #results-table .pagination a:hover,
+#content #results-table .pagination a:active  {	
+	text-decoration:underline;
+}
+#infiniteScrollLoader td {
+	height:50px;
+	background:url(/assets/images/icons/loader-switch.gif) no-repeat 50% 50%;
+}
+#back-results {
+	float:right;
+	margin-top:-27px;
+}
+#compare-table {
+	width:928px;
+	margin-bottom:20px;
+}
+#compare-table tbody td {text-align:center;}
+#compare-table .highlight {
+	background:#ccc;
+	padding:6px 5px 7px;
+}
+#results-list .compare-col-2 {width:215px}
+#results-list .compare-col-3 {width:215px}
+#compare-to-current {
+	background:#f3f4f8;
+	border:1px solid #E3D7E5;
+	float:left;
+	margin-bottom:8px;
+	padding:5px 10px 8px;
+	width:906px;
+}
+#switch-compare #results-list {
+	width:928px;
+}
+#saved-situation fieldset div.no-label {
+	width:379px;
+	float:left;
+	padding-left:211px;
+}
+#saved-situation fieldset div.no-label input {
+	float:left;
+	margin-right:8px;
+}
+#saved-situation fieldset div.no-label label {
+	font-weight:normal;
+	float:left;
+	width:340px;
+	margin-top:-7px;
+}
+#content .sign-up .fieldWrapper select.error {
+    width:250px;
+    margin:0;
+}
+#content .sign-up .fieldWrapper #dobDay.error,
+#content .sign-up .fieldWrapper #dobMonth.error,
+#content .sign-up .fieldWrapper #dobYear.error, 
+#content .sign-up .fieldWrapper #supplyAddressyearsAtAddress.error,
+#content .sign-up .fieldWrapper #supplyAddressmonthsAtAddress.error,
+#content .sign-up .fieldWrapper #previousAddress1yearsAtAddress.error,
+#content .sign-up .fieldWrapper #previousAddress1monthsAtAddress.error, 
+#content .sign-up .fieldWrapper #previousAddress2yearsAtAddress.error,
+#content .sign-up .fieldWrapper #previousAddress2monthsAtAddress.error {
+    width:auto;
+}
+#content .sign-up #ddSortCodeWrapper input.error {
+    margin:0;
+}
+
+/*Left nav*/
+#sub-nav h2 {
+	background:url(/assets/images/navigation/bg-switch-subnav.png) #6C3973 no-repeat top left;
+	margin:0;
+}
+#sub-nav ul li a,
+#sub-nav ul li a.on,
+#sub-nav ul li a.open {
+	background: url(/assets/images/navigation/bg-switch-sub-nav-off.gif) transparent no-repeat 193px 5px;
+}
+
+.sub-nav ul li.on a,
+#sub-nav ul li.on a,
+.sub-nav ul li a:focus, #sub-nav ul li a:focus,
+.sub-nav ul li a:hover, #sub-nav ul li a:hover,
+.sub-nav ul li a:active, #sub-nav ul li a:active {
+	background: url(/assets/images/navigation/bg-sub-nav-on.png) #E7EAEB no-repeat 193px 5px;
+	color: #C00;
+	padding-right: 25px;
+}
+.js-on #content #results-filter span {
+    background:url(/assets/images/bullets/blt-blue.png) no-repeat 0 50%;
+    padding-left:8px;
+}
+#content #results-filter span {
+    padding-left:18px;
+    display:block;
+}
+#content #results-filter .selected span a {
+    text-decoration:none;
+    background:url(/assets/images/icons/remove-cross-2.png) no-repeat 100% 2px;
+    padding-right:18px;
+    display:block;
+}
+#content #results-filter span a:hover, #content #results-filter span a:active, #content #results-filter span a:focus {
+	text-decoration:underline;
+}
+/*End left nav*/
+
+/*survey result tables*/
+.tnote {
+	margin-top:20px;
+}
+/*End survey result tables*/
+
+#results-filter .ui-widget-header {
+    background-image:url(/assets/images/slider/ui-bg-switch-500x100.png);
+}
+
+/*Tariff details*/
+.tariff-details {
+	background:transparent url(/assets/images/design/bg-basket-tbl-bottom.gif) no-repeat left bottom;
+	margin-bottom:10px;
+	clear:both;
+	display:block;
+	float:left;
+	margin:10px 0 15px 0;
+	width:930px;
+}
+#content .tariff-details h2 {
+	background:transparent url(/assets/images/design/bg-basket-tbl-top.gif) no-repeat left top;
+	margin:0;
+	padding:7px 16px;
+	background:transparent url(/assets/images/design/bg-basket-tbl-top.gif) no-repeat left top;
+	color:#333;
+	font-size:1.4em;
+	text-transform:uppercase;
+	text-align:right;
+}
+#content .tariff-details h2 span.tariff-details-header {
+	float:left;
+}
+#content .tariff-details h2 span.tariff-details-savings {
+	color:#CC0000;
+}
+.tariff-details div, .tariff-details .supplier-logo {
+	float:left;
+	margin:16px;
+}
+.tariff-details div {
+	width:700px;
+}
+.tariff-details li{
+	margin:5px 0;
+}
+.tariff-details .bullets {
+	list-style:disc;
+}
+.tariff-details .bullets  li {
+	margin-left:15px;
+}
+.tariff-details .tariff-notes {
+	margin-left:32px;
+}
+.tariff-details .link {
+	background:transparent url(/assets/images/bullets/blt-blue-circle.png) no-repeat 0 50%;
+	padding-left:22px;
+}
+.tariff-next-steps {
+	clear:both;
+}
+#content .tariff-next-steps h2 {
+	background:#CBADCE;
+	text-transform:uppercase;
+	padding-left:6px;
+	color:#fff;
+	margin-bottom:8px;
+}
+#results-filter .ui-slider-horizontal {
+    margin:0 5px 0 18px;
+    width:171px;
+    height:20px;
+}
+#results-filter .ui-slider-horizontal .ui-slider-handle {
+    margin-left:-17px;
+}
+#results-filter .ui-slider .ui-slider-handle {
+    height:28px;
+    width:35px;
+    background:#6e3277;
+}
+#results-filter .ui-state-hover, #results-filter .ui-widget-content .ui-state-hover, #results-filter .ui-state-focus, #results-filter .ui-widget-content .ui-state-focus {
+	border:1px solid #ccc;
+}
+#results-list thead th a.help-button,
+#results-filter a.help-button {
+    background:url(/assets/images/icons/help.png) no-repeat 0 0;
+    height:28px;
+    width:28px;
+    display:block;
+	float:left;
+    margin-bottom:-4px;
+}
+#results-list thead th a.help-button:hover,
+#content #results-filter a.help-button:hover {
+    background:url(/assets/images/icons/help.png) no-repeat 0 0;
+}
+#content form.sign-up fieldset.checkboxes div label {
+    width:300px;
+}
+#content form.sign-up fieldset.checkboxes .no-label {
+    margin-left:301px;
+    width:490px;
+}
+#content form.sign-up fieldset.checkboxes input {
+	margin-top:3px;
+}
+#content #results-filter h2 {
+    color:#fff;
+    font-size:1.17em;
+    padding:9px 3px 3px 8px;
+    background:#84418c;
+    margin-bottom:-0px;
+}
+#fs-which-economy .left-label {
+    margin:0;
+}
+
+/*Lightboxs*/
+#switch-results .dialog-current-situation-parent, #switch-application .dialog-ddinfo-parent {
+    border:0;
+    background:url(/assets/images/design/bg-grey-jquery-ui-1-1000.gif) repeat-x 0 0;
+    border:0;
+}
+#switch-results .dialog-current-situation-parent .ui-widget-header, #switch-application .dialog-ddinfo-parent .ui-widget-header {
+    border:none;
+    background:none;
+}
+#switch-results .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { border: 0; }
+#switch-application .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { border:0; }
+#switch-results .dialog-current-situation-parent .ui-widget-content, #switch-application .dialog-ddinfo-parent .ui-widget-content {
+    border:0;
+}
+#switch-results #dialog-current-situation, #switch-application #dialog-ddinfo {
+	padding:0 6px 13px 6px;	
+	background:transparent;
+	width:100%;
+	float:left;
+}
+#switch-results #dialog-current-situation #content, #switch-application .dialog-ddinfo #content {
+    background:#fff;
+    padding:8px 0 8px 0;
+}
+#switch-results .dialog-current-situation-parent a.ui-dialog-titlebar-close, #switch-application .dialog-ddinfo-parent a.ui-dialog-titlebar-close {
+    float:right;
+    margin:10px 12px 10px 0;	
+}
+#switch-results .dialog-current-situation-parent .ui-icon, #switch-application .dialog-ddinfo-parent .ui-icon {   
+    background-image:url(/assets/images/panels/thickbox-close.png);
+    width:18px;
+    height:17px;
+}
+#switch-results .dialog-current-situation-parent .ui-icon-closethick, #switch-application .dialog-ddinfo-parent .ui-icon-closethick  {   
+    background-position:0 0;
+}
+#switch-application #popup-info {
+	background:#FFFFFF;
+	padding:10px;
+	text-align:left;	
+}
+#switch-application #useCorrespondenceAddressForMailing {
+	margin-top:6px;
+}
+#switch-application label[for="useCorrespondenceAddressForMailing"] {
+	position:relative;
+	left:-4px; 
+}
+#switch-application #previous-address-country label {
+	width:320px;
+}
+#switch-application #previous-address-country input {
+	margin-top:6px;
+	margin-left:4px;
+}
+#switch-application .eon-credit-scoring input {
+	margin-top:6px;
+}
+#switch-application .eon-credit-label {
+	padding-left:4px;
+	position:relative;
+    width: 680px;
+}
+.eon-credit-wrapper input, .eon-credit-wrapper label, .eon-credit-wrapper .eon-credit-label {
+    float: left;
+    margin-top: 4px;
+}
+#content form.sign-up fieldset.checkboxes .rewards-opt-in label {
+    width: 330px;
+}
+#eon-rewards ul ,#eon-online ul{
+    list-style: disc inside;
+}
+#eon-rewards table td {
+    padding: 10px;
+    vertical-align: top;
+}
+#fs-which-economy .left-label {
+    margin:0;
+}
+/* disclaimer & tariff update*/
+#disclaimer {
+	float:left;
+	clear:left;
+	width:200px;
+	margin:20px 0 0;
+	font-size:.9em;
+}
+#tariff-update {
+	float:left;
+	margin-top:5px;
+}
+#tariff-switch-toggle {
+	clear:both;
+	padding:8px;
+	border:1px #ddd solid;
+	margin-bottom:8px;
+}
+#tariff-switch-toggle .submit-filter {
+	display:inline;
+	position:relative;
+	top:5px;
+	left:5px;
+}
+#switch-results .contracted-links .rates-info {
+	clear:left;
+	display:block;
+}
+/* tariff info and summary popup */
+#switch-results .info-popup {
+	background:url(/assets/images/design/bg-help-btm.png) no-repeat 0 100%;
+	padding-bottom:13px;
+	border:none;
+}
+#switch-results .info-popup h3 {
+	background:url(/assets/images/icons/icon-help-item.png) no-repeat 0 50%;
+	padding:0 24px;
+}
+#switch-results .info-popup .inner {
+	background:url(/assets/images/design/bg-help-top-switch.png) no-repeat 0 0;
+	padding:15px 15px 20px;
+	border:none;
+	text-align:left;
+}
+#switch-results .info-popup .ui-dialog-titlebar {
+	background:none;
+	border:none;
+}
+#switch-results .info-popup .ui-dialog-titlebar-close {
+	background:#fff url(/assets/images/icons/icon-help-close.png) no-repeat 0 0;
+	display:block;
+	width:14px;
+	height:14px;
+	position:absolute;
+	top:25px;
+	right:10px;
+}
+
+.info-popup .ui-dialog-titlebar-close span {
+	display: none;
+}
+.info-popup h2 {
+	font-size:1.3em;
+}
+.info-popup #tariff-info h3 {
+	background:none;
+	padding:0;
+	margin-top:10px;
+	font-size:1.1em;
+}
+.info-popup #tariff-info .additional-info  {
+	font-size:.9em;
+	list-style:disc;
+	margin-left:20px;
+}
+
+.tariff-savings {
+	color:red;
+	margin-bottom:10px;
+}
+.js-on .switch-help {
+    clear:none;
+}
+.switch-help {
+	clear:both;
+}
+#content p.timeout {
+	background:yellow;
+	border:1px solid red;
+	padding:10px;
+	margin:0 0 10px;
+	font-weight:bold;
+	color:red;
+}
+.faq-link {
+	clear:both;
+	margin:0 10px 20px 0;
+	float:right;
+}
+.faq-content {
+	clear:both;
+	padding:10px 0;
+}
+#content .faq-content h2, #switch-application .dialog-ddinfo-parent .faq-content h2 {
+	background:#ddd;
+	padding-left:6px;
+	color:#000;
+	text-align:left;
+} 
+#content .faq-content h2 a, #content .faq-content h2 a:link, #content .faq-content h2 a:visited, #content .faq-content h2 a:hover  {
+	color:#000;
+	text-decoration:none;
+	background:none;
+}
+.faq-content ul li {
+	margin:10px 0;
+	padding:10px 10px 0 10px;
+	text-align:left;
+}
+.faq-content ul li div {
+	margin:10px 0;
+	text-align:left;
+}
+.reassurance-content {
+	background:transparent url(/assets/images/design/bg-basket-tbl-bottom.gif) no-repeat left bottom;
+	margin-bottom:10px;
+	clear:both;
+	display:block;
+	float:left;
+	margin:10px 0 15px 0;
+	width:930px;
+}
+#content .reassurance-content h2 {
+	background:transparent url(/assets/images/design/bg-basket-tbl-top.gif) no-repeat left top;
+	margin:0;
+	padding:7px 16px;
+	background:transparent url(/assets/images/design/bg-basket-tbl-top.gif) no-repeat left top;
+	color:#333;
+	font-size:1.4em;
+	text-transform:uppercase;
+}
+#content .reassurance-content p {
+	padding:8px 8px 0 8px;
+}
+.accreditation-icons {
+	float:left;
+	width:380px;
+	margin-top:20px;
+}
+.smartMeterCreditTypeText .smartMeterPrepayTypeText .smartMeterMixedTypeText {
+	display:none;
+}
+
+.annual-saving {
+ width: 90px;
+}
+
+/* Tariff Information Label */
+#til-content {
+    width: 100%;
+}
+
+.til-tables {
+    clear: both;
+    padding: 15px 0;
+}
+
+.til-electricity {
+    background: white;
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+}
+
+.til-gas {
+    background: white;
+    float: left;
+    width: 48%;
+}
+
+.til-price-footnote {
+    width: 100%;
+    float: left;
+    background: white;
+}
+
+.til-table,
+.til-table th,
+.til-table td {
+    border:1px solid black;
+    border-collapse:collapse
+}
+
+.til-header {
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+.til-middle-header{
+    background: gainsboro;
+    color: black;
+    text-align: center;
+}
+
+.til-table-label{
+    font-weight: bold;
+    width:30%;
+}

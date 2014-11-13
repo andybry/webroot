@@ -1,0 +1,1 @@
+define(["jquery"],function(a){console.info("module.carousel");var b=function(){};return b});

@@ -1,0 +1,186 @@
+/* Which? Defaults */
+
+html * {
+	margin:0;
+	padding:0;
+}
+
+body {
+	background:#FFF;
+	color:#333;
+	font-size:76%;
+	line-height:1.4;
+	font-family:Verdana,Helvetica,sans-serif;	
+	opacity:.9999;
+	text-align:center;
+}
+
+ul,
+ol {
+	list-style:none;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family:"Trebuchet MS",Arial,sans-serif;
+}
+h1 {
+	color:#C00;
+	font-size:2.5em;
+	margin-bottom:20px;
+	font-weight:normal;
+	line-height:1.2;
+}
+h1 span {
+	font-size:0.8em;
+	margin-top:4px;
+	display:block;
+}
+span.subheading-a {
+	color:#455866;
+}
+span.subheading-b {
+	color:#00555D;
+}
+span.subheading-c {
+	color:#455866;
+	margin-top:15px;
+	margin-bottom:20px;
+}
+span.subheading-c a {
+	color:#0083B3;
+}
+#content h2 {
+	color:#C00;
+	font-size:1.5em;
+	margin-bottom:5px;
+	font-weight:normal;
+}
+#content h3 {
+	color:#000;
+	font-size:1.3em;
+	margin-bottom:5px;
+	line-height:1.2;
+}
+#content .bodyfield h3 {
+	font-weight:bold;
+}
+#content h3 a {
+	text-decoration:none;
+}
+#content h4 {
+	color:#455866;
+	font-size:1.3em;
+}
+
+/* Paragraphs and links */
+#content p,
+#content ul.content li {
+	color:#333;
+	margin-bottom:15px;
+}
+#content p#intro {
+	color:#455866;
+	font-size:1.3em;
+	margin-top:-15px;
+}
+#content p.intro {
+	color:#455866;
+	font-size:1.3em;
+}
+#content p img {
+	vertical-align:middle;
+}
+#content strong {
+	font-weight:bold;
+}
+#content em {
+	font-style:italic;
+}
+#content a {
+	color:#0083B3;
+}
+#content p a,
+#content p a:link,
+#content p a:visited {
+	text-decoration:underline;
+}
+#content a:hover,
+#content a:active,
+#content a:focus {
+	background-color:#E6F5FA;
+	text-decoration:underline;
+}
+#content hr {
+	background:#CDD8DE;
+	border:none;
+	color:#CDD8DE;
+	display:block;
+	height:1px;
+	margin-bottom:15px;
+}
+
+/* Quotes and addresses */
+#content address {
+	color:#333;
+	margin-bottom:15px;
+}
+#content address a,
+#content address a:link,
+#content address a:visited {
+	color:#0083B3;
+	text-decoration:underline;
+}
+#content address strong {
+	color:#000;
+	display:block;
+	font-weight:normal; 
+}
+
+/* Accessibility */
+/* These need proper testing in screen-reader environments but _should_ work well as far as I can tell */
+.hidden {
+	text-indent:-900000px !important; /* accessible visibility:hidden - read by screenreaders  */
+}
+.removed {
+	left:-900000px; /* accessible display:none - read by screenreaders */
+	position:absolute !important;
+	width:1px;
+	font-size:1px;
+}
+.show-for-js {
+	display:none;
+}
+/* Floats */	
+/* Note:Use the overflow technique documented here for clearing:http://www.quirksmode.org/css/clearing.html */
+.left {float:left;}
+.right {
+	float:right;
+}
+img.left {margin-right:10px;}
+img.right {margin-left:10px}
+hr {
+	clear:both;
+	display:block;
+	visibility:hidden;
+}
+.clear {clear:both;}
+
+/* Additional Resets */
+table {border-spacing:0;}
+caption,
+table th {text-align:left;}
+q:before,q:after {content:'';}
+a img {border:none;}
+
+/* Embolden */
+.bold {
+	font-weight:bold;
+}
+#content a.help:hover, #content a.help:active, #content a.help:focus {
+	background:none;
+	text-decoration:none;
+}
+.no-read {display:none;}
+

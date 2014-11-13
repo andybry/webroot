@@ -1,0 +1,394 @@
+// ############################################################################
+// # CONTENTS
+// ############################################################################
+//
+// CONTAINER VARIATIONS
+//   --open
+//   --closed
+//   --hidden
+// FLYOUT VARIATIONS
+//   --open
+//   --closed
+// CONTROL BAR
+//   __count-and-toggle
+//   __buttons
+// SELECTION BOXES
+//   __product
+//   __placeholder
+%comparison-flyout__container {
+  transition: bottom 0.5s;
+  -webkit-transition: bottom 0.5s;
+  position: fixed;
+  width: 100%;
+}
+
+// ############################################################################
+// # CONTAINER VARIATIONS (centers the flyout)
+// ############################################################################
+
+// <div class="js-comparison-flyout__container comparison-flyout__container--open">
+//    @Section Modules - Comparison Flyout - Flyout - Open Variation
+// </div>
+//
+// Styleguide Modules - Comparison Flyout - Container - Open
+.comparison-flyout__container--open {
+  @extend %comparison-flyout__container;
+  bottom: 0px;
+}
+
+// <div class="js-comparison-flyout__container comparison-flyout__container--closed">
+//    @Section Modules - Comparison Flyout - Flyout - Closed Variation
+// </div>
+//
+// Styleguide Modules - Comparison Flyout - Container - Closed
+.comparison-flyout__container--closed {
+  @extend %comparison-flyout__container;
+  bottom: -140px;
+}
+
+// <div class="js-comparison-flyout__container comparison-flyout__container--hidden">
+//    @Section Modules - Comparison Flyout - Flyout - Open Variation
+// </div>
+//
+// Styleguide Modules - Comparison Flyout - Container - Hidden
+.comparison-flyout__container--hidden {
+  @extend %comparison-flyout__container;
+  bottom: -190px;
+}
+
+// ############################################################################
+// # FLYOUT VARIATIONS (the main component of the module)
+// ############################################################################
+
+  //  <div class="comparison-flyout__flyout">
+  //    @Section Modules - Comparison Flyout - Control Bar - Open Variation
+  //    @Section Modules - Comparison Flyout - Selection Boxes
+  //  </div>
+  //
+  //  Styleguide Modules - Comparison Flyout - Flyout - Open Variation
+
+  //  <div class="comparison-flyout__flyout">
+  //    @Section Modules - Comparison Flyout - Control Bar - Closed Variation
+  //    @Section Modules - Comparison Flyout - Selection Boxes
+  //  </div>
+  //
+  //  Styleguide Modules - Comparison Flyout - Flyout - Closed Variation
+  .comparison-flyout__flyout {
+    width: 80%;
+    min-width: 550px;
+    max-width: 840px;
+    height: 190px;
+    margin: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 3px #DDDDDD;
+    .ie8 & {
+      border-top: 1px solid #E1EAED;
+      border-right: 1px solid #E1EAED;
+      border-left: 1px solid #E1EAED;
+    }
+    @media(max-width: 550px) {
+      display: none;
+    }
+  }
+
+// ############################################################################
+// # CONTROL BAR (count, toggle and buttons)
+// ############################################################################
+
+    //  <div class="comparison-flyout__control-bar">
+    //    @Section Modules - Comparison Flyout - Count and Toggle - Closed Variation
+    //    @Section Modules - Comparison Flyout - Buttons
+    //  </div>
+    //
+    //  Styleguide Modules - Comparison Flyout - Control Bar - Closed Variation
+
+    //  <div class="comparison-flyout__control-bar">
+    //    @Section Modules - Comparison Flyout - Count and Toggle - Open Variation
+    //    @Section Modules - Comparison Flyout - Buttons
+    //  </div>
+    //
+    //  Styleguide Modules - Comparison Flyout - Control Bar - Open Variation
+    .comparison-flyout__control-bar {
+      @extend %st-layout__parent-block;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      border-bottom: 1px solid #E1EAED;
+      vertical-align: middle;
+      @include font-size(1);
+    }
+
+      //    <div class="comparison-flyout__count-and-toggle">
+      //      @Section Modules - Comparison Flyout - Count Label
+      //      @Section Modules - Comparison Flyout - Count Container
+      //      @Section Modules - Comparison Flyout - Count Toggle - Closed
+      //    </div>
+      //
+      //  Styleguide Modules - Comparison Flyout - Count and Toggle - Closed Variation
+
+      //    <div class="comparison-flyout__count-and-toggle">
+      //      @Section Modules - Comparison Flyout - Count Label
+      //      @Section Modules - Comparison Flyout - Count Container
+      //      @Section Modules - Comparison Flyout - Count Toggle - Open
+      //    </div>
+      //
+      //  Styleguide Modules - Comparison Flyout - Count and Toggle - Open Variation
+      .comparison-flyout__count-and-toggle {
+        @extend %st-layout__block-of-width--left--50;
+      }
+
+        //  <span class="comparison-flyout__count-label">TVs to compare</span>
+        //
+        //  Styleguide Modules - Comparison Flyout - Count Label
+        .comparison-flyout__count-label {
+          padding-left: 1.5em;
+          padding-right: 0.75em;
+        }
+
+        //  <span class="comparison-flyout__count-container">
+        //    @Section Modules - Comparison Flyout - Count - 2 variation
+        //  </span>
+        //
+        //  Styleguide Modules - Comparison Flyout - Count Container
+        .comparison-flyout__count-container {
+          display: inline-block;
+          height: 2em;
+          width: 2em;
+          border-radius: 1em;
+          background-color: #587E8F;
+          text-align: center;
+          line-height: 2em;
+          .ie8 & {
+            background-color: transparent;
+            background-image: asset-data-url('comparison_flyout/count-container-bg.png');
+          }
+        }
+
+          //  <span class="js-comparison-flyout__count comparison-flyout__count">2</span>
+          //
+          //  Styleguide Modules - Comparison Flyout - Count - 2 variation
+          .comparison-flyout__count {
+            color: white;
+          }
+
+        %comparison-flyout__toggle {
+          @include font-size(2);
+          line-height: 1em;
+          padding-left: 0.75em;
+          padding-right: 0.75em;
+          border: none;
+          background: none;
+          cursor: pointer;
+        }
+
+        //  <button data-widget="comparisonFlyout__toggleWidget" class="comparison-flyout__toggle--open"></button>
+        //
+        //  Styleguide Modules - Comparison Flyout - Count Toggle - Open
+        .comparison-flyout__toggle--open {
+          @extend %comparison-flyout__toggle;
+          @include which-icon(more);
+        }
+
+        //  <button data-widget="comparisonFlyout__toggleWidget" class="comparison-flyout__toggle--closed"></button>
+        //
+        //  Styleguide Modules - Comparison Flyout - Count Toggle - Closed
+        .comparison-flyout__toggle--closed {
+          @extend %comparison-flyout__toggle;
+          @include which-icon(less);
+        }
+
+      //  <div class="comparison-flyout__buttons">
+      //    @Section Modules - Comparison Flyout - Remove All Button
+      //    @Section Modules - Comparison Flyout - Compare Button
+      //  </div>
+      //
+      //  Styleguide Modules - Comparison Flyout - Buttons
+      .comparison-flyout__buttons {
+        @extend %st-layout__block-of-width--right--50;
+      }
+
+        //  <button data-widget="comparisonFlyout__removeAllWidget" class="comparison-flyout__remove-all-button">Remove all</button>
+        //
+        //  Styleguide Modules - Comparison Flyout - Remove All Button
+        .comparison-flyout__remove-all-button {
+          @extend .link;
+          @include font-size(1);
+          padding-right: 2em;
+          padding-left: 2em;
+        }
+
+        //  <button class="comparison-flyout__compare-button">Compare</button>
+        //
+        //  Styleguide Modules - Comparison Flyout - Compare Button
+        .comparison-flyout__compare-button, .comparison-flyout__compare-button:hover {
+          @extend .button-primary;
+          @include which-icon(right);
+          height: 50px;
+          border-sizing: border-box;
+          -moz-border-sizing: border-box;
+          border-radius: 0px;
+          border-top-right-radius: 3px;
+          box-shadow: none;
+          -webkit-box-shadow: none;
+          -webkit-font-smoothing: auto;
+          &:after {
+            border-bottom-width: 50px;
+          }
+        }
+
+// ############################################################################
+// # SELECTION BOXES (products and placeholders)
+// ############################################################################
+
+    //  <div class="comparison-flyout__selection-boxes">
+    //    @Section Modules - Comparison Flyout - Selection Box - with Border - Product Variation
+    //    @Section Modules - Comparison Flyout - Selection Box - with Border - Product Variation
+    //    @Section Modules - Comparison Flyout - Selection Box - with Border - Placeholder Variation
+    //    @Section Modules - Comparison Flyout - Selection Box
+    //  </div>
+    //
+    //  Styleguide Modules - Comparison Flyout - Selection Boxes
+    .comparison-flyout__selection-boxes {
+      @extend %st-layout__parent-block;
+      width: 100%;
+      height: 140px;
+    }
+
+      //  <div class="comparison-flyout__selection-box">
+      //    @Section Modules - Comparison Flyout - Product Placeholder - TV
+      //  </div>
+      //
+      //  Styleguide Modules - Comparison Flyout - Selection Box
+      .comparison-flyout__selection-box {
+        @extend %st-layout__block-of-width--25;
+        height: 100%;
+        background-color: #F0F4F7;
+      }
+
+      //  <div class="comparison-flyout__selection-box--with-border">
+      //    @Section Modules - Comparison Flyout - Product
+      //  </div>
+      //
+      //  Styleguide Modules - Comparison Flyout - Selection Box - with Border - Product Variation
+
+      //  <div class="comparison-flyout__selection-box--with-border">
+      //    @Section Modules - Comparison Flyout - Product Placeholder - TV
+      //  </div>
+      //
+      //  Styleguide Modules - Comparison Flyout - Selection Box - with Border - Placeholder Variation
+      .comparison-flyout__selection-box--with-border {
+        @extend .comparison-flyout__selection-box;
+        border-right: 1px solid #E1EAED;
+      }
+
+        %comparison-flyout__product-placeholder {
+          @include font-size(5);
+          border: 3px dashed #DDE5E9;
+          height: 90%;
+          line-height: 120px;
+          margin: 5%;
+          color: #AABDC7;
+          width: 90%;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          text-align: center;
+        }
+
+        //  <div class="js-comparison-flyout__product-container comparison-flyout__product-placeholder--tv"></div>
+        //
+        // Styleguide Modules - Comparison Flyout - Product Placeholder - TV
+        .comparison-flyout__product-placeholder--tv {
+          @extend %comparison-flyout__product-placeholder;
+          @include which-icon(tv);
+        }
+
+        //  <div class="js-comparison-flyout__product-container comparison-flyout__product">
+        //    @Section Modules - Comparison Flyout - Remove Product
+        //    @Section Modules - Comparison Flyout - Product Link
+        //  </div>
+        //  
+        // Styleguide Modules - Comparison Flyout - Product
+        .comparison-flyout__product {
+          background-color: white;
+          height: 100%;
+          width: 100%;
+        }
+
+
+          //  <button data-widget="comparisonFlyout__removeProductWidget" class="comparison-flyout__remove-product"></button>
+          //
+          // Styleguide Modules - Comparison Flyout - Remove Product
+          .comparison-flyout__remove-product {
+            @include which-icon(close);
+            @include font-size(1.25);
+            border: none; // remove user-agent button styles
+            background: none; // remove user-agent button styles
+            display: block;
+            float: right;
+            text-align: right;
+            padding: 0.5em 0.5em 0 0.5em;
+            color: #4C626D;
+            cursor: pointer;
+          }
+
+         //  <a href="product-page" class="comparison-flyout__product-link">
+         //    @Section Modules - Comparison Flyout - Thumb Container
+         //    @Section Modules - Comparison Flyout - Name
+         //  </a>
+         //
+         // Styleguide Modules - Comparison Flyout - Product Link
+         .comparison-flyout__product-link {
+           display: block;
+           clear: both;
+           color: $black;
+           text-decoration: none;
+         }
+
+           //  <div class="comparison-flyout__thumb-container">
+           //    @Section Modules - Comparison Flyout - Thumb Image
+           //  </div>
+           //
+           // Styleguide Modules - Comparison Flyout - Thumb Container
+           .comparison-flyout__thumb-container {
+             text-align: center;
+           }
+
+             //  <img
+             //    class="comparison-flyout__thumb-image"
+             //    alt=""
+             //    src="http://images.pricerunner.com/product/408x432/370089985/Samsung-UE65ES8000.jpg"
+             //  >
+             //
+             // Styleguide Modules - Comparison Flyout - Thumb Image
+             .comparison-flyout__thumb-image {
+               max-height: 60px;
+             }
+
+            //  <div class="comparison-flyout__name">
+            //    @Section Modules - Comparison Flyout - Manufacturer
+            //    @Section Modules - Comparison Flyout - Model
+            //  </div>
+            //
+            // Styleguide Modules - Comparison Flyout - Name
+          .comparison-flyout__name {
+            padding-left: 1em;
+          }
+
+            //  <div class="comparison-flyout__manufacturer">Samsung</div>
+            //
+            // Styleguide Modules - Comparison Flyout - Manufacturer
+            .comparison-flyout__manufacturer {
+              @extend %font-stack-bold;
+            }
+          
+            //  <div class="comparison-flyout__model">UE55F8000STXXU</div>
+            // 
+            // Styleguide Modules - Comparison Flyout - Model
+            .comparison-flyout__model {
+            }

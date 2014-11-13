@@ -1,0 +1,308 @@
+/*Home and charity pages*/
+#sidebar .switch-panel-simple {
+	clear:both;
+	width:300px;
+	background:url(/assets/images/design/bg-switch-panel-simple.gif) #FFF 0 0 no-repeat;
+	margin:0 0 20px; padding:5px 0 0;
+}
+#sidebar .switch-panel-simple .inner {
+	clear:both;
+	width:300px;
+	background:url(/assets/images/design/bg-switch-panel-simple.gif) transparent 0 100% no-repeat;
+	margin:0; padding:0 0 5px;
+}
+#sidebar .switch-panel-simple .more a {
+	background:url(/assets/images/bullets/bullet-blue-arrow.png) transparent 0 0 no-repeat;
+	padding:4px 0 4px 20px;
+}
+#sidebar .switch-panel-simple p {
+	margin:5px 10px;
+}
+#sidebar .switch-panel-simple h2 {
+	color:#C00; background:none;
+	margin:0 10px; padding:0;
+}
+#sidebar .switch-panel-simple ul {
+	margin:5px 0 0; padding:0 10px 10px;
+}
+#sidebar .switch-panel-simple li {
+	margin:10px 0;
+}
+#sidebar .switch-panel-simple li.last {
+	margin:10px 0 0;
+}
+#sidebar .pdf-download p {
+	margin:20px 0 0 30px;
+}
+#sidebar .pdf-download  a {
+	display:block;
+	width:150px;
+	margin-bottom:25px;
+	text-decoration:none;
+}
+#sidebar .pdf-download  img {
+	float:right;
+	margin:-15px 30px 0 5px;
+}
+/* Homepage intro panel */
+#intro-panel {
+	float:none;
+	width:616px;
+	margin:0 0 20px;
+	padding:0 0 10px;
+	background:url(/assets/images/design/bg-switch-home.jpg) #FFF 0 100% no-repeat;
+}
+#intro-panel form {
+	margin:15px;
+}
+#intro-panel h1 {
+	margin:0; padding:15px;
+	line-height:1.2;
+	background:url(/assets/images/design/bg-switch-home.jpg) transparent 0 0 no-repeat;
+}
+#intro-panel .subheading {
+	color:#455866;
+	font-size:140%;
+	margin: 5px 15px;
+}
+.readers-digest #intro-panel h1 img {
+	float: right;
+	margin:16px;
+}
+#intro-panel .fieldWrapper{
+	clear:both;
+	margin:15px 0;
+}
+#intro-panel label, #intro-panel .label {
+	display:inline;
+	float:none;
+	margin-right:5px;
+}
+#intro-panel .radioBtns {
+	position:relative;
+	z-index:1000;
+	margin:-15px 0 0 255px;
+}
+#intro-panel .radioBtns p {
+	margin:0 0 5px;
+}
+#intro-panel h2 {
+	position:absolute;
+	top:50%;
+	left:auto;
+	margin:-16px 15px 0 20px;
+	color:#C00;
+}
+#start-switching {
+	clear:both;
+	position:relative;
+	z-index:3;
+}
+#start-switching input {
+	margin-left:230px;
+}
+
+/*Charity page overrides*/
+.charity-page #intro-panel {
+	float:left;
+	background-image:url(/assets/images/design/bg-switch-charity.jpg);
+}
+.charity-page #intro-panel h1 {
+	background-image:url(/assets/images/design/bg-switch-charity.jpg);
+}
+#intro-panel #charity-switch-form {
+	float:right;
+	width:300px;
+	margin-right:20px;
+	border:solid 2px #C4D9EA;
+}
+#charity-switch-form label {
+	margin:5px 0 0 10px;
+}
+#charity-switch-form #your-postcode {
+	margin:5px 0 0 60px;
+}
+.charity-page #intro-panel h1 {
+	padding:4px;
+}
+.charity-page #intro-panel .intro {
+	font-weight:bold;
+}
+.charity-page #intro-panel p {
+	margin:10px 15px;
+}
+.charity-page #intro-panel .radioBtns {
+	margin:0 0 0 50px;
+}
+.charity-page #start-switching {
+	text-align:center;
+	margin:0 0 15px;
+}
+.charity-page #start-switching input {
+	margin-left:0;
+}
+.charity-details, .footnote {
+	font-size:90%;
+}
+.charity-page .standard {
+	margin-left:15px;
+	padding-left:15px;
+}
+/*End Charity page overrides*/
+
+/*Homepage errors*/
+.pp_postcode_error {
+	margin-bottom:10px;
+	background:#F9F0F8;
+	border:solid 1px #E9D1E9;
+}
+.postcode_error {
+	margin:10px;
+}
+#page .error {
+	color:#C00;
+}
+#page .help-button {
+	position:relative;
+	top:3px;
+}
+#help-box {
+	position:absolute;
+	width:335px;
+	z-index:1000;
+	margin:0; padding:0 0 13px;
+	background:url(/assets/images/design/bg-switch-tips-btm.png) transparent 0 100% no-repeat;
+	opacity:0.95;
+}
+#content #help-close {
+	float:right;
+	padding:0 2px 2px;
+	line-height:1;
+	color:#6D7D85;
+	border:solid 1px #6D7D85;
+	text-decoration:none;
+}
+#content #help-close:focus {
+	background:none;
+	outline:none;
+}
+#content #help-close:hover {
+	background:none;
+	color:#C00;
+	text-decoration:none;
+}
+#help-box .inner {
+	margin:0; padding:0;
+	background:url(/assets/images/design/bg-switch-tips-mid.png) transparent 0 75px no-repeat;
+}
+#help-box #sb {
+	margin:0;
+	padding:15px 15px 15px 40px;
+	background:url(/assets/images/design/bg-switch-tips-top.png) transparent 0 0 no-repeat;
+}
+#help-box #sb p {
+	margin-bottom:0;
+}
+.clear {clear:both;}
+/*End Homepage errors*/
+.user-quote {
+	position:relative;
+	background:url(/assets/images/design/switch-quote-open.gif) #FFF 0 0 no-repeat;
+}
+.user-quote blockquote {
+	width:230px;
+	margin:0 0 0 45px;
+	padding-top:5px;
+	color:#636;
+	font-size:140%;
+}
+.user-quote cite {
+	margin:0 0 0 45px;
+	font-style:normal;
+	color:#666;
+}
+#sidebar .switch-panel-simple .accredited {
+	margin:0 10px; padding:10px 0 0;
+}
+.accredited  img {
+	float:right;
+	margin:5px;
+}
+.home-decoration {
+	position:absolute; top:-130px; left:272px;
+	height:242px;
+	width:340px;
+	background:url(/assets/images/content/switch/ws_home_decoration-bottom.jpg) transparent 0 100% no-repeat;
+}
+.decoration-top {
+	height:126px;
+	background:url(/assets/images/content/switch/ws_home_decoration-top.png) transparent 0 0 no-repeat;
+}
+.charity-page  formx{
+	float:right;
+	width:300px;
+	margin:20px;
+	background:#F7EDF6;
+}
+#sidebar a:hover, #sidebar  a:active, #sidebar  a:focus {
+	background-color:#E6F5FA;
+	text-decoration:underline;
+}
+#sidebar a {
+	color:#0083B3;
+	text-decoration:none;
+}
+
+/* main (or fat) footer - copied from core-verticals.css so need to align when page structure is the same */
+#main-footer {
+    clear:both;
+    width:960px;
+    margin:15px auto;
+	padding-bottom:20px;
+    background:url(/assets/images/design/bg-global-footer.png) #fff 15px 100% repeat-x;
+	overflow:auto;
+}
+#main-footer .content {
+    width:457px;
+    float:left; 
+    margin-left:16px;
+    padding:0 0 5px;
+	text-align:left;
+}
+#main-footer .first-content {margin-left:15px;}
+#main-footer h2 {
+    margin:0;
+	padding:20px 0 10px;
+	text-indent:15px;
+ 	background:url(/assets/images/design/bg-global-footer.png) #fff 0 0 repeat-x;
+ 	font-size: 1.5em;
+}
+#main-footer h3 {
+    margin:0;
+	line-height:1.1;
+	font-weight:bold;
+	font-size:130%;
+}
+#main-footer .first-col,
+#main-footer .second-col {
+	float:left;
+    width:207px;
+	margin:0 0 5px 15px;
+	padding-top:5px;
+}
+#main-footer .first-col {width:206px;}
+#main-footer p {margin:0 15px 6px 0;}
+#main-footer ul {
+	list-style:none;
+    margin:0 15px 6px 0;
+	padding:0;
+}
+#main-footer li {display:inline;}
+#main-footer a {color:#0083B3; text-decoration:none;}
+#main-footer a:hover {text-decoration:underline;}
+
+#footer {
+	background:none;
+	margin-top:0;
+	padding-top:0;
+}

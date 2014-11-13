@@ -1,0 +1,14 @@
+// vertically center a full width line of child elements
+@mixin center_vertically {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

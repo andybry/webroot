@@ -1,0 +1,9 @@
+@mixin generate-block-of-width(
+  $variant_name,
+  $width
+) {
+  %st-layout__block-of-width--#{$variant_name} {
+    @extend %st-layout__block;
+    width: $width;
+  }
+}
