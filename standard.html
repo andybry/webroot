@@ -87,26 +87,21 @@
 
 <!-- START OF FRAGMENT: standardPageLookAndFeelFragment -->
 
-		                <!-- NAV -->
-        <link rel="stylesheet" type="text/css" href="http://www.staticwhich.co.uk/assets/182/nav/globalnav/public/css/global-navigation-comp.css">
-        <link rel="stylesheet" type="text/css" href="http://www.staticwhich.co.uk/assets/182/nav/globalnav/public/css/masthead.css">
-        <!--[if lt IE 9]>
-        <link rel="stylesheet" type="text/css" href="http://www.staticwhich.co.uk/assets/182/nav/globalnav/public/components/typography/icons-ie7.css">
-        <link rel="stylesheet" type="text/css" href="http://www.staticwhich.co.uk/assets/182/nav/globalnav/public/css/global-navigation-ie.css">
-        <![endif]-->
+<link href="https://test-eva-fragment-server.herokuapp.com/assets/application-b25f551baa48022247939b2484ce82b0.css" media="all" rel="stylesheet" />
 
 <!-- END OF FRAGMENT: standardPageLookAndFeelFragment -->
 
 
 <!-- START OF FRAGMENT: standardPageScriptFragment -->
 
+<script src="https://test-eva-fragment-server.herokuapp.com/assets/application-644c3ecf8547bdea2024067cce40eb87.js"></script>
+
+<!-- END OF FRAGMENT: standardPageScriptFragment -->
+
 <!-- =============================================================================================-->
 <!-- END OF SLOT: headerStandardPage -->
 <!-- =============================================================================================-->
 
-<script data-main="http://www.staticwhich.co.uk/assets/182/nav/globalnav/public/js/main.js" src="http://www.staticwhich.co.uk/assets/182/nav/globalnav/public/components/requirejs/require.js"></script>		
-
-<!-- END OF FRAGMENT: standardPageScriptFragment -->
 
 
 		<!-- FOOTER -->
@@ -160,199 +155,1131 @@ dataLayer = [{
 <!-- START OF SLOT: body (global navigation) -->
 <!-- =============================================================================================-->
 
+<!-- START OF FRAGMENT: globalNavLoggedOut -->
 
-<!-- START OF FRAGMENT: n1 -->
-<div class="global-nav">
-        <div class="nav-bar">
-                <div class="nav-left">
-                        <div id="logo" class="button logo-button"><a href="http://www.which.co.uk"></a></div>
-                </div>
+<div class="global-nav" role="banner">
+  <div class="nav-bar">
+    <a href="http://www.which.co.uk" rel="home">
+      <div class="button logo-button main"><span class="a11y">Which? homepage</span></div>
+    </a>
+    <nav role="navigation" aria-label="Global">
+      <h2 class="a11y">Global Navigation</h1>
+      <ul class="quicklinks">
 
-                <div class="nav-right">
-        <a class="nav-links" href="http://www.which.co.uk/sitemap/#reviews"><div id="reviews-button" class="button quicklink-button switch-a"><div class="button-label">REVIEWS<span class="more-less icon-more"></span></div></div></a>
-        <a class="nav-links" href="http://www.which.co.uk/sitemap/#campaigns"><div id="campaigns-button" class="button quicklink-button switch-a"><div class="button-label">CAMPAIGNS<span class="more-less icon-more"></span></div></div></a>
-        <a class="nav-links" href="http://www.which.co.uk/sitemap/#services"><div id="services-button" class="button quicklink-button switch-a"><div class="button-label">SERVICES<span class="more-less icon-more"></span></div></div></a>
-        <a class="nav-links" href="http://www.which.co.uk/sitemap/#about-us"><div id="about-us-button" class="button quicklink-button switch-a"><div class="button-label">ABOUT US<span class="more-less icon-more"></span></div></div></a>
+        <li>
+          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d0" aria-expanded="false">
+            <div class="button quicklink-button switch-a">
+              <div class="button-label no-border">Product Reviews<span class="more-less icon-more"></span>
+              </div>
+            </div>
+          </a>
 
-        <div id="menu-button" class="button show-menu switch-b"><div class="button-label"><span class="icon-list"></span></div></div>
+          <div class="mega-dropdown" id="d0" tabindex="-1">
+            <section class="global-nav-menu">
+              <h1 class="global-nav-menu__accordion-title">
+                Product Reviews
+                <span class="icon-more"></span>
+              </h1>
+              <div class="global-nav-menu__accordion-body">
+                <ul class="global-nav-menu__category-list">
+                    <li class="global-nav-menu__category-list-item is-1-column is-popular-products">
+                      <h2 class="global-nav-menu__category-name">Popular products</h2>
+                      <ul class="global-nav-menu__product-list">
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Boilers</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Dishwashers</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Fridge freezers</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Laptops</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Printers</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Steam cleaners</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Tablets</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Televisions</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Tumble dryers</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Vacuum cleaners</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Washing machines</a>
+                          </li>
+                            <li class="global-nav-menu__product-list-item">
+                              <a href="http://www.which.co.uk/news/#?intcmp=GNH.About-Us.News" class="global-nav-menu__product-link is-additional-link">Latest news from Which?</a>
+                            </li>
+                      </ul>
+                    </li>
+                    <li class="global-nav-menu__category-list-item
+                          is-3-columns
+                          ">
+                      <h2 class="global-nav-menu__category-name">Product categories</h2>
+                      <ul class="global-nav-menu__subcategory-list">
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/technology/#?intcmp=GNH.Reviews.Technology" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" style="background-color:#3972B4">&#57351;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Technology</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/tv-and-home-entertainment#?intcmp=GNH.Reviews.Technology.Tv-And-Home-Entertainment" class="global-nav-menu__product-link">TV &amp; home entertainment</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/technology/computing/#?intcmp=GNH.Reviews.Technology.Computing" class="global-nav-menu__product-link">Computing</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/technology/camcorders/#?intcmp=GNH.Reviews.Technology.Camcorders" class="global-nav-menu__product-link">Camcorders</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/technology/photography/#?intcmp=GNH.Reviews.Technology.Photography" class="global-nav-menu__product-link">Photography</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/technology/audio/#?intcmp=GNH.Reviews.Technology.Audio" class="global-nav-menu__product-link">Audio</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/technology/phones/#?intcmp=GNH.Reviews.Technology.Phones" class="global-nav-menu__product-link">Phones</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/technology/software/#?intcmp=GNH.Reviews.Technology.Software" class="global-nav-menu__product-link">Software</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/technology/broadband-tv-and-phone/#?intcmp=GNH.Reviews.Technology.Broadband-Tv-And-Phone" class="global-nav-menu__product-link">Broadband, TV and phone</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://blogs.which.co.uk/technology/#?intcmp=GNH.Reviews.Technology.Tech-Daily" class="global-nav-menu__product-link">Tech daily</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/money/#?intcmp=GNH.Reviews.Money" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" style="background-color:#40969a">&#57353;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Money</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/savings-and-investments/#?intcmp=GNH.Reviews.Money.Savings-And-Investments" class="global-nav-menu__product-link">Savings &amp; investments</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/credit-cards-and-loans/#?intcmp=GNH.Reviews.Money.Credit-Cards-And-Loans" class="global-nav-menu__product-link">Credit cards &amp; loans</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/retirement/#?intcmp=GNH.Reviews.Money.Retirement" class="global-nav-menu__product-link">Retirement</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/bills-and-budgeting/#?intcmp=GNH.Reviews.Money.Bills-And-Budgeting" class="global-nav-menu__product-link">Bills &amp; budgeting</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/insurance/#?intcmp=GNH.Reviews.Money.Insurance" class="global-nav-menu__product-link">Insurance</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/mortgages-and-property/#?intcmp=GNH.Reviews.Money.Mortgages-And-Property" class="global-nav-menu__product-link">Mortgages &amp; property</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/bank-accounts/#?intcmp=GNH.Reviews.Money.Bank-Accounts" class="global-nav-menu__product-link">Bank accounts</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/tax/#?intcmp=GNH.Reviews.Money.Tax" class="global-nav-menu__product-link">Tax</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/home-and-garden/#?intcmp=GNH.Reviews.Home-And-Garden" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" style="background-color:#ee5a40">&#57350;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Home &amp; Garden</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/home-appliances/#?intcmp=GNH.Reviews.Home-And-Garden.Home-Appliances" class="global-nav-menu__product-link">Home appliances</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/small-appliances/#?intcmp=GNH.Reviews.Home-And-Garden.Small-Appliances" class="global-nav-menu__product-link">Small appliances</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/heating-water-and-electricity/#?intcmp=GNH.Reviews.Home-And-Garden.Heating-Water-And-Electricity" class="global-nav-menu__product-link">Heating, water &amp; electricity</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/bathroom-and-personal-care/#?intcmp=GNH.Reviews.Home-And-Garden.Bathroom-And-Personal-Care" class="global-nav-menu__product-link">Bathroom &amp; Personal Care</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/garden/#?intcmp=GNH.Reviews.Home-And-Garden.Garden" class="global-nav-menu__product-link">Garden</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/home-improvements/#?intcmp=GNH.Reviews.Home-And-Garden.Home-Improvements" class="global-nav-menu__product-link">Home improvement</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/leisure/#?intcmp=GNH.Reviews.Home-And-Garden.Leisure" class="global-nav-menu__product-link">Leisure</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://local.which.co.uk/#?intcmp=GNH.Reviews.Home-And-Garden.Which-Local" class="global-nav-menu__product-link">Which? Local</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/staying-independent-at-home/#?intcmp=GNH.Reviews.Home-And-Garden.Staying-independent-at-home" class="global-nav-menu__product-link">Staying independent at home</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/cars/#?intcmp=GNH.Reviews.Cars" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" style="background-color:#54626c">&#57360;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Cars</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/cars/reviews/#?intcmp=GNH.Reviews.Cars.Car-Reviews" class="global-nav-menu__product-link">Car reviews</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/cars/driving" class="global-nav-menu__product-link">Driving your car</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/cars/choosing-a-car/#?intcmp=GNH.Reviews.Cars.Choosing-A-Car" class="global-nav-menu__product-link">Choosing a car</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="https://cars.verveengine.co.uk/?Source=12&amp;amp;Sample=2" class="global-nav-menu__product-link">Car Survey 2014</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/baby-and-child/#?intcmp=GNH.Reviews.Baby-And-Child" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" style="background-color:#7963a8">&#57361;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Baby &amp; Child</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/baby-and-child/baby-transport/#?intcmp=GNH.Reviews.Baby-And-Child.Baby-Transport" class="global-nav-menu__product-link">Baby transport</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/baby-and-child/nursery-and-feeding/#?intcmp=GNH.Reviews.Baby-And-Child.Nursery-And-Feeding" class="global-nav-menu__product-link">Nursery &amp; feeding</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/baby-and-child/child-safety-at-home/#?intcmp=GNH.Reviews.Baby-And-Child.Child-Safety-At-Home" class="global-nav-menu__product-link">Child safety at home</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/baby-and-child/shopping-and-family-finances//#?intcmp=GNH.Reviews.Baby-And-Child.Shopping-and-Family-Finances" class="global-nav-menu__product-link">Shopping &amp; family finances</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/energy/#?intcmp=GNH.Reviews.Energy" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" style="background-color:#8cc04b">&#57362;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Energy</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/energy/saving-money/#?intcmp=GNH.Reviews.Energy.Saving-Money" class="global-nav-menu__product-link">Saving money</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/energy/energy-saving-products/#?intcmp=GNH.Reviews.Energy.Energy-Saving-Products" class="global-nav-menu__product-link">Energy saving products</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/energy/creating-an-energy-saving-home/#?intcmp=GNH.Reviews.Energy.Creating-An-Energy-Saving-Home" class="global-nav-menu__product-link">Creating an energy saving home</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/switch/#?intcmp=GNH.Reviews.Energy.Which-Switch" class="global-nav-menu__product-link">Which? Switch</a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </li>
 
-        <a class="nav-links" href="http://search.which.co.uk/"><div id="search-button" class="button show-search"><div class="button-label"><span class="icon-search"></span></div></div></a>
 
-                <!-- Logged In/Out state -->
-<!-- END OF FRAGMENT: n1 -->
+        <li>
+          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d1" aria-expanded="false">
+            <div class="button quicklink-button switch-a">
+              <div class="button-label ">Campaigns<span class="more-less icon-more"></span>
+              </div>
+            </div>
+          </a>
 
-<!-- START OF FRAGMENT: n2 -->
+          <div class="mega-dropdown" id="d1" tabindex="-1">
+            <section class="global-nav-menu">
+              <h1 class="global-nav-menu__accordion-title">
+                Campaigns
+                <span class="icon-more"></span>
+              </h1>
+              <div class="global-nav-menu__accordion-body">
+                <ul class="global-nav-menu__category-list">
+                    <li class="global-nav-menu__category-list-item
+                          is-4-columns
+                          has-single-subcategory">
+                      <h2 class="global-nav-menu__category-name">Which? campaigns</h2>
+                      <ul class="global-nav-menu__subcategory-list">
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/#?intcmp=NH.Campaigns.Campaigns" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Campaigns hub</h3>
+                                <p class="global-nav-menu__subcategory-desc">Get involved in our latest campaigns and find out how to take action.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/insurance-bank-card-fees/#?intcmp=GNH.Campaigns.Sneaky-Fees" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Sneaky fees</h3>
+                                <p class="global-nav-menu__subcategory-desc">Do you feel tricked by sneaky fees and charges? Sign our petition and help us put a stop to the practice.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/holiday-delays-cancellations/#?intcmp=GNH.Campaigns.Holiday-Hassles" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Holiday hassles</h3>
+                                <p class="global-nav-menu__subcategory-desc">Have you experienced a holiday hassle? Support our campaign and receive tips on taking action.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/savings-rates/#?intcmp=GNH.Campaigns.Savings-Rates" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Savings rates</h3>
+                                <p class="global-nav-menu__subcategory-desc">Are you tired of sub-standard savings accounts? Free your savings from the savings trap.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/mobile-phone-deals/#?intcmp=GNH.Campaigns.Mobile-Phones" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Unlock mobile phones</h3>
+                                <p class="global-nav-menu__subcategory-desc">Trapped in a poor value mobile phone contract? Sign our petition to unlock better deals.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/meat-takeaways-horsemeat/#?intcmp=GNH.Campaigns.Food-Fraud" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Food fraud</h3>
+                                <p class="global-nav-menu__subcategory-desc">Are you confident that the meat in your takeaways is what it says it is?</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/broadband-speed-service/#?intcmp=GNH.Campaigns.Broadband-Speed" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Broadband speed</h3>
+                                <p class="global-nav-menu__subcategory-desc">Are you plagued by unreliable and slow internet? Sign our petition to get broadband speeds guaranteed.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/broken-energy-market/#?intcmp=GNH.Campaigns.Fix-The-Big-Six" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Broken energy market</h3>
+                                <p class="global-nav-menu__subcategory-desc">Fed up with gas and electricity price rises? Help us fix the big six.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/schools-doctors-hospitals/#?intcmp=GNH.Campaigns.Public-Service-Complaints" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Public service complaints</h3>
+                                <p class="global-nav-menu__subcategory-desc">Ever feel like your complaints to GPs or care homes are being ignored?</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/consumer-rights#?intcmp=GNH.Campaigns.Consumer-Rights" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Consumer rights</h3>
+                                <p class="global-nav-menu__subcategory-desc">An expert guide to your consumer rights with free tools and advice for what to do if things go wrong.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/who-we-are/which-policy/#?intcmp=GNH.Campaigns.Which-Policy" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Policy</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find out about the policy which underpins the work we do to campaign for consumers.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://conversation.which.co.uk/#?intcmp=GNH.Campaigns.Conversation" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Conversation</h3>
+                                <p class="global-nav-menu__subcategory-desc">A community website to share your views on the consumer issues of the day.</p>
+                              </a>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </li>
 
-                        <div class="signin-signup-wrapper">
-                                <a href="https://www.which.co.uk/login/#?intcmp=GNH-Login"><div class="button show-signin"><span class="icon-user"></span><span class="login-label">LOG IN</span></div></a>
-                                <a href="https://www.which.co.uk/signup/#?intcmp=GNH-Signup"><div class="button show-signup"><div class="button-label">SIGN UP</div></div></a>
-                        </div>
-                                <!---->
-                                <!--<div id="" class="button show-signin">-->
-                                <!--    <span class="icon-user"></span>-->
-                                <!--    <a rel="nofollow" href="/login" id="om-login-tn"><span class="account-btn-label">SIGN IN</span></a>-->
-                                <!--</div>-->
-                                <!---->
 
-<!-- END OF FRAGMENT: n2 -->
+        <li>
+          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d2" aria-expanded="false">
+            <div class="button quicklink-button switch-a">
+              <div class="button-label ">Our Services<span class="more-less icon-more"></span>
+              </div>
+            </div>
+          </a>
 
-<!-- START OF FRAGMENT: n3 -->
-                </div>
+          <div class="mega-dropdown" id="d2" tabindex="-1">
+            <section class="global-nav-menu">
+              <h1 class="global-nav-menu__accordion-title">
+                Our Services
+                <span class="icon-more"></span>
+              </h1>
+              <div class="global-nav-menu__accordion-body">
+                <ul class="global-nav-menu__category-list">
+                    <li class="global-nav-menu__category-list-item
+                          is-1-column
+                          ">
+                      <h2 class="global-nav-menu__category-name">Consumer advice</h2>
+                      <ul class="global-nav-menu__subcategory-list">
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/consumer-rights/#?intcmp=GNH.Services.Consumer-Rights" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Consumer rights</h3>
+                                <p class="global-nav-menu__subcategory-desc">An expert guide to your consumer rights with free tools and advice for what to do if things go wrong.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://university.which.co.uk/#?intcmp=GNH.Services.Which-University" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? University</h3>
+                                <p class="global-nav-menu__subcategory-desc">Our free tool helps you choose what to study, where to go and how to get there.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/birth-choice#?intcmp=GNH.Services.Which-Birth-Choice" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Birth choice</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find and compare local maternity services with our free service to help you choose where to give birth.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/elderly-care#?intcmp=GNH.Services.Which-Elderly-Care" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Elderly care</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find free, independent and practical advice about caring for older people across the UK.</p>
+                              </a>
+                          </li>
+                      </ul>
+                    </li>
+                    <li class="global-nav-menu__category-list-item
+                          is-2-columns
+                          ">
+                      <h2 class="global-nav-menu__category-name">Which? services</h2>
+                      <ul class="global-nav-menu__subcategory-list">
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://local.which.co.uk/#?intcmp=GNH.Services.Which-Local" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Local</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find reliable traders from thousands of local business reviews by Which? members across the UK.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.whichwills.com/#?intcmp=GNH.Services.Which-Wills" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Wills</h3>
+                                <p class="global-nav-menu__subcategory-desc">Writing an online will with Which? Wills is an easy, affordable and efficient solution.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://trustedtraders.which.co.uk/#?intcmp=GNH.Services.Which-Trusted.Traders" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Trusted traders</h3>
+                                <p class="global-nav-menu__subcategory-desc">A pilot endorsement scheme helping consumers find reputable traders in the home improvement and motoring sectors.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/switch/#?intcmp=GNH.Services.Which-Switch" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Switch</h3>
+                                <p class="global-nav-menu__subcategory-desc">Save money by comparing and switching your gas and electricity supplier using our free independent service.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://mortgageadvisers.which.co.uk/#?intcmp=GNH.Services.Mortgage-Advisers" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Mortgage advisers</h3>
+                                <p class="global-nav-menu__subcategory-desc">Our impartial advisers look at every mortgage from every available lender to help you find the right mortgage.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://legalservice.which.co.uk/#?intcmp=GNH.Services.Legal-Service" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Legal Services</h3>
+                                <p class="global-nav-menu__subcategory-desc">Subscribe to Which? Legal Service to get simple and affordable legal advice from our expert lawyers.</p>
+                              </a>
+                          </li>
+                      </ul>
+                    </li>
+                    <li class="global-nav-menu__category-list-item
+                          is-1-column
+                          ">
+                      <h2 class="global-nav-menu__category-name">Member exclusive</h2>
+                      <ul class="global-nav-menu__subcategory-list">
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/what-we-offer/which-money-helpline/#?intcmp=GNH.About-Us.Which-Money-Helpline" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Money helpline</h3>
+                                <p class="global-nav-menu__subcategory-desc">Expert, unbiased information and guidance to help our members make the best financial decisions.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/magazine/computing/#?intcmp=GNH.About-Us.Computing-Helpdesk" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Computing helpdesk</h3>
+                                <p class="global-nav-menu__subcategory-desc">Jargon-free technical support and buying advice to help make sense of our members&#39; computing issues.</p>
+                              </a>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </li>
+
+
+        <li>
+          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d3" aria-expanded="false">
+            <div class="button quicklink-button switch-a">
+              <div class="button-label ">About us<span class="more-less icon-more"></span>
+              </div>
+            </div>
+          </a>
+
+          <div class="mega-dropdown" id="d3" tabindex="-1">
+            <section class="global-nav-menu">
+              <h1 class="global-nav-menu__accordion-title">
+                About us
+                <span class="icon-more"></span>
+              </h1>
+              <div class="global-nav-menu__accordion-body">
+                <ul class="global-nav-menu__category-list">
+                    <li class="global-nav-menu__category-list-item
+                          is-4-columns
+                          has-single-subcategory">
+                      <h2 class="global-nav-menu__category-name">About us</h2>
+                      <ul class="global-nav-menu__subcategory-list">
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/#?intcmp=GNH.About-Us.About-Which" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">About Which?</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find out more about what we do and how we work, including the Which? Council.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/what-we-offer/what-do-i-get-when-i-take-a-trial/#?intcmp=GNH.About-Us.Signup" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Become a member</h3>
+                                <p class="global-nav-menu__subcategory-desc">Discover the benefits of Which?. Find out more about what your subscription includes and take a trial.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/who-we-are/which-policy/#?intcmp=GNH.About-Us.Which-Policy" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Policy</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find out about the policy which underpins the work we do to campaign for consumers.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/contact-us/#?intcmp=GNH.About-Us.Contact-Us" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Contact us</h3>
+                                <p class="global-nav-menu__subcategory-desc">Whether you&#39;re new to us or a longstanding member, there are several ways to get in touch.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/help/#?intcmp=GNH.About-Us.Help" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Help</h3>
+                                <p class="global-nav-menu__subcategory-desc">FAQs on subjects including using which.co.uk and accessing your account.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://press.which.co.uk/#?intcmp=GNH.About-Us.Press-Office" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Press office</h3>
+                                <p class="global-nav-menu__subcategory-desc">Latest news releases and statements, information on spokespeople and contacts for journalists.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://careersatwhich.co.uk/#?intcmp=GNH.About-Us.Careers" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Careers</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find out more about working at Which? including latest vacancies and how to apply.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/sitemap/#?intcmp=GNH.About-Us.Sitemap" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Directory</h3>
+                                <p class="global-nav-menu__subcategory-desc">Can&#39;t find what you&#39;re looking for? Access the complete A-Z directory of Which? Sites.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/news/#?intcmp=GNH.About-Us.News" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? News</h3>
+                                <p class="global-nav-menu__subcategory-desc">Get the latest news on our research and the consumer issues that affect you.</p>
+                              </a>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </li>
+
+      </ul>
+    </nav> 
+
+    <div class="nav-right">
+      <a id="menu-button" class="button show-menu switch-b">
+        <div class="button-label">
+          <span class="icon-list"></span>
         </div>
+      </a>
+      <div class="search-container">
+        <a class="nav-links" href="http://search.which.co.uk/" aria-expanded="false" aria-controls="search-bar">
+          <div id="search-button" class="button show-search">
+            <div class="button-label">
+              <span class="icon-search"><span class="a11y">Open search form</span></span>
+            </div>
+          </div>
+        </a>
 
-        <!---->
-
-        <!--
-        If account:
-        class="account-dropdown"
-        If signin:
-        class="account-dropdown signin"
-        -->
-
-<!-- END OF FRAGMENT: n3 -->
-
-<!-- START OF FRAGMENT: n5 -->
-        <!---->
-
-        <div id="search-bar" class="search-bar">
-                <div class="search-inner">
-                        <form method="get" action="http://search.which.co.uk/search" id="global-search">
-                                <input type="text" class="search-box" name="w" value="" id="sli_search_1" placeholder="Search all of Which?">
-                                <input type="hidden" name="asug" />
-                                <input type="hidden" name="mainresult" value="mainresult:yes" />
-                                <input type="hidden" name="intcmp" value="GNH-Search" />
-                                <input type="submit" value="&#x27B2" class="search-button">
-                        </form>
-                </div>
+        <div class="search-bar mega-dropdown" id="search-bar">
+          <div class="search-inner">
+            <form method="get" action="http://search.which.co.uk/search" id="global-search">
+              <label for="sli_search_1" class="a11y">Search all of Which?</label>
+              <input type="text" class="search-box" name="w" value="" id="sli_search_1" placeholder="Search all of Which?" autocomplete="off">
+              <input type="hidden" name="asug" />
+              <input type="hidden" name="mainresult" value="mainresult:yes" />
+              <input type="hidden" name="intcmp" value="GNH-Search" />
+              <input type="submit" value="Search" class="search-button">
+            </form>
+          </div>
         </div>
+      </div>
+        <nav class="signin-signup-wrapper" role="navigation" aria-label="Login and Sign Up">
+          <h2 class="a11y">Login and Sign Up Navigation</h1>
+          <a href="https://www.which.co.uk/login/#?intcmp=GNH.Login">
+            <div class="button show-signin">
+              <span class="icon-user"></span>
+              <span class="login-label">Log In</span>
+            </div>
+          </a>
+          <a href="https://www.which.co.uk/signup/#?intcmp=GNH.Signup">
+            <div class="button show-signup">
+              <div class="button-label">Sign Up</div>
+            </div>
+          </a>
+        </nav>
+    </div>
+  </div>
+</div>
 
-        <!---->
+<div id="mobile-nav-container"></div>
 
-        <!-- Links maintained from CMS placed into webapps/ROOT -->
-<!-- END OF FRAGMENT: n5 -->
+<script type="text/template" id="mobile-nav-template">
 
+  <div class="mobile-search">
+    <div class="search-bar">
+      <div class="search-inner">
+        <form method="get" action="http://search.which.co.uk/search" id="global-search">
+          <label for="sli_search_1" class="a11y">Search all of Which?</label>
+          <input type="text" class="search-box" name="w" value="" id="sli_search_1" placeholder="Search all of Which?" autocomplete="off">
+          <input type="hidden" name="asug" />
+          <input type="hidden" name="mainresult" value="mainresult:yes" />
+          <input type="hidden" name="intcmp" value="GNH-Search" />
+          <input type="submit" value="Search" class="search-button">
+        </form>
+      </div>
+    </div>
+  </div>
 
-<!-- START OF FRAGMENT: quickLinks -->
-<div class="quicklinks"> 
+  <nav class="mobile-navigation">
+    <h2 class="a11y">Global Navigation</h1>
+    <ul>
+      <li>
 
-<!-- ======== REVIEWS TAB - START ======= --> 
-<div class="quicklink"> <div class="column oneofthree mob-button"> <h2 class="highlight-a main-link-button">Reviews<span class="icon-more"></span></h2> <div class="description">Free, unbiased advice on buying and choosing the right product for you - plus members can see a full breakdown of test scores and the latest Best Buys and Don't Buys too.</div> </div> <div class="column twoofthree main-links"> <ul> 
+        <h2 class="mobile-navigation__title">Product Reviews<span class="indicator icon-more"></span></h2>
 
-<!-- ======== REVIEWS TAB - TECHNOLOGY ======== --> <li class="link-set fixed"> <h3><a href="http://www.which.co.uk/technology/#?intcmp=GNH.Reviews.Technology">Technology <span class="icon- right"></span></a></h3> <div> <ul> <li><a href=" http://www.which.co.uk/tv-and-home-entertainment#?intcmp=GNH.Reviews.Technology.Tv-And-Home- Entertainment">TV &amp; home entertainment </a></li> <li><a href="http://www.which.co.uk/technology/computing/#? intcmp=GNH.Reviews.Technology.Computing">Computing</a></li> <li><a href="http://www.which.co.uk/technology/photography/#? intcmp=GNH.Reviews.Technology.Photography">Photography</a></li> <li><a href="http://www.which.co.uk/technology/camcorders/reviews/hd-camcorders/#? intcmp=GNH.Reviews.Technology.Camcorders">Camcorders</a></li> <li><a href="http://www.which.co.uk/technology/audio/#?intcmp=GNH.Reviews.Technology.Audio">Audio</a></li>
-<li><a href="http://www.which.co.uk/technology/phones/#?intcmp=GNH.Reviews.Technology.Phones">Phones</a></li> <li><a href="http://www.which.co.uk/technology/software/#? intcmp=GNH.Reviews.Technology.Software">Software</a></li> <li><a href="http://www.which.co.uk/technology/broadband-tv-and-phone/#? intcmp=GNH.Reviews.Technology.Broadband-Tv-And-Phone">Broadband, TV and phone</a></li> <li><a href="http://blogs.which.co.uk/technology/#?intcmp= GNH.Reviews.Technology.Tech-Daily">Tech Daily</a></li> </ul> </div> </li> 
+          <div class="global-nav-menu__accordion-body">
+            <ul class="global-nav-menu__category-list">
+                <li class="global-nav-menu__category-list-item is-1-column is-popular-products">
+                  <h2 class="global-nav-menu__category-name">Popular products</h2>
+                  <ul class="global-nav-menu__product-list">
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Boilers</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Dishwashers</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Fridge freezers</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Laptops</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Printers</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Steam cleaners</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Tablets</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Televisions</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Tumble dryers</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Vacuum cleaners</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/" class="global-nav-menu__product-link is-popular">Washing machines</a>
+                      </li>
+                  </ul>
+                </li>
+                <li class="global-nav-menu__category-list-item
+                      is-3-columns
+                      ">
+                  <h2 class="global-nav-menu__category-name">Product categories</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/technology/#?intcmp=GNH.Reviews.Technology" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" style="background-color:#3972B4">&#57351;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Technology</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/tv-and-home-entertainment#?intcmp=GNH.Reviews.Technology.Tv-And-Home-Entertainment" class="global-nav-menu__product-link">TV &amp; home entertainment</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/technology/computing/#?intcmp=GNH.Reviews.Technology.Computing" class="global-nav-menu__product-link">Computing</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/technology/camcorders/#?intcmp=GNH.Reviews.Technology.Camcorders" class="global-nav-menu__product-link">Camcorders</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/technology/photography/#?intcmp=GNH.Reviews.Technology.Photography" class="global-nav-menu__product-link">Photography</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/technology/audio/#?intcmp=GNH.Reviews.Technology.Audio" class="global-nav-menu__product-link">Audio</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/technology/phones/#?intcmp=GNH.Reviews.Technology.Phones" class="global-nav-menu__product-link">Phones</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/technology/software/#?intcmp=GNH.Reviews.Technology.Software" class="global-nav-menu__product-link">Software</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/technology/broadband-tv-and-phone/#?intcmp=GNH.Reviews.Technology.Broadband-Tv-And-Phone" class="global-nav-menu__product-link">Broadband, TV and phone</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://blogs.which.co.uk/technology/#?intcmp=GNH.Reviews.Technology.Tech-Daily" class="global-nav-menu__product-link">Tech daily</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/money/#?intcmp=GNH.Reviews.Money" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" style="background-color:#40969a">&#57353;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Money</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/savings-and-investments/#?intcmp=GNH.Reviews.Money.Savings-And-Investments" class="global-nav-menu__product-link">Savings &amp; investments</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/credit-cards-and-loans/#?intcmp=GNH.Reviews.Money.Credit-Cards-And-Loans" class="global-nav-menu__product-link">Credit cards &amp; loans</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/retirement/#?intcmp=GNH.Reviews.Money.Retirement" class="global-nav-menu__product-link">Retirement</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/bills-and-budgeting/#?intcmp=GNH.Reviews.Money.Bills-And-Budgeting" class="global-nav-menu__product-link">Bills &amp; budgeting</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/insurance/#?intcmp=GNH.Reviews.Money.Insurance" class="global-nav-menu__product-link">Insurance</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/mortgages-and-property/#?intcmp=GNH.Reviews.Money.Mortgages-And-Property" class="global-nav-menu__product-link">Mortgages &amp; property</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/bank-accounts/#?intcmp=GNH.Reviews.Money.Bank-Accounts" class="global-nav-menu__product-link">Bank accounts</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/tax/#?intcmp=GNH.Reviews.Money.Tax" class="global-nav-menu__product-link">Tax</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/home-and-garden/#?intcmp=GNH.Reviews.Home-And-Garden" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" style="background-color:#ee5a40">&#57350;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Home &amp; Garden</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/home-appliances/#?intcmp=GNH.Reviews.Home-And-Garden.Home-Appliances" class="global-nav-menu__product-link">Home appliances</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/small-appliances/#?intcmp=GNH.Reviews.Home-And-Garden.Small-Appliances" class="global-nav-menu__product-link">Small appliances</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/heating-water-and-electricity/#?intcmp=GNH.Reviews.Home-And-Garden.Heating-Water-And-Electricity" class="global-nav-menu__product-link">Heating, water &amp; electricity</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/bathroom-and-personal-care/#?intcmp=GNH.Reviews.Home-And-Garden.Bathroom-And-Personal-Care" class="global-nav-menu__product-link">Bathroom &amp; Personal Care</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/garden/#?intcmp=GNH.Reviews.Home-And-Garden.Garden" class="global-nav-menu__product-link">Garden</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/home-improvements/#?intcmp=GNH.Reviews.Home-And-Garden.Home-Improvements" class="global-nav-menu__product-link">Home improvement</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/leisure/#?intcmp=GNH.Reviews.Home-And-Garden.Leisure" class="global-nav-menu__product-link">Leisure</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://local.which.co.uk/#?intcmp=GNH.Reviews.Home-And-Garden.Which-Local" class="global-nav-menu__product-link">Which? Local</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/staying-independent-at-home/#?intcmp=GNH.Reviews.Home-And-Garden.Staying-independent-at-home" class="global-nav-menu__product-link">Staying independent at home</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/cars/#?intcmp=GNH.Reviews.Cars" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" style="background-color:#54626c">&#57360;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Cars</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/cars/reviews/#?intcmp=GNH.Reviews.Cars.Car-Reviews" class="global-nav-menu__product-link">Car reviews</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/cars/driving" class="global-nav-menu__product-link">Driving your car</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/cars/choosing-a-car/#?intcmp=GNH.Reviews.Cars.Choosing-A-Car" class="global-nav-menu__product-link">Choosing a car</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="https://cars.verveengine.co.uk/?Source=12&amp;amp;Sample=2" class="global-nav-menu__product-link">Car Survey 2014</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/baby-and-child/#?intcmp=GNH.Reviews.Baby-And-Child" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" style="background-color:#7963a8">&#57361;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Baby &amp; Child</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/baby-and-child/baby-transport/#?intcmp=GNH.Reviews.Baby-And-Child.Baby-Transport" class="global-nav-menu__product-link">Baby transport</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/baby-and-child/nursery-and-feeding/#?intcmp=GNH.Reviews.Baby-And-Child.Nursery-And-Feeding" class="global-nav-menu__product-link">Nursery &amp; feeding</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/baby-and-child/child-safety-at-home/#?intcmp=GNH.Reviews.Baby-And-Child.Child-Safety-At-Home" class="global-nav-menu__product-link">Child safety at home</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/baby-and-child/shopping-and-family-finances//#?intcmp=GNH.Reviews.Baby-And-Child.Shopping-and-Family-Finances" class="global-nav-menu__product-link">Shopping &amp; family finances</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/energy/#?intcmp=GNH.Reviews.Energy" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" style="background-color:#8cc04b">&#57362;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Energy</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/energy/saving-money/#?intcmp=GNH.Reviews.Energy.Saving-Money" class="global-nav-menu__product-link">Saving money</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/energy/energy-saving-products/#?intcmp=GNH.Reviews.Energy.Energy-Saving-Products" class="global-nav-menu__product-link">Energy saving products</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/energy/creating-an-energy-saving-home/#?intcmp=GNH.Reviews.Energy.Creating-An-Energy-Saving-Home" class="global-nav-menu__product-link">Creating an energy saving home</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/switch/#?intcmp=GNH.Reviews.Energy.Which-Switch" class="global-nav-menu__product-link">Which? Switch</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </div>
 
-<!-- ======== REVIEWS TAB - HOME & GARDEN ======== --> <li class="link-set fixed"> <h3><a href="http://www.which.co.uk/home-and-garden/#?intcmp=GNH.Reviews.Home-And-Garden">Home &amp; Garden <span class="icon-right"></span></a></h3> <div> <ul> <li><a href="http://www.which.co.uk/home-and-garden/home-appliances/#?intcmp=GNH.Reviews.Home-And- Garden.Home-Appliances">Home appliances</a></li> <li><a href="http://www.which.co.uk/home-and-garden/small-appliances/#?intcmp=GNH.Reviews.Home-And- Garden.Small-Appliances">Small appliances</a></li> <li><a href="http://www.which.co.uk/home-and-garden/heating-water-and-electricity/#?intcmp=GNH.Reviews.Home- And-Garden.Heating-Water-And-Electricity">Heating, water &amp electricity</a></li> <li><a href="http://www.which.co.uk/home-and-garden/bathroom-and-personal-care/#?intcmp=GNH.Reviews.Home-And- Garden.Bathroom-And-Personal-Care">Bathroom &amp personal care</a></li> <li><a href="http://www.which.co.uk/home-and-garden/garden/#?intcmp=GNH.Reviews.Home-And- Garden.Garden">Garden</a></li> <li><a href="http://www.which.co.uk/home-and-garden/home-improvements/#?intcmp=GNH.Reviews.Home-And- Garden.Home-Improvements">Home improvements</a></li> <li><a href="http://www.which.co.uk/home-and-garden/leisure/#?intcmp=GNH.Reviews.Home-And- Garden.Leisure">Leisure</a></li> <li><a href="http://local.which.co.uk/#?intcmp=GNH.Reviews.Home-And-Garden.Which-Local">Which? Local</a></li> <li><a href="http://www.which.co.uk/home-and-garden/staying-independent-at-home/#?intcmp=GNH.Reviews.Home-And-Garden.Staying-independent-at-home">Staying independent at home</a></li> </ul> </div> </li> 
+      </li>
+      <li>
 
-<!-- ======== REVIEWS TAB - CARS ======== --> <li class="link-set fixed"> <h3><a href="http://www.which.co.uk/cars/#?intcmp=GNH.Reviews.Cars">Cars <span class="icon- right"></span></a></h3> <div> <ul> <li><a href="http://www.which.co.uk/cars/reviews/#?intcmp=GNH.Reviews.Cars.Car-Reviews">Car reviews</a></li> <li><a href="http://www.which.co.uk/cars/driving">Driving your car</a></li> <li><a href="http://www.which.co.uk/cars/choosing-a-car/#?intcmp=GNH.Reviews.Cars.Choosing-A-Car">Choosing a car</a></li> <li><a href="http://www.which.co.uk/cars/survey/which-car-survey-2011/which-car-survey-2014/">Car Survey 2014</a></li> </ul> </div> </li> 
+        <h2 class="mobile-navigation__title">Campaigns<span class="indicator icon-more"></span></h2>
 
-<!-- ======== REVIEWS TAB - MONEY ======== --> <li class="link-set fixed"> <h3><a href="http://www.which.co.uk/money/#?intcmp=GNH.Reviews.Money">Money <span class="icon- right"></span></a></h3> <div> <ul> <li><a 
-href="http://www.which.co.uk/money/savings-and-investments/#?intcmp=GNH.Reviews.Money.Savings-And- Investments">Savings &amp; investments</a></li> <li><a href="http://www.which.co.uk/money/credit-cards-and-loans/#?intcmp=GNH.Reviews.Money.Credit-Cards-And- Loans">Credit cards &amp; loans</a></li> <li><a href="http://www.which.co.uk/money/retirement/#? intcmp=GNH.Reviews.Money.Retirement">Retirement</a></li> <li><a 
-href="http://www.which.co.uk/money/money-saving-tips/#?intcmp=GNH.Reviews.Money.Money-saving-tips">Money-saving tips</a></li> <li><a 
-href="http://www.which.co.uk/money/insurance/#?intcmp=GNH.Reviews.Money.Insurance">Insurance</a></li> <li><a 
-href="http://www.which.co.uk/money/mortgages-and-property/#?intcmp=GNH.Reviews.Money.Mortgages-And- Property">Mortgages &amp; property</a></li> <li><a 
-href="http://www.which.co.uk/money/bank-accounts/#?intcmp=GNH.Reviews.Money.Bank-Accounts">Bank accounts</a></li> <li><a 
-href="http://www.which.co.uk/money/tax/#?intcmp=GNH.Reviews.Money.Tax">Tax</a>
-</li> </ul> </div> </li> 
+          <div class="global-nav-menu__accordion-body">
+            <ul class="global-nav-menu__category-list">
+                <li class="global-nav-menu__category-list-item
+                      is-4-columns
+                      has-single-subcategory">
+                  <h2 class="global-nav-menu__category-name">Which? campaigns</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/#?intcmp=NH.Campaigns.Campaigns" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Campaigns hub</h3>
+                            <p class="global-nav-menu__subcategory-desc">Get involved in our latest campaigns and find out how to take action.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/insurance-bank-card-fees/#?intcmp=GNH.Campaigns.Sneaky-Fees" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Sneaky fees</h3>
+                            <p class="global-nav-menu__subcategory-desc">Do you feel tricked by sneaky fees and charges? Sign our petition and help us put a stop to the practice.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/holiday-delays-cancellations/#?intcmp=GNH.Campaigns.Holiday-Hassles" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Holiday hassles</h3>
+                            <p class="global-nav-menu__subcategory-desc">Have you experienced a holiday hassle? Support our campaign and receive tips on taking action.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/savings-rates/#?intcmp=GNH.Campaigns.Savings-Rates" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Savings rates</h3>
+                            <p class="global-nav-menu__subcategory-desc">Are you tired of sub-standard savings accounts? Free your savings from the savings trap.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/mobile-phone-deals/#?intcmp=GNH.Campaigns.Mobile-Phones" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Unlock mobile phones</h3>
+                            <p class="global-nav-menu__subcategory-desc">Trapped in a poor value mobile phone contract? Sign our petition to unlock better deals.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/meat-takeaways-horsemeat/#?intcmp=GNH.Campaigns.Food-Fraud" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Food fraud</h3>
+                            <p class="global-nav-menu__subcategory-desc">Are you confident that the meat in your takeaways is what it says it is?</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/broadband-speed-service/#?intcmp=GNH.Campaigns.Broadband-Speed" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Broadband speed</h3>
+                            <p class="global-nav-menu__subcategory-desc">Are you plagued by unreliable and slow internet? Sign our petition to get broadband speeds guaranteed.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/broken-energy-market/#?intcmp=GNH.Campaigns.Fix-The-Big-Six" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Broken energy market</h3>
+                            <p class="global-nav-menu__subcategory-desc">Fed up with gas and electricity price rises? Help us fix the big six.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/schools-doctors-hospitals/#?intcmp=GNH.Campaigns.Public-Service-Complaints" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Public service complaints</h3>
+                            <p class="global-nav-menu__subcategory-desc">Ever feel like your complaints to GPs or care homes are being ignored?</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/consumer-rights#?intcmp=GNH.Campaigns.Consumer-Rights" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Consumer rights</h3>
+                            <p class="global-nav-menu__subcategory-desc">An expert guide to your consumer rights with free tools and advice for what to do if things go wrong.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/who-we-are/which-policy/#?intcmp=GNH.Campaigns.Which-Policy" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Policy</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find out about the policy which underpins the work we do to campaign for consumers.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://conversation.which.co.uk/#?intcmp=GNH.Campaigns.Conversation" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Conversation</h3>
+                            <p class="global-nav-menu__subcategory-desc">A community website to share your views on the consumer issues of the day.</p>
+                          </a>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </div>
 
-<!-- ======== REVIEWS TAB - BABY & CHILD ======== --> <li class="link-set fixed"> <h3><a href="http://www.which.co.uk/baby-and-child/#?intcmp=GNH.Reviews.Baby-And-Child">Baby &amp; Child <span class="icon-right"></span></a></h3> <div> <ul> <li><a href="http://www.which.co.uk/baby-and-child/baby-transport/#?intcmp=GNH.Reviews.Baby-And-Child.Baby- Transport">Baby transport</a></li> <li><a href="http://www.which.co.uk/baby-and-child/nursery-and-feeding/#?intcmp=GNH.Reviews.Baby-And- Child.Nursery-And-Feeding">Nursery &amp; feeding</a></li> <li><a href="http://www.which.co.uk/baby-and-child/child-safety-at-home/#?intcmp=GNH.Reviews.Baby-And- Child.Child-Safety-At-Home">Child safety at home</a></li> <li><a href="http://www.which.co.uk/baby-and-child/shopping-and-family-finances/#?intcmp=GNH.Reviews.Baby- And-Child.Shopping-and-Family-Finances">Shopping & family finances</a></li> </ul> </div> </li> 
+      </li>
+      <li>
 
-<!-- ======== REVIEWS TAB - ENERGY ======== --> <li class="link-set fixed"> <h3><a href="http://www.which.co.uk/energy/#?intcmp=GNH.Reviews.Energy">Energy <span class="icon- right"></span></a></h3> <div> <ul> <li><a href="http://www.which.co.uk/energy/saving-money/#?intcmp=GNH.Reviews.Energy.Saving-Money">Saving money</a></li> <li><a href="http://www.which.co.uk/energy/energy-saving-products/#?intcmp=GNH.Reviews.Energy.Energy-Saving- Products">Energy saving products</a></li> <li><a href="http://www.which.co.uk/energy/creating-an-energy-saving-home/#? intcmp=GNH.Reviews.Energy.Creating-An-Energy-Saving-Home">Creating an energy saving home</a></li> <li><a href="http://switch.which.co.uk">Which? Switch</a></li> </ul> </div> </li> </ul> </div> </div> 
-<!-- ======== REVIEWS TAB - FINISH ======== --> 
+        <h2 class="mobile-navigation__title">Our Services<span class="indicator icon-more"></span></h2>
 
-<!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> 
+          <div class="global-nav-menu__accordion-body">
+            <ul class="global-nav-menu__category-list">
+                <li class="global-nav-menu__category-list-item
+                      is-1-column
+                      ">
+                  <h2 class="global-nav-menu__category-name">Consumer advice</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/consumer-rights/#?intcmp=GNH.Services.Consumer-Rights" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Consumer rights</h3>
+                            <p class="global-nav-menu__subcategory-desc">An expert guide to your consumer rights with free tools and advice for what to do if things go wrong.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://university.which.co.uk/#?intcmp=GNH.Services.Which-University" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? University</h3>
+                            <p class="global-nav-menu__subcategory-desc">Our free tool helps you choose what to study, where to go and how to get there.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/birth-choice#?intcmp=GNH.Services.Which-Birth-Choice" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Birth choice</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find and compare local maternity services with our free service to help you choose where to give birth.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/elderly-care#?intcmp=GNH.Services.Which-Elderly-Care" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Elderly care</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find free, independent and practical advice about caring for older people across the UK.</p>
+                          </a>
+                      </li>
+                  </ul>
+                </li>
+                <li class="global-nav-menu__category-list-item
+                      is-2-columns
+                      ">
+                  <h2 class="global-nav-menu__category-name">Which? services</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://local.which.co.uk/#?intcmp=GNH.Services.Which-Local" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Local</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find reliable traders from thousands of local business reviews by Which? members across the UK.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.whichwills.com/#?intcmp=GNH.Services.Which-Wills" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Wills</h3>
+                            <p class="global-nav-menu__subcategory-desc">Writing an online will with Which? Wills is an easy, affordable and efficient solution.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://trustedtraders.which.co.uk/#?intcmp=GNH.Services.Which-Trusted.Traders" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Trusted traders</h3>
+                            <p class="global-nav-menu__subcategory-desc">A pilot endorsement scheme helping consumers find reputable traders in the home improvement and motoring sectors.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/switch/#?intcmp=GNH.Services.Which-Switch" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Switch</h3>
+                            <p class="global-nav-menu__subcategory-desc">Save money by comparing and switching your gas and electricity supplier using our free independent service.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://mortgageadvisers.which.co.uk/#?intcmp=GNH.Services.Mortgage-Advisers" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Mortgage advisers</h3>
+                            <p class="global-nav-menu__subcategory-desc">Our impartial advisers look at every mortgage from every available lender to help you find the right mortgage.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://legalservice.which.co.uk/#?intcmp=GNH.Services.Legal-Service" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Legal Services</h3>
+                            <p class="global-nav-menu__subcategory-desc">Subscribe to Which? Legal Service to get simple and affordable legal advice from our expert lawyers.</p>
+                          </a>
+                      </li>
+                  </ul>
+                </li>
+                <li class="global-nav-menu__category-list-item
+                      is-1-column
+                      ">
+                  <h2 class="global-nav-menu__category-name">Member exclusive</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/what-we-offer/which-money-helpline/#?intcmp=GNH.About-Us.Which-Money-Helpline" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Money helpline</h3>
+                            <p class="global-nav-menu__subcategory-desc">Expert, unbiased information and guidance to help our members make the best financial decisions.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/magazine/computing/#?intcmp=GNH.About-Us.Computing-Helpdesk" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Computing helpdesk</h3>
+                            <p class="global-nav-menu__subcategory-desc">Jargon-free technical support and buying advice to help make sense of our members&#39; computing issues.</p>
+                          </a>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </div>
 
-<!-- ======== CAMPAIGNS TAB - START ======== --> <div class="quicklink"> <div class="column oneofthree mob-button"> <h2 class="highlight-a main-link-button">Campaigns <span class="icon-more"></span></h2> <div class="description"> We campaign to make people's lives simpler and fairer. Let's make change happen.</div> </div> <div class="column twoofthree main-links"> <ul> 
+      </li>
+      <li>
 
-<!-- ======== CAMPAIGNS TAB - CAMPAIGNS ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/campaigns/#?intcmp= GNH.Campaigns.Campaigns">Campaigns <span class="icon- right"></span></a></h3> <div> <ul> <li>Get involved in our latest campaigns and find out how to take action.</li> </ul> </div> </li> 
+        <h2 class="mobile-navigation__title">About us<span class="indicator icon-more"></span></h2>
 
-<!-- ======== CAMPAIGNS TAB â DODGY DELIVERIES ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/campaigns/dodgy-deliveries/#?intcmp=GNH.Campaigns.Dodgy-deliveries">Dodgy deliveries <span class="icon-right"></span></a></h3> <div> <ul> <li> Are you experiencing difficulties getting online orders delivered? Sign our petition to stamp out dodgy deliveries.</li> </ul> </div> </li> 
+          <div class="global-nav-menu__accordion-body">
+            <ul class="global-nav-menu__category-list">
+                <li class="global-nav-menu__category-list-item
+                      is-4-columns
+                      has-single-subcategory">
+                  <h2 class="global-nav-menu__category-name">About us</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/#?intcmp=GNH.About-Us.About-Which" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">About Which?</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find out more about what we do and how we work, including the Which? Council.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/what-we-offer/what-do-i-get-when-i-take-a-trial/#?intcmp=GNH.About-Us.Signup" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Become a member</h3>
+                            <p class="global-nav-menu__subcategory-desc">Discover the benefits of Which?. Find out more about what your subscription includes and take a trial.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/who-we-are/which-policy/#?intcmp=GNH.About-Us.Which-Policy" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Policy</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find out about the policy which underpins the work we do to campaign for consumers.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/contact-us/#?intcmp=GNH.About-Us.Contact-Us" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Contact us</h3>
+                            <p class="global-nav-menu__subcategory-desc">Whether you&#39;re new to us or a longstanding member, there are several ways to get in touch.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/help/#?intcmp=GNH.About-Us.Help" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Help</h3>
+                            <p class="global-nav-menu__subcategory-desc">FAQs on subjects including using which.co.uk and accessing your account.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://press.which.co.uk/#?intcmp=GNH.About-Us.Press-Office" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Press office</h3>
+                            <p class="global-nav-menu__subcategory-desc">Latest news releases and statements, information on spokespeople and contacts for journalists.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://careersatwhich.co.uk/#?intcmp=GNH.About-Us.Careers" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Careers</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find out more about working at Which? including latest vacancies and how to apply.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/sitemap/#?intcmp=GNH.About-Us.Sitemap" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Directory</h3>
+                            <p class="global-nav-menu__subcategory-desc">Can&#39;t find what you&#39;re looking for? Access the complete A-Z directory of Which? Sites.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/news/#?intcmp=GNH.About-Us.News" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? News</h3>
+                            <p class="global-nav-menu__subcategory-desc">Get the latest news on our research and the consumer issues that affect you.</p>
+                          </a>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </div>
 
-<!-- ======== CAMPAIGNS TAB â FAIR ENERGY PRICES ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/campaigns/fair-energy-prices/#?intcmp=GNH.Campaigns.Fair-energy-prices">Fair energy prices <span class="icon-right"></span></a></h3> <div> <ul> <li> Do you think you pay a fair price for your energy? If in doubt, sign our petition. </li> </ul> </div> </li> 
+      </li>
+    </ul>
+  </nav>
+</script>
 
-<!-- ======== CAMPAIGNS TAB â SNEAKY FEES ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/campaigns/insurance-bank-card-fees/#?intcmp=GNH.Campaigns.Sneaky-Fees">Sneaky fees <span class="icon-right"></span></a></h3> <div> <ul> <li> Do you feel tricked by sneaky fees and charges? Sign our petition and help us put a stop to the practice.</li> </ul> </div> </li> 
-
-<!-- ======== CAMPAIGNS TAB â SAVINGS RATES ======== --> <li class="link-set"> <h3><a href=" http://www.which.co.uk/campaigns/savings-rates/#?intcmp=GNH.Campaigns.Savings-Rates ">Savings rates <span class="icon-right"></span></a></h3> <div> <ul> <li> Are you tired of sub-standard savings accounts? Free your savings from the savings trap.</li> </ul> </div> </li> 
-
-<!-- ======== CAMPAIGNS TAB â NUISANCE CALLS AND TEXTS ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/campaigns/nuisance-calls-and-texts./#?intcmp=GNH.Campaigns.Nuisance-Calls-and-Texts">Nuisance calls and texts <span class="icon-right"></span></a></h3> <div> <ul> <li> Plagued by nuisance calls and texts? Use our tool to report the culprits. </li> </ul> </div> </li> 
-
-<!-- ======== CAMPAIGNS TAB â BROADBAND SPEED ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/campaigns/broadband-speed-service/#?intcmp=GNH.Campaigns.Broadband-Speed">Broadband Speed <span class="icon-right"></span></a></h3> <div> <ul> <li> We're calling on broadband providers to improve service and make speed guaranteed.</li> </ul> </div> </li> 
-
-<!-- ======== CAMPAIGNS TAB â UNLOCK MOBILE PHONES ======== --> <li class="link-set"> <h3><a href=" http://www.which.co.uk/campaigns/mobile-phone-deals/#?intcmp=GNH.Campaigns.Mobile-Phones ">Unlock mobile phones <span class="icon-right"></span></a></h3> <div> <ul> <li> Trapped in a poor value mobile phone contract? Sign our petition to unlock better deals.</li> </ul> </div> </li> 
-
-<!-- ======== CAMPAIGNS TAB â PUBLIC SERVICE COMPLAINTS ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/campaigns/schools-doctors-hospitals/#?intcmp=GNH.Campaigns.Public-Service-Complaints">Public Service Complaints <span class="icon-right"></span></a></h3> <div> <ul> <li> Ever feel like your complaints to GPs or care homes are being ignored?</li> </ul> </div> </li> 
-
-<!-- ======== CAMPAIGNS TAB - CONSUMER RIGHTS ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/consumer-rights/#?intcmp=GNH.Campaigns.Consumer-Rights">Consumer Rights <span class="icon-right"></span></a></h3> <div> <ul> <li>An expert guide to your consumer rights with free tools and advice for what to do if things go wrong.</li> </ul> </div> </li> 
-
-<!-- ======== CAMPAIGNS TAB - WHICH? POLICY ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/about-which/who-we-are/which-policy/#?intcmp=GNH.Campaigns.Which- Policy">Which? Policy <span class="icon-right"></span></a></h3> <div> <ul> <li>Find out about the policy which underpins the work we do to campaign for consumers.</li> </ul> </div> </li> 
-
-<!-- ======== CAMPAIGNS TAB - WHICH? CONVERSATION ======== --> <li class="link-set"> <h3><a href="http://conversation.which.co.uk/#?intcmp=GNH.Campaigns.Conversation">Which? Conversation <span class="icon-right"></span></a></h3> <div> <ul> <li>A community website to share your views on the consumer issues of the day.</li> </ul> </div> </li> </ul> </div> </div> 
-
-<!-- ======== CAMPAIGNS TAB - FINISH ======== --> 
-
-<!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> 
-
-<!-- ======== SERVICES TAB - START ======== --> <div class="quicklink"> <div class="column oneofthree mob-button"> <h2 class="highlight-a main-link-button">Services<span class="icon-more"></span></h2> <div class="description"> Get tailored one-to-one advice from our range of legal, financial, travel and technology experts to help you make the right decisions.</div> </div> <div class="column twoofthree main-links"> <ul> 
-
-<!-- ======== SERVICES TAB - MORTGAGE ADVISERS ======== --> <li class="link-set"> <h3><a href="http://mortgageadvisers.which.co.uk/#?intcmp=GNH.Services.Mortgage-Advisers">Mortgage Advisers <span class="icon-right"></span></a></h3> <div> <ul> <li> Our impartial advisers look at every mortgage from every available lender to help you find the right mortgage.</li> </ul> </div> </li> 
-
-<!-- ======== SERVICES TAB - LEGAL SERVICE ======== --> <li class="link-set"> <h3><a href="http://legalservice.which.co.uk/#?intcmp=GNH.Services.Legal-Service">Legal Service <span class="icon-right"></span></a></h3> <div> <ul> <li> Subscribe to Which? Legal Service to get simple and affordable legal advice from our expert lawyers.</li> </ul> </div> </li> 
-
-<!-- ======== SERVICES TAB - WILLS ======== --> <li class="link-set"> <h3><a href="http://www.wills.which.co.uk/#?intcmp=GNH.Services.Which-Wills">Wills <span class="icon- right"></span></a></h3> <div> <ul> <li> Writing an online will with Which? Wills is an easy, affordable and efficient solution.</li> </ul> </div> </li> 
-
-<!-- ======== SERVICES TAB - CONSUMER RIGHTS ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/consumer-rights/#?intcmp=GNH.Services.Consumer-Rights">Consumer Rights <span class="icon-right"></span></a></h3> <div> <ul> <li>An expert guide to your consumer rights with free tools and advice for what to do if things go wrong.</li> </ul> </div> </li> 
-
-<!-- ======== SERVICES TAB - WHICH? LOCAL ======== --> <li class="link-set"> <h3><a href="http://local.which.co.uk/#?intcmp=GNH.Services.Which-Local">Which? Local <span class="icon- right"></span></a></h3> <div> <ul> <li> Find reliable traders from thousands of local business reviews by Which? members across the UK.</li> </ul> </div> </li> 
-
-<!-- ======== SERVICES TAB - WHICH? SWITCH ======== --> <li class="link-set"> <h3><a href="http://switch.which.co.uk">Which? Switch <span class="icon-right"></span></a></h3> <div> <ul> <li> Save money by comparing and switching your gas and electricity supplier using our free independent service.</li> </ul> </div> </li> 
-
-<!-- ======== SERVICES TAB - WHICH? UNIVERSITY ======== --> <li class="link-set"> <h3><a href="http://university.which.co.uk/#?intcmp=GNH.Services.Which-University">Which? University <span class="icon-right"></span></a></h3> <div> <ul> <li>Our free tool helps you choose what to study, where to go and how to get there.</li> </ul> </div> </li> 
-
-<!-- ======== SERVICES TAB - WHICH? BIRTH CHOICE ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/birth-choice#?intcmp=GNH.Services.Which-Birth-Choice">Which? Birth Choice <span class="icon- right"></span></a></h3> <div> <ul> <li>Find and compare local maternity services with our free service to help you choose where to give birth.</li> </ul> </div> </li> 
-
-<!-- ======== SERVICES TAB - WHICH? TRUSTED TRADERS ======== --> <li class="link-set"> <h3><a href="http://trustedtraders.which.co.uk/#?intcmp=GNH.Services.Which-Trusted.Traders">Which? Trusted Traders <span class="icon-right"></span></a></h3> <div> <ul> <li>An endorsement scheme helping consumers find reputable traders in the home improvement and motoring sectors</li> </ul> </div> </li> 
-
-<!-- ======== SERVICES TAB - WHICH? ELDERLY CARE ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/elderly-care#?intcmp=GNH.Services.Which-Elderly-Care">Which? Elderly Care <span class="icon- right"></span></a></h3> <div> <ul> <li>Find free, independent and practical advice about caring for older people across the UK</li> </ul> </div> </li> 
-
-<!-- ======== SERVICES TAB - WHICH? MONEY COMPARE ======== --> <li class="link-set"> <h3><a href="http://moneycompare.which.co.uk/#?intcmp=GNH.Services.Which-Money-Compare">Which? Money Compare <span class="icon- right"></span></a></h3> <div> <ul> <li>Compare credit cards, mortgages, savings and ISAs with the Which? Money comparison site.</li> </ul> </div> </li> </ul> </div> </div> 
-
-<!-- ======== SERVICES TAB - FINISH ======== --> 
-
-<!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> <!-- ====================================== --> 
-
-<!-- ======== ABOUT US TAB - START ======== --> <div class="quicklink"> <div class="column oneofthree mob-button"> <h2 class="highlight-a main-link-button">About us<span class="more-less icon-more"></span></h2> <div class="description"> Which? exists to make people as powerful as the organisations that affect their lives. We don't accept any advertising, freebies or sponsorship. All our research and campaigning is completely independent and funded by subscriptions.</div> </div> <div class="column twoofthree main-links"> <ul> 
-
-<!-- ======== ABOUT US TAB - ABOUT WHICH? ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/about-which/#?intcmp=GNH.About-Us.About-Which">About Which? <span class="icon-right"></span></a></h3> <div> <ul> <li>Find out more about what we do and how we work, including more about the Which? Council.</li> </ul> </div> </li> 
-
-<!-- ======== ABOUT US TAB - BECOME A MEMBER ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/about-which/what-we-offer/what-do-i-get-when-i-take-a-trial/#? intcmp=GNH.About-Us.Signup">Become a Member <span class="icon-right"></span></a></h3> <div> <ul> <li>Discover the benefits of Which?. Find out more about what your subscription includes and take a trial.</li> </ul> </div> </li> 
-
-<!-- ======== ABOUT US TAB - WHICH? POLICY ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/about-which/who-we-are/which-policy/#?intcmp=GNH.About-Us.Which- Policy">Which? Policy <span class="icon-right"></span></a></h3> <div> <ul> <li>Find out about the policy which underpins the work we do to campaign for consumers.</li> </ul> </div> </li> 
-
-<!-- ======== ABOUT US TAB - CONTACT US ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/about-which/contact-us/#?intcmp=GNH.About-Us.Contact-Us">Contact us <span class="icon-right"></span></a></h3> <div> <ul> <li>Whether you're new to us or a longstanding member, there are several ways to get in touch.</li> </ul> </div> </li> 
-
-<!-- ======== ABOUT US TAB - HELP ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/help/#?intcmp=GNH.About-Us.Help">Help <span class="icon- right"></span></a></h3> <div> <ul> <li>FAQs on subjects including using which.co.uk and accessing your account.</li> </ul> </div> </li> 
-
-<!-- ======== ABOUT US TAB - PRESS OFFICE ======== --> <li class="link-set"> <h3><a href="http://press.which.co.uk/#?intcmp=GNH.About-Us.Press-Office">Press Office <span class="icon- right"></span></a></h3> <div> <ul> <li> Latest news releases and statements, information on spokespeople and contacts for journalists. </li> </ul> </div> </li> 
-
-<!-- ======== ABOUT US TAB - CAREERS ======== --> <li class="link-set"> <h3><a href="http://careersatwhich.co.uk/#?intcmp=GNH.About-Us.Careers">Careers <span class="icon- right"></span></a></h3> <div> <ul> <li> Find out more about working at Which? including latest vacancies and how to apply.</li> </ul> </div> </li> 
-
-<!-- ======== ABOUT US TAB - WHICH? DIRECTORY ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/sitemap/#?intcmp=GNH.About-Us.Sitemap">Which? Directory <span class="icon-right"></span></a></h3> <div> <ul> <li> Can't find what you're looking for? Access the complete A-Z directory of Which? Sites.</li> </ul> </div> </li> 
-
-<!-- ======== ABOUT US TAB - WHICH? NEWS ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/news/#?intcmp=GNH.About-Us.News">Which? News <span class="icon- right"></span></a></h3> <div> <ul> <li>Get the latest news on our research and the consumer issues that affect you.</li> </ul> </div> </li> 
-
-<!-- ======== ABOUT US TAB - MONEY HELPLINE ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/about-which/what-we-offer/which-money-helpline/#? intcmp=GNH.About-Us.Which-Money-Helpline">Money Helpline <span class="icon-right"></span></a></h3> <div> <ul> <li> Expert, unbiased information and guidance to help our members make the best financial decisions.</li> </ul> </div> </li> 
-
-<!-- ======== ABOUT US TAB - COMPUTING HELPDESK ======== --> <li class="link-set"> <h3><a href="http://www.which.co.uk/magazine/computing/#?intcmp=GNH.About-Us.Computing-Helpdesk">Computing Helpdesk <span class="icon-right"></span></a></h3> <div> <ul> <li> Jargon-free technical support and buying advice to help make sense of our members' computing issues. </li> </ul> </div> </li> </ul> </div> </div> 
-
-<!-- ======== ABOUT US TAB - FINISH ======== --> </div><!--end of quicklinks-->
-
-<!-- END OF FRAGMENT: quickLinks -->
-
-
-<!-- START OF FRAGMENT: n7 -->
-
-</div><!--end of global nav-->    										
-
-<!-- END OF FRAGMENT: n7 -->
+<!-- END OF FRAGMENT: globalNavLoggedOut -->
 
 <!-- =============================================================================================-->
 <!-- END OF SLOT: body (global navigation) -->
@@ -481,26 +1408,35 @@ href="http://www.which.co.uk/money/tax/#?intcmp=GNH.Reviews.Money.Tax">Tax</a>
 
 <!-- START OF FRAGMENT: footerFragment -->
 
-					<div class="global-footer group">
-  <div class="footer-left group">
+<footer class="global-footer group" role="contentinfo">
+  <nav class="footer-left group" role="navigation" aria-label="Footer">
+    <h2 class="a11y">Footer Navigation</h1>
     <ul>
-      <li id="footer-item1"><a href="http://www.which.co.uk/about-which/contact-us/#?intcmp=GNF.Contact-Us">Contact us</a></li>
-      <li id="footer-item2"><a href="http://www.which.co.uk/sitemap/#?intcmp=GNF.Sitemap">Which? Directory</a></li>
-      <li id="footer-item3"><a href="http://www.which.co.uk/accessibility/#?intcmp=GNF.Accessibility">Accessibility</a></li>
-      <li id="footer-item4"><a href="http://www.which.co.uk/terms-and-conditions/#?intcmp=GNF.Terms-And-Conditions">Terms &amp; conditions</a></li>
-      <li id="footer-item5"><a href="http://www.which.co.uk/privacy-policy/#?intcmp=GNF.Privacy-Policy">Privacy</a></li>
-      <li id="footer-item6" class="last"><a href="http://www.which.co.uk/privacy-policy/cookie-policy/#?intcmp=GNF.Privacy-Policy.Cookie-Policy">Cookies</a></li>
+        <li id="footer-item1">
+            <a href="http://www.which.co.uk/about-which/contact-us/#?intcmp=GNF.Contact-Us">Contact us</a>
+        </li>
+        <li id="footer-item2">
+            <a href="http://www.which.co.uk/sitemap/#?intcmp=GNF.Sitemap">Which? Directory</a>
+        </li>
+        <li id="footer-item3">
+            <a href="http://www.which.co.uk/accessibility/#?intcmp=GNF.Accessibility">Accessibility</a>
+        </li>
+        <li id="footer-item4">
+            <a href="http://www.which.co.uk/terms-and-conditions/#?intcmp=GNF.Terms-And-Conditions">Terms &amp; conditions</a>
+        </li>
+        <li id="footer-item5">
+            <a href="http://www.which.co.uk/privacy-policy/#?intcmp=GNF.Privacy-Policy">Privacy</a>
+        </li>
+        <li id="footer-item6">
+            <a href="http://www.which.co.uk/privacy-policy/cookie-policy/#?intcmp=GNF.Privacy-Policy.Cookie-Policy">Cookies</a>
+        </li>
     </ul>
-  </div>
+  </nav>
   <div class="footer-right">
     <span class="strapline">Which? works for you</span>
-    &copy; Which? <script>
-    var the_date = new Date();
-    document.write(the_date.getFullYear());
-    </script>
+    <span id="copyright_notice">© Which? 2014</span>
   </div>
-</div>
-
+</footer>
 
 <!-- END OF FRAGMENT: footerFragment -->
 
@@ -527,33 +1463,22 @@ if(typeof optimost=='object'){optimost.en=0;while(optimost.en<optimost.es.length
 <!-- =============================================================================================-->
 
 <!-- START OF FRAGMENT: privacyFragment -->
-		<link type="text/css" rel="stylesheet" href="//www.staticwhich.co.uk/assets/styles/eprivacy.css" />
-<script type="text/javascript" src="//www.staticwhich.co.uk/assets/scripts/eprivacy.js"></script>
-<div id="eprivacy-holder"></div>
-<div id="eprivacy-outer">
-        <div id="eprivacy-inner">
-        <noscript>
-                <style type="text/css">body { padding-top:120px; } #eprivacy-outer { display:block; height:90px; }</style>
-                <h2>Sorry for interrupting, but there is something we need to tell you...</h2>
-                <p>We've made changes to our cookie policy, please <a href="#eprivacy-content">read this message</a> for more information.</p>
-        </noscript>
-        </div>
+
+<!-- Eprivacy start -->
+<div id="eprivacy" class="eprivacy banner group">
+  <div class="eprivacy-container">
+    <div class="left-column">
+      <p><strong>Cookies at Which?&nbsp;</strong>We use cookies to help improve our sites. If you continue, we'll assume that you're happy to accept out cookies.&nbsp;<a href="http://www.which.co.uk/privacy-policy/cookie-policy/" title="Learn about what cookies we use and how to control them">Find out more</a></p>
+    </div>
+    <div class="right-column">
+      <p>
+        <a href="#" class="button button-simple primary" id="eprivacy-submit" aria-label="Accept cookie policy">OK</a>
+      </p>
+    </div>
+  </div>
 </div>
-<noscript>
-        <iframe id="eprivacy-content" src="//www.which.co.uk/components/eprivacy.html"></iframe>
-</noscript>
-<script type="text/javascript">
-        var currentDomain, contentURL;
-        currentDomain = document.domain;
-        if (currentDomain === "which.co.uk") {
-                contentURL = "//www.which.co.uk/components/eprivacy-pluck.html";
-        }
-        else {
-                contentURL = "//www.which.co.uk/components/eprivacy.html";
-        }
-        $('#eprivacy-content').remove();
-        $('#eprivacy-outer').after('<iframe id="eprivacy-content" src="' + contentURL + '"></iframe>');
-</script>		
+<!-- Eprivacy end -->
+
 <!-- END OF FRAGMENT: privacyFragment -->
 
 <!-- =============================================================================================-->
