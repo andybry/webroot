@@ -11,7 +11,7 @@ requirejs.config({
   }
 });
 
-requirejs(['jquery', 'nav', 'hero', 'pagebody', 'eprivacy', 'new'], function($, nav, hero, pb, eprivacy, oldnew){
+requirejs(['jquery', 'hero', 'pagebody', 'eprivacy', 'new'], function($, hero, pb, eprivacy, oldnew){
   $(function(){
 
     if(typeof window.onload == 'function') {
@@ -19,18 +19,12 @@ requirejs(['jquery', 'nav', 'hero', 'pagebody', 'eprivacy', 'new'], function($, 
       oldonload();
     }
 
-    $('#eprivacy').prependTo('body');
-
-    nav.init({
-      // Show logo as red or black
-      logo: true,
-      // Show search open on start = true, closed = false
-      search_open: true,
-      // Make search available on site
-      search: true,
-      // Show signin
-      signin: true
-    });
+    if($('.oldnew').length) {
+      $('#eprivacy').insertAfter('.oldnew');
+    } else {
+      //$('#eprivacy').insertAfter('body');
+      $('body').prepend($('#eprivacy'));
+    }
 
     eprivacy.init();
 
