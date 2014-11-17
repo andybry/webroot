@@ -88,13 +88,46 @@
 <!-- START OF FRAGMENT: standardPageLookAndFeelFragment -->
 
 <link href="https://test-eva-fragment-server.herokuapp.com/assets/application-b25f551baa48022247939b2484ce82b0.css" media="all" rel="stylesheet" />
+<style>
+@media(min-width: 960px) {
+  #frame .global-nav .button-label {
+      padding: 5px 9px 5px 15px;
+  }
+
+  #frame .global-nav .button-label, #frame .global-nav .login-label {
+    font-size: 12px;
+  }
+
+ #frame .global-nav .show-search .button-label {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+</style>
+
+                <!-- NAV -->
+        <link rel="stylesheet" type="text/css" href="http://www.staticwhich.co.uk/assets/182/nav/globalnav/public/css/global-navigation-comp.css">
+        <link rel="stylesheet" type="text/css" href="http://www.staticwhich.co.uk/assets/182/nav/globalnav/public/css/masthead.css">
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="http://www.staticwhich.co.uk/assets/182/nav/globalnav/public/components/typography/icons-ie7.css">
+        <link rel="stylesheet" type="text/css" href="http://www.staticwhich.co.uk/assets/182/nav/globalnav/public/css/global-navigation-ie.css">
+        <![endif]-->
+
 
 <!-- END OF FRAGMENT: standardPageLookAndFeelFragment -->
 
 
 <!-- START OF FRAGMENT: standardPageScriptFragment -->
 
-<script src="https://test-eva-fragment-server.herokuapp.com/assets/application-644c3ecf8547bdea2024067cce40eb87.js"></script>
+<script src="http://www.staticwhich.co.uk/assets/cookies.js"></script>
+<script src="http://www.staticwhich.co.uk/assets/global-navigation/global-navigation.js"></script>
+<script src="http://www.staticwhich.co.uk/assets/e-privacy/e-privacy.js"></script>
+<script>
+  $(document).ready(function() {
+  GlobalNavigation.init();
+  ePrivacy.init();
+});
+</script>
 
 <!-- END OF FRAGMENT: standardPageScriptFragment -->
 
